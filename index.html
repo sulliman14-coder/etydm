@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إي تي واي للتصميم والتسويق - مدعوم بالذكاء الاصطناعي</title>
+    <meta name="description" content="إي تي واي (ETY) - شريكك الرقمي الأول في السعودية لتصميم الهويات البصرية، برمجة المواقع، والتسويق الرقمي. حلول إبداعية موثقة برقم FL-63005888.">
+    <meta name="keywords" content="تصميم, تسويق, برمجة مواقع, هوية بصرية, السعودية, ETY, تسويق رقمي, سيو">
+    <title>إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -165,25 +167,12 @@
             transform: translateX(0);
         }
         
-        /* Markdown Styles for AI Response */
         .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1rem; margin-bottom: 0.5rem; color: #1e40af; }
         .prose ul { list-style-type: disc; padding-right: 1.5rem; margin-bottom: 1rem; }
         .prose li { margin-bottom: 0.25rem; }
         .prose p { margin-bottom: 0.75rem; line-height: 1.6; }
         .prose strong { color: #4b5563; }
 
-        /* Audio Player Styling */
-        .audio-player-wrapper {
-            margin-top: 1rem;
-            padding: 0.5rem;
-            background: #f3f4f6;
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Sparkle Animation */
         .sparkle-btn {
             position: relative;
             overflow: hidden;
@@ -307,11 +296,11 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-6 max-w-5xl mx-auto flex-wrap">
-                <!-- Smart Quote Button -->
-                <button onclick="openSmartQuoteModal()" class="sparkle-btn group relative bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[320px] overflow-hidden border border-indigo-400">
+                <!-- About Us Button (REPLACED SMART QUOTE) -->
+                <button onclick="openAboutModal()" class="sparkle-btn group relative bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[320px] overflow-hidden border border-indigo-400">
                     <div class="relative flex items-center justify-center gap-3">
-                        <span class="text-2xl">⚡</span>
-                        <span>تسعير فوري بالذكاء الاصطناعي</span>
+                        <span class="text-2xl">ℹ️</span>
+                        <span>من نحن</span>
                     </div>
                 </button>
 
@@ -355,11 +344,11 @@
                 <p class="text-xl text-gray-600">جولة في إبداعاتنا الرقمية.. انتقي ما يلهمك</p>
             </div>
 
-            <!-- Portfolio Controls (Removed Search) -->
+            <!-- Portfolio Controls (Removed Search & All) -->
             <div class="flex justify-center mb-8">
                 <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-full shadow-sm border border-gray-100" id="portfolio-filters">
-                    <button onclick="filterPortfolio('all')" class="filter-btn active px-6 py-2 rounded-full font-medium transition-all bg-blue-600 text-white shadow-md">الكل</button>
-                    <button onclick="filterPortfolio('profile')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">بروفايل</button>
+                    <!-- 'All' button removed as requested -->
+                    <button onclick="filterPortfolio('profile')" class="filter-btn active bg-blue-600 text-white shadow-md px-6 py-2 rounded-full font-medium transition-all hover:bg-blue-700">بروفايل</button>
                     <button onclick="filterPortfolio('web')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">مواقع ومتاجر</button>
                     <button onclick="filterPortfolio('menu')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">منيو إلكتروني</button>
                     <button onclick="filterPortfolio('misc')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">أعمال متنوعة</button>
@@ -373,7 +362,7 @@
         </div>
     </section>
 
-    <!-- AI Tools Section (NEW) -->
+    <!-- AI Tools Section -->
     <section id="ai-tools" class="py-20 bg-gradient-to-b from-indigo-900 to-purple-900 text-white relative overflow-hidden">
          <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/circuit-board.png')]"></div>
          <div class="container mx-auto px-4 relative z-10">
@@ -541,6 +530,14 @@
             <div>
                 <h4 class="text-xl font-bold mb-4">إي تي واي للتصميم</h4>
                 <p class="text-gray-400 leading-relaxed">شريكك الرقمي المتكامل لخدمات التصميم، البرمجة، والتسويق الإلكتروني. نصنع الفرق في أعمالك.</p>
+                <div class="mt-4 border-t border-gray-700 pt-4">
+                    <p class="text-xs text-gray-400 mb-1">موثق لدى المركز السعودي للأعمال</p>
+                    <div class="flex flex-col gap-1 text-xs text-gray-300">
+                        <span>وثيقة العمل الحر: FL-63005888</span>
+                        <span>رقم التوثيق: 0000162606</span>
+                    </div>
+                    <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="شعار المركز السعودي للأعمال" class="mt-3 h-8 opacity-80">
+                </div>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">روابط سريعة</h4>
@@ -565,6 +562,72 @@
 
     <!-- Modals -->
     
+    <!-- About Us Modal (NEW) -->
+    <div id="aboutModal" class="modal-container" onclick="closeModal('aboutModal')">
+        <div class="modal-content max-w-4xl" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl text-indigo-600">ℹ️</span>
+                    <h2 class="text-2xl font-bold text-gray-800">من نحن - إي تي واي</h2>
+                </div>
+                <button onclick="closeModal('aboutModal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+                <p class="text-lg font-bold text-indigo-900 mb-4">نحن "إي تي واي للتصميم والتسويق"، وكالتك الرقمية الرائدة في المملكة العربية السعودية.</p>
+                
+                <p class="mb-4">
+                    نجمع بين الإبداع الفني والتقنية المتقدمة لنقدم حلولاً رقمية متكاملة ترفع من قيمة علامتك التجارية. متخصصون في <strong>تصميم الهويات البصرية</strong> التي تخلد في الذاكرة، و<strong>تطوير المواقع والمتاجر الإلكترونية</strong> ذات الأداء العالي، و<strong>التسويق الرقمي</strong> المدروس الذي يستهدف جمهورك بدقة.
+                </p>
+                
+                <p class="mb-6">
+                    فريقنا شغوف بالتفاصيل، ملتزم بالجودة، ويسعى دائماً لتحويل رؤيتك إلى واقع رقمي ملموس يحقق أهدافك التجارية ويزيد من مبيعاتك.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-indigo-50 p-4 rounded-lg text-center">
+                        <span class="block text-2xl mb-2">🎯</span>
+                        <span class="font-bold text-indigo-800">رؤيتنا</span>
+                        <p class="text-sm mt-1">أن نكون الخيار الأول للحلول الرقمية في المملكة.</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg text-center">
+                        <span class="block text-2xl mb-2">🚀</span>
+                        <span class="font-bold text-purple-800">رسالتنا</span>
+                        <p class="text-sm mt-1">تمكين الأعمال بأدوات وحلول تقنية مبتكرة.</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg text-center">
+                        <span class="block text-2xl mb-2">⭐</span>
+                        <span class="font-bold text-blue-800">قيمنا</span>
+                        <p class="text-sm mt-1">الإبداع، الجودة، والالتزام بالمواعيد.</p>
+                    </div>
+                </div>
+
+                <!-- Legal/Trust Section -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg">
+                    <div class="text-center md:text-right">
+                        <h4 class="font-bold text-lg mb-2 text-indigo-300">موثوقون ومعتمدون</h4>
+                        <p class="text-sm opacity-90 mb-1">وثيقة العمل الحر: <span class="font-mono text-yellow-400">FL-63005888</span></p>
+                        <p class="text-sm opacity-90">رقم التوثيق: <span class="font-mono text-yellow-400">0000162606</span></p>
+                    </div>
+                    <div class="bg-white/10 p-2 rounded-lg backdrop-blur-sm">
+                        <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="المركز السعودي للأعمال" class="h-16 w-auto object-contain">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex gap-4">
+                <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'}); closeModal('aboutModal');" class="flex-1 bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
+                    اكتشف خدماتنا
+                </button>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeModal('aboutModal');" class="flex-1 bg-white border-2 border-indigo-600 text-indigo-600 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors">
+                    تواصل معنا
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Portfolio Details Modal (Updated for PDF & Website Support) -->
     <div id="portfolioModal" class="modal-container" onclick="closeModal('portfolioModal')">
         <div class="modal-content max-w-5xl" onclick="event.stopPropagation()">
@@ -1419,15 +1482,15 @@
             packageKey: null
         };
 
-        // Portfolio Data (Updated to include 4 items per new category)
+        // Portfolio Data
         const portfolioItems = [
             // Profile Items - Added pdfUrl property
             {
                 id: 1,
                 title: 'تقرير سنوي جمعية مسارات',
                 category: 'profile',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczNauihJ3rzmKIViFZZfKpNXpMOYSI2FlNi2w_Exg0fvKJdZccw-rzDtnhgM5XdKNiAmlEnLxGB8VqX0sPaYfvhTvalp0MxDNN_iLQ3__7uNjVJRjC9dH7--ILcPkyqyfL5hjfFGrV1MHErqiMopMnF8zQ=w1600-h900-s-no-gm?authuser=0', // صورة البطاقة (Thumbnail)
-                pdfUrl: 'https://drive.google.com/file/d/1pqzZyR0DFSz4jurKM8hZvyrdoX76uXho/view?usp=sharing', // رابط ملف PDF (يمكن تغييره)
+                image: 'https://lh3.googleusercontent.com/pw/AP1GczNauihJ3rzmKIViFZZfKpNXpMOYSI2FlNi2w_Exg0fvKJdZccw-rzDtnhgM5XdKNiAmlEnLxGB8VqX0sPaYfvhTvalp0MxDNN_iLQ3__7uNjVJRjC9dH7--ILcPkyqyfL5hjfFGrV1MHErqiMopMnF8zQ=w1600-h900-s-no-gm?authuser=0',
+                pdfUrl: 'https://drive.google.com/file/d/1pqzZyR0DFSz4jurKM8hZvyrdoX76uXho/view?usp=sharing',
                 desc: 'تصميم وتحليل بيانات جمعية مسارات ، شمل 20 صفحة مع إنفوجرافيك للإنجازات.',
                 tags: ['تصميم تقرير سنوي', 'كتابة محتوى', 'إنفوجرافيك']
             },
@@ -1436,7 +1499,7 @@
                 title: 'تصميم بروفايل إعمار المساند للتشغيل والصيانة ',
                 category: 'profile',
                 image: 'https://lh3.googleusercontent.com/pw/AP1GczODDifOmTd2U5ZiWhPmOCoZWPmBDFZ68x_a48FnUXr_tAo9OQABVD7KULrh9m4DUT6vcsUmObRSBUcYtML2w8wOQZhvEfdHkHBY_UY8e6WmrLnRi0YfjUGiQcMEIAX4CA5g3whidY6FE9aIMo7Ehi_7Hw=w1600-h900-s-no-gm?authuser=0',
-                pdfUrl: 'https://drive.google.com/file/d/1yRSAzCj1ziBvea6frrr3yEzt0TiOVl14/view?usp=sharing', // اتركه فارغاً إذا لم يكن هناك ملف
+                pdfUrl: 'https://drive.google.com/file/d/1yRSAzCj1ziBvea6frrr3yEzt0TiOVl14/view?usp=sharing',
                 desc: 'تصميم عصري وجذاب لملف تعريفي لشركة إعمار المساند للتشغيل والصيانة، باللغتين العربية والإنجليزية.',
                 tags: ['ثنائي اللغة', 'تصميم عصري']
             },
@@ -1459,13 +1522,13 @@
                 tags: ['قطاع غير ربحي', 'تصميم إبداعي']
             },
 
-            // Web Items - Added websiteUrl
+            // Web Items
             {
                 id: 5,
                 title: 'تصميم متجر سكون',
                 category: 'web',
                 image: 'https://lh3.googleusercontent.com/pw/AP1GczNvrripjkyLcL9ETLKpewyeSNlYcq6Yu4_Xq0Aj1oA5HAyRpwjVbvmw4fakmEI-GmSEPWkVk8MEbTb86oxR2S9EnlK95Deiz3Gsz-bnpL539E7P0YTPbRdkj7vjkGNqhFjXnvXjXQ-0Gizcm6ymRdyB9w=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://skoon-care.com/', // 👈 رابط الموقع
+                websiteUrl: 'https://skoon-care.com/',
                 desc: 'تصميم متجر سكون الإلكتروني للعناية بالعين مع تحسين واجهة المستخدم وتجربة المستخدم , تحسين seo محركات البحث و وصف المنتجات  .',
                 tags: ['متجر إلكتروني', 'UI/UX', 'بوابات دفع متنوعة' ]
             },
@@ -1474,7 +1537,7 @@
                 title: 'متحر رواد الإعمار الكبرى',
                 category: 'web',
                 image: 'https://lh3.googleusercontent.com/pw/AP1GczNYJ5IEGNT-V1W9HcnMxx2UAo8ySBpDsOPCe7vEGCXi_24NA2JXRlrVDNsCGbfeihiBikGquaKpmIlzgFkQI7IszubHIcDL-v9DBWueoWSaTvO53fK7F1wJSM3HhPCUECGmFPUeRjjsUqWw-S-yrOIMiA=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://r-w-d.com/', // 👈 رابط الموقع
+                websiteUrl: 'https://r-w-d.com/',
                 desc: 'متجر رواد الإعمار الكبرى لمنتجات مواد البناء المواد الصحية .',
                 tags: ['مواد صحية ', 'متجر مواد بناء']
             },
@@ -1483,7 +1546,7 @@
                 title: 'متجر عسل صبوح',
                 category: 'web',
                 image: 'https://lh3.googleusercontent.com/pw/AP1GczMFVYyTENVYl7Oh5FSB0Aud4J1GszEdpwMsSuYe0Imdt60l4i1i_hXv6gwe6z_fvxJ0F9achQs4vmbrN9VER_PsLddJqMd36HHpIBOsw0rT8BxTDYP27Pfq_zWXCXHmOggwm6X_q6uvBCMbBkB-bFEDjg=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://sabo7.com/', // لا يوجد رابط (تطبيق)
+                websiteUrl: 'https://sabo7.com/',
                 desc: 'متجر عسل صبوح لبيع منتجات العسل .',
                 tags: ['متجر على منصة سلة', 'تجربة مستخدم']
             },
@@ -1492,18 +1555,18 @@
                 title: 'موقع تعريفي شركة مرونة القوة للخدمات اللوجيستية',
                 category: 'web',
                 image: 'https://lh3.googleusercontent.com/pw/AP1GczNI_aLCI7Og6Z5ytngzUJ3kyzpsEXz9DfnXw3hZEAQbWehUTrTk8viwjbUkkJ_7roGG3luLAsMwyOxG_urSpUGgyqmR0U-a5ZWLXFlBSOajV3ztEe0B6JhkWpDQBqDZsGUOBHQ8-mXwKcwPU9Z1_Ty51A=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://forceflexi.com/', // 👈 رابط المنصة
+                websiteUrl: 'https://forceflexi.com/',
                 desc: 'موقع تعريفي لشركة مرونة القوة للخدمات اللوجيستية.',
                 tags: ['منصة ووردبريس', 'سرعة فائقه']
             },
 
-            // Menu Items - Added websiteUrl (Menu Link)
+            // Menu Items
             {
                 id: 9,
                 title: 'منيو كوفي هاوس إلكتروني',
                 category: 'menu',
                 image: 'https://lh3.googleusercontent.com/pw/AP1GczNJEJKfX_lY4KAiUT01SskmTdOVRgUQ_7nT5KiXuIqhztQ_t4SwGv2iyXmWinfSvBJvLOSrnKD2Db5mPiQ_YcuBO-CSrATswGhWuXkueAogE73_mpuwx0uapfUoP4Bj72vK4yEBRMktYImSsoNS6vnScA=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://kozicoffe.netlify.app/', // 👈 رابط المنيو الإلكتروني
+                websiteUrl: 'https://kozicoffe.netlify.app/',
                 desc: 'ميم منيو إلكتروني ، إضافة المنتجات والتسعيرات ولوحة تحكم خاصة للتحكم في الاسعار والصور والعروض .',
                 tags: ['منيو ورقي', 'تصوير منتجات']
             },
@@ -1512,7 +1575,7 @@
                 title: ' قائمة طعام برقر لارنج ورقي',
                 category: 'menu',
                 image: 'https://lh3.googleusercontent.com/pw/AP1GczMbchnu_khD5Vl3adbRmMWEypeycE_ktlbhO--YLYT7-Yns64Mnt5BqRjQ6fe7ObLbnL55WLmxkCC9Lz6BTogQMyPgTpUXuzFs4CN4won1ZdqT81k8w1wYBivgpVgZCr9x6WIBiLGAmYAJJUP8ztk7OsQ=w686-h314-s-no-gm?authuser=0',
-                websiteUrl: 'https://drive.google.com/file/d/1rhfeoIhgj7lN525jv4IUIjNfT5yrxmU5/view?usp=sharing', // 👈 رابط المنيو الإلكتروني
+                websiteUrl: 'https://drive.google.com/file/d/1rhfeoIhgj7lN525jv4IUIjNfT5yrxmU5/view?usp=sharing',
                 desc: 'كتيب منيو لارنج برجر (QR Code) لمطعم برقر، ورقي كلاسيك.',
                 tags: ['منيو ورقي', 'QR Code']
             },
@@ -1521,7 +1584,7 @@
                 title: 'منيو برجر ستيشن',
                 category: 'menu',
                 image: 'https://placehold.co/600x400/f97316/ffffff?text=Burger+Menu',
-                websiteUrl: 'https://google.com', // 👈 رابط المنيو
+                websiteUrl: 'https://google.com',
                 desc: 'تصميم قائمة طعام حائطية (Board Menu) لمطعم وجبات سريعة، بأسلوب مشهي وجذاب.',
                 tags: ['لوحات منيو', 'وجبات سريعة']
             },
@@ -1572,7 +1635,7 @@
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             renderServices();
-            renderPortfolio(); // Init Portfolio with all items
+            renderPortfolio('profile'); // Init Portfolio with PROFILE as default
             renderPartners();
             renderWhyUs();
             renderSuccessStories();
@@ -1582,12 +1645,12 @@
         });
 
         // Portfolio Functions
-        function renderPortfolio(filter = 'all') {
+        function renderPortfolio(filter) {
             const container = document.getElementById('portfolio-grid');
             container.innerHTML = '';
 
             const filteredItems = portfolioItems.filter(item => {
-                return filter === 'all' || item.category === filter;
+                return item.category === filter;
             });
 
             if (filteredItems.length === 0) {
@@ -1617,11 +1680,11 @@
         function filterPortfolio(category) {
             // Update UI
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md', 'active');
                 btn.classList.add('bg-gray-100', 'text-gray-600');
             });
             event.target.classList.remove('bg-gray-100', 'text-gray-600');
-            event.target.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+            event.target.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'active');
 
             // Render
             renderPortfolio(category);
@@ -1700,6 +1763,10 @@
             openModal('portfolioModal');
         }
 
+        function openAboutModal() {
+            openModal('aboutModal');
+        }
+
         // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -1739,12 +1806,12 @@
         // Render Partners
         function renderPartners() {
             const partners = [
-                { name: 'شركة التقنية الحديثة', logo: 'https://placehold.co/200x100/e0e7ff/1e40af?text=Tech+Co' },
-                { name: 'مؤسسة البناء', logo: 'https://placehold.co/200x100/dcfce7/166534?text=Build+Corp' },
+                { name: 'شركة التقنية الحديثة', logo: 'https://tse2.mm.bing.net/th/id/OIP.HnPide3T7HBUZky05pObWwHaE4?w=866&h=571&rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { name: 'مؤسسة البناء', logo: 'https://darb.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.9535ecf2.png&w=256&q=75' },
                 { name: 'مدارس المستقبل', logo: 'https://placehold.co/200x100/fef9c3/854d0e?text=School' },
-                { name: 'مطعم الذواقة', logo: 'https://placehold.co/200x100/fee2e2/991b1b?text=Foodie' },
-                { name: 'عيادات الشفاء', logo: 'https://placehold.co/200x100/f3e8ff/6b21a8?text=Clinic' },
-                { name: 'مكتب المحاماة', logo: 'https://placehold.co/200x100/f3f4f6/1f2937?text=Law+Firm' }
+                { name: 'مطعم الذواقة', logo: 'https://forceflexi.com/wp-content/uploads/2023/12/aaYH6jiH_400x400.jpg' },
+                { name: 'عيادات الشفاء', logo: 'https://cdn.files.salla.network/homepage/2055011317/f4e6c34d-7028-4e91-8f74-5f5b054aafcb.webp' },
+                { name: 'مكتب المحاماة', logo: 'https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/jZyxya/NY9k7atvkOfCmHxp6AS2LLet2H3RZEyzxbXTMIPY.jpg' }
             ];
             
             const container = document.getElementById('partners-grid');
