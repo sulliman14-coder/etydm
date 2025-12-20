@@ -1,1150 +1,642 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="إي تي واي (ETY) - الوكالة السعودية الرائدة في حلول التصميم الجرافيكي، برمجة المواقع والمتاجر الإلكترونية، والتسويق الرقمي. خدمات إبداعية متكاملة موثقة برقم FL-63005888.">
-    <meta name="keywords" content="تصميم شعارات, هوية بصرية, تصميم مواقع, متاجر إلكترونية, تسويق رقمي, إدارة حسابات التواصل, السعودية, جدة, الرياض, موشن جرافيك, SEO">
-    <meta name="author" content="ETY Design & Marketing">
-    <title>إي تي واي | خدمات التصميم والتسويق الرقمي وبرمجة المواقع</title>
-    
-    <!-- Libraries -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4F46E5',
-                        secondary: '#7C3AED',
-                        dark: {
-                            bg: '#0F172A',
-                            surface: '#1E293B',
-                            text: '#F8FAFC'
-                        }
-                    },
-                    fontFamily: {
-                        tajawal: ['Tajawal', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-    
+    <title>ETYDM - Professional Technical Support & Development Services</title>
+    <meta name="description" content="ETYDM provides expert technical support, software development, and IT consulting services. Professional solutions for businesses of all sizes.">
+    <meta name="keywords" content="technical support, software development, IT services, consulting, web development">
     <style>
         * {
-            font-family: 'Tajawal', Arial, sans-serif;
-            -webkit-tap-highlight-color: transparent;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        .dark ::-webkit-scrollbar-track { background: #0F172A; }
-        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #555; }
-
-        /* Navigation Active State */
-        .nav-link.active {
-            color: #4F46E5;
-            font-weight: 800;
-        }
-        .dark .nav-link.active { color: #818CF8; }
-        
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            background-color: currentColor;
-            border-radius: 2px;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            color: #333;
+            background-color: #f5f5f5;
         }
 
-        /* Page Transitions */
-        .page-view {
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hamburger {
             display: none;
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
-        }
-        .page-view.active {
-            display: block;
-            opacity: 1;
+            flex-direction: column;
+            cursor: pointer;
         }
 
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #4c1d95 100%);
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            width: 100%;
+            background: rgba(102, 126, 234, 0.98);
+            flex-direction: column;
+            padding: 2rem;
+            z-index: 99;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.1rem;
+            letter-spacing: 0.3px;
+            line-height: 1.6;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            line-height: 1.9;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            letter-spacing: 0.6px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .services {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            letter-spacing: 0.8px;
+            line-height: 1.4;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
-            transition: all 0.3s ease;
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            line-height: 1.8;
         }
+
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            left: 24px;
-            z-index: 1000;
-            background: #25d366;
+        .service-card h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.3px;
+            line-height: 1.8;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            background: #667eea;
             color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            padding: 0.6rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: 600;
+            letter-spacing: 0.4px;
         }
 
-        .modal-container {
+        .learn-more-btn:hover {
+            background: #764ba2;
+        }
+
+        .modal {
+            display: none;
             position: fixed;
-            top: 0;
+            z-index: 1000;
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
-            z-index: 2000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
         }
-        .modal-container.open { display: flex; }
-        
+
+        .modal.active {
+            display: block;
+        }
+
         .modal-content {
-            border-radius: 16px;
-            max-width: 95%;
-            width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
+            background-color: white;
+            margin: 5% auto;
             padding: 2rem;
-            animation: slideUp 0.3s ease-out;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            line-height: 1.8;
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .modal-content h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            letter-spacing: 0.6px;
+            line-height: 1.4;
         }
 
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 3000;
-            padding: 1rem 1.5rem;
+        .modal-content p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            line-height: 1.8;
+        }
+
+        .sub-services {
+            background: #f5f5f5;
+            padding: 1.5rem;
             border-radius: 8px;
-            color: white;
-            transform: translateX(120%);
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin: 1.5rem 0;
         }
-        .notification.show { transform: translateX(0); }
-        .notification.success { background: #10b981; }
-        .notification.error { background: #ef4444; }
-        
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-        .mobile-menu.open { transform: translateX(0); }
 
-        /* Typography for SEO content */
-        .seo-content h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 1.5rem; color: inherit; }
-        .seo-content h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; margin-top: 2rem; color: inherit; }
-        .seo-content h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; margin-top: 1.5rem; color: inherit; }
-        .seo-content p { line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem; opacity: 0.9; }
-        .seo-content ul { list-style: disc; padding-right: 1.5rem; margin-bottom: 1.5rem; }
-        .seo-content li { margin-bottom: 0.5rem; }
+        .sub-services h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.4px;
+            line-height: 1.5;
+        }
+
+        .sub-services ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sub-services li {
+            padding: 0.8rem 0 0.8rem 1.5rem;
+            position: relative;
+            color: #666;
+            letter-spacing: 0.3px;
+            line-height: 1.7;
+        }
+
+        .sub-services li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .benefits {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .benefits h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.4px;
+            line-height: 1.5;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .benefits li {
+            padding: 0.8rem 0 0.8rem 1.5rem;
+            position: relative;
+            color: #666;
+            letter-spacing: 0.3px;
+            line-height: 1.7;
+        }
+
+        .benefits li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #667eea;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            line-height: 1.8;
+        }
+
+        footer p {
+            letter-spacing: 0.3px;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                background: rgba(102, 126, 234, 0.98);
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                letter-spacing: 0.5px;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                letter-spacing: 0.4px;
+            }
+
+            .services h2 {
+                font-size: 1.8rem;
+                letter-spacing: 0.5px;
+            }
+
+            .service-card h3 {
+                font-size: 1.3rem;
+                letter-spacing: 0.3px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 20% auto;
+            }
+
+            .modal-content h2 {
+                font-size: 1.5rem;
+                letter-spacing: 0.4px;
+            }
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-dark-bg dark:text-dark-text transition-colors duration-300">
-
-    <!-- Notification -->
-    <div id="notification" class="notification"></div>
-
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/966596466303" target="_blank" class="whatsapp-float" title="تواصل معنا عبر واتساب">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
-        </svg>
-    </a>
-
-    <!-- Header & Navigation -->
-    <header class="bg-white/90 dark:bg-dark-surface/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100 dark:border-gray-700 transition-colors duration-300">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3 space-x-reverse cursor-pointer" onclick="navigate('home')">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm?authuser=0" alt="شعار إي تي واي" class="w-12 h-12 object-contain rounded-lg">
-                    <h1 class="text-xl md:text-2xl font-black text-gray-800 dark:text-white tracking-tight">إي تي واي</h1>
-                </div>
-
-                <!-- Desktop Nav & Tools -->
-                <div class="hidden md:flex items-center gap-6">
-                    <nav class="flex items-center space-x-6 space-x-reverse">
-                        <button onclick="navigate('home')" id="nav-home" class="nav-link active relative text-gray-600 dark:text-gray-300 font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2" data-i18n="home">الرئيسية</button>
-                        <button onclick="navigate('services')" id="nav-services" class="nav-link relative text-gray-600 dark:text-gray-300 font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2" data-i18n="services">خدماتنا</button>
-                        <button onclick="navigate('portfolio')" id="nav-portfolio" class="nav-link relative text-gray-600 dark:text-gray-300 font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2" data-i18n="portfolio">أعمالنا</button>
-                        <button onclick="navigate('about')" id="nav-about" class="nav-link relative text-gray-600 dark:text-gray-300 font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2" data-i18n="about">من نحن</button>
-                    </nav>
-                    
-                    <div class="h-6 w-px bg-gray-300 dark:bg-gray-600"></div>
-
-                    <!-- Tools -->
-                    <div class="flex items-center gap-3">
-                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" title="تبديل المظهر">
-                            <span id="theme-icon" class="text-xl">🌙</span>
-                        </button>
-                        <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md border border-gray-300 dark:border-gray-600 text-sm font-bold hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                            <span id="lang-text">EN</span>
-                        </button>
-                        <button onclick="navigate('contact')" id="nav-contact" class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-all font-bold shadow-md hover:shadow-lg text-sm" data-i18n="contact">اطلب خدمة</button>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Toggle -->
-                <div class="md:hidden flex items-center gap-3">
-                    <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-lg">
-                        <span id="theme-icon-mobile">🌙</span>
-                    </button>
-                    <button onclick="toggleMobileMenu()" class="text-gray-700 dark:text-white p-2">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
-                </div>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">ETYDM</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </div>
-
-        <!-- Mobile Menu Sidebar -->
-        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white dark:bg-dark-surface shadow-2xl z-50 md:hidden flex flex-col transition-transform duration-300">
-            <div class="p-6 border-b dark:border-gray-700 flex justify-between items-center">
-                <span class="font-bold text-lg text-gray-800 dark:text-white" data-i18n="menu">القائمة</span>
-                <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-red-500 dark:text-gray-400">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            <nav class="flex-grow p-6 space-y-2">
-                <button onclick="navigate('home'); toggleMobileMenu()" class="w-full text-right px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium" data-i18n="home">الرئيسية</button>
-                <button onclick="navigate('services'); toggleMobileMenu()" class="w-full text-right px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium" data-i18n="services">خدماتنا</button>
-                <button onclick="navigate('portfolio'); toggleMobileMenu()" class="w-full text-right px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium" data-i18n="portfolio">أعمالنا</button>
-                <button onclick="navigate('about'); toggleMobileMenu()" class="w-full text-right px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium" data-i18n="about">من نحن</button>
-                <div class="pt-4 border-t dark:border-gray-700 mt-2">
-                    <button onclick="toggleLanguage(); toggleMobileMenu()" class="w-full text-right px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium flex justify-between items-center">
-                        <span data-i18n="language">اللغة</span>
-                        <span id="lang-text-mobile" class="bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded text-xs">EN</span>
-                    </button>
-                </div>
-                <button onclick="navigate('contact'); toggleMobileMenu()" class="w-full text-right px-4 py-3 rounded-lg bg-indigo-600 text-white font-bold mt-4 shadow-lg" data-i18n="contact">اطلب خدمة</button>
-            </nav>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main id="app-content" class="min-h-screen">
-        
-        <!-- PAGE: HOME -->
-        <div id="page-home" class="page-view active">
-            <!-- Hero Section -->
-            <section class="gradient-bg text-white py-24 relative overflow-hidden">
-                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                <div class="container mx-auto px-4 text-center relative z-10">
-                    <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight" data-i18n="hero_title">شريكك الرقمي الطموح<br><span class="text-indigo-200">إي تي واي للتصميم</span></h1>
-                    <p class="text-lg md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto font-light" data-i18n="hero_desc">نحول الأفكار إلى واقع رقمي ملموس من خلال حلول التصميم، البرمجة، والتسويق الرقمي المبتكرة.</p>
-                    
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <button onclick="navigate('services')" class="px-8 py-4 bg-white text-indigo-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-transform hover:-translate-y-1 shadow-xl" data-i18n="explore_services">
-                            استكشف خدماتنا
-                        </button>
-                        <button onclick="navigate('about')" class="px-8 py-4 bg-indigo-600 border-2 border-indigo-400 text-white rounded-xl font-bold text-lg hover:bg-indigo-700 transition-transform hover:-translate-y-1" data-i18n="know_us">
-                            تعرف علينا
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Featured Services Preview (New) -->
-            <section class="py-20 bg-white dark:bg-dark-bg transition-colors duration-300">
-                <div class="container mx-auto px-4">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="featured_services">أبرز خدماتنا</h2>
-                        <p class="text-gray-600 dark:text-gray-300" data-i18n="featured_services_desc">نقدم حلولاً متكاملة لتنمية نشاطك التجاري</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="home-services-preview">
-                        <!-- Filled by JS (First 6 services) -->
-                    </div>
-
-                    <div class="text-center mt-12">
-                        <button onclick="navigate('services')" class="px-8 py-3 border-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 dark:border-indigo-400 rounded-full font-bold hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-400 dark:hover:text-gray-900 transition-all" data-i18n="view_all_services">
-                            عرض جميع الخدمات
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Portfolio Banner (New) -->
-            <section class="py-24 relative bg-fixed bg-cover bg-center overflow-hidden group cursor-pointer" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');" onclick="navigate('portfolio')">
-                <div class="absolute inset-0 bg-indigo-900/80 group-hover:bg-indigo-900/70 transition-colors duration-500"></div>
-                <div class="container mx-auto px-4 relative z-10 text-center">
-                    <h2 class="text-4xl md:text-6xl font-black text-white mb-6 transform group-hover:scale-105 transition-transform duration-500" data-i18n="portfolio_banner_title">إبداعاتنا تتحدث</h2>
-                    <p class="text-xl text-indigo-100 max-w-2xl mx-auto mb-10" data-i18n="portfolio_banner_desc">تصفح معرض أعمالنا واكتشف كيف ساعدنا الشركات في تحقيق أهدافها من خلال التصميم والتقنية.</p>
-                    <button class="px-8 py-4 bg-white text-indigo-900 rounded-full font-bold shadow-lg hover:shadow-2xl hover:bg-indigo-50 transition-all flex items-center gap-2 mx-auto">
-                        <span data-i18n="view_portfolio">شاهد الأعمال</span>
-                        <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </button>
-                </div>
-            </section>
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Professional Technical Solutions</h1>
+            <p>Expert Support, Development & Consulting Services for Your Business Growth</p>
+            <a href="#services" class="cta-button">Explore Services</a>
         </div>
+    </section>
 
-        <!-- PAGE: SERVICES (Full List) -->
-        <div id="page-services" class="page-view">
-            <section class="bg-gray-900 text-white py-20">
-                <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="services_page_title">خدماتنا الاحترافية</h1>
-                    <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="services_page_desc">نقدم باقة متكاملة من الحلول الرقمية المصممة خصيصاً لتنمية أعمالك.</p>
-                </div>
-            </section>
-
-            <section class="py-16 bg-white dark:bg-dark-bg transition-colors duration-300">
-                <div class="container mx-auto px-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid-container">
-                        <!-- Services populated by JS -->
-                    </div>
-                </div>
-            </section>
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid" id="servicesGrid"></div>
         </div>
+    </section>
 
-        <!-- PAGE: SERVICE DETAILS (New Separate Page View) -->
-        <div id="page-service-detail" class="page-view">
-            <div id="service-detail-content">
-                <!-- Content Injected by JS -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            
+            <div class="sub-services" id="subServicesContainer">
+                <h4>Service Methods & Offerings</h4>
+                <ul id="subServicesList"></ul>
+            </div>
+
+            <div class="benefits" id="benefitsContainer">
+                <h4>Key Benefits</h4>
+                <ul id="benefitsList"></ul>
             </div>
         </div>
+    </div>
 
-        <!-- PAGE: PORTFOLIO -->
-        <div id="page-portfolio" class="page-view">
-            <section class="bg-gray-900 text-white py-20">
-                <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="portfolio_page_title">معرض الأعمال</h1>
-                    <p class="text-xl text-gray-300" data-i18n="portfolio_page_desc">قصص نجاح سطرناها مع عملائنا.. كن التالي!</p>
-                </div>
-            </section>
-
-            <section class="py-16 bg-gray-50 dark:bg-dark-bg transition-colors duration-300">
-                <div class="container mx-auto px-4">
-                    <!-- Filters -->
-                    <div class="flex justify-center mb-10 overflow-x-auto pb-4">
-                        <div class="flex space-x-2 space-x-reverse bg-white dark:bg-dark-surface p-2 rounded-full shadow-sm">
-                            <button onclick="filterPortfolio('profile')" class="filter-btn active px-6 py-2 rounded-full text-sm font-bold transition-all bg-indigo-600 text-white shadow-md">بروفايل شركات</button>
-                            <button onclick="filterPortfolio('web')" class="filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">مواقع ومتاجر</button>
-                            <button onclick="filterPortfolio('menu')" class="filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">منيو إلكتروني</button>
-                            <button onclick="filterPortfolio('misc')" class="filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">أعمال متنوعة</button>
-                        </div>
-                    </div>
-
-                    <!-- Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-                        <!-- Content via JS -->
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- PAGE: ABOUT -->
-        <div id="page-about" class="page-view">
-            <section class="bg-gray-900 text-white py-20">
-                <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="about_page_title">من نحن</h1>
-                    <p class="text-xl text-gray-300" data-i18n="about_page_desc">أكثر من مجرد وكالة دعاية وإعلان.. نحن مستشاروك الرقميون.</p>
-                </div>
-            </section>
-
-            <section class="py-16 bg-white dark:bg-dark-bg transition-colors duration-300">
-                <div class="container mx-auto px-4 max-w-6xl">
-                    <!-- Adjusted Layout: Text Right, Image Left -->
-                    <div class="flex flex-col-reverse lg:flex-row gap-12 items-center mb-16">
-                        <div class="lg:w-1/2">
-                            <div class="relative">
-                                <div class="absolute inset-0 bg-indigo-600 rounded-2xl transform rotate-3 opacity-20"></div>
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="فريق العمل" class="relative rounded-2xl shadow-2xl w-full h-auto object-cover transform -rotate-2 hover:rotate-0 transition-transform duration-500">
-                            </div>
-                        </div>
-                        <div class="lg:w-1/2 prose dark:prose-invert">
-                            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">إي تي واي للتصميم والتسويق</h2>
-                            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                                تأسست إي تي واي لتكون المظلة التي تجمع الإبداع الفني بالخبرة التقنية. نحن فريق شغوف من المصممين، المبرمجين، والمسوقين السعوديين، نهدف لتمكين الشركات الناشئة والمتوسطة من الظهور بشكل احترافي ينافس كبرى العلامات التجارية.
-                            </p>
-                            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                                نفخر بكوننا مؤسسة سعودية رسمية مسجلة وموثقة، مما يمنح عملاءنا الثقة والأمان في التعامل والتعاقد.
-                            </p>
-                            
-                            <div class="bg-gray-50 dark:bg-dark-surface border-r-4 border-indigo-600 p-6 rounded-lg">
-                                <h3 class="font-bold text-gray-800 dark:text-white mb-2">بيانات التوثيق الرسمي</h3>
-                                <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                                    <li class="flex items-center gap-2">
-                                        <span class="text-indigo-600">✓</span>
-                                        <strong>وثيقة العمل الحر:</strong> <span class="font-mono">FL-63005888</span>
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <span class="text-indigo-600">✓</span>
-                                        <strong>رقم التوثيق (المركز السعودي للأعمال):</strong> <span class="font-mono">0000162606</span>
-                                    </li>
-                                </ul>
-                                <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" class="mt-4 h-12 p-2 bg-gray-800 rounded" alt="SBC Logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- PAGE: CONTACT -->
-        <div id="page-contact" class="page-view">
-            <section class="bg-gray-900 text-white py-20">
-                <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="contact_page_title">اطلب خدمتك الآن</h1>
-                    <p class="text-xl text-gray-300" data-i18n="contact_page_desc">جاهزون لبدء رحلة النجاح معك. اختر خدماتك وتواصل معنا.</p>
-                </div>
-            </section>
-
-            <section class="py-16 bg-white dark:bg-dark-bg transition-colors duration-300">
-                <div class="container mx-auto px-4">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <!-- Services Selection Form -->
-                        <div class="bg-gray-50 dark:bg-dark-surface p-8 rounded-2xl border border-gray-200 dark:border-gray-700">
-                            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">حدد اهتماماتك للحصول على عرض سعر</h2>
-                            <div class="space-y-4" id="request-form-services">
-                                <!-- Checkboxes via JS -->
-                            </div>
-                            
-                            <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-                                <label class="block text-gray-700 dark:text-gray-300 font-bold mb-2">ملاحظات إضافية (اختياري)</label>
-                                <textarea id="request-notes" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-dark-bg dark:text-white focus:border-indigo-500 focus:outline-none h-24" placeholder="أخبرنا المزيد عن مشروعك..."></textarea>
-                                
-                                <button onclick="sendRequestToWhatsApp()" class="w-full mt-4 bg-green-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors shadow-lg flex items-center justify-center gap-3">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg>
-                                    <span>إرسال الطلب عبر واتساب</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Contact Details -->
-                        <div class="space-y-8">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">قنوات التواصل</h3>
-                                <div class="bg-white dark:bg-dark-surface p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 space-y-4">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold">📞</div>
-                                        <div>
-                                            <p class="text-sm text-gray-500 dark:text-gray-400">الجوال / واتساب</p>
-                                            <p class="font-bold text-gray-800 dark:text-white" dir="ltr">+966 59 646 6303</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold">✉️</div>
-                                        <div>
-                                            <p class="text-sm text-gray-500 dark:text-gray-400">البريد الإلكتروني</p>
-                                            <p class="font-bold text-gray-800 dark:text-white">info@etydm.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold">📍</div>
-                                        <div>
-                                            <p class="text-sm text-gray-500 dark:text-gray-400">المقر</p>
-                                            <p class="font-bold text-gray-800 dark:text-white">المملكة العربية السعودية</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Global Partners Section (Visible in all pages logic handled via footer placement) -->
-        <section class="py-16 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8" data-i18n="partners_title">شركاء النجاح</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6" id="global-partners-grid">
-                    <!-- Partners via JS -->
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-right mb-12">
-                <div>
-                    <h4 class="text-2xl font-bold mb-4 text-white">إي تي واي</h4>
-                    <p class="text-gray-400 leading-relaxed mb-6">نصنع الفارق في تواجدك الرقمي من خلال استراتيجيات مدروسة وتصاميم مبتكرة.</p>
-                    <div class="bg-gray-800 p-4 rounded-lg inline-block text-right">
-                        <p class="text-xs text-gray-400 mb-2">موثق لدى المركز السعودي للأعمال</p>
-                        <div class="flex items-center gap-3">
-                            <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="SBC" class="h-8">
-                            <div class="text-xs text-gray-300">
-                                <div>رقم الوثيقة: FL-63005888</div>
-                                <div>رقم التوثيق: 0000162606</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4 text-indigo-400">الوصول السريع</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><button onclick="navigate('services')" class="hover:text-white transition-colors">خدماتنا</button></li>
-                        <li><button onclick="navigate('portfolio')" class="hover:text-white transition-colors">معرض الأعمال</button></li>
-                        <li><button onclick="navigate('about')" class="hover:text-white transition-colors">عن الشركة</button></li>
-                        <li><button onclick="navigate('contact')" class="hover:text-white transition-colors">اطلب عرض سعر</button></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4 text-indigo-400">تواصل معنا</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-center justify-center md:justify-start gap-2">
-                            <span>📞</span> <span dir="ltr">+966 59 646 6303</span>
-                        </li>
-                        <li class="flex items-center justify-center md:justify-start gap-2">
-                            <span>📧</span> <span>info@etydm.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>© 2025 إي تي واي للتصميم والتسويق. جميع الحقوق محفوظة.</p>
-            </div>
+    <footer id="contact">
+        <div class="container">
+            <h3 style="letter-spacing: 0.5px; line-height: 1.6;">Contact Us</h3>
+            <p>Email: info@etydm.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>&copy; 2024 ETYDM. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Service Selection Modal (For Single Service Request) -->
-    <div id="serviceModal" class="modal-container" onclick="closeModal('serviceModal')">
-        <div class="modal-content bg-white dark:bg-dark-surface" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white">طلب خدمة</h2>
-                <button onclick="closeModal('serviceModal')" class="text-gray-500 hover:text-gray-700 dark:text-gray-400">✕</button>
-            </div>
-            <div class="text-center">
-                <h3 id="modalServiceName" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-4"></h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">هل تود الاستفسار عن هذه الخدمة أو طلب عرض سعر لها؟</p>
-                <button onclick="sendSingleServiceRequest()" class="bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-700 transition-colors flex items-center justify-center gap-2 w-full">
-                    <span>تواصل عبر واتساب</span>
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Details Modal -->
-    <div id="portfolioModal" class="modal-container" onclick="closeModal('portfolioModal')">
-        <div class="modal-content bg-white dark:bg-dark-surface max-w-5xl" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-start mb-4">
-                <div>
-                    <span id="modalProjectCategory" class="text-sm font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/50 px-3 py-1 rounded-full mb-2 inline-block"></span>
-                    <h2 id="modalProjectTitle" class="text-3xl font-bold text-gray-800 dark:text-white"></h2>
-                </div>
-                <button onclick="closeModal('portfolioModal')" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 p-2 rounded-full">✕</button>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div id="modalMediaContainer" class="lg:col-span-2 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-dark-bg min-h-[300px] flex items-center justify-center relative"></div>
-                
-                <div class="space-y-6 lg:col-span-1">
-                    <div>
-                        <h3 class="font-bold text-gray-700 dark:text-gray-200 mb-2">عن المشروع</h3>
-                        <p id="modalProjectDesc" class="text-gray-600 dark:text-gray-400 leading-relaxed"></p>
-                    </div>
-                    
-                    <div class="bg-gray-50 dark:bg-dark-bg p-4 rounded-lg">
-                        <h3 class="font-bold text-gray-700 dark:text-gray-200 mb-2">الخدمات المنفذة</h3>
-                        <div id="modalProjectTags" class="flex flex-wrap gap-2"></div>
-                    </div>
-                    
-                    <div class="space-y-3">
-                         <div id="pdfDownloadBtnContainer" class="hidden">
-                            <a id="pdfDownloadLink" href="#" target="_blank" class="w-full bg-gray-800 dark:bg-gray-700 text-white py-2 rounded-lg font-bold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
-                                <span>عرض الملف (PDF)</span>
-                            </a>
-                        </div>
-                        <div id="websiteBtnContainer" class="hidden">
-                            <a id="websiteLink" href="#" target="_blank" class="w-full bg-green-600 text-white py-2 rounded-lg font-bold hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
-                                <span id="websiteBtnText">زيارة الموقع</span>
-                            </a>
-                        </div>
-                        <button onclick="closeModal('portfolioModal'); navigate('contact');" class="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 transition-colors shadow-lg flex items-center justify-center gap-2">
-                            <span>اطلب مشروع مشابه</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // --- Data Models (Expanded for SEO & Details) ---
-        const servicesData = {
-            profile: {
-                name: 'تصميم الملفات التعريفية (Company Profile)',
-                desc: 'واجهتك الأولى أمام العملاء. تصميم وكتابة محتوى احترافي.',
-                longDescription: `
-                    <div class="seo-content">
-                        <h1>خدمة تصميم بروفايل الشركات (Company Profile)</h1>
-                        <p>يعد الملف التعريفي للشركة (Company Profile) هو الانطباع الأول والأهم الذي تتركه لدى عملائك وشركائك المحتملين. في إي تي واي، نقدم خدمة شاملة تتجاوز مجرد التصميم الجرافيكي لتشمل صياغة القصة الكاملة لعلامتك التجارية.</p>
-                        
-                        <h2>ماذا تشمل الخدمة؟</h2>
-                        <ul>
-                            <li><strong>كتابة المحتوى الإبداعي (Copywriting):</strong> صياغة "من نحن"، "الرؤية والرسالة"، و"الأهداف" بأسلوب تسويقي رصين وجذاب باللغتين العربية والإنجليزية.</li>
-                            <li><strong>التصميم الفني الاحترافي:</strong> استخدام أحدث اتجاهات التصميم العالمية لإنتاج ملف يتناسب مع هويتك البصرية ويعكس احترافيتك.</li>
-                            <li><strong>الإنفوجرافيك والرسوم البيانية:</strong> تحويل الأرقام والإحصائيات الجامدة إلى رسومات بصرية سهلة الفهم توضح حجم إنجازاتك ونموك.</li>
-                            <li><strong>تنسيقات متعددة:</strong> تسليم الملف بصيغ جاهزة للطباعة (Print Ready) وصيغ تفاعلية (Interactive PDF) للمشاركة الرقمية عبر واتساب والبريد الإلكتروني.</li>
-                        </ul>
-
-                        <h3>لماذا تحتاج إلى بروفايل احترافي؟</h3>
-                        <p>البروفايل القوي يعزز الثقة، ويسهل دخولك في المناقصات الحكومية والخاصة، ويعطي ثقلاً لعلامتك التجارية في الاجتماعات والمعارض الدولية.</p>
-                    </div>
-                `,
-                items: ['تصميم بروفايل تفاعلي', 'كتابة محتوى تعريفي', 'ترجمة احترافية', 'تصميم إنفوجرافيك']
-            },
-            websites: {
-                name: 'تصميم وبرمجة المواقع والمتاجر',
-                desc: 'مواقع سريعة وآمنة متوافقة مع محركات البحث (SEO).',
-                longDescription: `
-                    <div class="seo-content">
-                        <h1>تصميم وبرمجة المواقع والمتاجر الإلكترونية</h1>
-                        <p>في العصر الرقمي، موقعك الإلكتروني هو مقرك الدائم المفتوح 24 ساعة. نحن متخصصون في بناء تجارب رقمية متكاملة تركز على سرعة الأداء، سهولة الاستخدام (UX)، وجمالية الواجهة (UI).</p>
-                        
-                        <h2>خدماتنا في الويب:</h2>
-                        <ul>
-                            <li><strong>المواقع التعريفية (Corporate Websites):</strong> مواقع لعرض خدمات الشركات والمؤسسات، مصممة لتعزيز المصداقية وجذب العملاء المحتملين.</li>
-                            <li><strong>المتاجر الإلكترونية (E-commerce):</strong> بناء متاجر متكاملة على منصات مثل سلة، زد، أو برمجة خاصة (WooCommerce/Shopify) مع ربط بوابات الدفع والشحن.</li>
-                            <li><strong>صفحات الهبوط (Landing Pages):</strong> صفحات مخصصة للحملات الإعلانية مصممة لتحقيق أعلى معدلات تحويل (Conversion Rate).</li>
-                        </ul>
-
-                        <h3>التقنيات ومعايير الجودة</h3>
-                        <p>نحرص على أن يكون الموقع متجاوباً (Responsive) مع جميع أحجام الشاشات، وسريع التحميل لضمان تجربة مستخدم ممتازة وتصدر نتائج البحث في جوجل (SEO Friendly).</p>
-                    </div>
-                `,
-                items: ['مواقع تعريفية', 'متاجر إلكترونية', 'صفحات هبوط', 'تحسين SEO', 'حجز النطاق والاستضافة']
-            },
-            identity: {
-                name: 'تصميم الهوية البصرية (Branding)',
-                desc: 'بناء علامة تجارية تخلد في الأذهان.',
-                longDescription: `
-                    <div class="seo-content">
-                        <h1>تصميم الهوية البصرية والعلامات التجارية</h1>
-                        <p>الهوية البصرية ليست مجرد شعار، بل هي الروح التي تميز مشروعك عن المنافسين. نحن نساعدك في بناء هوية بصرية متكاملة تحكي قصة نجاحك وتخلق رابطاً عاطفياً مع عملائك.</p>
-                        
-                        <h2>مكونات باقة الهوية:</h2>
-                        <ul>
-                            <li><strong>تصميم الشعار (Logo):</strong> ابتكار شعار أصلي ومميز يعكس قيم النشاط وفلسفته.</li>
-                            <li><strong>دليل الهوية (Brand Guidelines):</strong> ملف يوضح كيفية استخدام الشعار، الألوان المعتمدة، وأنواع الخطوط لضمان التناسق في كل مكان.</li>
-                            <li><strong>المطبوعات المكتبية:</strong> تصميم كروت العمل (Business Cards)، الأوراق الرسمية (Letterhead)، الأظرف، والفواتير.</li>
-                            <li><strong>قوالب التواصل الاجتماعي:</strong> تصميم قوالب جاهزة لمنشورات انستقرام وتويتر تتناسب مع الهوية الجديدة.</li>
-                        </ul>
-                    </div>
-                `,
-                items: ['تصميم الشعار', 'دليل الهوية', 'المطبوعات', 'واجهات التواصل']
-            },
-            marketing: {
-                name: 'التسويق الرقمي وإدارة التواصل',
-                desc: 'استراتيجيات مدروسة للوصول لجمهورك المستهدف.',
-                longDescription: `
-                    <div class="seo-content">
-                        <h1>التسويق الرقمي وإدارة حسابات التواصل</h1>
-                        <p>الوصول للعميل الصحيح في الوقت المناسب هو مفتاح النجاح. نقدم حلول تسويقية مبنية على البيانات والتحليلات لضمان تحقيق أفضل عائد على الاستثمار (ROI).</p>
-                        
-                        <h2>خدماتنا التسويقية:</h2>
-                        <ul>
-                            <li><strong>إدارة حسابات التواصل الاجتماعي:</strong> تخطيط وجدولة ونشر المحتوى، والرد على العملاء لزيادة التفاعل والولاء.</li>
-                            <li><strong>الإعلانات الممولة (Paid Ads):</strong> إدارة حملات إعلانية دقيقة الاستهداف على منصات (Google Ads, Snapchat, Instagram, TikTok).</li>
-                            <li><strong>كتابة المحتوى الإبداعي:</strong> صياغة نصوص إعلانية وتغريدات تجذب الانتباه وتحفز على اتخاذ إجراء.</li>
-                            <li><strong>تحسين محركات البحث (SEO):</strong> استراتيجيات طويلة المدى لرفع ترتيب موقعك في نتائج البحث العضوية.</li>
-                        </ul>
-                    </div>
-                `,
-                items: ['إدارة الحسابات', 'حملات ممولة', 'كتابة محتوى', 'خطط تسويقية']
-            },
-            menu: {
-                name: 'تصميم المنيو (الرقمي والورقي)',
-                desc: 'قوائم طعام تفتح الشهية وتزيد المبيعات.',
-                longDescription: `
-                    <div class="seo-content">
-                        <h1>تصميم المنيو الرقمي والورقي للمطاعم</h1>
-                        <p>قائمة الطعام هي أهم أداة بيع داخل مطعمك. نصمم قوائم تجمع بين الجمالية وعلم النفس الهندسي للقوائم (Menu Engineering) لزيادة متوسط قيمة الفاتورة.</p>
-                        
-                        <h2>أنواع المنيو:</h2>
-                        <ul>
-                            <li><strong>المنيو الإلكتروني (QR Code):</strong> منيو ذكي تفاعلي يتيح للعميل تصفح الصور والأسعار والطلب مباشرة عبر الجوال، مع سهولة التعديل والتحديث.</li>
-                            <li><strong>المنيو الورقي والكتيبات:</strong> تصاميم فاخرة للطباعة تناسب هوية المطعم وتجربة تناول الطعام الداخلي.</li>
-                            <li><strong>لوحات المنيو (Menu Boards):</strong> تصاميم واضحة وجذابة لشاشات العرض خلف الكاشير في مطاعم الوجبات السريعة والمقاهي.</li>
-                        </ul>
-                    </div>
-                `,
-                items: ['منيو باركود', 'منيو ورقي', 'تصوير أطباق', 'تحديث الأسعار']
-            },
-            misc: {
-                name: 'خدمات التصميم المتنوعة',
-                desc: 'موشن جرافيك، مونتاج، وعروض تقديمية.',
-                longDescription: `
-                    <div class="seo-content">
-                        <h1>خدمات التصميم المتنوعة والموشن جرافيك</h1>
-                        <p>نقدم مجموعة واسعة من الخدمات الإبداعية المساندة التي تغطي كافة احتياجاتك التسويقية والإدارية.</p>
-                        
-                        <h2>تشمل خدماتنا:</h2>
-                        <ul>
-                            <li><strong>الموشن جرافيك (Motion Graphics):</strong> فيديوهات رسومية متحركة تشرح فكرة مشروعك أو تطبيقك في ثوانٍ معدودة بأسلوب شيق.</li>
-                            <li><strong>تصميم العروض التقديمية (PowerPoint):</strong> تصميم عروض احترافية للمستثمرين والاجتماعات تعكس قوة شركتك.</li>
-                            <li><strong>تصميم التغليف والعبوات (Packaging):</strong> تصاميم أغلفة منتجات تجذب العين على الرف وتعزز قيمة المنتج.</li>
-                        </ul>
-                    </div>
-                `,
-                items: ['عروض تقديمية', 'موشن جرافيك', 'مونتاج فيديو', 'تصميم تغليف']
-            }
-        };
-
-        const portfolioItems = [
-            // Data remains same as before, preserving links and structure
+        // Enhanced service data with SEO content, sub-services, and benefits
+        const services = [
             {
                 id: 1,
-                title: 'تقرير سنوي جمعية مسارات',
-                category: 'profile',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczNauihJ3rzmKIViFZZfKpNXpMOYSI2FlNi2w_Exg0fvKJdZccw-rzDtnhgM5XdKNiAmlEnLxGB8VqX0sPaYfvhTvalp0MxDNN_iLQ3__7uNjVJRjC9dH7--ILcPkyqyfL5hjfFGrV1MHErqiMopMnF8zQ=w1600-h900-s-no-gm?authuser=0',
-                pdfUrl: 'https://drive.google.com/file/d/1pqzZyR0DFSz4jurKM8hZvyrdoX76uXho/view?usp=sharing',
-                desc: 'تصميم وتحليل بيانات جمعية مسارات ، شمل 20 صفحة مع إنفوجرافيك للإنجازات.',
-                tags: ['تصميم تقرير سنوي', 'كتابة محتوى', 'إنفوجرافيك']
+                title: "Technical Support",
+                shortDescription: "24/7 reliable IT support for your business needs",
+                longDescription: "Comprehensive technical support services designed to keep your systems running smoothly. Our expert team provides immediate assistance for all your IT issues, ensuring minimal downtime and maximum productivity. We specialize in troubleshooting, system maintenance, and preventive solutions.",
+                subServices: [
+                    "24/7 Help Desk Support",
+                    "Remote & On-Site Assistance",
+                    "Hardware Troubleshooting",
+                    "Software Issue Resolution",
+                    "Network Connectivity Support",
+                    "System Performance Optimization",
+                    "Emergency Technical Response",
+                    "Documentation & Knowledge Base"
+                ],
+                benefits: [
+                    "Reduced system downtime and faster issue resolution",
+                    "Proactive monitoring prevents costly problems",
+                    "Expert technicians available around the clock",
+                    "Cost-effective solutions tailored to your business",
+                    "Improved employee productivity and satisfaction",
+                    "Enhanced system security and reliability"
+                ]
             },
             {
                 id: 2,
-                title: 'تصميم بروفايل إعمار المساند للتشغيل والصيانة ',
-                category: 'profile',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczODDifOmTd2U5ZiWhPmOCoZWPmBDFZ68x_a48FnUXr_tAo9OQABVD7KULrh9m4DUT6vcsUmObRSBUcYtML2w8wOQZhvEfdHkHBY_UY8e6WmrLnRi0YfjUGiQcMEIAX4CA5g3whidY6FE9aIMo7Ehi_7Hw=w1600-h900-s-no-gm?authuser=0',
-                pdfUrl: 'https://drive.google.com/file/d/1yRSAzCj1ziBvea6frrr3yEzt0TiOVl14/view?usp=sharing',
-                desc: 'تصميم عصري وجذاب لملف تعريفي لشركة إعمار المساند للتشغيل والصيانة، باللغتين العربية والإنجليزية.',
-                tags: ['ثنائي اللغة', 'تصميم عصري']
+                title: "Software Development",
+                shortDescription: "Custom solutions built for your unique requirements",
+                longDescription: "Professional software development services creating robust, scalable applications tailored to your business objectives. From concept to deployment, our experienced developers deliver high-quality solutions using modern technologies and best practices. We focus on innovation, performance, and user experience.",
+                subServices: [
+                    "Custom Web Applications",
+                    "Mobile App Development (iOS & Android)",
+                    "E-Commerce Solutions",
+                    "Enterprise Software Systems",
+                    "API Development & Integration",
+                    "Cloud Application Services",
+                    "Progressive Web Apps (PWAs)",
+                    "Legacy System Modernization"
+                ],
+                benefits: [
+                    "Scalable solutions that grow with your business",
+                    "Improved operational efficiency",
+                    "Enhanced customer engagement and experience",
+                    "Competitive advantage through innovation",
+                    "Reduced time-to-market for new products",
+                    "Full technical support and maintenance included"
+                ]
             },
             {
                 id: 3,
-                title: 'بروفايل أوفى المتحدة للتطوير العقاري',
-                category: 'profile',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczMKO-sLBfjhr4QH6TpRmCOsyxeQg6WXhbtslJkcq2VhjEtugMY9kBpYj1vd4SkI2dcTKYKNPz_fu-N1zsFzRNmYaSUPLRNb8OawEqbdhD3cML7X1C84kMDsJkNjcTLUa6ViJwBH418Y7P2pc1XtenQY7g=w1600-h900-s-no-gm?authuser=0',
-                pdfUrl: 'https://drive.google.com/file/d/1WtE4hxw5uCRaewI-PY0Lc09ftEYyg9yb/view?usp=sharing',
-                desc: 'تصميم بروفايل شركة أوفى للتطوير العقاري.',
-                tags: ['بروفايل تفاعلي', 'PDF ذكي']
+                title: "IT Consulting",
+                shortDescription: "Strategic guidance for your technology roadmap",
+                longDescription: "Strategic IT consulting services helping organizations optimize their technology infrastructure and digital transformation initiatives. Our consultants provide expert advice on system architecture, security strategies, cloud migration, and technology investment planning to align with your business goals.",
+                subServices: [
+                    "Technology Strategy Planning",
+                    "Digital Transformation Roadmaps",
+                    "Cloud Migration Consulting",
+                    "Security & Compliance Assessment",
+                    "Infrastructure Planning & Design",
+                    "Vendor Selection & Evaluation",
+                    "Cost Optimization Analysis",
+                    "Business Continuity Planning"
+                ],
+                benefits: [
+                    "Optimized technology spending and ROI",
+                    "Reduced security risks and compliance issues",
+                    "Improved system performance and reliability",
+                    "Faster implementation of new technologies",
+                    "Aligned technology with business objectives",
+                    "Experienced guidance from industry experts"
+                ]
             },
             {
                 id: 4,
-                title: 'بروفايل شركة مناسيب للمقاولات العامة',
-                category: 'profile',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczP6xIIBz_XslAKDgMSu3dL5bg7ZzKynCITweZ6EDjrGHyKVwgjjJRunrB0iQNXkAogz8r7VbKxRIMoCA1XaMjogiBErAyb2EQjWN7pU4QE1wtT0qhdI7XqmxDISEHYGKoHlrNFiAVLTcc0_YNS5_a7meg=w1600-h900-s-no-gm?authuser=0',
-                pdfUrl: 'https://drive.google.com/file/d/1M_p9rMNkSb3HJnSjio0R5pt2dmGlElda/view?usp=sharing',
-                desc: 'تصميم وإخراج فني لكتيب تعريفي ببرامج جمعية خيرية، بأسلوب إنساني ومؤثر.',
-                tags: ['قطاع غير ربحي', 'تصميم إبداعي']
-            },
-            {
-                id: 5,
-                title: 'تصميم متجر سكون',
-                category: 'web',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczNvrripjkyLcL9ETLKpewyeSNlYcq6Yu4_Xq0Aj1oA5HAyRpwjVbvmw4fakmEI-GmSEPWkVk8MEbTb86oxR2S9EnlK95Deiz3Gsz-bnpL539E7P0YTPbRdkj7vjkGNqhFjXnvXjXQ-0Gizcm6ymRdyB9w=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://skoon-care.com/',
-                desc: 'تصميم متجر سكون الإلكتروني للعناية بالعين مع تحسين واجهة المستخدم وتجربة المستخدم.',
-                tags: ['متجر إلكتروني', 'UI/UX']
-            },
-            {
-                id: 6,
-                title: 'متحر رواد الإعمار الكبرى',
-                category: 'web',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczNYJ5IEGNT-V1W9HcnMxx2UAo8ySBpDsOPCe7vEGCXi_24NA2JXRlrVDNsCGbfeihiBikGquaKpmIlzgFkQI7IszubHIcDL-v9DBWueoWSaTvO53fK7F1wJSM3HhPCUECGmFPUeRjjsUqWw-S-yrOIMiA=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://r-w-d.com/',
-                desc: 'متجر رواد الإعمار الكبرى لمنتجات مواد البناء المواد الصحية.',
-                tags: ['مواد صحية', 'مواد بناء']
-            },
-            {
-                id: 7,
-                title: 'متجر عسل صبوح',
-                category: 'web',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczMFVYyTENVYl7Oh5FSB0Aud4J1GszEdpwMsSuYe0Imdt60l4i1i_hXv6gwe6z_fvxJ0F9achQs4vmbrN9VER_PsLddJqMd36HHpIBOsw0rT8BxTDYP27Pfq_zWXCXHmOggwm6X_q6uvBCMbBkB-bFEDjg=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://sabo7.com/',
-                desc: 'متجر عسل صبوح لبيع منتجات العسل.',
-                tags: ['منصة سلة', 'تجربة مستخدم']
-            },
-            {
-                id: 8,
-                title: 'موقع شركة مرونة القوة',
-                category: 'web',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczNI_aLCI7Og6Z5ytngzUJ3kyzpsEXz9DfnXw3hZEAQbWehUTrTk8viwjbUkkJ_7roGG3luLAsMwyOxG_urSpUGgyqmR0U-a5ZWLXFlBSOajV3ztEe0B6JhkWpDQBqDZsGUOBHQ8-mXwKcwPU9Z1_Ty51A=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://forceflexi.com/',
-                desc: 'موقع تعريفي لشركة مرونة القوة للخدمات اللوجيستية.',
-                tags: ['ووردبريس', 'تصميم شركات']
-            },
-            {
-                id: 9,
-                title: 'منيو كوفي هاوس إلكتروني',
-                category: 'menu',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczNJEJKfX_lY4KAiUT01SskmTdOVRgUQ_7nT5KiXuIqhztQ_t4SwGv2iyXmWinfSvBJvLOSrnKD2Db5mPiQ_YcuBO-CSrATswGhWuXkueAogE73_mpuwx0uapfUoP4Bj72vK4yEBRMktYImSsoNS6vnScA=w1600-h900-s-no-gm?authuser=0',
-                websiteUrl: 'https://kozicoffe.netlify.app/',
-                desc: 'تصميم منيو إلكتروني مع لوحة تحكم خاصة للأسعار والصور.',
-                tags: ['منيو إلكتروني', 'لوحة تحكم']
-            },
-            {
-                id: 10,
-                title: 'منيو برقر لارنج',
-                category: 'menu',
-                image: 'https://lh3.googleusercontent.com/pw/AP1GczMbchnu_khD5Vl3adbRmMWEypeycE_ktlbhO--YLYT7-Yns64Mnt5BqRjQ6fe7ObLbnL55WLmxkCC9Lz6BTogQMyPgTpUXuzFs4CN4won1ZdqT81k8w1wYBivgpVgZCr9x6WIBiLGAmYAJJUP8ztk7OsQ=w686-h314-s-no-gm?authuser=0',
-                websiteUrl: 'https://drive.google.com/file/d/1rhfeoIhgj7lN525jv4IUIjNfT5yrxmU5/view?usp=sharing',
-                desc: 'كتيب منيو لارنج برجر بتصميم كلاسيكي جذاب.',
-                tags: ['منيو ورقي', 'PDF']
+                title: "Cybersecurity",
+                shortDescription: "Protect your business with advanced security solutions",
+                longDescription: "Comprehensive cybersecurity services protecting your organization from threats and vulnerabilities. We implement multi-layered security strategies including threat detection, vulnerability assessment, incident response, and employee training to safeguard your critical assets and data.",
+                subServices: [
+                    "Security Audits & Assessments",
+                    "Vulnerability Testing & Scanning",
+                    "Penetration Testing Services",
+                    "Firewall & Network Security",
+                    "Data Encryption Solutions",
+                    "Incident Response & Recovery",
+                    "Security Awareness Training",
+                    "Compliance & Regulatory Support"
+                ],
+                benefits: [
+                    "Protection against evolving cyber threats",
+                    "Compliance with industry regulations",
+                    "Early threat detection and prevention",
+                    "Reduced breach costs and data loss",
+                    "Enhanced customer trust and confidence",
+                    "Continuous security monitoring and updates"
+                ]
             }
         ];
 
-        let selectedServiceForModal = null;
-        let isDarkMode = localStorage.getItem('theme') === 'dark';
-        let currentLang = 'ar';
+        // DOM elements
+        const servicesGrid = document.getElementById('servicesGrid');
+        const modal = document.getElementById('serviceModal');
+        const closeBtn = document.getElementById('closeBtn');
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-        // --- Core Application Logic (SPA Router) ---
-        function navigate(pageId, params = null) {
-            // Hide all pages
-            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
-            
-            // Highlight nav if exists
-            const navBtn = document.getElementById(`nav-${pageId}`);
-            if (navBtn) navBtn.classList.add('active');
+        // Render service cards
+        function renderServices() {
+            servicesGrid.innerHTML = services.map(service => `
+                <div class="service-card" onclick="openModal(${service.id})">
+                    <h3>${service.title}</h3>
+                    <p>${service.shortDescription}</p>
+                    <a href="#" class="learn-more-btn" onclick="openModal(${service.id}); return false;">Learn More</a>
+                </div>
+            `).join('');
+        }
 
-            if (pageId === 'service-detail' && params) {
-                renderServiceDetail(params);
-                document.getElementById('page-service-detail').classList.add('active');
-            } else {
-                document.getElementById(`page-${pageId}`).classList.add('active');
+        // Open modal with service details
+        function openModal(serviceId) {
+            const service = services.find(s => s.id === serviceId);
+            if (service) {
+                document.getElementById('modalTitle').textContent = service.title;
+                document.getElementById('modalDescription').textContent = service.longDescription;
+                
+                // Render sub-services
+                const subServicesList = document.getElementById('subServicesList');
+                subServicesList.innerHTML = service.subServices.map(subService => `
+                    <li>${subService}</li>
+                `).join('');
+
+                // Render benefits
+                const benefitsList = document.getElementById('benefitsList');
+                benefitsList.innerHTML = service.benefits.map(benefit => `
+                    <li>${benefit}</li>
+                `).join('');
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
             }
-
-            // Close mobile menu if open
-            const menu = document.getElementById('mobileMenu');
-            if (menu.classList.contains('open')) toggleMobileMenu();
-
-            window.scrollTo(0, 0);
         }
 
-        function renderServiceDetail(serviceKey) {
-            const service = servicesData[serviceKey];
-            const content = document.getElementById('service-detail-content');
-            
-            content.innerHTML = `
-                <section class="bg-indigo-900 text-white py-16">
-                    <div class="container mx-auto px-4 text-center">
-                        <h1 class="text-3xl md:text-5xl font-bold mb-4">${service.name}</h1>
-                        <p class="text-xl text-indigo-200">تفاصيل الخدمة</p>
-                    </div>
-                </section>
-                <section class="py-16 bg-white dark:bg-dark-bg text-gray-800 dark:text-gray-200">
-                    <div class="container mx-auto px-4 max-w-4xl">
-                        <button onclick="navigate('services')" class="mb-8 flex items-center text-indigo-600 dark:text-indigo-400 hover:underline">
-                            <svg class="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            العودة للخدمات
-                        </button>
-                        
-                        <div class="prose dark:prose-invert max-w-none">
-                            ${service.longDescription}
-                        </div>
-
-                        <div class="mt-12 bg-gray-50 dark:bg-dark-surface p-8 rounded-2xl border border-gray-100 dark:border-gray-700 text-center">
-                            <h3 class="text-2xl font-bold mb-4">جاهز للبدء؟</h3>
-                            <p class="mb-6">تواصل معنا الآن لمناقشة تفاصيل مشروعك والحصول على عرض سعر مخصص.</p>
-                            <button onclick="openServiceModal('${serviceKey}')" class="bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-700 transition-colors inline-flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg>
-                                <span>طلب الخدمة</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-            `;
+        // Close modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
 
-        // --- Initialization ---
-        document.addEventListener('DOMContentLoaded', () => {
-            initTheme();
-            renderHomeServicesPreview();
-            renderServicesGrid();
-            renderPartners();
-            renderPortfolio('profile'); 
-            renderContactFormServices();
+        // Event listeners
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
         });
 
-        // --- Theme & Language ---
-        function initTheme() {
-            if (isDarkMode) {
-                document.documentElement.classList.add('dark');
-                document.getElementById('theme-icon').innerText = '☀️';
-                document.getElementById('theme-icon-mobile').innerText = '☀️';
-            }
-        }
+        // Mobile menu toggle
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
 
-        function toggleTheme() {
-            isDarkMode = !isDarkMode;
-            if (isDarkMode) {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                document.getElementById('theme-icon').innerText = '☀️';
-                document.getElementById('theme-icon-mobile').innerText = '☀️';
-            } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                document.getElementById('theme-icon').innerText = '🌙';
-                document.getElementById('theme-icon-mobile').innerText = '🌙';
-            }
-        }
-
-        function toggleLanguage() {
-            // Simple placeholder for language toggle logic
-            // In a real app, this would swap text content based on a dictionary
-            if (currentLang === 'ar') {
-                currentLang = 'en';
-                document.getElementById('lang-text').innerText = 'AR';
-                document.getElementById('lang-text-mobile').innerText = 'AR';
-                document.body.dir = 'ltr';
-                alert("تم تفعيل واجهة اللغة الإنجليزية (تجريبي - English Mode Activated)");
-                // Reload or swap content logic here
-            } else {
-                currentLang = 'ar';
-                document.getElementById('lang-text').innerText = 'EN';
-                document.getElementById('lang-text-mobile').innerText = 'EN';
-                document.body.dir = 'rtl';
-            }
-        }
-
-        // --- Rendering Functions ---
-        function renderHomeServicesPreview() {
-            const container = document.getElementById('home-services-preview');
-            // Take first 6 services
-            const previewKeys = Object.keys(servicesData).slice(0, 6);
-            
-            container.innerHTML = previewKeys.map(key => {
-                const service = servicesData[key];
-                return `
-                <div class="service-card p-8 bg-white dark:bg-dark-surface border border-gray-100 dark:border-gray-700 rounded-2xl group flex flex-col h-full">
-                    <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        ${getServiceIcon(key)}
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">${service.name}</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm flex-grow line-clamp-3">${service.desc}</p>
-                    <button onclick="navigate('service-detail', '${key}')" class="text-indigo-600 dark:text-indigo-400 font-bold hover:underline flex items-center gap-1 mt-auto">
-                        <span>اقرأ المزيد</span>
-                        <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </button>
-                </div>
-            `}).join('');
-        }
-
-        function renderServicesGrid() {
-            const container = document.getElementById('services-grid-container');
-            container.innerHTML = Object.entries(servicesData).map(([key, service]) => `
-                <div class="service-card p-8 bg-white dark:bg-dark-surface border border-gray-100 dark:border-gray-700 rounded-2xl group flex flex-col h-full">
-                    <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        ${getServiceIcon(key)}
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">${service.name}</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed text-sm flex-grow">${service.desc}</p>
-                    <div class="flex flex-col gap-3 mt-auto">
-                        <button onclick="navigate('service-detail', '${key}')" class="w-full py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg font-bold hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-                            تفاصيل الخدمة
-                        </button>
-                        <button onclick="openServiceModal('${key}')" class="w-full py-3 border border-indigo-600 text-indigo-600 dark:text-indigo-400 dark:border-indigo-400 rounded-lg font-bold hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-400 dark:hover:text-gray-900 transition-all">
-                            طلب الخدمة
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function getServiceIcon(key) {
-            const icons = {
-                profile: '📋', websites: '🌐', identity: '🎨',
-                marketing: '📢', menu: '🍔', misc: '✨'
-            };
-            return icons[key] || '⭐';
-        }
-
-        function renderContactFormServices() {
-            const container = document.getElementById('request-form-services');
-            container.innerHTML = Object.values(servicesData).map(s => `
-                <label class="flex items-center p-4 bg-white dark:bg-dark-surface rounded-xl border border-gray-200 dark:border-gray-600 cursor-pointer hover:border-indigo-500 transition-colors">
-                    <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 rounded focus:ring-indigo-500 ml-3 service-checkbox" value="${s.name}">
-                    <span class="text-gray-700 dark:text-gray-200 font-medium">${s.name}</span>
-                </label>
-            `).join('');
-        }
-
-        // --- Portfolio Logic ---
-        function renderPortfolio(filter) {
-            const container = document.getElementById('portfolio-grid');
-            container.innerHTML = '';
-
-            const filteredItems = portfolioItems.filter(item => item.category === filter);
-
-            if (filteredItems.length === 0) {
-                container.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">لا توجد مشاريع في هذا القسم حالياً.</div>`;
-                return;
-            }
-
-            filteredItems.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100 dark:border-gray-700';
-                card.onclick = () => openPortfolioModal(item);
-                
-                card.innerHTML = `
-                    <div class="relative overflow-hidden aspect-video">
-                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white border border-white px-4 py-2 rounded-full text-sm">عرض التفاصيل</span>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-xs font-bold text-indigo-500 dark:text-indigo-400 mb-2 block">${getCategoryName(item.category)}</span>
-                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2 line-clamp-1">${item.title}</h3>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">${item.desc}</p>
-                    </div>
-                `;
-                container.appendChild(card);
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
             });
-        }
+        });
 
-        function filterPortfolio(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.className = 'filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700';
-            });
-            event.target.className = 'filter-btn active px-6 py-2 rounded-full text-sm font-bold transition-all bg-indigo-600 text-white shadow-md';
-            renderPortfolio(category);
-        }
-
-        function getCategoryName(cat) {
-            const names = { 'profile': 'بروفايل', 'web': 'مواقع', 'menu': 'منيو', 'misc': 'متنوع' };
-            return names[cat] || 'مشروع';
-        }
-
-        function openPortfolioModal(item) {
-            document.getElementById('modalProjectTitle').innerText = item.title;
-            document.getElementById('modalProjectCategory').innerText = getCategoryName(item.category);
-            document.getElementById('modalProjectDesc').innerText = item.desc;
-            
-            // Tags
-            document.getElementById('modalProjectTags').innerHTML = item.tags.map(tag => 
-                `<span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-3 py-1 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-600">${tag}</span>`
-            ).join('');
-            
-            // Media
-            const mediaContainer = document.getElementById('modalMediaContainer');
-            if (item.pdfUrl) {
-                let embedUrl = item.pdfUrl;
-                if (embedUrl.includes('drive.google.com') && embedUrl.includes('/view')) {
-                    embedUrl = embedUrl.replace('/view', '/preview');
-                }
-                mediaContainer.innerHTML = `<iframe src="${embedUrl}" class="w-full h-[400px] md:h-[500px] border-0 rounded-lg"></iframe>`;
-                
-                document.getElementById('pdfDownloadBtnContainer').classList.remove('hidden');
-                document.getElementById('pdfDownloadLink').href = item.pdfUrl;
-            } else {
-                mediaContainer.innerHTML = `<img src="${item.image}" class="w-full h-auto object-contain max-h-[500px] rounded-lg">`;
-                document.getElementById('pdfDownloadBtnContainer').classList.add('hidden');
-            }
-
-            const webBtn = document.getElementById('websiteBtnContainer');
-            if (item.websiteUrl) {
-                document.getElementById('websiteLink').href = item.websiteUrl;
-                document.getElementById('websiteBtnText').innerText = item.category === 'menu' ? 'تصفح المنيو' : 'زيارة الموقع';
-                webBtn.classList.remove('hidden');
-            } else {
-                webBtn.classList.add('hidden');
-            }
-
-            openModal('portfolioModal');
-        }
-
-        // --- Service Modal (Single Item) ---
-        function openServiceModal(key) {
-            selectedServiceForModal = servicesData[key].name;
-            document.getElementById('modalServiceName').innerText = selectedServiceForModal;
-            openModal('serviceModal');
-        }
-
-        function sendSingleServiceRequest() {
-            const message = `مرحباً إي تي واي، أرغب في الاستفسار عن خدمة: ${selectedServiceForModal}`;
-            window.open(`https://wa.me/966596466303?text=${encodeURIComponent(message)}`, '_blank');
-            closeModal('serviceModal');
-        }
-
-        // --- Contact Form Logic (WhatsApp) ---
-        function sendRequestToWhatsApp() {
-            const selectedServices = Array.from(document.querySelectorAll('.service-checkbox:checked')).map(cb => cb.value);
-            const notes = document.getElementById('request-notes').value;
-
-            if (selectedServices.length === 0 && !notes) {
-                showNotification('الرجاء اختيار خدمة واحدة على الأقل', 'error');
-                return;
-            }
-
-            let message = "مرحباً إي تي واي، أرغب في طلب عرض سعر للخدمات التالية:\n\n";
-            selectedServices.forEach(s => message += `✅ ${s}\n`);
-            
-            if (notes) {
-                message += `\n📝 ملاحظات: ${notes}`;
-            }
-
-            window.open(`https://wa.me/966596466303?text=${encodeURIComponent(message)}`, '_blank');
-        }
-
-        // --- Partners (Rendered Globally) ---
-        function renderPartners() {
-            const partners = [
-                { logo: 'https://tse2.mm.bing.net/th/id/OIP.HnPide3T7HBUZky05pObWwHaE4?w=866&h=571&rs=1&pid=ImgDetMain&o=7&rm=3' },
-                { logo: 'https://darb.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.9535ecf2.png&w=256&q=75' },
-                { logo: 'https://placehold.co/200x100/fef9c3/854d0e?text=School' },
-                { logo: 'https://forceflexi.com/wp-content/uploads/2023/12/aaYH6jiH_400x400.jpg' },
-                { logo: 'https://cdn.files.salla.network/homepage/2055011317/f4e6c34d-7028-4e91-8f74-5f5b054aafcb.webp' },
-                { logo: 'https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/jZyxya/NY9k7atvkOfCmHxp6AS2LLet2H3RZEyzxbXTMIPY.jpg' }
-            ];
-            
-            document.getElementById('global-partners-grid').innerHTML = partners.map(p => `
-                <div class="bg-white dark:bg-dark-surface border border-gray-100 dark:border-gray-700 p-4 rounded-xl flex items-center justify-center h-24 hover:shadow-md transition-shadow grayscale hover:grayscale-0">
-                    <img src="${p.logo}" class="max-h-full max-w-full object-contain">
-                </div>
-            `).join('');
-        }
-
-        // --- Utilities ---
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('open');
-        }
-
-        function openModal(id) {
-            document.getElementById(id).classList.add('open');
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('open');
-        }
-
-        function showNotification(msg, type = 'success') {
-            const el = document.getElementById('notification');
-            el.innerText = msg;
-            el.className = `notification show ${type}`;
-            setTimeout(() => el.classList.remove('show'), 3000);
-        }
+        // Initial render
+        renderServices();
     </script>
 </body>
 </html>
