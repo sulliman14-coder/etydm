@@ -8,7 +8,7 @@
     <title>إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد</title>
     
     <!-- إصلاح مشكلة الوضع الليلي في Chrome -->
-    <meta name="color-scheme" content="light dark">
+    <meta name="color-scheme" content="light only">
     
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد">
@@ -73,16 +73,28 @@
 
         /* إصلاح مشكلة الوضع الليلي في Chrome وFirefox */
         :root {
-            color-scheme: light dark;
+            color-scheme: light only;
         }
 
         body {
             color-scheme: light;
             scroll-behavior: smooth;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* الوضع الليلي */
+        body.dark-mode {
+            background-color: #0f172a !important;
+            color: #f1f5f9 !important;
         }
 
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: background 0.5s ease;
+        }
+
+        body.dark-mode .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #4c1d95 100%) !important;
         }
 
         /* تحسينات البطاقات */
@@ -99,6 +111,11 @@
             padding: 2rem 1.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             position: relative;
+        }
+
+        body.dark-mode .service-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 1px solid #334155;
         }
 
         /* تأثير تألق عند hover */
@@ -159,6 +176,67 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
+        body.dark-mode .service-card button {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+            color: white !important;
+        }
+
+        /* زر تبديل الوضع الليلي */
+        .theme-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #e2e8f0;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #cbd5e1;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: #334155;
+            border-color: #475569;
+        }
+
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            background: white;
+            border-radius: 50%;
+            top: 2px;
+            right: 2px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        body.dark-mode .theme-toggle::before {
+            right: 30px;
+            background: #fbbf24;
+        }
+
+        .theme-toggle i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #64748b;
+            z-index: 1;
+        }
+
+        .theme-toggle .sun {
+            right: 8px;
+        }
+
+        .theme-toggle .moon {
+            left: 8px;
+            color: #fbbf24;
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 24px;
@@ -215,6 +293,10 @@
             animation: fadeIn 0.3s ease-out;
             transform: scale(0.9);
         }
+        body.dark-mode .modal-content {
+            background: #1e293b;
+            color: #f1f5f9;
+        }
         .modal-content.show {
             transform: scale(1);
         }
@@ -258,15 +340,21 @@
             transition: transform 0.3s ease;
         }
 
+        body.dark-mode .mobile-menu {
+            background: #1e293b;
+        }
+
         .mobile-menu.open {
             transform: translateX(0);
         }
         
         .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1rem; margin-bottom: 0.5rem; color: #1e40af; }
+        body.dark-mode .prose h3 { color: #93c5fd; }
         .prose ul { list-style-type: disc; padding-right: 1.5rem; margin-bottom: 1rem; }
         .prose li { margin-bottom: 0.25rem; }
         .prose p { margin-bottom: 0.75rem; line-height: 1.6; }
         .prose strong { color: #4b5563; }
+        body.dark-mode .prose strong { color: #cbd5e1; }
 
         .sparkle-btn {
             position: relative;
@@ -294,6 +382,10 @@
             border-radius: 8px;
             margin-bottom: 2rem;
         }
+        body.dark-mode .breadcrumb {
+            background: #1e293b;
+            border: 1px solid #334155;
+        }
         .breadcrumb a {
             color: #3b82f6;
             text-decoration: none;
@@ -304,6 +396,9 @@
         .breadcrumb span {
             color: #64748b;
         }
+        body.dark-mode .breadcrumb span {
+            color: #cbd5e1;
+        }
 
         /* تحسين تأثيرات التمرير */
         section {
@@ -312,112 +407,70 @@
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        /* إصلاح مشكلة الوضع الليلي */
-        @media (prefers-color-scheme: dark) {
-            /* إعادة تعيين الألوان في الوضع الليلي */
-            body {
-                background-color: #0f172a !important;
-                color: #f1f5f9 !important;
-            }
-            
-            /* إصلاح الأزرار */
-            button:not(.whatsapp-float),
-            .filter-btn,
-            .service-card button,
-            .modal-content button {
-                color-scheme: dark;
-            }
-            
-            /* تحسين التباين */
-            .text-gray-800 {
-                color: #f1f5f9 !important;
-            }
-            
-            .text-gray-600 {
-                color: #cbd5e1 !important;
-            }
-            
-            .text-gray-700 {
-                color: #e2e8f0 !important;
-            }
-            
-            /* إصلاح البطاقات */
-            .service-card {
-                background: linear-gradient(145deg, #1e293b, #0f172a);
-                border-color: #334155;
-            }
-            
-            .service-card h3 {
-                color: #f8fafc !important;
-            }
-            
-            .service-card p {
-                color: #cbd5e1 !important;
-            }
-            
-            /* إصلاح القوائم */
-            .modal-content {
-                background-color: #1e293b;
-                color: #f1f5f9;
-            }
-            
-            /* إصلاح أزرار البطاقات في الوضع الليلي */
-            .service-card button {
-                background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
-            }
-            
-            /* إصلاح حقل الإدخال */
-            input, textarea {
-                background-color: #334155 !important;
-                border-color: #475569 !important;
-                color: #f1f5f9 !important;
-            }
-            
-            input::placeholder,
-            textarea::placeholder {
-                color: #94a3b8 !important;
-            }
-            
-            .bg-white {
-                background-color: #1e293b !important;
-            }
-            
-            .bg-gray-50 {
-                background-color: #0f172a !important;
-            }
-            
-            .bg-gradient-to-br.from-gray-50.to-blue-50 {
-                background: linear-gradient(to bottom right, #111827, #1e3a8a) !important;
-            }
-            
-            .bg-gradient-to-br.from-indigo-50.via-white.to-purple-50 {
-                background: linear-gradient(to bottom right, #312e81, #1f2937, #5b21b6) !important;
-            }
-            
-            .prose, .prose strong {
-                color: #f1f5f9 !important;
-            }
-            
-            .bg-blue-50, .bg-indigo-50, .bg-purple-50, .bg-pink-50 {
-                background-color: #1e3a8a !important;
-                color: #f1f5f9 !important;
-            }
-            
-            /* تحسين شعار المركز السعودي للأعمال */
-            footer {
-                background-color: #0f172a !important;
-            }
-            
-            footer .text-gray-400 {
-                color: #9ca3af !important;
-            }
+        /* أنماط الوضع الليلي */
+        body.dark-mode .bg-white {
+            background-color: #1e293b !important;
+        }
+        
+        body.dark-mode .bg-gray-50 {
+            background-color: #0f172a !important;
+        }
+        
+        body.dark-mode .text-gray-800 {
+            color: #f1f5f9 !important;
+        }
+        
+        body.dark-mode .text-gray-600 {
+            color: #cbd5e1 !important;
+        }
+        
+        body.dark-mode .text-gray-700 {
+            color: #e2e8f0 !important;
+        }
+        
+        body.dark-mode .bg-gradient-to-br.from-gray-50.to-blue-50 {
+            background: linear-gradient(to bottom right, #111827, #1e3a8a) !important;
+        }
+        
+        body.dark-mode .bg-gradient-to-br.from-indigo-50.via-white.to-purple-50 {
+            background: linear-gradient(to bottom right, #312e81, #1f2937, #5b21b6) !important;
+        }
+        
+        body.dark-mode .prose, body.dark-mode .prose strong {
+            color: #f1f5f9 !important;
+        }
+        
+        body.dark-mode .bg-blue-50, body.dark-mode .bg-indigo-50, body.dark-mode .bg-purple-50, body.dark-mode .bg-pink-50 {
+            background-color: #1e3a8a !important;
+            color: #f1f5f9 !important;
+        }
+        
+        /* تحسين شعار المركز السعودي للأعمال */
+        footer {
+            background-color: #1E2A38 !important;
+            color: #FFFFFF !important;
         }
 
-        /* إضافة هذا لمعالجة مشكلة الألوان في Chrome */
-        @media (prefers-color-scheme: light) {
-            body {
-                color-scheme: light only;
-            }
+        body.dark-mode footer {
+            background-color: #0f172a !important;
+        }
+        
+        body.dark-mode footer .text-gray-400 {
+            color: #9ca3af !important;
+        }
+
+        /* تحسين حقل الإدخال في الوضع الليلي */
+        body.dark-mode input,
+        body.dark-mode textarea,
+        body.dark-mode select {
+            background-color: #334155 !important;
+            border-color: #475569 !important;
+            color: #f1f5f9 !important;
+        }
+        
+        body.dark-mode input::placeholder,
+        body.dark-mode textarea::placeholder {
+            color: #94a3b8 !important;
         }
 
         /* تحسين محاذاة شعار المركز السعودي للأعمال */
@@ -455,11 +508,35 @@
             color: white;
             box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
+
+        body.dark-mode .filter-btn:not(.active) {
+            background: #334155;
+            color: #cbd5e1;
+        }
         
         /* تحسين الأيقونات */
         .modern-icon {
             font-size: 1.5rem;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        /* زر إرسال الموقع في الوضع الليلي */
+        .send-dark-mode-btn {
+            background: linear-gradient(135deg, #000000, #4c1d95);
+            color: white;
+            border: 2px solid #7c3aed;
+            animation: dark-mode-pulse 2s infinite;
+        }
+
+        @keyframes dark-mode-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(124, 58, 237, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+        }
+
+        /* تأثيرات إضافية للوضع الليلي */
+        body.dark-mode .decoration-circle {
+            background: rgba(124, 58, 237, 0.1) !important;
         }
     </style>
 </head>
@@ -479,21 +556,36 @@
                 <div class="flex items-center space-x-3 space-x-reverse">
                     <!-- Logo -->
                     <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm?authuser=0" alt="شعار إي تي واي" class="w-12 h-12 object-contain rounded-lg" itemprop="logo">
-                    <h1 class="text-lg md:text-xl font-bold text-gray-800 leading-tight">إي تي واي للتصميم والتسويق</h1>
+                    <h1 class="text-lg md:text-xl font-bold text-gray-800 leading-tight dark-mode-text">إي تي واي للتصميم والتسويق</h1>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8 space-x-reverse" aria-label="القائمة الرئيسية">
-                    <a href="#home" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">الرئيسية</a>
-                    <a href="#services" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">الخدمات</a>
-                    <a href="#portfolio" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">أعمالنا</a>
-                    <a href="#packages" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">الباقات المميزة</a>
-                    <a href="#contact" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">تواصل معنا</a>
+                    <a href="#home" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors dark-mode-text">الرئيسية</a>
+                    <a href="#services" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors dark-mode-text">الخدمات</a>
+                    <a href="#portfolio" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors dark-mode-text">أعمالنا</a>
+                    <a href="#packages" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors dark-mode-text">الباقات المميزة</a>
+                    <a href="#contact" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors dark-mode-text">تواصل معنا</a>
+                    
+                    <!-- زر تبديل الوضع الليلي -->
+                    <div class="flex items-center space-x-3 space-x-reverse mr-4">
+                        <span class="text-gray-600 text-sm hidden md:block dark-mode-text">الوضع الليلي</span>
+                        <div class="theme-toggle" id="themeToggle" title="تبديل الوضع الليلي">
+                            <i class="fas fa-sun sun"></i>
+                            <i class="fas fa-moon moon"></i>
+                        </div>
+                    </div>
                 </nav>
 
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center gap-2 md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-gray-700" aria-label="فتح القائمة">
+                    <!-- زر تبديل الوضع الليلي للجوال -->
+                    <div class="theme-toggle mr-4" id="themeToggleMobile" title="تبديل الوضع الليلي">
+                        <i class="fas fa-sun sun"></i>
+                        <i class="fas fa-moon moon"></i>
+                    </div>
+                    
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 dark-mode-text" aria-label="فتح القائمة">
                         <i class="fas fa-bars modern-icon"></i>
                     </button>
                 </div>
@@ -506,12 +598,22 @@
                 <button onclick="toggleMobileMenu()" class="float-left text-gray-600 mb-8" aria-label="إغلاق القائمة">
                     <i class="fas fa-times modern-icon"></i>
                 </button>
-                <nav class="space-y-4 mt-8">
-                    <a href="#home" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الرئيسية</a>
-                    <a href="#services" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الخدمات</a>
-                    <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">أعمالنا</a>
-                    <a href="#packages" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الباقات المميزة</a>
-                    <a href="#contact" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2">تواصل معنا</a>
+                
+                <!-- زر تبديل الوضع في القائمة المتحركة -->
+                <div class="flex items-center justify-center mb-6">
+                    <span class="text-gray-700 mr-3 dark-mode-text">الوضع الليلي</span>
+                    <div class="theme-toggle" id="themeToggleMenu" title="تبديل الوضع الليلي">
+                        <i class="fas fa-sun sun"></i>
+                        <i class="fas fa-moon moon"></i>
+                    </div>
+                </div>
+                
+                <nav class="space-y-4 mt-4">
+                    <a href="#home" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b dark-mode-text">الرئيسية</a>
+                    <a href="#services" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b dark-mode-text">الخدمات</a>
+                    <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b dark-mode-text">أعمالنا</a>
+                    <a href="#packages" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b dark-mode-text">الباقات المميزة</a>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 dark-mode-text">تواصل معنا</a>
                 </nav>
             </div>
         </div>
@@ -520,8 +622,8 @@
     <!-- Hero Section -->
     <section id="home" class="gradient-bg text-white py-20 relative overflow-hidden" itemprop="mainContentOfPage">
         <!-- Decoration Circles -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -ml-32 -mb-32"></div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20 decoration-circle"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -ml-32 -mb-32 decoration-circle"></div>
 
         <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-3xl md:text-6xl font-bold mb-6 leading-tight">نحوّل أفكارك إلى واقع رقمي مميز</h2>
@@ -573,6 +675,14 @@
                         <span>الباقات المميزة</span>
                     </div>
                 </button>
+
+                <!-- Send in Dark Mode Button -->
+                <button onclick="sendDarkModeLink()" class="group relative send-dark-mode-btn px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[280px] overflow-hidden">
+                    <div class="relative flex items-center justify-center gap-3">
+                        <i class="fas fa-moon modern-icon"></i>
+                        <span>إرسال الموقع في الوضع الليلي</span>
+                    </div>
+                </button>
             </div>
         </div>
     </section>
@@ -598,8 +708,8 @@
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتميزة</h2>
-                <p class="text-xl text-gray-600">نقدم 12 خدمة متكاملة تشمل حلول تقنية وتسويقية وتعليمية لنمو أعمالك</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 dark-mode-text">خدماتنا المتميزة</h2>
+                <p class="text-xl text-gray-600 dark-mode-text">نقدم 12 خدمة متكاملة تشمل حلول تقنية وتسويقية وتعليمية لنمو أعمالك</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-container">
                 <!-- Service cards will be populated by JavaScript -->
@@ -611,13 +721,13 @@
     <section id="portfolio" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">معرض أعمالنا الذكي</h2>
-                <p class="text-xl text-gray-600">جولة في إبداعاتنا الرقمية.. انتقي ما يلهمك</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 dark-mode-text">معرض أعمالنا الذكي</h2>
+                <p class="text-xl text-gray-600 dark-mode-text">جولة في إبداعاتنا الرقمية.. انتقي ما يلهمك</p>
             </div>
 
             <!-- Portfolio Controls -->
             <div class="flex justify-center mb-8">
-                <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-full shadow-sm border border-gray-100" id="portfolio-filters">
+                <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-full shadow-sm border border-gray-100 dark-mode-bg" id="portfolio-filters">
                     <button onclick="filterPortfolio('profile')" class="filter-btn active bg-blue-600 text-white shadow-md px-6 py-2 rounded-full font-medium transition-all hover:bg-blue-700">بروفايل</button>
                     <button onclick="filterPortfolio('web')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">مواقع ومتاجر</button>
                     <button onclick="filterPortfolio('menu')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">منيو إلكتروني</button>
@@ -639,8 +749,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4 shadow-lg">
                     <i class="fas fa-gift modern-icon text-white"></i>
                 </div>
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">الباقات المميزة بخصومات حصرية</h2>
-                <p class="text-xl text-gray-600">وفر حتى 28% مع باقاتنا المتكاملة المدروسة</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 dark-mode-text">الباقات المميزة بخصومات حصرية</h2>
+                <p class="text-xl text-gray-600 dark-mode-text">وفر حتى 28% مع باقاتنا المتكاملة المدروسة</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="packages-container">
@@ -653,14 +763,14 @@
     <section id="partners" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">شركاء النجاح</h2>
-                <p class="text-xl text-gray-600 mb-8">نفخر بشراكاتنا الاستراتيجية مع أفضل الشركات والمؤسسات</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 dark-mode-text">شركاء النجاح</h2>
+                <p class="text-xl text-gray-600 dark-mode-text mb-8">نفخر بشراكاتنا الاستراتيجية مع أفضل الشركات والمؤسسات</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12" id="partners-grid">
                 <!-- Partner cards will be populated by JavaScript -->
             </div>
-            <div class="bg-white rounded-2xl shadow-xl p-8">
-                <h3 class="text-2xl font-bold text-gray-800 text-center mb-8">قصص نجاح مشتركة</h3>
+            <div class="bg-white rounded-2xl shadow-xl p-8 dark-mode-bg">
+                <h3 class="text-2xl font-bold text-gray-800 text-center mb-8 dark-mode-text">قصص نجاح مشتركة</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="success-stories">
                     <!-- Success stories will be populated by JavaScript -->
                 </div>
@@ -675,8 +785,8 @@
                 <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mb-6 shadow-lg">
                     <i class="fas fa-trophy modern-icon text-white"></i>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">لماذا تختارنا؟</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight dark-mode-text">لماذا تختارنا؟</h2>
+                <p class="text-xl text-gray-600 dark-mode-text max-w-3xl mx-auto leading-relaxed">
                     نحن لسنا مجرد مقدمي خدمات، بل شركاء نجاح نسعى لتحقيق أهدافك وتطوير أعمالك بأحدث الحلول التقنية والإبداعية
                 </p>
             </div>
@@ -690,21 +800,21 @@
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">تواصل معنا</h2>
-                <p class="text-xl text-gray-600">نحن هنا لمساعدتك في تحقيق أهدافك</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 dark-mode-text">تواصل معنا</h2>
+                <p class="text-xl text-gray-600 dark-mode-text">نحن هنا لمساعدتك في تحقيق أهدافك</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12" id="contact-container">
                 <!-- Contact Info -->
-                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">معلومات الاتصال</h3>
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm dark-mode-bg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 dark-mode-text">معلومات الاتصال</h3>
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4 space-x-reverse">
                             <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
                                 <i class="fas fa-phone modern-icon"></i>
                             </div>
                             <div>
-                                <p class="font-medium text-gray-900">الهاتف / واتساب</p>
-                                <p class="text-gray-600" dir="ltr">+966 59 646 6303</p>
+                                <p class="font-medium text-gray-900 dark-mode-text">الهاتف / واتساب</p>
+                                <p class="text-gray-600 dark-mode-text" dir="ltr">+966 59 646 6303</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4 space-x-reverse">
@@ -712,8 +822,8 @@
                                 <i class="fas fa-envelope modern-icon"></i>
                             </div>
                             <div>
-                                <p class="font-medium text-gray-900">البريد الإلكتروني</p>
-                                <p class="text-gray-600">info@etydm.com</p>
+                                <p class="font-medium text-gray-900 dark-mode-text">البريد الإلكتروني</p>
+                                <p class="text-gray-600 dark-mode-text">info@etydm.com</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4 space-x-reverse">
@@ -721,29 +831,29 @@
                                 <i class="fas fa-map-marker-alt modern-icon"></i>
                             </div>
                             <div>
-                                <p class="font-medium text-gray-900">الموقع</p>
-                                <p class="text-gray-600">المملكة العربية السعودية</p>
+                                <p class="font-medium text-gray-900 dark-mode-text">الموقع</p>
+                                <p class="text-gray-600 dark-mode-text">المملكة العربية السعودية</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <form class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100" onsubmit="event.preventDefault(); showNotification('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.', 'success');">
+                <form class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 dark-mode-bg" onsubmit="event.preventDefault(); showNotification('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.', 'success');">
                     <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2">الاسم الكامل</label>
-                        <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors" required>
+                        <label class="block text-gray-700 font-bold mb-2 dark-mode-text">الاسم الكامل</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors dark-mode-input" required>
                     </div>
                     <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2">رقم الجوال</label>
-                        <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors" required>
+                        <label class="block text-gray-700 font-bold mb-2 dark-mode-text">رقم الجوال</label>
+                        <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors dark-mode-input" required>
                     </div>
                     <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2">الرسالة</label>
-                        <textarea id="contactMessage" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors h-32" required placeholder="اكتب رسالتك هنا..."></textarea>
+                        <label class="block text-gray-700 font-bold mb-2 dark-mode-text">الرسالة</label>
+                        <textarea id="contactMessage" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors h-32 dark-mode-input" required placeholder="اكتب رسالتك هنا..."></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md">
-                        <i class="fas fa-paper-plane mr-2"></i> إرسال الرسالة
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md flex items-center justify-center">
+                        <i class="fas fa-paper-plane ml-2"></i> إرسال الرسالة
                     </button>
                 </form>
             </div>
@@ -797,15 +907,15 @@
             <div class="flex justify-between items-center mb-6">
                 <div class="flex items-center gap-3">
                     <i class="fas fa-info-circle modern-icon text-indigo-600"></i>
-                    <h2 class="text-2xl font-bold text-gray-800">من نحن - إي تي واي</h2>
+                    <h2 class="text-2xl font-bold text-gray-800 dark-mode-text">من نحن - إي تي واي</h2>
                 </div>
                 <button onclick="closeModal('aboutModal')" class="text-gray-500 hover:text-gray-700">
                     <i class="fas fa-times modern-icon"></i>
                 </button>
             </div>
             
-            <div class="prose max-w-none text-gray-700 leading-relaxed">
-                <p class="text-lg font-bold text-indigo-900 mb-4">نحن "إي تي واي للتصميم والتسويق"، وكالتك الرقمية الرائدة في المملكة العربية السعودية.</p>
+            <div class="prose max-w-none text-gray-700 leading-relaxed dark-mode-text">
+                <p class="text-lg font-bold text-indigo-900 mb-4 dark-mode-text">نحن "إي تي واي للتصميم والتسويق"، وكالتك الرقمية الرائدة في المملكة العربية السعودية.</p>
                 
                 <p class="mb-4">
                     نجمع بين الإبداع الفني والتقنية المتقدمة لنقدم حلولاً رقمية متكاملة ترفع من قيمة علامتك التجارية. متخصصون في <strong>تصميم الهويات البصرية</strong> التي تخلد في الذاكرة، و<strong>تطوير المواقع والمتاجر الإلكترونية</strong> ذات الأداء العالي، و<strong>التسويق الرقمي</strong> المدروس الذي يستهدف جمهورك بدقة.
@@ -816,20 +926,20 @@
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    <div class="bg-indigo-50 p-4 rounded-lg text-center">
+                    <div class="bg-indigo-50 p-4 rounded-lg text-center dark-mode-bg">
                         <i class="fas fa-bullseye modern-icon block text-2xl mb-2 text-indigo-600"></i>
-                        <span class="font-bold text-indigo-800">رؤيتنا</span>
-                        <p class="text-sm mt-1">أن نكون الخيار الأول للحلول الرقمية في المملكة.</p>
+                        <span class="font-bold text-indigo-800 dark-mode-text">رؤيتنا</span>
+                        <p class="text-sm mt-1 dark-mode-text">أن نكون الخيار الأول للحلول الرقمية في المملكة.</p>
                     </div>
-                    <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <div class="bg-purple-50 p-4 rounded-lg text-center dark-mode-bg">
                         <i class="fas fa-rocket modern-icon block text-2xl mb-2 text-purple-600"></i>
-                        <span class="font-bold text-purple-800">رسالتنا</span>
-                        <p class="text-sm mt-1">تمكين الأعمال بأدوات وحلول تقنية مبتكرة.</p>
+                        <span class="font-bold text-purple-800 dark-mode-text">رسالتنا</span>
+                        <p class="text-sm mt-1 dark-mode-text">تمكين الأعمال بأدوات وحلول تقنية مبتكرة.</p>
                     </div>
-                    <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <div class="bg-blue-50 p-4 rounded-lg text-center dark-mode-bg">
                         <i class="fas fa-star modern-icon block text-2xl mb-2 text-blue-600"></i>
-                        <span class="font-bold text-blue-800">قيمنا</span>
-                        <p class="text-sm mt-1">الإبداع، الجودة، والالتزام بالمواعيد.</p>
+                        <span class="font-bold text-blue-800 dark-mode-text">قيمنا</span>
+                        <p class="text-sm mt-1 dark-mode-text">الإبداع، الجودة، والالتزام بالمواعيد.</p>
                     </div>
                 </div>
 
@@ -848,10 +958,10 @@
             
             <div class="mt-8 flex gap-4">
                 <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'}); closeModal('aboutModal');" class="flex-1 bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    <i class="fas fa-eye mr-2"></i> اكتشف خدماتنا
+                    <i class="fas fa-eye ml-2"></i> اكتشف خدماتنا
                 </button>
-                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeModal('aboutModal');" class="flex-1 bg-white border-2 border-indigo-600 text-indigo-600 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors">
-                    <i class="fas fa-envelope mr-2"></i> تواصل معنا
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeModal('aboutModal');" class="flex-1 bg-white border-2 border-indigo-600 text-indigo-600 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors dark-mode-text">
+                    <i class="fas fa-envelope ml-2"></i> تواصل معنا
                 </button>
             </div>
         </div>
@@ -862,29 +972,29 @@
         <div class="modal-content max-w-5xl" onclick="event.stopPropagation()">
             <div class="flex justify-between items-start mb-4">
                 <div>
-                    <span id="modalProjectCategory" class="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-2 inline-block"></span>
-                    <h2 id="modalProjectTitle" class="text-3xl font-bold text-gray-800"></h2>
+                    <span id="modalProjectCategory" class="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-2 inline-block dark-mode-bg"></span>
+                    <h2 id="modalProjectTitle" class="text-3xl font-bold text-gray-800 dark-mode-text"></h2>
                 </div>
-                <button onclick="closeModal('portfolioModal')" class="text-gray-500 hover:text-gray-700 bg-gray-100 p-2 rounded-full">
+                <button onclick="closeModal('portfolioModal')" class="text-gray-500 hover:text-gray-700 bg-gray-100 p-2 rounded-full dark-mode-bg">
                     <i class="fas fa-times modern-icon"></i>
                 </button>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Media Container (Image or PDF) -->
-                <div id="modalMediaContainer" class="lg:col-span-2 rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 min-h-[300px] flex items-center justify-center relative">
+                <div id="modalMediaContainer" class="lg:col-span-2 rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 min-h-[300px] flex items-center justify-center relative dark-mode-bg">
                     <!-- Content will be injected here by JS -->
                 </div>
                 
                 <!-- Details Container -->
                 <div class="space-y-6 lg:col-span-1">
                     <div>
-                        <h3 class="font-bold text-gray-700 mb-2">عن المشروع</h3>
-                        <p id="modalProjectDesc" class="text-gray-600 leading-relaxed"></p>
+                        <h3 class="font-bold text-gray-700 mb-2 dark-mode-text">عن المشروع</h3>
+                        <p id="modalProjectDesc" class="text-gray-600 leading-relaxed dark-mode-text"></p>
                     </div>
                     
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="font-bold text-gray-700 mb-2">الخدمات المنفذة</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg dark-mode-bg">
+                        <h3 class="font-bold text-gray-700 mb-2 dark-mode-text">الخدمات المنفذة</h3>
                         <div id="modalProjectTags" class="flex flex-wrap gap-2"></div>
                     </div>
                     
@@ -920,7 +1030,7 @@
     <div id="serviceDetailsModal" class="modal-container" onclick="closeModal('serviceDetailsModal')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6">
-                <h2 id="serviceDetailsTitle" class="text-2xl font-bold text-gray-800"></h2>
+                <h2 id="serviceDetailsTitle" class="text-2xl font-bold text-gray-800 dark-mode-text"></h2>
                 <button onclick="closeModal('serviceDetailsModal')" class="text-gray-500 hover:text-gray-700">
                     <i class="fas fa-times modern-icon"></i>
                 </button>
@@ -933,7 +1043,7 @@
     <div id="calculatorModal" class="modal-container" onclick="closeModal('calculatorModal')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center dark-mode-text">
                     <i class="fas fa-calculator modern-icon ml-3"></i>
                     حاسبة الأسعار المتقدمة
                 </h2>
@@ -942,27 +1052,27 @@
                 </button>
             </div>
             <div id="calculatorContent"></div>
-            <div class="mt-6 md:mt-8 p-4 md:p-6 bg-gray-50 rounded-lg">
+            <div class="mt-6 md:mt-8 p-4 md:p-6 bg-gray-50 rounded-lg dark-mode-bg">
                 <div class="flex justify-between items-center mb-3 md:mb-4">
-                    <span class="text-base md:text-lg font-semibold">المجموع الفرعي:</span>
+                    <span class="text-base md:text-lg font-semibold dark-mode-text">المجموع الفرعي:</span>
                     <span id="subtotal" class="text-base md:text-lg font-bold text-blue-600">0 ريال</span>
                 </div>
                 <div class="flex justify-between items-center mb-3 md:mb-4">
-                    <span id="discount-label" class="text-base md:text-lg font-semibold">الخصم:</span>
-                    <span id="discount-amount" class="text-base md:text-lg font-bold text-gray-600">0 ريال</span>
+                    <span id="discount-label" class="text-base md:text-lg font-semibold dark-mode-text">الخصم:</span>
+                    <span id="discount-amount" class="text-base md:text-lg font-bold text-gray-600 dark-mode-text">0 ريال</span>
                 </div>
                 <div class="border-t pt-3 md:pt-4">
                     <div class="flex justify-between items-center mb-4 md:mb-6">
-                        <span class="text-lg md:text-xl font-bold">الإجمالي النهائي:</span>
+                        <span class="text-lg md:text-xl font-bold dark-mode-text">الإجمالي النهائي:</span>
                         <span id="total" class="text-lg md:text-xl font-bold text-green-600">0 ريال</span>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4 md:space-x-reverse">
                     <button onclick="showDownloadOptions()" class="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm md:text-base">
-                        <i class="fas fa-download mr-2"></i> تحميل عرض السعر
+                        <i class="fas fa-download ml-2"></i> تحميل عرض السعر
                     </button>
                     <button onclick="sendToWhatsApp()" class="flex-1 bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm md:text-base">
-                        <i class="fab fa-whatsapp mr-2"></i> إرسال عبر واتساب
+                        <i class="fab fa-whatsapp ml-2"></i> إرسال عبر واتساب
                     </button>
                 </div>
             </div>
@@ -973,8 +1083,8 @@
     <div id="downloadOptionsModal" class="modal-container" onclick="closeModal('downloadOptionsModal')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="text-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">اختر نوع التحميل</h3>
-                <p class="text-gray-600">كيف تريد تحميل عرض السعر؟</p>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2 dark-mode-text">اختر نوع التحميل</h3>
+                <p class="text-gray-600 dark-mode-text">كيف تريد تحميل عرض السعر؟</p>
             </div>
             <div class="space-y-4">
                 <button onclick="downloadQuotePDF()" class="w-full bg-red-600 text-white py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center space-x-3 space-x-reverse">
@@ -996,7 +1106,7 @@
     <div id="allPackagesModal" class="modal-container" onclick="closeModal('allPackagesModal')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center dark-mode-text">
                     <i class="fas fa-gift modern-icon ml-3"></i>
                     الباقات المميزة بخصومات حصرية
                 </h2>
@@ -1012,13 +1122,85 @@
     <div id="quoteTemplate" style="position: absolute; left: -9999px; top: -9999px; width: 794px; background: white; padding: 30px; box-sizing: border-box; direction: rtl; font-family: 'Tajawal', Arial, sans-serif;"></div>
 
     <script>
+        // إدارة الوضع الليلي
+        let darkMode = false;
+
+        // تحميل تفضيلات المستخدم من localStorage
+        function loadThemePreference() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        }
+
+        // تفعيل الوضع الليلي
+        function enableDarkMode() {
+            document.body.classList.add('dark-mode');
+            darkMode = true;
+            localStorage.setItem('theme', 'dark');
+            updateThemeButtons();
+        }
+
+        // تعطيل الوضع الليلي
+        function disableDarkMode() {
+            document.body.classList.remove('dark-mode');
+            darkMode = false;
+            localStorage.setItem('theme', 'light');
+            updateThemeButtons();
+        }
+
+        // تبديل الوضع الليلي
+        function toggleDarkMode() {
+            if (darkMode) {
+                disableDarkMode();
+            } else {
+                enableDarkMode();
+            }
+        }
+
+        // تحديث حالة أزرار الوضع الليلي
+        function updateThemeButtons() {
+            const buttons = ['themeToggle', 'themeToggleMobile', 'themeToggleMenu'];
+            buttons.forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                if (btn) {
+                    btn.classList.toggle('active', darkMode);
+                }
+            });
+        }
+
+        // إرسال رابط الوضع الليلي
+        function sendDarkModeLink() {
+            // تمكين الوضع الليلي أولاً
+            enableDarkMode();
+            
+            // إنشاء رابط مع تفعيل الوضع الليلي
+            const currentUrl = window.location.href.split('#')[0];
+            const darkModeUrl = `${currentUrl}?theme=dark`;
+            
+            // إنشاء رسالة واتساب
+            const message = `مرحباً، أود مشاركة موقع إي تي واي معك في الوضع الليلي:\n\n${darkModeUrl}\n\nتمتع بتجربة تصفح مميزة في الوضع الليلي!`;
+            
+            const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+            
+            showNotification('تم إنشاء رابط الوضع الليلي! جاري فتح واتساب...', 'success');
+        }
+
+        // التحقق من معامل URL لتفعيل الوضع الليلي
+        function checkUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                enableDarkMode();
+            }
+        }
+
         // Force light color scheme to fix Chrome dark mode issues
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // Add a class to handle dark mode manually
-            document.documentElement.classList.add('force-light-mode');
-            
-            // Add CSS variable for manual dark mode handling
-            document.documentElement.style.setProperty('--is-dark-mode', 'true');
+            // Ignore system preference and force light mode by default
+            disableDarkMode();
         }
 
         // Data for services, packages, partners, etc.
@@ -1535,6 +1717,15 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
+            // تحميل تفضيلات المستخدم
+            loadThemePreference();
+            checkUrlParams();
+            
+            // إضافة أحداث النقر لأزرار الوضع الليلي
+            document.getElementById('themeToggle').addEventListener('click', toggleDarkMode);
+            document.getElementById('themeToggleMobile').addEventListener('click', toggleDarkMode);
+            document.getElementById('themeToggleMenu').addEventListener('click', toggleDarkMode);
+            
             renderServices();
             renderPortfolio('profile'); // Init Portfolio with PROFILE as default
             renderPackages();
@@ -1554,13 +1745,13 @@
             });
 
             if (filteredItems.length === 0) {
-                container.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500">لا توجد أعمال في هذا القسم حالياً</div>`;
+                container.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500 dark-mode-text">لا توجد أعمال في هذا القسم حالياً</div>`;
                 return;
             }
 
             filteredItems.forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white card-hover-effect';
+                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white card-hover-effect dark-mode-bg';
                 card.onclick = () => openPortfolioModal(item);
                 
                 card.innerHTML = `
@@ -1607,7 +1798,7 @@
             
             // Handle Tags
             const tagsContainer = document.getElementById('modalProjectTags');
-            tagsContainer.innerHTML = item.tags.map(tag => `<span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">${tag}</span>`).join('');
+            tagsContainer.innerHTML = item.tags.map(tag => `<span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm dark-mode-bg dark-mode-text">${tag}</span>`).join('');
             
             // Handle Media (Image or PDF)
             const mediaContainer = document.getElementById('modalMediaContainer');
@@ -1689,10 +1880,10 @@
                     <div class="service-icon-wrapper">
                         ${service.icon}
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">${service.name}</h3>
-                    <p class="text-gray-500 mb-6 line-clamp-2 flex-grow">${service.details.overview}</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 dark-mode-text">${service.name}</h3>
+                    <p class="text-gray-500 mb-6 line-clamp-2 flex-grow dark-mode-text">${service.details.overview}</p>
                     <button onclick="event.stopPropagation(); openServiceDetails('${key}')" 
-                            class="bg-gradient-to-r ${key === 'profile' ? 'from-blue-500 to-blue-600' : 'from-gray-700 to-gray-800'} text-white font-medium hover:shadow-md">
+                            class="bg-gradient-to-r ${key === 'profile' ? 'from-blue-500 to-blue-600' : 'from-gray-700 to-gray-800'} text-white font-medium hover:shadow-md dark-mode-btn">
                         التفاصيل
                     </button>
                 `;
@@ -1719,16 +1910,16 @@
             packageKeys.forEach(key => {
                 const pkg = servicePackages[key];
                 const card = document.createElement('div');
-                card.className = 'bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-1 duration-300 flex flex-col card-hover-effect';
+                card.className = 'bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-1 duration-300 flex flex-col card-hover-effect dark-mode-bg';
                 
                 card.innerHTML = `
                     <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-lg">
                         خصم ${pkg.discount}%
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 pt-2">${pkg.name}</h3>
-                    <p class="text-gray-600 mb-4 flex-grow">${pkg.description}</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 pt-2 dark-mode-text">${pkg.name}</h3>
+                    <p class="text-gray-600 mb-4 flex-grow dark-mode-text">${pkg.description}</p>
                     <div class="space-y-2 mb-4">
-                        ${pkg.includes.slice(0, 3).map(item => `<div class="flex items-center text-sm text-gray-700"><i class="fas fa-check text-green-500 ml-2"></i>${item}</div>`).join('')}
+                        ${pkg.includes.slice(0, 3).map(item => `<div class="flex items-center text-sm text-gray-700 dark-mode-text"><i class="fas fa-check text-green-500 ml-2"></i>${item}</div>`).join('')}
                     </div>
                     <div class="mt-auto">
                         <div class="flex items-center gap-2 mb-3">
@@ -1757,7 +1948,7 @@
             
             const container = document.getElementById('partners-grid');
             container.innerHTML = partners.map(p => `
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-center h-32 overflow-hidden group card-hover-effect">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-center h-32 overflow-hidden group card-hover-effect dark-mode-bg">
                     <img src="${p.logo}" alt="${p.name}" class="max-h-full max-w-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110" loading="lazy">
                 </div>
             `).join('');
@@ -1774,10 +1965,10 @@
             
             const container = document.getElementById('why-us-grid');
             container.innerHTML = features.map(f => `
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 card-hover-effect">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 card-hover-effect dark-mode-bg">
                     <div class="text-4xl mb-4 text-blue-600">${f.icon}</div>
-                    <h3 class="text-xl font-bold mb-2">${f.title}</h3>
-                    <p class="text-gray-500">${f.desc}</p>
+                    <h3 class="text-xl font-bold mb-2 dark-mode-text">${f.title}</h3>
+                    <p class="text-gray-500 dark-mode-text">${f.desc}</p>
                 </div>
             `).join('');
         }
@@ -1787,12 +1978,12 @@
             const container = document.getElementById('success-stories');
             container.innerHTML = `
                 <div class="border-r-4 border-blue-500 pr-4">
-                    <h4 class="font-bold text-lg mb-2">تطوير متجر إلكتروني لمتجر أزياء</h4>
-                    <p class="text-gray-600">زيادة المبيعات بنسبة 150% خلال 3 أشهر بعد إعادة تصميم المتجر وتحسين تجربة المستخدم.</p>
+                    <h4 class="font-bold text-lg mb-2 dark-mode-text">تطوير متجر إلكتروني لمتجر أزياء</h4>
+                    <p class="text-gray-600 dark-mode-text">زيادة المبيعات بنسبة 150% خلال 3 أشهر بعد إعادة تصميم المتجر وتحسين تجربة المستخدم.</p>
                 </div>
                 <div class="border-r-4 border-green-500 pr-4">
-                    <h4 class="font-bold text-lg mb-2">هوية بصرية لشركة عقارية</h4>
-                    <p class="text-gray-600">بناء هوية قوية ساعدت الشركة في الحصول على عقود حصرية مع كبار المستثمرين.</p>
+                    <h4 class="font-bold text-lg mb-2 dark-mode-text">هوية بصرية لشركة عقارية</h4>
+                    <p class="text-gray-600 dark-mode-text">بناء هوية قوية ساعدت الشركة في الحصول على عقود حصرية مع كبار المستثمرين.</p>
                 </div>
             `;
         }
@@ -1820,21 +2011,21 @@
             
             const content = document.getElementById('serviceDetailsContent');
             content.innerHTML = `
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <h3 class="font-bold text-lg mb-2">نبذة عن الخدمة</h3>
-                    <p class="text-gray-600 leading-relaxed">${service.details.overview}</p>
+                <div class="bg-gray-50 p-4 rounded-lg dark-mode-bg">
+                    <h3 class="font-bold text-lg mb-2 dark-mode-text">نبذة عن الخدمة</h3>
+                    <p class="text-gray-600 leading-relaxed dark-mode-text">${service.details.overview}</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <h3 class="font-bold text-lg mb-3">المميزات</h3>
+                        <h3 class="font-bold text-lg mb-3 dark-mode-text">المميزات</h3>
                         <ul class="space-y-2">
-                            ${service.details.features.map(f => `<li class="flex items-center text-gray-600"><i class="fas fa-check text-green-500 ml-2"></i>${f}</li>`).join('')}
+                            ${service.details.features.map(f => `<li class="flex items-center text-gray-600 dark-mode-text"><i class="fas fa-check text-green-500 ml-2"></i>${f}</li>`).join('')}
                         </ul>
                     </div>
                     <div>
-                        <h3 class="font-bold text-lg mb-3">الفوائد</h3>
+                        <h3 class="font-bold text-lg mb-3 dark-mode-text">الفوائد</h3>
                         <ul class="space-y-2">
-                            ${service.details.benefits.map(b => `<li class="flex items-center text-gray-600"><i class="fas fa-award text-blue-500 ml-2"></i>${b}</li>`).join('')}
+                            ${service.details.benefits.map(b => `<li class="flex items-center text-gray-600 dark-mode-text"><i class="fas fa-award text-blue-500 ml-2"></i>${b}</li>`).join('')}
                         </ul>
                     </div>
                 </div>
@@ -1859,15 +2050,15 @@
             const container = document.getElementById('calculatorContent');
             
             container.innerHTML = `
-                <h3 class="font-bold text-xl mb-4 text-blue-800">${service.name}</h3>
+                <h3 class="font-bold text-xl mb-4 text-blue-800 dark-mode-text">${service.name}</h3>
                 <div class="space-y-3">
                     ${service.items.map((item, index) => `
-                        <label class="flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors card-hover-effect">
+                        <label class="flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors card-hover-effect dark-mode-bg">
                             <div class="flex items-center">
                                 <input type="checkbox" onchange="updateTotal(${index}, ${item.price}, '${item.name}')" class="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500">
-                                <span class="mr-3 text-gray-700">${item.name}</span>
+                                <span class="mr-3 text-gray-700 dark-mode-text">${item.name}</span>
                             </div>
-                            <span class="font-bold text-gray-900">${item.price} ريال</span>
+                            <span class="font-bold text-gray-900 dark-mode-text">${item.price} ريال</span>
                         </label>
                     `).join('')}
                 </div>
@@ -1917,13 +2108,13 @@
             Object.keys(servicePackages).forEach(key => {
                 const pkg = servicePackages[key];
                 const card = document.createElement('div');
-                card.className = 'border rounded-xl p-6 hover:shadow-lg transition-shadow bg-white flex flex-col relative overflow-hidden card-hover-effect';
+                card.className = 'border rounded-xl p-6 hover:shadow-lg transition-shadow bg-white flex flex-col relative overflow-hidden card-hover-effect dark-mode-bg';
                 card.innerHTML = `
                     <div class="absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-br-lg">
                         خصم ${pkg.discount}%
                     </div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800">${pkg.name}</h3>
-                    <p class="text-sm text-gray-500 mb-4 h-10">${pkg.description}</p>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark-mode-text">${pkg.name}</h3>
+                    <p class="text-sm text-gray-500 mb-4 h-10 dark-mode-text">${pkg.description}</p>
                     <ul class="text-sm text-gray-600 space-y-1 mb-4 flex-grow">
                         ${pkg.includes.slice(0, 3).map(i => `<li><i class="fas fa-check text-green-500 ml-2"></i>${i}</li>`).join('')}
                     </ul>
@@ -1954,10 +2145,10 @@
             // Populate Calculator Modal directly
             const container = document.getElementById('calculatorContent');
             container.innerHTML = `
-                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-                    <h3 class="font-bold text-lg text-blue-800 mb-2">${pkg.name}</h3>
-                    <p class="text-sm text-blue-600 mb-2">${pkg.description}</p>
-                    <div class="text-sm text-gray-600">
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 dark-mode-bg">
+                    <h3 class="font-bold text-lg text-blue-800 mb-2 dark-mode-text">${pkg.name}</h3>
+                    <p class="text-sm text-blue-600 mb-2 dark-mode-text">${pkg.description}</p>
+                    <div class="text-sm text-gray-600 dark-mode-text">
                         <strong>يشمل:</strong>
                         <ul class="list-disc list-inside mt-1">
                             ${pkg.includes.map(i => `<li>${i}</li>`).join('')}
