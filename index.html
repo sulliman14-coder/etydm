@@ -243,83 +243,157 @@
             color: #64748b;
         }
 
-        /* دعم الوضع الليلي */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #111827;
-                color: #f3f4f6;
-            }
-            
-            .bg-white {
-                background-color: #1f2937 !important;
-            }
-            
-            .bg-gray-50 {
-                background-color: #111827 !important;
-            }
-            
-            .text-gray-800 {
-                color: #f3f4f6 !important;
-            }
-            
-            .text-gray-600 {
-                color: #d1d5db !important;
-            }
-            
-            .text-gray-700 {
-                color: #e5e7eb !important;
-            }
-            
-            .bg-gradient-to-br.from-gray-50.to-blue-50 {
-                background: linear-gradient(to bottom right, #111827, #1e3a8a) !important;
-            }
-            
-            .bg-gradient-to-br.from-indigo-50.via-white.to-purple-50 {
-                background: linear-gradient(to bottom right, #312e81, #1f2937, #5b21b6) !important;
-            }
-            
-            /* تحسين النوافذ المنبثقة */
-            .modal-content {
-                background-color: #1f2937;
-                color: #f3f4f6;
-                border-color: #374151;
-            }
-            
-            .prose, .prose strong {
-                color: #f3f4f6 !important;
-            }
-            
-            .service-card {
-                background-color: #1f2937;
-                border-color: #374151;
-            }
-            
-            .service-card h3 {
-                color: #f3f4f6;
-            }
-            
-            .service-card p {
-                color: #d1d5db;
-            }
-            
-            .bg-blue-50, .bg-indigo-50, .bg-purple-50, .bg-pink-50 {
-                background-color: #1e3a8a !important;
-                color: #f3f4f6 !important;
-            }
-            
-            /* تحسين شعار المركز السعودي للأعمال */
-            footer {
-                background-color: #0f172a !important;
-            }
-            
-            footer .text-gray-400 {
-                color: #9ca3af !important;
-            }
+        /* أنماط الوضع الليلي */
+        body.dark-mode {
+            background-color: #111827 !important;
+            color: #f3f4f6 !important;
         }
 
-        /* للدعم الشامل */
-        @media (prefers-color-scheme: no-preference) {
-            /* أنماط افتراضية للحفاظ على الاتساق */
+        body.dark-mode .bg-white {
+            background-color: #1f2937 !important;
+        }
+
+        body.dark-mode .bg-gray-50 {
+            background-color: #111827 !important;
+        }
+
+        body.dark-mode .text-gray-800 {
+            color: #f3f4f6 !important;
+        }
+
+        body.dark-mode .text-gray-600 {
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode .text-gray-700 {
+            color: #e5e7eb !important;
+        }
+
+        body.dark-mode .bg-gradient-to-br.from-gray-50.to-blue-50 {
+            background: linear-gradient(to bottom right, #111827, #1e3a8a) !important;
+        }
+
+        body.dark-mode .bg-gradient-to-br.from-indigo-50.via-white.to-purple-50 {
+            background: linear-gradient(to bottom right, #312e81, #1f2937, #5b21b6) !important;
+        }
+
+        body.dark-mode .modal-content {
+            background-color: #1f2937 !important;
+            color: #f3f4f6 !important;
+            border-color: #374151 !important;
+        }
+
+        body.dark-mode .prose,
+        body.dark-mode .prose strong {
+            color: #f3f4f6 !important;
+        }
+
+        body.dark-mode .service-card {
+            background-color: #1f2937 !important;
+            border-color: #374151 !important;
+        }
+
+        body.dark-mode .service-card h3 {
+            color: #f3f4f6 !important;
+        }
+
+        body.dark-mode .service-card p {
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode .bg-blue-50,
+        body.dark-mode .bg-indigo-50,
+        body.dark-mode .bg-purple-50,
+        body.dark-mode .bg-pink-50 {
+            background-color: #1e3a8a !important;
+            color: #f3f4f6 !important;
+        }
+
+        body.dark-mode footer {
+            background-color: #0f172a !important;
+        }
+
+        body.dark-mode footer .text-gray-400 {
+            color: #9ca3af !important;
+        }
+
+        body.dark-mode .breadcrumb {
+            background-color: #1f2937 !important;
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode .breadcrumb a {
+            color: #60a5fa !important;
+        }
+
+        body.dark-mode .breadcrumb span {
+            color: #9ca3af !important;
+        }
+
+        body.dark-mode .gradient-bg {
+            background: linear-gradient(135deg, #4c51bf 0%, #6b21a8 100%) !important;
+        }
+
+        body.dark-mode .mobile-menu {
+            background-color: #1f2937 !important;
+        }
+
+        body.dark-mode .mobile-menu a {
+            color: #e5e7eb !important;
+        }
+
+        body.dark-mode .mobile-menu a:hover {
+            color: #60a5fa !important;
+        }
+
+        body.dark-mode .filter-btn {
+            background-color: #374151 !important;
+            color: #e5e7eb !important;
+        }
+
+        body.dark-mode .filter-btn.active {
+            background-color: #3b82f6 !important;
+            color: white !important;
+        }
+
+        body.dark-mode .filter-btn:hover {
+            background-color: #4b5563 !important;
+        }
+
+        body.dark-mode .bg-gray-100 {
+            background-color: #374151 !important;
+        }
+
+        body.dark-mode .border-gray-300 {
+            border-color: #4b5563 !important;
+        }
+
+        body.dark-mode input,
+        body.dark-mode textarea {
+            background-color: #374151 !important;
+            color: #f3f4f6 !important;
+            border-color: #4b5563 !important;
+        }
+
+        body.dark-mode input::placeholder,
+        body.dark-mode textarea::placeholder {
+            color: #9ca3af !important;
+        }
+
+        body.dark-mode .border-gray-100 {
+            border-color: #374151 !important;
+        }
+
+        body.dark-mode .shadow-lg {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        body.dark-mode .shadow-sm {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        body.dark-mode .bg-gray-900 {
+            background-color: #030712 !important;
         }
 
         /* تحسين محاذاة شعار المركز السعودي للأعمال */
@@ -345,7 +419,7 @@
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/966596466303" target="_blank" class="whatsapp-float" title="تواصل معنا عبر واتساب">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0.16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
         </svg>
     </a>
 
@@ -366,6 +440,10 @@
                     <a href="#portfolio" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">أعمالنا</a>
                     <a href="#packages" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">الباقات المميزة</a>
                     <a href="#contact" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">تواصل معنا</a>
+                    <button onclick="toggleDarkMode()" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors flex items-center" title="تبديل الوضع الليلي">
+                        <span class="ml-2 text-lg">🌙</span>
+                        <span>الوضع الليلي</span>
+                    </button>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -392,7 +470,11 @@
                     <a href="#services" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الخدمات</a>
                     <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">أعمالنا</a>
                     <a href="#packages" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الباقات المميزة</a>
-                    <a href="#contact" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2">تواصل معنا</a>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">تواصل معنا</a>
+                    <button onclick="toggleDarkMode(); toggleMobileMenu();" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center w-full">
+                        <span class="ml-2 text-lg">🌙</span>
+                        <span>الوضع الليلي</span>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -884,8 +966,7 @@
                 </h2>
                 <button onclick="closeModal('allPackagesModal')" class="text-gray-500 hover:text-gray-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
             <div id="allPackagesContent" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"></div>
@@ -1415,7 +1496,32 @@
             renderPartners();
             renderWhyUs();
             renderSuccessStories();
+            checkDarkModePreference();
         });
+
+        // Dark Mode Functions
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Save preference to localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                showNotification('تم تفعيل الوضع الليلي', 'success');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                showNotification('تم إلغاء الوضع الليلي', 'success');
+            }
+        }
+
+        // Check for saved dark mode preference
+        function checkDarkModePreference() {
+            const darkModeSaved = localStorage.getItem('darkMode');
+            
+            // Don't apply dark mode automatically, only if user explicitly enabled it
+            if (darkModeSaved === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        }
 
         // Portfolio Functions
         function renderPortfolio(filter) {
@@ -1847,6 +1953,12 @@
             const notif = document.getElementById('notification');
             notif.innerText = message;
             notif.className = `notification ${type} show`;
+            
+            // Adjust for dark mode
+            if (document.body.classList.contains('dark-mode')) {
+                notif.style.color = 'white';
+            }
+            
             setTimeout(() => {
                 notif.classList.remove('show');
             }, 3000);
