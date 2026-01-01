@@ -7,6 +7,9 @@
     <meta name="keywords" content="تصميم, تسويق, برمجة مواقع, هوية بصرية, السعودية, ETY, تسويق رقمي, سيو, تصميم شعار, متاجر إلكترونية">
     <title>إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد</title>
     
+    <!-- إصلاح مشكلة الوضع الليلي في Chrome -->
+    <meta name="color-scheme" content="light dark">
+    
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد">
     <meta property="og:description" content="نحوّل أفكارك إلى واقع رقمي مميز - تصميم هويات | مواقع إلكترونية | متاجر | تسويق رقمي">
@@ -61,40 +64,99 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             font-family: 'Tajawal', Arial, sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* إصلاح مشكلة الوضع الليلي في Chrome وFirefox */
+        :root {
+            color-scheme: light dark;
+        }
+
+        body {
+            color-scheme: light;
+            scroll-behavior: smooth;
+        }
+
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
+        /* تحسينات البطاقات */
         .service-card {
-            background: white;
-            border-radius: 1rem;
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border-radius: 20px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e5e7eb;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        /* تأثير تألق عند hover */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--start-color), var(--end-color));
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: translateY(0);
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
         .service-icon-wrapper {
             background: linear-gradient(135deg, var(--start-color), var(--end-color));
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
-            margin-bottom: 1rem;
+            border-radius: 18px;
+            margin-bottom: 1.5rem;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .service-icon-wrapper:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* تحسين أزرار البطاقات */
+        .service-card button {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            border: none;
+            cursor: pointer;
+        }
+
+        .service-card button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .whatsapp-float {
@@ -243,157 +305,119 @@
             color: #64748b;
         }
 
-        /* أنماط الوضع الليلي */
-        body.dark-mode {
-            background-color: #111827 !important;
-            color: #f3f4f6 !important;
+        /* تحسين تأثيرات التمرير */
+        section {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        body.dark-mode .bg-white {
-            background-color: #1f2937 !important;
+        /* إصلاح مشكلة الوضع الليلي */
+        @media (prefers-color-scheme: dark) {
+            /* إعادة تعيين الألوان في الوضع الليلي */
+            body {
+                background-color: #0f172a !important;
+                color: #f1f5f9 !important;
+            }
+            
+            /* إصلاح الأزرار */
+            button:not(.whatsapp-float),
+            .filter-btn,
+            .service-card button,
+            .modal-content button {
+                color-scheme: dark;
+            }
+            
+            /* تحسين التباين */
+            .text-gray-800 {
+                color: #f1f5f9 !important;
+            }
+            
+            .text-gray-600 {
+                color: #cbd5e1 !important;
+            }
+            
+            .text-gray-700 {
+                color: #e2e8f0 !important;
+            }
+            
+            /* إصلاح البطاقات */
+            .service-card {
+                background: linear-gradient(145deg, #1e293b, #0f172a);
+                border-color: #334155;
+            }
+            
+            .service-card h3 {
+                color: #f8fafc !important;
+            }
+            
+            .service-card p {
+                color: #cbd5e1 !important;
+            }
+            
+            /* إصلاح القوائم */
+            .modal-content {
+                background-color: #1e293b;
+                color: #f1f5f9;
+            }
+            
+            /* إصلاح أزرار البطاقات في الوضع الليلي */
+            .service-card button {
+                background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+            }
+            
+            /* إصلاح حقل الإدخال */
+            input, textarea {
+                background-color: #334155 !important;
+                border-color: #475569 !important;
+                color: #f1f5f9 !important;
+            }
+            
+            input::placeholder,
+            textarea::placeholder {
+                color: #94a3b8 !important;
+            }
+            
+            .bg-white {
+                background-color: #1e293b !important;
+            }
+            
+            .bg-gray-50 {
+                background-color: #0f172a !important;
+            }
+            
+            .bg-gradient-to-br.from-gray-50.to-blue-50 {
+                background: linear-gradient(to bottom right, #111827, #1e3a8a) !important;
+            }
+            
+            .bg-gradient-to-br.from-indigo-50.via-white.to-purple-50 {
+                background: linear-gradient(to bottom right, #312e81, #1f2937, #5b21b6) !important;
+            }
+            
+            .prose, .prose strong {
+                color: #f1f5f9 !important;
+            }
+            
+            .bg-blue-50, .bg-indigo-50, .bg-purple-50, .bg-pink-50 {
+                background-color: #1e3a8a !important;
+                color: #f1f5f9 !important;
+            }
+            
+            /* تحسين شعار المركز السعودي للأعمال */
+            footer {
+                background-color: #0f172a !important;
+            }
+            
+            footer .text-gray-400 {
+                color: #9ca3af !important;
+            }
         }
 
-        body.dark-mode .bg-gray-50 {
-            background-color: #111827 !important;
-        }
-
-        body.dark-mode .text-gray-800 {
-            color: #f3f4f6 !important;
-        }
-
-        body.dark-mode .text-gray-600 {
-            color: #d1d5db !important;
-        }
-
-        body.dark-mode .text-gray-700 {
-            color: #e5e7eb !important;
-        }
-
-        body.dark-mode .bg-gradient-to-br.from-gray-50.to-blue-50 {
-            background: linear-gradient(to bottom right, #111827, #1e3a8a) !important;
-        }
-
-        body.dark-mode .bg-gradient-to-br.from-indigo-50.via-white.to-purple-50 {
-            background: linear-gradient(to bottom right, #312e81, #1f2937, #5b21b6) !important;
-        }
-
-        body.dark-mode .modal-content {
-            background-color: #1f2937 !important;
-            color: #f3f4f6 !important;
-            border-color: #374151 !important;
-        }
-
-        body.dark-mode .prose,
-        body.dark-mode .prose strong {
-            color: #f3f4f6 !important;
-        }
-
-        body.dark-mode .service-card {
-            background-color: #1f2937 !important;
-            border-color: #374151 !important;
-        }
-
-        body.dark-mode .service-card h3 {
-            color: #f3f4f6 !important;
-        }
-
-        body.dark-mode .service-card p {
-            color: #d1d5db !important;
-        }
-
-        body.dark-mode .bg-blue-50,
-        body.dark-mode .bg-indigo-50,
-        body.dark-mode .bg-purple-50,
-        body.dark-mode .bg-pink-50 {
-            background-color: #1e3a8a !important;
-            color: #f3f4f6 !important;
-        }
-
-        body.dark-mode footer {
-            background-color: #0f172a !important;
-        }
-
-        body.dark-mode footer .text-gray-400 {
-            color: #9ca3af !important;
-        }
-
-        body.dark-mode .breadcrumb {
-            background-color: #1f2937 !important;
-            color: #d1d5db !important;
-        }
-
-        body.dark-mode .breadcrumb a {
-            color: #60a5fa !important;
-        }
-
-        body.dark-mode .breadcrumb span {
-            color: #9ca3af !important;
-        }
-
-        body.dark-mode .gradient-bg {
-            background: linear-gradient(135deg, #4c51bf 0%, #6b21a8 100%) !important;
-        }
-
-        body.dark-mode .mobile-menu {
-            background-color: #1f2937 !important;
-        }
-
-        body.dark-mode .mobile-menu a {
-            color: #e5e7eb !important;
-        }
-
-        body.dark-mode .mobile-menu a:hover {
-            color: #60a5fa !important;
-        }
-
-        body.dark-mode .filter-btn {
-            background-color: #374151 !important;
-            color: #e5e7eb !important;
-        }
-
-        body.dark-mode .filter-btn.active {
-            background-color: #3b82f6 !important;
-            color: white !important;
-        }
-
-        body.dark-mode .filter-btn:hover {
-            background-color: #4b5563 !important;
-        }
-
-        body.dark-mode .bg-gray-100 {
-            background-color: #374151 !important;
-        }
-
-        body.dark-mode .border-gray-300 {
-            border-color: #4b5563 !important;
-        }
-
-        body.dark-mode input,
-        body.dark-mode textarea {
-            background-color: #374151 !important;
-            color: #f3f4f6 !important;
-            border-color: #4b5563 !important;
-        }
-
-        body.dark-mode input::placeholder,
-        body.dark-mode textarea::placeholder {
-            color: #9ca3af !important;
-        }
-
-        body.dark-mode .border-gray-100 {
-            border-color: #374151 !important;
-        }
-
-        body.dark-mode .shadow-lg {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
-        }
-
-        body.dark-mode .shadow-sm {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
-        }
-
-        body.dark-mode .bg-gray-900 {
-            background-color: #030712 !important;
+        /* إضافة هذا لمعالجة مشكلة الألوان في Chrome */
+        @media (prefers-color-scheme: light) {
+            body {
+                color-scheme: light only;
+            }
         }
 
         /* تحسين محاذاة شعار المركز السعودي للأعمال */
@@ -410,6 +434,33 @@
                 display: inline-block;
             }
         }
+
+        /* تحسينات إضافية للتصميم */
+        .card-hover-effect {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* تحسين الفلاتر في المعرض */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* تحسين الأيقونات */
+        .modern-icon {
+            font-size: 1.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
     </style>
 </head>
 <body class="bg-gray-50" itemscope itemtype="https://schema.org/WebPage">
@@ -418,9 +469,7 @@
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/966596466303" target="_blank" class="whatsapp-float" title="تواصل معنا عبر واتساب">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0.16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
-        </svg>
+        <i class="fab fa-whatsapp modern-icon"></i>
     </a>
 
     <!-- Header -->
@@ -440,18 +489,12 @@
                     <a href="#portfolio" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">أعمالنا</a>
                     <a href="#packages" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">الباقات المميزة</a>
                     <a href="#contact" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">تواصل معنا</a>
-                    <button onclick="toggleDarkMode()" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors flex items-center" title="تبديل الوضع الليلي">
-                        <span class="ml-2 text-lg">🌙</span>
-                        <span>الوضع الليلي</span>
-                    </button>
                 </nav>
 
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center gap-2 md:hidden">
                     <button onclick="toggleMobileMenu()" class="text-gray-700" aria-label="فتح القائمة">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                        <i class="fas fa-bars modern-icon"></i>
                     </button>
                 </div>
             </div>
@@ -461,20 +504,14 @@
         <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-50 md:hidden">
             <div class="p-6">
                 <button onclick="toggleMobileMenu()" class="float-left text-gray-600 mb-8" aria-label="إغلاق القائمة">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                    <i class="fas fa-times modern-icon"></i>
                 </button>
                 <nav class="space-y-4 mt-8">
                     <a href="#home" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الرئيسية</a>
                     <a href="#services" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الخدمات</a>
                     <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">أعمالنا</a>
                     <a href="#packages" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الباقات المميزة</a>
-                    <a href="#contact" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">تواصل معنا</a>
-                    <button onclick="toggleDarkMode(); toggleMobileMenu();" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center w-full">
-                        <span class="ml-2 text-lg">🌙</span>
-                        <span>الوضع الليلي</span>
-                    </button>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2">تواصل معنا</a>
                 </nav>
             </div>
         </div>
@@ -515,7 +552,7 @@
                 <!-- About Us Button -->
                 <button onclick="openAboutModal()" class="sparkle-btn group relative bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[320px] overflow-hidden border border-indigo-400">
                     <div class="relative flex items-center justify-center gap-3">
-                        <span class="text-2xl">ℹ️</span>
+                        <i class="fas fa-info-circle modern-icon"></i>
                         <span>من نحن</span>
                     </div>
                 </button>
@@ -524,7 +561,7 @@
                 <button onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" class="group relative bg-white text-indigo-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[260px] overflow-hidden border-2 border-indigo-200">
                     <div class="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="relative flex items-center justify-center gap-3">
-                        <span class="text-2xl">🎨</span>
+                        <i class="fas fa-palette modern-icon"></i>
                         <span>أعمالنا</span>
                     </div>
                 </button>
@@ -532,7 +569,7 @@
                 <!-- Packages Button -->
                 <button onclick="showAllPackages()" class="group relative bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[260px] overflow-hidden">
                     <div class="relative flex items-center justify-center gap-3">
-                        <span class="text-2xl">🎁</span>
+                        <i class="fas fa-gift modern-icon"></i>
                         <span>الباقات المميزة</span>
                     </div>
                 </button>
@@ -600,7 +637,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4 shadow-lg">
-                    <span class="text-3xl text-white">🎁</span>
+                    <i class="fas fa-gift modern-icon text-white"></i>
                 </div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4">الباقات المميزة بخصومات حصرية</h2>
                 <p class="text-xl text-gray-600">وفر حتى 28% مع باقاتنا المتكاملة المدروسة</p>
@@ -636,7 +673,7 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mb-6 shadow-lg">
-                    <span class="text-3xl text-white">🏆</span>
+                    <i class="fas fa-trophy modern-icon text-white"></i>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">لماذا تختارنا؟</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -663,7 +700,7 @@
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4 space-x-reverse">
                             <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <i class="fas fa-phone modern-icon"></i>
                             </div>
                             <div>
                                 <p class="font-medium text-gray-900">الهاتف / واتساب</p>
@@ -672,7 +709,7 @@
                         </div>
                         <div class="flex items-center space-x-4 space-x-reverse">
                             <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <i class="fas fa-envelope modern-icon"></i>
                             </div>
                             <div>
                                 <p class="font-medium text-gray-900">البريد الإلكتروني</p>
@@ -681,7 +718,7 @@
                         </div>
                         <div class="flex items-center space-x-4 space-x-reverse">
                             <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <i class="fas fa-map-marker-alt modern-icon"></i>
                             </div>
                             <div>
                                 <p class="font-medium text-gray-900">الموقع</p>
@@ -706,7 +743,7 @@
                         <textarea id="contactMessage" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors h-32" required placeholder="اكتب رسالتك هنا..."></textarea>
                     </div>
                     <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md">
-                        إرسال الرسالة
+                        <i class="fas fa-paper-plane mr-2"></i> إرسال الرسالة
                     </button>
                 </form>
             </div>
@@ -759,11 +796,11 @@
         <div class="modal-content max-w-4xl" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6">
                 <div class="flex items-center gap-3">
-                    <span class="text-3xl text-indigo-600">ℹ️</span>
+                    <i class="fas fa-info-circle modern-icon text-indigo-600"></i>
                     <h2 class="text-2xl font-bold text-gray-800">من نحن - إي تي واي</h2>
                 </div>
                 <button onclick="closeModal('aboutModal')" class="text-gray-500 hover:text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <i class="fas fa-times modern-icon"></i>
                 </button>
             </div>
             
@@ -780,17 +817,17 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                     <div class="bg-indigo-50 p-4 rounded-lg text-center">
-                        <span class="block text-2xl mb-2">🎯</span>
+                        <i class="fas fa-bullseye modern-icon block text-2xl mb-2 text-indigo-600"></i>
                         <span class="font-bold text-indigo-800">رؤيتنا</span>
                         <p class="text-sm mt-1">أن نكون الخيار الأول للحلول الرقمية في المملكة.</p>
                     </div>
                     <div class="bg-purple-50 p-4 rounded-lg text-center">
-                        <span class="block text-2xl mb-2">🚀</span>
+                        <i class="fas fa-rocket modern-icon block text-2xl mb-2 text-purple-600"></i>
                         <span class="font-bold text-purple-800">رسالتنا</span>
                         <p class="text-sm mt-1">تمكين الأعمال بأدوات وحلول تقنية مبتكرة.</p>
                     </div>
                     <div class="bg-blue-50 p-4 rounded-lg text-center">
-                        <span class="block text-2xl mb-2">⭐</span>
+                        <i class="fas fa-star modern-icon block text-2xl mb-2 text-blue-600"></i>
                         <span class="font-bold text-blue-800">قيمنا</span>
                         <p class="text-sm mt-1">الإبداع، الجودة، والالتزام بالمواعيد.</p>
                     </div>
@@ -811,10 +848,10 @@
             
             <div class="mt-8 flex gap-4">
                 <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'}); closeModal('aboutModal');" class="flex-1 bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    اكتشف خدماتنا
+                    <i class="fas fa-eye mr-2"></i> اكتشف خدماتنا
                 </button>
                 <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); closeModal('aboutModal');" class="flex-1 bg-white border-2 border-indigo-600 text-indigo-600 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors">
-                    تواصل معنا
+                    <i class="fas fa-envelope mr-2"></i> تواصل معنا
                 </button>
             </div>
         </div>
@@ -829,7 +866,7 @@
                     <h2 id="modalProjectTitle" class="text-3xl font-bold text-gray-800"></h2>
                 </div>
                 <button onclick="closeModal('portfolioModal')" class="text-gray-500 hover:text-gray-700 bg-gray-100 p-2 rounded-full">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <i class="fas fa-times modern-icon"></i>
                 </button>
             </div>
             
@@ -856,7 +893,7 @@
                         <!-- PDF Button -->
                          <div id="pdfDownloadBtnContainer" class="hidden">
                             <a id="pdfDownloadLink" href="#" target="_blank" class="w-full bg-gray-800 text-white py-2 rounded-lg font-bold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <i class="fas fa-file-pdf modern-icon"></i>
                                 <span>فتح الملف في نافذة جديدة</span>
                             </a>
                         </div>
@@ -864,13 +901,13 @@
                         <!-- Website/Menu Visit Button -->
                         <div id="websiteBtnContainer" class="hidden">
                             <a id="websiteLink" href="#" target="_blank" class="w-full bg-green-600 text-white py-2 rounded-lg font-bold hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <i class="fas fa-external-link-alt modern-icon"></i>
                                 <span id="websiteBtnText">زيارة الموقع الإلكتروني</span>
                             </a>
                         </div>
 
                         <button onclick="closeModal('portfolioModal'); document.getElementById('contact').scrollIntoView({behavior: 'smooth'});" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg flex items-center justify-center gap-2">
-                            <span>🚀</span>
+                            <i class="fas fa-rocket modern-icon"></i>
                             <span>اطلب مشروع مشابه</span>
                         </button>
                     </div>
@@ -885,9 +922,7 @@
             <div class="flex justify-between items-center mb-6">
                 <h2 id="serviceDetailsTitle" class="text-2xl font-bold text-gray-800"></h2>
                 <button onclick="closeModal('serviceDetailsModal')" class="text-gray-500 hover:text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                    <i class="fas fa-times modern-icon"></i>
                 </button>
             </div>
             <div id="serviceDetailsContent" class="space-y-8"></div>
@@ -898,11 +933,12 @@
     <div id="calculatorModal" class="modal-container" onclick="closeModal('calculatorModal')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-800">حاسبة الأسعار المتقدمة</h2>
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                    <i class="fas fa-calculator modern-icon ml-3"></i>
+                    حاسبة الأسعار المتقدمة
+                </h2>
                 <button onclick="closeModal('calculatorModal')" class="text-gray-500 hover:text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                    <i class="fas fa-times modern-icon"></i>
                 </button>
             </div>
             <div id="calculatorContent"></div>
@@ -923,10 +959,10 @@
                 </div>
                 <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4 md:space-x-reverse">
                     <button onclick="showDownloadOptions()" class="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm md:text-base">
-                        📥 تحميل عرض السعر
+                        <i class="fas fa-download mr-2"></i> تحميل عرض السعر
                     </button>
                     <button onclick="sendToWhatsApp()" class="flex-1 bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm md:text-base">
-                        📱 إرسال عبر واتساب
+                        <i class="fab fa-whatsapp mr-2"></i> إرسال عبر واتساب
                     </button>
                 </div>
             </div>
@@ -942,11 +978,11 @@
             </div>
             <div class="space-y-4">
                 <button onclick="downloadQuotePDF()" class="w-full bg-red-600 text-white py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center space-x-3 space-x-reverse">
-                    <span class="text-2xl">📄</span>
+                    <i class="fas fa-file-pdf modern-icon"></i>
                     <span>تحميل PDF (A4)</span>
                 </button>
                 <button onclick="downloadQuoteImage()" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-3 space-x-reverse">
-                    <span class="text-2xl">🖼️</span>
+                    <i class="fas fa-image modern-icon"></i>
                     <span>تحميل كصورة</span>
                 </button>
                 <button onclick="closeModal('downloadOptionsModal')" class="w-full bg-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-400 transition-colors">
@@ -961,12 +997,11 @@
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold text-gray-800 flex items-center">
-                    <span class="text-3xl ml-3">🎁</span>
+                    <i class="fas fa-gift modern-icon ml-3"></i>
                     الباقات المميزة بخصومات حصرية
                 </h2>
                 <button onclick="closeModal('allPackagesModal')" class="text-gray-500 hover:text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <i class="fas fa-times modern-icon"></i>
                 </button>
             </div>
             <div id="allPackagesContent" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"></div>
@@ -977,6 +1012,15 @@
     <div id="quoteTemplate" style="position: absolute; left: -9999px; top: -9999px; width: 794px; background: white; padding: 30px; box-sizing: border-box; direction: rtl; font-family: 'Tajawal', Arial, sans-serif;"></div>
 
     <script>
+        // Force light color scheme to fix Chrome dark mode issues
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Add a class to handle dark mode manually
+            document.documentElement.classList.add('force-light-mode');
+            
+            // Add CSS variable for manual dark mode handling
+            document.documentElement.style.setProperty('--is-dark-mode', 'true');
+        }
+
         // Data for services, packages, partners, etc.
         const servicePackages = {
             profile: {
@@ -1101,10 +1145,11 @@
             }
         };
 
+        // تحسين الأيقونات لتصبح أكثر عصرية
         const servicesData = {
             profile: {
                 name: 'تصميم ملف تعريفي احترافي',
-                icon: '📋',
+                icon: '<i class="fas fa-file-alt"></i>',
                 price: 250,
                 startColor: '#0b7d85',
                 endColor: '#065f65',
@@ -1124,7 +1169,7 @@
             },
             websites: {
                 name: 'المواقع التعريفية والمتاجر الإلكترونية',
-                icon: '🌐',
+                icon: '<i class="fas fa-globe"></i>',
                 price: 800,
                 startColor: '#3b82f6',
                 endColor: '#1d4ed8',
@@ -1147,7 +1192,7 @@
             },
             content: {
                 name: 'إنشاء المحتوى وإدارة التواصل',
-                icon: '✍️',
+                icon: '<i class="fas fa-pen-fancy"></i>',
                 price: 500,
                 startColor: '#8b5cf6',
                 endColor: '#6d28d9',
@@ -1166,7 +1211,7 @@
             },
             identity: {
                 name: 'الهوية البصرية والعلامات التجارية',
-                icon: '🎨',
+                icon: '<i class="fas fa-palette"></i>',
                 price: 600,
                 startColor: '#ec4899',
                 endColor: '#be185d',
@@ -1185,7 +1230,7 @@
             },
             marketing: {
                 name: 'التسويق الرقمي والإعلانات',
-                icon: '📢',
+                icon: '<i class="fas fa-bullhorn"></i>',
                 price: 1000,
                 startColor: '#f59e0b',
                 endColor: '#b45309',
@@ -1204,7 +1249,7 @@
             },
             menu: {
                 name: 'تصميم المنيو الرقمي والورقي',
-                icon: '🍔',
+                icon: '<i class="fas fa-utensils"></i>',
                 price: 300,
                 startColor: '#10b981',
                 endColor: '#047857',
@@ -1223,7 +1268,7 @@
             },
             analytics: {
                 name: 'تحليل البيانات وتقارير الأداء',
-                icon: '📊',
+                icon: '<i class="fas fa-chart-line"></i>',
                 price: 800,
                 startColor: '#3b82f6',
                 endColor: '#1e40af',
@@ -1241,7 +1286,7 @@
             },
             schoolActivities: {
                 name: 'الأنشطة المدرسية والتعليمية',
-                icon: '🎓',
+                icon: '<i class="fas fa-graduation-cap"></i>',
                 price: 150,
                 startColor: '#f43f5e',
                 endColor: '#9f1239',
@@ -1259,7 +1304,7 @@
             },
             annualReport: {
                 name: 'التقارير السنوية والعروض',
-                icon: '📈',
+                icon: '<i class="fas fa-chart-bar"></i>',
                 price: 1000,
                 startColor: '#6366f1',
                 endColor: '#4338ca',
@@ -1277,7 +1322,7 @@
             },
             teachers: {
                 name: 'خدمات المعلمين والمدربين',
-                icon: '📚',
+                icon: '<i class="fas fa-chalkboard-teacher"></i>',
                 price: 200,
                 startColor: '#14b8a6',
                 endColor: '#0f766e',
@@ -1295,7 +1340,7 @@
             },
             students: {
                 name: 'خدمات الطلاب والخريجين',
-                icon: '🎓',
+                icon: '<i class="fas fa-user-graduate"></i>',
                 price: 100,
                 startColor: '#8b5cf6',
                 endColor: '#5b21b6',
@@ -1307,13 +1352,13 @@
                 ],
                 details: {
                     overview: 'ندعم مسيرتك الأكاديمية بخدمات تصميم وتنسيق احترافية تساعدك في تحقيق أفضل الدرجات والتميز.',
-                    features: ['التزام بمعايير الجامعة', 'تصاميم عصرية وجذابة', 'أسعار مناسبة للطلاب', 'دقة في المواعيد'],
+                    features: ['التزام بمعايير الجامعة', 'تصاميم عصرية وجذابة', 'أسعار مناسبة للطلاب', 'دقة في الموعد'],
                     benefits: ['ضمان قبول البحث', 'ترك انطباع قوي', 'سهولة العرض والشرح']
                 }
             },
             letterhead: {
                 name: 'المطبوعات التجارية',
-                icon: '🖨️',
+                icon: '<i class="fas fa-print"></i>',
                 price: 300,
                 startColor: '#f97316',
                 endColor: '#c2410c',
@@ -1496,32 +1541,8 @@
             renderPartners();
             renderWhyUs();
             renderSuccessStories();
-            checkDarkModePreference();
+            initScrollAnimations();
         });
-
-        // Dark Mode Functions
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            
-            // Save preference to localStorage
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-                showNotification('تم تفعيل الوضع الليلي', 'success');
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-                showNotification('تم إلغاء الوضع الليلي', 'success');
-            }
-        }
-
-        // Check for saved dark mode preference
-        function checkDarkModePreference() {
-            const darkModeSaved = localStorage.getItem('darkMode');
-            
-            // Don't apply dark mode automatically, only if user explicitly enabled it
-            if (darkModeSaved === 'enabled') {
-                document.body.classList.add('dark-mode');
-            }
-        }
 
         // Portfolio Functions
         function renderPortfolio(filter) {
@@ -1539,7 +1560,7 @@
 
             filteredItems.forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white';
+                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white card-hover-effect';
                 card.onclick = () => openPortfolioModal(item);
                 
                 card.innerHTML = `
@@ -1559,11 +1580,11 @@
         function filterPortfolio(category) {
             // Update UI
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md', 'active');
+                btn.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-md');
                 btn.classList.add('bg-gray-100', 'text-gray-600');
             });
             event.target.classList.remove('bg-gray-100', 'text-gray-600');
-            event.target.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'active');
+            event.target.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-md');
 
             // Render
             renderPortfolio(category);
@@ -1652,7 +1673,7 @@
             menu.classList.toggle('open');
         }
 
-        // Render Services
+        // Render Services with improved design
         function renderServices() {
             const container = document.getElementById('services-container');
             container.innerHTML = '';
@@ -1660,24 +1681,29 @@
             Object.keys(servicesData).forEach(key => {
                 const service = servicesData[key];
                 const card = document.createElement('div');
-                card.className = 'service-card p-6 cursor-pointer';
+                card.className = 'service-card';
                 card.style.setProperty('--start-color', service.startColor);
                 card.style.setProperty('--end-color', service.endColor);
-                card.onclick = () => openServiceDetails(key);
                 
                 card.innerHTML = `
-                    <div class="service-icon-wrapper text-3xl">
+                    <div class="service-icon-wrapper">
                         ${service.icon}
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">${service.name}</h3>
-                    <p class="text-gray-500 mb-4 line-clamp-2">${service.details.overview}</p>
-                    <div class="flex justify-between items-center mt-auto">
-                        <span class="text-blue-600 font-bold text-sm">تبدأ من ${service.price} ريال</span>
-                        <span class="text-gray-400 text-sm flex items-center gap-1">
-                            المزيد <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        </span>
-                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">${service.name}</h3>
+                    <p class="text-gray-500 mb-6 line-clamp-2 flex-grow">${service.details.overview}</p>
+                    <button onclick="event.stopPropagation(); openServiceDetails('${key}')" 
+                            class="bg-gradient-to-r ${key === 'profile' ? 'from-blue-500 to-blue-600' : 'from-gray-700 to-gray-800'} text-white font-medium hover:shadow-md">
+                        التفاصيل
+                    </button>
                 `;
+                
+                // Add click event to entire card
+                card.addEventListener('click', (e) => {
+                    if (!e.target.closest('button')) {
+                        openServiceDetails(key);
+                    }
+                });
+                
                 container.appendChild(card);
             });
         }
@@ -1693,7 +1719,7 @@
             packageKeys.forEach(key => {
                 const pkg = servicePackages[key];
                 const card = document.createElement('div');
-                card.className = 'bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-1 duration-300 flex flex-col';
+                card.className = 'bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-1 duration-300 flex flex-col card-hover-effect';
                 
                 card.innerHTML = `
                     <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-lg">
@@ -1702,7 +1728,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-3 pt-2">${pkg.name}</h3>
                     <p class="text-gray-600 mb-4 flex-grow">${pkg.description}</p>
                     <div class="space-y-2 mb-4">
-                        ${pkg.includes.slice(0, 3).map(item => `<div class="flex items-center text-sm text-gray-700"><span class="text-green-500 ml-2">✓</span>${item}</div>`).join('')}
+                        ${pkg.includes.slice(0, 3).map(item => `<div class="flex items-center text-sm text-gray-700"><i class="fas fa-check text-green-500 ml-2"></i>${item}</div>`).join('')}
                     </div>
                     <div class="mt-auto">
                         <div class="flex items-center gap-2 mb-3">
@@ -1710,7 +1736,7 @@
                             <span class="text-red-600 font-bold text-lg">${pkg.discountedPrice} ريال</span>
                         </div>
                         <button onclick="selectPackage('${key}')" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-bold hover:shadow-md transition-all">
-                            اختر الباقة
+                            <i class="fas fa-shopping-cart ml-2"></i> اختر الباقة
                         </button>
                     </div>
                 `;
@@ -1731,7 +1757,7 @@
             
             const container = document.getElementById('partners-grid');
             container.innerHTML = partners.map(p => `
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-center h-32 overflow-hidden group">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-center h-32 overflow-hidden group card-hover-effect">
                     <img src="${p.logo}" alt="${p.name}" class="max-h-full max-w-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110" loading="lazy">
                 </div>
             `).join('');
@@ -1740,16 +1766,16 @@
         // Render Why Us
         function renderWhyUs() {
             const features = [
-                { title: 'جودة عالية', desc: 'نلتزم بأعلى معايير الجودة في كل مشروع', icon: '⭐' },
-                { title: 'دعم فني', desc: 'دعم متواصل على مدار الساعة لخدمتكم', icon: '🎧' },
-                { title: 'أسعار منافسة', desc: 'باقات متنوعة تناسب جميع الميزانيات', icon: '💰' },
-                { title: 'سرعة التنفيذ', desc: 'نحترم أوقاتكم ونسلم المشاريع في الموعد', icon: '🚀' }
+                { title: 'جودة عالية', desc: 'نلتزم بأعلى معايير الجودة في كل مشروع', icon: '<i class="fas fa-star"></i>' },
+                { title: 'دعم فني', desc: 'دعم متواصل على مدار الساعة لخدمتكم', icon: '<i class="fas fa-headset"></i>' },
+                { title: 'أسعار منافسة', desc: 'باقات متنوعة تناسب جميع الميزانيات', icon: '<i class="fas fa-tags"></i>' },
+                { title: 'سرعة التنفيذ', desc: 'نحترم أوقاتكم ونسلم المشاريع في الموعد', icon: '<i class="fas fa-bolt"></i>' }
             ];
             
             const container = document.getElementById('why-us-grid');
             container.innerHTML = features.map(f => `
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-4xl mb-4">${f.icon}</div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 card-hover-effect">
+                    <div class="text-4xl mb-4 text-blue-600">${f.icon}</div>
                     <h3 class="text-xl font-bold mb-2">${f.title}</h3>
                     <p class="text-gray-500">${f.desc}</p>
                 </div>
@@ -1802,19 +1828,19 @@
                     <div>
                         <h3 class="font-bold text-lg mb-3">المميزات</h3>
                         <ul class="space-y-2">
-                            ${service.details.features.map(f => `<li class="flex items-center text-gray-600"><span class="text-green-500 ml-2">✔</span>${f}</li>`).join('')}
+                            ${service.details.features.map(f => `<li class="flex items-center text-gray-600"><i class="fas fa-check text-green-500 ml-2"></i>${f}</li>`).join('')}
                         </ul>
                     </div>
                     <div>
                         <h3 class="font-bold text-lg mb-3">الفوائد</h3>
                         <ul class="space-y-2">
-                            ${service.details.benefits.map(b => `<li class="flex items-center text-gray-600"><span class="text-blue-500 ml-2">✦</span>${b}</li>`).join('')}
+                            ${service.details.benefits.map(b => `<li class="flex items-center text-gray-600"><i class="fas fa-award text-blue-500 ml-2"></i>${b}</li>`).join('')}
                         </ul>
                     </div>
                 </div>
                 <div class="mt-6">
                     <button onclick="openCalculator('${serviceKey}')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
-                        احسب تكلفة مشروعك الآن
+                        <i class="fas fa-calculator ml-2"></i> احسب تكلفة مشروعك الآن
                     </button>
                 </div>
             `;
@@ -1836,7 +1862,7 @@
                 <h3 class="font-bold text-xl mb-4 text-blue-800">${service.name}</h3>
                 <div class="space-y-3">
                     ${service.items.map((item, index) => `
-                        <label class="flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                        <label class="flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors card-hover-effect">
                             <div class="flex items-center">
                                 <input type="checkbox" onchange="updateTotal(${index}, ${item.price}, '${item.name}')" class="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500">
                                 <span class="mr-3 text-gray-700">${item.name}</span>
@@ -1891,7 +1917,7 @@
             Object.keys(servicePackages).forEach(key => {
                 const pkg = servicePackages[key];
                 const card = document.createElement('div');
-                card.className = 'border rounded-xl p-6 hover:shadow-lg transition-shadow bg-white flex flex-col relative overflow-hidden';
+                card.className = 'border rounded-xl p-6 hover:shadow-lg transition-shadow bg-white flex flex-col relative overflow-hidden card-hover-effect';
                 card.innerHTML = `
                     <div class="absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-br-lg">
                         خصم ${pkg.discount}%
@@ -1899,7 +1925,7 @@
                     <h3 class="font-bold text-lg mb-2 text-gray-800">${pkg.name}</h3>
                     <p class="text-sm text-gray-500 mb-4 h-10">${pkg.description}</p>
                     <ul class="text-sm text-gray-600 space-y-1 mb-4 flex-grow">
-                        ${pkg.includes.slice(0, 3).map(i => `<li>• ${i}</li>`).join('')}
+                        ${pkg.includes.slice(0, 3).map(i => `<li><i class="fas fa-check text-green-500 ml-2"></i>${i}</li>`).join('')}
                     </ul>
                     <div class="mt-auto">
                         <div class="flex items-center gap-2 mb-3">
@@ -1907,7 +1933,7 @@
                             <span class="text-red-600 font-bold text-lg">${pkg.discountedPrice} ريال</span>
                         </div>
                         <button onclick="selectPackage('${key}')" class="w-full bg-gradient-to-r from-teal-500 to-blue-500 text-white py-2 rounded-lg font-bold hover:shadow-md transition-all text-sm">
-                            اختر الباقة
+                            <i class="fas fa-shopping-cart ml-2"></i> اختر الباقة
                         </button>
                     </div>
                 `;
@@ -1948,17 +1974,55 @@
             openModal('calculatorModal');
         }
 
+        // Scroll Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                observer.observe(section);
+            });
+        }
+
+        // Smooth scrolling with animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Add fade out animation to current section
+                    const currentSection = document.querySelector('section:not([style*="display: none"])');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
         // Utilities
         function showNotification(message, type = 'info') {
             const notif = document.getElementById('notification');
             notif.innerText = message;
             notif.className = `notification ${type} show`;
-            
-            // Adjust for dark mode
-            if (document.body.classList.contains('dark-mode')) {
-                notif.style.color = 'white';
-            }
-            
             setTimeout(() => {
                 notif.classList.remove('show');
             }, 3000);
