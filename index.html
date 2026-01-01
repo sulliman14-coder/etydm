@@ -242,6 +242,100 @@
         .breadcrumb span {
             color: #64748b;
         }
+
+        /* دعم الوضع الليلي */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #111827;
+                color: #f3f4f6;
+            }
+            
+            .bg-white {
+                background-color: #1f2937 !important;
+            }
+            
+            .bg-gray-50 {
+                background-color: #111827 !important;
+            }
+            
+            .text-gray-800 {
+                color: #f3f4f6 !important;
+            }
+            
+            .text-gray-600 {
+                color: #d1d5db !important;
+            }
+            
+            .text-gray-700 {
+                color: #e5e7eb !important;
+            }
+            
+            .bg-gradient-to-br.from-gray-50.to-blue-50 {
+                background: linear-gradient(to bottom right, #111827, #1e3a8a) !important;
+            }
+            
+            .bg-gradient-to-br.from-indigo-50.via-white.to-purple-50 {
+                background: linear-gradient(to bottom right, #312e81, #1f2937, #5b21b6) !important;
+            }
+            
+            /* تحسين النوافذ المنبثقة */
+            .modal-content {
+                background-color: #1f2937;
+                color: #f3f4f6;
+                border-color: #374151;
+            }
+            
+            .prose, .prose strong {
+                color: #f3f4f6 !important;
+            }
+            
+            .service-card {
+                background-color: #1f2937;
+                border-color: #374151;
+            }
+            
+            .service-card h3 {
+                color: #f3f4f6;
+            }
+            
+            .service-card p {
+                color: #d1d5db;
+            }
+            
+            .bg-blue-50, .bg-indigo-50, .bg-purple-50, .bg-pink-50 {
+                background-color: #1e3a8a !important;
+                color: #f3f4f6 !important;
+            }
+            
+            /* تحسين شعار المركز السعودي للأعمال */
+            footer {
+                background-color: #0f172a !important;
+            }
+            
+            footer .text-gray-400 {
+                color: #9ca3af !important;
+            }
+        }
+
+        /* للدعم الشامل */
+        @media (prefers-color-scheme: no-preference) {
+            /* أنماط افتراضية للحفاظ على الاتساق */
+        }
+
+        /* تحسين محاذاة شعار المركز السعودي للأعمال */
+        footer img[alt="شعار المركز السعودي للأعمال"] {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            footer img[alt="شعار المركز السعودي للأعمال"] {
+                margin: 0;
+                display: inline-block;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50" itemscope itemtype="https://schema.org/WebPage">
@@ -549,7 +643,10 @@
                         <span>وثيقة العمل الحر: FL-63005888</span>
                         <span>رقم التوثيق: 0000162606</span>
                     </div>
-                    <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="شعار المركز السعودي للأعمال" class="mt-3 h-8 opacity-80">
+                    <!-- تحسين محاذاة شعار المركز السعودي للأعمال -->
+                    <div class="mt-3 flex justify-center md:justify-start">
+                        <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="شعار المركز السعودي للأعمال" class="h-16 w-auto object-contain">
+                    </div>
                 </div>
             </div>
             <div>
