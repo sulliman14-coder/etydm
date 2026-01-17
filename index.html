@@ -106,7 +106,7 @@
         }
 
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4C1D95 0%, #5B21B6 100%);
         }
 
         .service-card {
@@ -123,27 +123,23 @@
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border-color: #3b82f6;
+            border-color: #4C1D95;
         }
 
         .service-icon-wrapper {
-            background: linear-gradient(135deg, var(--start-color), var(--end-color));
             width: 80px;
             height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 20px;
+            border-radius: 50%;
             margin: 0 auto 1.5rem;
-            color: white;
             font-size: 2.5rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .service-icon-svg {
             width: 40px;
             height: 40px;
-            fill: currentColor;
         }
 
         .whatsapp-float {
@@ -249,7 +245,7 @@
             transform: translateX(0);
         }
         
-        .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1rem; margin-bottom: 0.5rem; color: #1e40af; }
+        .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1rem; margin-bottom: 0.5rem; color: #4C1D95; }
         .prose ul { list-style-type: disc; padding-right: 1.5rem; margin-bottom: 1rem; }
         .prose li { margin-bottom: 0.25rem; }
         .prose p { margin-bottom: 0.75rem; line-height: 1.6; }
@@ -282,7 +278,7 @@
             margin-bottom: 2rem;
         }
         .breadcrumb a {
-            color: #3b82f6;
+            color: #4C1D95;
             text-decoration: none;
         }
         .breadcrumb a:hover {
@@ -321,14 +317,14 @@
         
         .seo-content h1 {
             font-size: 2.5rem;
-            color: #1e40af;
+            color: #4C1D95;
             margin-bottom: 1.5rem;
             text-align: center;
         }
         
         .seo-content h2 {
             font-size: 2rem;
-            color: #1e40af;
+            color: #4C1D95;
             margin: 2rem 0 1rem;
             border-bottom: 2px solid #e5e7eb;
             padding-bottom: 0.5rem;
@@ -387,6 +383,30 @@
                 height: 70px;
                 font-size: 2rem;
             }
+            
+            /* تحسين تباعد الأسطر في البطل للجوال */
+            .seo-page-header h1 {
+                font-size: 2.2rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+            }
+            
+            .seo-page-header p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                padding: 0 1rem;
+            }
+            
+            .hero-section h2 {
+                font-size: 2.5rem;
+                line-height: 1.3;
+            }
+            
+            .hero-section p {
+                font-size: 1.3rem;
+                line-height: 1.5;
+                padding: 0 1rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -400,6 +420,32 @@
             
             .seo-content h2 {
                 font-size: 1.5rem;
+            }
+            
+            .seo-page-header {
+                padding: 2.5rem 0;
+            }
+            
+            .seo-page-header h1 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .seo-page-header p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            .hero-section h2 {
+                font-size: 2rem;
+                line-height: 1.2;
+                padding: 0 0.5rem;
+            }
+            
+            .hero-section p {
+                font-size: 1.1rem;
+                line-height: 1.4;
+                padding: 0 0.5rem;
             }
         }
         
@@ -426,7 +472,7 @@
             position: absolute;
             top: -40px;
             right: 0;
-            background: #1e40af;
+            background: #4C1D95;
             color: white;
             padding: 8px;
             z-index: 1001;
@@ -454,7 +500,7 @@
             width: 50px;
             height: 50px;
             border: 5px solid #e5e7eb;
-            border-top: 5px solid #3b82f6;
+            border-top: 5px solid #4C1D95;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -466,7 +512,6 @@
 
         /* Updated styles for service cards */
         .service-icon-infographic {
-            background: linear-gradient(135deg, var(--start-color), var(--end-color));
             width: 100px;
             height: 100px;
             border-radius: 25px;
@@ -475,17 +520,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-icon-infographic::before {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            background: white;
-            opacity: 0.1;
+            color: var(--icon-color);
+            background: var(--icon-bg);
+            border: 2px solid var(--icon-border);
         }
 
         .service-title {
@@ -539,8 +576,8 @@
 
         .category-card:hover {
             transform: translateY(-5px);
-            border-color: #3b82f6;
-            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.1);
+            border-color: #4C1D95;
+            box-shadow: 0 15px 30px rgba(76, 29, 149, 0.1);
         }
 
         .category-icon {
@@ -551,6 +588,7 @@
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
+            color: #4C1D95;
         }
 
         /* Contact buttons */
@@ -589,9 +627,9 @@
         }
 
         .calculator-service-item:hover {
-            border-color: #3b82f6;
+            border-color: #4C1D95;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.1);
+            box-shadow: 0 5px 15px rgba(76, 29, 149, 0.1);
         }
 
         .calculator-service-item.selected {
@@ -643,7 +681,7 @@
         .package-summary-item:last-child {
             border-bottom: none;
             font-weight: bold;
-            color: #1e40af;
+            color: #4C1D95;
             font-size: 1.1rem;
         }
         
@@ -717,7 +755,7 @@
         
         /* SEO Page Styles */
         .seo-page-header {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #4C1D95 0%, #5B21B6 100%);
             color: white;
             padding: 4rem 0;
             margin-bottom: 3rem;
@@ -727,6 +765,7 @@
             color: white;
             font-size: 3rem;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
         
         .seo-page-header p {
@@ -734,6 +773,7 @@
             font-size: 1.25rem;
             max-width: 800px;
             margin: 0 auto;
+            line-height: 1.6;
         }
         
         .seo-cta-section {
@@ -753,16 +793,45 @@
         .seo-faq-item {
             background: white;
             border-radius: 1rem;
-            padding: 1.5rem;
             margin-bottom: 1rem;
             border: 1px solid #e5e7eb;
+            overflow: hidden;
         }
         
         .seo-faq-question {
             font-weight: 700;
-            color: #1e40af;
-            margin-bottom: 0.5rem;
+            color: #4C1D95;
+            margin-bottom: 0;
             font-size: 1.1rem;
+            cursor: pointer;
+            padding: 1.5rem;
+            width: 100%;
+            text-align: right;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .seo-faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #4b5563;
+            line-height: 1.6;
+            display: none;
+        }
+        
+        .seo-faq-answer.active {
+            display: block;
+        }
+        
+        .seo-faq-question .faq-icon {
+            transition: transform 0.3s ease;
+            color: #4C1D95;
+        }
+        
+        .seo-faq-question.active .faq-icon {
+            transform: rotate(45deg);
         }
         
         .seo-testimonials {
@@ -786,11 +855,8 @@
             margin-top: 1rem;
         }
         
-        .testimonial-author img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-left: 1rem;
+        .testimonial-author div {
+            margin-right: 1rem;
         }
         
         /* Service Page Specific Styles */
@@ -828,7 +894,7 @@
             top: 0;
             width: 3rem;
             height: 3rem;
-            background: #3b82f6;
+            background: #4C1D95;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -836,6 +902,28 @@
             justify-content: center;
             font-weight: bold;
             font-size: 1.2rem;
+        }
+        
+        /* Hero Section Line Height Fix */
+        .hero-section h2 {
+            line-height: 1.2;
+        }
+        
+        .hero-section p {
+            line-height: 1.6;
+        }
+        
+        /* Updated styles for purple buttons */
+        .detail-btn, .service-btn, .package-btn {
+            background-color: #4C1D95 !important;
+            color: white !important;
+            border: none !important;
+        }
+        
+        .detail-btn:hover, .service-btn:hover, .package-btn:hover {
+            background-color: #5B21B6 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(76, 29, 149, 0.3);
         }
     </style>
 </head>
@@ -870,7 +958,7 @@
                     <a href="/" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors" onclick="showPage('home')">الرئيسية</a>
                     <a href="#services" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors" onclick="showPage('services')">الخدمات</a>
                     <a href="#portfolio" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors" onclick="showPage('portfolio')">أعمالنا</a>
-                    <a href="#design-package" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors" onclick="showPage('design-package')">صمم باقتك</a>
+                    <a href="#" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors" onclick="showPage('about')">من نحن</a>
                     <a href="https://wa.me/966596466303" target="_blank" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors">استشارة مجانية</a>
                     <a href="#contact" class="relative text-gray-600 font-medium hover:text-blue-600 transition-colors" onclick="showPage('contact')">تواصل معنا</a>
                 </nav>
@@ -898,7 +986,7 @@
                     <a href="/" onclick="toggleMobileMenu(); showPage('home')" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الرئيسية</a>
                     <a href="#services" onclick="toggleMobileMenu(); showPage('services')" class="block text-gray-700 hover:text-blue-600 py-2 border-b">الخدمات</a>
                     <a href="#portfolio" onclick="toggleMobileMenu(); showPage('portfolio')" class="block text-gray-700 hover:text-blue-600 py-2 border-b">أعمالنا</a>
-                    <a href="#design-package" onclick="toggleMobileMenu(); showPage('design-package')" class="block text-gray-700 hover:text-blue-600 py-2 border-b">صمم باقتك</a>
+                    <a href="#" onclick="toggleMobileMenu(); showPage('about')" class="block text-gray-700 hover:text-blue-600 py-2 border-b">من نحن</a>
                     <a href="https://wa.me/966596466303" target="_blank" onclick="toggleMobileMenu()" class="block text-gray-700 hover:text-blue-600 py-2 border-b">استشارة مجانية</a>
                     <a href="#contact" onclick="toggleMobileMenu(); showPage('contact')" class="block text-gray-700 hover:text-blue-600 py-2">تواصل معنا</a>
                 </nav>
@@ -912,7 +1000,7 @@
         <div id="home-page" class="page-content active">
             <!-- Home Page Content Remains Exactly The Same -->
             <!-- Hero Section -->
-            <section id="home" class="gradient-bg text-white py-20 relative overflow-hidden" itemprop="mainContentOfPage">
+            <section id="home" class="gradient-bg text-white py-20 relative overflow-hidden hero-section" itemprop="mainContentOfPage">
                 <!-- Decoration Circles -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20"></div>
                 <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -ml-32 -mb-32"></div>
@@ -944,9 +1032,8 @@
                     <!-- Action Buttons -->
                     <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-6 max-w-5xl mx-auto flex-wrap hero-buttons">
                         <!-- About Us Button -->
-                        <button onclick="openAboutModal()" class="sparkle-btn group relative bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[320px] overflow-hidden border border-indigo-400">
+                        <button onclick="showPage('about')" class="sparkle-btn group relative bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[320px] overflow-hidden border border-indigo-400">
                             <div class="relative flex items-center justify-center gap-3">
-                                <span class="text-2xl">ℹ️</span>
                                 <span>من نحن</span>
                             </div>
                         </button>
@@ -955,18 +1042,16 @@
                         <button onclick="showPage('portfolio')" class="group relative bg-white text-indigo-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[260px] overflow-hidden border-2 border-indigo-200">
                             <div class="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div class="relative flex items-center justify-center gap-3">
-                                <span class="text-2xl">🎨</span>
                                 <span>أعمالنا</span>
                             </div>
                         </button>
                         
-                        <!-- Design Your Package Button -->
-                        <button onclick="showPage('design-package')" class="group relative bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[260px] overflow-hidden">
+                        <!-- Free Consultation Button (REPLACED Design Package Button) -->
+                        <a href="https://wa.me/966596466303" target="_blank" class="group relative bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[260px] overflow-hidden text-center">
                             <div class="relative flex items-center justify-center gap-3">
-                                <span class="text-2xl">🎁</span>
-                                <span>صمم باقتك</span>
+                                <span>استشارة مجانية</span>
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -982,7 +1067,7 @@
                         <!-- Service cards will be populated by JavaScript -->
                     </div>
                     <div class="text-center mt-12">
-                        <button onclick="showPage('services')" class="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-md">
+                        <button onclick="showPage('services')" class="inline-flex items-center justify-center px-8 py-3 bg-purple-800 text-white font-bold rounded-lg hover:bg-purple-900 transition-colors shadow-md">
                             <span>استكشف جميع الخدمات</span>
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -1003,7 +1088,7 @@
                     <!-- Portfolio Controls -->
                     <div class="flex justify-center mb-8">
                         <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-full shadow-sm border border-gray-100" id="portfolio-filters">
-                            <button onclick="filterPortfolio('profile')" class="filter-btn active bg-blue-600 text-white shadow-md px-6 py-2 rounded-full font-medium transition-all hover:bg-blue-700">بروفايل</button>
+                            <button onclick="filterPortfolio('profile')" class="filter-btn active bg-purple-800 text-white shadow-md px-6 py-2 rounded-full font-medium transition-all hover:bg-purple-900">بروفايل</button>
                             <button onclick="filterPortfolio('web')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">مواقع ومتاجر</button>
                             <button onclick="filterPortfolio('menu')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">منيو إلكتروني</button>
                         </div>
@@ -1012,68 +1097,6 @@
                     <!-- Portfolio Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="portfolio-grid">
                         <!-- Items will be injected by JS -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- Design Your Package Section -->
-            <section id="design-package" class="py-20 bg-gradient-to-b from-blue-50 to-white">
-                <div class="container mx-auto px-4">
-                    <div class="text-center mb-16">
-                        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4 shadow-lg">
-                            <span class="text-3xl text-white">🎁</span>
-                        </div>
-                        <h2 class="text-4xl font-bold text-gray-800 mb-4">صمم باقتك المخصصة</h2>
-                        <p class="text-xl text-gray-600">اختر خدمات متعددة واحصل على خصم يصل إلى 20% على باقتك المخصصة</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                        <div class="bg-white rounded-2xl shadow-lg p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6">كيف تعمل الباقة المخصصة؟</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-start">
-                                    <span class="text-green-500 text-xl ml-2">✓</span>
-                                    <span>اختر خدمات من مختلف الفئات حسب احتياجاتك</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-green-500 text-xl ml-2">✓</span>
-                                    <span>احصل على خصم تراكمي مع زيادة عدد الخدمات</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-green-500 text-xl ml-2">✓</span>
-                                    <span>خصم يصل إلى 20% كحد أقصى</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-green-500 text-xl ml-2">✓</span>
-                                    <span>جميع الخدمات بأسعار تنافسية</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6">مميزات الباقة المخصصة</h3>
-                            <div class="space-y-3">
-                                <div class="flex items-center justify-between bg-white p-4 rounded-lg">
-                                    <span class="font-medium">خدمة واحدة</span>
-                                    <span class="text-gray-600">بدون خصم</span>
-                                </div>
-                                <div class="flex items-center justify-between bg-white p-4 rounded-lg">
-                                    <span class="font-medium">2-3 خدمات</span>
-                                    <span class="text-green-600 font-bold">خصم 10%</span>
-                                </div>
-                                <div class="flex items-center justify-between bg-white p-4 rounded-lg">
-                                    <span class="font-medium">4 خدمات أو أكثر</span>
-                                    <span class="text-green-600 font-bold">خصم 20%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button onclick="showPage('design-package')" class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-bold rounded-lg hover:from-teal-600 hover:to-cyan-700 transition-all shadow-md text-lg">
-                            <span class="text-2xl ml-2">🎯</span>
-                            <span>ابدأ بتصميم باقة مخصصة</span>
-                        </button>
                     </div>
                 </div>
             </section>
@@ -1142,13 +1165,244 @@
                                 <label for="quick-message" class="block text-gray-700 font-bold mb-2">الاستفسار</label>
                                 <textarea id="quick-message" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors h-32" placeholder="اكتب استفسارك هنا..."></textarea>
                             </div>
-                            <button onclick="sendQuickInquiry()" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md">
+                            <button onclick="sendQuickInquiry()" class="w-full bg-purple-800 text-white font-bold py-3 rounded-lg hover:bg-purple-900 transition-colors shadow-md">
                                 إرسال الاستفسار
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
+
+        <!-- About Us Page -->
+        <div id="about-page" class="page-content">
+            <div class="seo-page-header">
+                <div class="container mx-auto px-4 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">من نحن - إي تي واي للتصميم والتسويق</h1>
+                    <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">وكالتك الرقمية المتكاملة في المملكة العربية السعودية منذ 2012</p>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 py-12">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb mb-8">
+                    <a href="/" onclick="showPage('home')">الرئيسية</a> / 
+                    <span>من نحن</span>
+                </div>
+
+                <!-- Introduction Section -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">قصتنا في عالم التصميم والتسويق الرقمي</h2>
+                        <p class="text-lg text-gray-700">
+                            تأسست <strong>إي تي واي للتصميم والتسويق</strong> عام 2012 كمشروع طموح في المملكة العربية السعودية، وتطورت لتصبح واحدة من الوكالات الرقمية الرائدة التي تقدم حلولاً متكاملة في مجالات التصميم، البرمجة، والتسويق الإلكتروني.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-purple-800 mb-4">رؤيتنا</h3>
+                            <p class="text-gray-700 mb-4">
+                                أن نكون الخيار الأول للشركات والمؤسسات في المملكة العربية السعودية ودول الخليج العربي للحلول الرقمية المبتكرة التي تحقق النمو المستدام وتواكب التطور التكنولوجي.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-green-500 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    <span>الريادة في تقديم الحلول الرقمية المبتكرة</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-green-500 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    <span>تعزيز التحول الرقمي في القطاع الخاص والحكومي</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-green-500 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    <span>بناء شراكات استراتيجية طويلة الأمد مع عملائنا</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-bold text-purple-800 mb-4">رسالتنا</h3>
+                            <p class="text-gray-700 mb-4">
+                                تمكين الشركات والمؤسسات من تحقيق أهدافها التجارية من خلال تقديم حلول رقمية متكاملة، مبتكرة، وعالية الجودة، مع التركيز على تحقيق أعلى عائد على الاستثمار لعملائنا.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-green-500 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    <span>تقديم حلول رقمية مخصصة تلبي احتياجات السوق السعودي</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-green-500 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    <span>الالتزام بأعلى معايير الجودة والاحترافية</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-green-500 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                    <span>الابتكار المستمر والتطوير الدائم لخدماتنا</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Us Section -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">لماذا تختار إي تي واي؟</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">🎯</div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">خبرة 13+ سنة</h3>
+                                <p class="text-gray-600">أكثر من 13 عاماً من الخبرة في تقديم الحلول الرقمية للشركات في السعودية والخليج العربي</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">🚀</div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">500+ مشروع ناجح</h3>
+                                <p class="text-gray-600">أكثر من 500 مشروع تم تنفيذها بنجاح في مختلف القطاعات والصناعات</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">⭐</div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">200+ عميل راضٍ</h3>
+                                <p class="text-gray-600">ثقة أكثر من 200 عميل في مختلف أنحاء المملكة العربية السعودية ودول الخليج</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Expertise Section -->
+                <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-8 mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">مجالات تخصصنا</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-purple-800 mb-3">تصميم الهويات البصرية</h3>
+                            <p class="text-gray-700 mb-4">نبتكر هويات بصرية مميزة تعكس قيم العلامة التجارية وتترك انطباعاً قوياً في أذهان العملاء.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم شعارات احترافية</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> هوية بصرية متكاملة</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> دليل استخدام الهوية</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-purple-800 mb-3">برمجة المواقع والمتاجر</h3>
+                            <p class="text-gray-700 mb-4">نطور مواقع إلكترونية ومتاجر رقمية بتقنيات حديثة وتجربة مستخدم استثنائية.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> مواقع تعريفية احترافية</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> متاجر إلكترونية متكاملة</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تطبيقات ويب مخصصة</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-purple-800 mb-3">التسويق الرقمي</h3>
+                            <p class="text-gray-700 mb-4">ننفذ استراتيجيات تسويق رقمي مدروسة لزيادة ظهور علامتك التجارية ونمو مبيعاتك.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين محركات البحث SEO</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إعلانات وسائل التواصل الاجتماعي</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة المحتوى والعلاقات العامة</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-purple-800 mb-3">تصميم البروفايلات والكتيبات</h3>
+                            <p class="text-gray-700 mb-4">نصمم بروفايلات احترافية تبرز إنجازات الشركة وتجذب العملاء والمستثمرين.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بروفايلات شركات ثنائية اللغة</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتيبات تسويقية متطورة</li>
+                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تقارير سنوية وإنفوجرافيك</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Values -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">قيمنا الأساسية</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-100">
+                            <div class="text-3xl mb-4 text-blue-600">💎</div>
+                            <h4 class="font-bold text-gray-800 mb-2">الجودة</h4>
+                            <p class="text-gray-600 text-sm">نلتزم بأعلى معايير الجودة في كل مشروع ننفذه</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-100">
+                            <div class="text-3xl mb-4 text-green-600">⚡</div>
+                            <h4 class="font-bold text-gray-800 mb-2">السرعة</h4>
+                            <p class="text-gray-600 text-sm">ننفذ المشاريع في الوقت المحدد دون تأخير</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-100">
+                            <div class="text-3xl mb-4 text-purple-600">🤝</div>
+                            <h4 class="font-bold text-gray-800 mb-2">الشراكة</h4>
+                            <p class="text-gray-600 text-sm">نعمل كشريك حقيقي لتحقيق أهداف عملائنا</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-100">
+                            <div class="text-3xl mb-4 text-orange-600">💡</div>
+                            <h4 class="font-bold text-gray-800 mb-2">الابتكار</h4>
+                            <p class="text-gray-600 text-sm">نبحث دائماً عن حلول مبتكرة ومبدعة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Stories -->
+                <div class="seo-testimonials mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">قصص نجاح من عملائنا</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="testimonial-card">
+                            <p class="text-gray-700 italic mb-4">"تعاملنا مع إي تي واي لتصميم بروفايل شركتنا وكانت النتيجة مذهلة. البروفايل ساعدنا في الحصول على عقود جديدة وتقديم صورة احترافية للعملاء."</p>
+                            <div class="testimonial-author">
+                                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold">
+                                    أ.ع
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">أحمد العتيبي</h4>
+                                    <p class="text-gray-600 text-sm">مدير شركة البناء الحديث - الرياض</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <p class="text-gray-700 italic mb-4">"متجرنا الإلكتروني الذي صممه فريق إي تي واي ساهم في زيادة مبيعاتنا بنسبة 60% خلال أول ستة أشهر. فريق محترف وملتزم."</p>
+                            <div class="testimonial-author">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                                    س.ق
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">سارة القحطاني</h4>
+                                    <p class="text-gray-600 text-sm">مالكة متجر سكون للعناية - جدة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="bg-gradient-to-r from-purple-800 to-indigo-900 text-white rounded-2xl p-8 text-center">
+                    <h2 class="text-3xl font-bold mb-4">هل أنت مستعد لبدء رحلتك الرقمية معنا؟</h2>
+                    <p class="text-xl mb-6 opacity-90">تواصل معنا اليوم لمناقشة مشروعك والحصول على استشارة مجانية</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-4">
+                        <a href="https://wa.me/966596466303" target="_blank" class="bg-white text-purple-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center gap-2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                            </svg>
+                            تواصل عبر واتساب
+                        </a>
+                        <a href="https://wa.me/966596466303" target="_blank" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-800 transition-colors text-lg">
+                            استشارة مجانية
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Services Page -->
@@ -1176,17 +1430,17 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                         <div class="bg-blue-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">🎯</span>
+                            <span class="text-3xl mb-4 block text-blue-600">🎯</span>
                             <h3 class="font-bold text-lg mb-2">حلول مخصصة</h3>
                             <p class="text-gray-700">نصمم خدمات تناسب احتياجات عملك الفريدة</p>
                         </div>
                         <div class="bg-green-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">⚡</span>
+                            <span class="text-3xl mb-4 block text-green-600">⚡</span>
                             <h3 class="font-bold text-lg mb-2">سرعة في التنفيذ</h3>
                             <p class="text-gray-700">نلتزم بمواعيد التسليم دون المساس بالجودة</p>
                         </div>
                         <div class="bg-purple-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">🏆</span>
+                            <span class="text-3xl mb-4 block text-purple-600">🏆</span>
                             <h3 class="font-bold text-lg mb-2">جودة عالية</h3>
                             <p class="text-gray-700">نستخدم أحدث التقنيات وأفضل الممارسات</p>
                         </div>
@@ -1200,9 +1454,9 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Service 1: Profile Design -->
                         <div class="service-detail-section">
-                            <div class="service-icon-infographic" style="--start-color: #0b7d85; --end-color: #065f65;">
+                            <div class="service-icon-infographic" style="--icon-color: #0b7d85; --icon-bg: #f0f9ff; --icon-border: #bae6fd;">
                                 <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm3 4h2v2H7V8zm0 4h2v2H7v-2zm0 4h2v2H7v-2zm4-8h2v2h-2V8zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-8h2v2h-2V8zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4-3h2v13h-2z"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم ملف تعريفي احترافي</h3>
@@ -1230,7 +1484,7 @@
 
                         <!-- Service 2: Websites & E-commerce -->
                         <div class="service-detail-section">
-                            <div class="service-icon-infographic" style="--start-color: #3b82f6; --end-color: #1d4ed8;">
+                            <div class="service-icon-infographic" style="--icon-color: #3b82f6; --icon-bg: #eff6ff; --icon-border: #bfdbfe;">
                                 <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
                                 </svg>
@@ -1260,9 +1514,9 @@
 
                         <!-- Service 3: Content Creation -->
                         <div class="service-detail-section">
-                            <div class="service-icon-infographic" style="--start-color: #8b5cf6; --end-color: #6d28d9;">
+                            <div class="service-icon-infographic" style="--icon-color: #8b5cf6; --icon-bg: #f5f3ff; --icon-border: #ddd6fe;">
                                 <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">إنشاء المحتوى وإدارة التواصل</h3>
@@ -1290,9 +1544,9 @@
 
                         <!-- Service 4: Visual Identity -->
                         <div class="service-detail-section">
-                            <div class="service-icon-infographic" style="--start-color: #ec4899; --end-color: #be185d;">
+                            <div class="service-icon-infographic" style="--icon-color: #ec4899; --icon-bg: #fdf2f8; --icon-border: #fbcfe8;">
                                 <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>
+                                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">الهوية البصرية والعلامات التجارية</h3>
@@ -1320,9 +1574,9 @@
 
                         <!-- Service 5: Digital Marketing -->
                         <div class="service-detail-section">
-                            <div class="service-icon-infographic" style="--start-color: #f59e0b; --end-color: #b45309;">
+                            <div class="service-icon-infographic" style="--icon-color: #f59e0b; --icon-bg: #fffbeb; --icon-border: #fde68a;">
                                 <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">التسويق الرقمي والإعلانات</h3>
@@ -1350,9 +1604,9 @@
 
                         <!-- Service 6: Menu Design -->
                         <div class="service-detail-section">
-                            <div class="service-icon-infographic" style="--start-color: #10b981; --end-color: #047857;">
+                            <div class="service-icon-infographic" style="--icon-color: #10b981; --icon-bg: #f0fdf4; --icon-border: #bbf7d0;">
                                 <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+                                    <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm16 14H5V5h14v14zM9 7h6v2H9zm0 4h6v2H9zm0 4h6v2H9z"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم المنيو الرقمي والورقي</h3>
@@ -1411,13 +1665,13 @@
                     <div class="flex flex-col md:flex-row justify-center gap-4">
                         <a href="https://wa.me/966596466303" target="_blank" class="bg-green-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-700 transition-colors text-lg inline-flex items-center justify-center gap-2">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01 1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
                             </svg>
                             تواصل عبر واتساب
                         </a>
-                        <button onclick="showPage('design-package')" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors text-lg">
-                            صمم باقة مخصصة
-                        </button>
+                        <a href="https://wa.me/966596466303" target="_blank" class="bg-purple-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-purple-900 transition-colors text-lg">
+                            استشارة مجانية
+                        </a>
                     </div>
                 </div>
 
@@ -1427,23 +1681,43 @@
                     
                     <div class="space-y-4">
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">كم تستغرق مدة تصميم الموقع الإلكتروني؟</h3>
-                            <p class="text-gray-700">تتراوح مدة تصميم الموقع بين 7-21 يوم عمل حسب حجم المشروع وتعقيده. نضمن لك التسليم في الموعد المتفق عليه مع الحفاظ على أعلى معايير الجودة.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                كم تستغرق مدة تصميم الموقع الإلكتروني؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">تتراوح مدة تصميم الموقع بين 7-21 يوم عمل حسب حجم المشروع وتعقده. نضمن لك التسليم في الموعد المتفق عليه مع الحفاظ على أعلى معايير الجودة.</p>
+                            </div>
                         </div>
                         
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">هل تقدموا خدمات SEO لتحسين محركات البحث؟</h3>
-                            <p class="text-gray-700">نعم، نقدم خدمات متكاملة لتحسين محركات البحث (SEO) تشمل تحسين الموقع داخلياً، بناء الروابط الخلفية، وتحسين المحتوى للظهور في النتائج الأولى لمحركات البحث في السعودية.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                هل تقدموا خدمات SEO لتحسين محركات البحث؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">نعم، نقدم خدمات متكاملة لتحسين محركات البحث (SEO) تشمل تحسين الموقع داخلياً، بناء الروابط الخلفية، وتحسين المحتوى للظهور في النتائج الأولى لمحركات البحث في السعودية.</p>
+                            </div>
                         </div>
                         
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">هل تعملون مع العملاء في جميع أنحاء السعودية؟</h3>
-                            <p class="text-gray-700">نعم، نخدم العملاء في جميع مدن المملكة العربية السعودية (الرياض، جدة، الدمام، الخبر، مكة، المدينة المنورة، وغيرها) كما نتعامل مع عملاء من دول الخليج العربي.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                هل تعملون مع العملاء في جميع أنحاء السعودية؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">نعم، نخدم العملاء في جميع مدن المملكة العربية السعودية (الرياض، جدة، الدمام، الخبر، مكة، المدينة المنورة، وغيرها) كما نتعامل مع عملاء من دول الخليج العربي.</p>
+                            </div>
                         </div>
                         
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">ما هي ضمانات الجودة التي تقدمونها؟</h3>
-                            <p class="text-gray-700">نقدم ضمان 30 يوماً على جميع خدماتنا، مع إمكانية التعديلات والدعم الفني. كما نضمن لك أن جميع أعمالنا تتم وفقاً لأحدث معايير الصناعة وأفضل الممارسات التقنية.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                ما هي ضمانات الجودة التي تقدمونها؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">نقدم ضمان 30 يوماً على جميع خدماتنا، مع إمكانية التعديلات والدعم الفني. كما نضمن لك أن جميع أعمالنا تتم وفقاً لأحدث معايير الصناعة وأفضل الممارسات التقنية.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1499,7 +1773,7 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                         <div class="category-card" onclick="filterPortfolio('profile')">
-                            <div class="category-icon text-blue-600">
+                            <div class="category-icon">
                                 <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm3 4h2v2H7V8zm0 4h2v2H7v-2zm0 4h2v2H7v-2zm4-8h2v2h-2V8zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-8h2v2h-2V8zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
                                 </svg>
@@ -1509,7 +1783,7 @@
                         </div>
                         
                         <div class="category-card" onclick="filterPortfolio('web')">
-                            <div class="category-icon text-green-600">
+                            <div class="category-icon">
                                 <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
                                 </svg>
@@ -1519,7 +1793,7 @@
                         </div>
                         
                         <div class="category-card" onclick="filterPortfolio('menu')">
-                            <div class="category-icon text-purple-600">
+                            <div class="category-icon">
                                 <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
                                 </svg>
@@ -1537,7 +1811,7 @@
                     <!-- Portfolio Filters -->
                     <div class="flex justify-center mb-8">
                         <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-full shadow-sm border border-gray-100" id="portfolio-page-filters">
-                            <button onclick="filterPortfolio('profile')" class="filter-btn active bg-blue-600 text-white shadow-md px-6 py-2 rounded-full font-medium transition-all hover:bg-blue-700">بروفايل</button>
+                            <button onclick="filterPortfolio('profile')" class="filter-btn active bg-purple-800 text-white shadow-md px-6 py-2 rounded-full font-medium transition-all hover:bg-purple-900">بروفايل</button>
                             <button onclick="filterPortfolio('web')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">مواقع ومتاجر</button>
                             <button onclick="filterPortfolio('menu')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200">منيو إلكتروني</button>
                         </div>
@@ -1557,7 +1831,6 @@
                         <div class="testimonial-card">
                             <p class="text-gray-700 italic mb-4">"لقد حصلت على بروفايل شركتي من إي تي واي وكان العمل ممتازاً من حيث الجودة والتسليم في الوقت المحدد. فريق محترف ومبدع."</p>
                             <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="عميل راضي عن خدمات إي تي واي">
                                 <div>
                                     <h4 class="font-bold text-gray-800">أحمد العتيبي</h4>
                                     <p class="text-gray-600 text-sm">مدير شركة البناء الحديث</p>
@@ -1568,7 +1841,6 @@
                         <div class="testimonial-card">
                             <p class="text-gray-700 italic mb-4">"متجرنا الإلكتروني الذي صممه فريق إي تي واي ساعدنا على زيادة المبيعات بنسبة 40% في أول ثلاثة أشهر. شكراً لفريق العمل المتميز."</p>
                             <div class="testimonial-author">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="عميلة راضية عن خدمات إي تي واي">
                                 <div>
                                     <h4 class="font-bold text-gray-800">سارة القحطاني</h4>
                                     <p class="text-gray-600 text-sm">مالكة متجر سكون للعناية</p>
@@ -1579,199 +1851,20 @@
                 </div>
 
                 <!-- CTA Section -->
-                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl p-8 text-center mb-12">
+                <div class="bg-gradient-to-r from-purple-800 to-indigo-900 text-white rounded-2xl p-8 text-center mb-12">
                     <h2 class="text-3xl font-bold mb-4">مستعد لبدء مشروعك القادم معنا؟</h2>
                     <p class="text-xl mb-6 opacity-90">تواصل معنا اليوم واحصل على عرض مخصص لمشروعك الرقمي</p>
                     <div class="flex flex-col md:flex-row justify-center gap-4">
-                        <a href="https://wa.me/966596466303" target="_blank" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center gap-2">
+                        <a href="https://wa.me/966596466303" target="_blank" class="bg-white text-purple-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center gap-2">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
                             </svg>
                             طلب تصميم مماثل
                         </a>
-                        <button onclick="showPage('contact')" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors text-lg">
+                        <a href="https://wa.me/966596466303" target="_blank" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-800 transition-colors text-lg">
                             استشارة مجانية
-                        </button>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Design Package Page -->
-        <div id="design-package-page" class="page-content">
-            <div class="seo-page-header">
-                <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">صمم باقتك المخصصة</h1>
-                    <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">اختر خدمات متعددة واحصل على خصم يصل إلى 20% على باقتك المخصصة - حلول رقمية مرنة تناسب ميزانيتك</p>
-                </div>
-            </div>
-
-            <div class="container mx-auto px-4 py-12">
-                <!-- Breadcrumb -->
-                <div class="breadcrumb mb-8">
-                    <a href="/" onclick="showPage('home')">الرئيسية</a> / 
-                    <span>صمم باقتك</span>
-                </div>
-
-                <!-- Package Introduction -->
-                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">لماذا الباقة المخصصة؟</h2>
-                    <p class="text-lg text-gray-700 mb-6 text-center">
-                        في <strong>إي تي واي</strong>، نؤمن بأن كل عمل لديه احتياجات فريدة. لذلك نقدم لك نظام الباقات المخصصة الذي يتيح لك اختيار الخدمات التي تناسب عملك بالضبط، مع الحصول على خصومات تراكمية تجعل الحصول على خدمات متعددة أكثر جدوى اقتصادياً.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                        <div class="bg-blue-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">💰</span>
-                            <h3 class="font-bold text-lg mb-2">توفير في التكلفة</h3>
-                            <p class="text-gray-700">خصم يصل إلى 20% عند اختيار خدمات متعددة</p>
-                        </div>
-                        <div class="bg-green-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">🎯</span>
-                            <h3 class="font-bold text-lg mb-2">مرونة كاملة</h3>
-                            <p class="text-gray-700">اختر فقط ما تحتاجه من خدمات</p>
-                        </div>
-                        <div class="bg-purple-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">⚡</span>
-                            <h3 class="font-bold text-lg mb-2">حلول متكاملة</h3>
-                            <p class="text-gray-700">جميع خدماتك من مكان واحد</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Discount Calculator -->
-                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">آلة حاسبة للخصم</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <div class="bg-white p-6 rounded-xl text-center">
-                            <div class="text-4xl font-bold text-gray-800 mb-2">0%</div>
-                            <h3 class="font-bold text-lg mb-2">خدمة واحدة</h3>
-                            <p class="text-gray-600">بدون خصم</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl text-center border-2 border-green-300">
-                            <div class="text-4xl font-bold text-green-600 mb-2">10%</div>
-                            <h3 class="font-bold text-lg mb-2">2-3 خدمات</h3>
-                            <p class="text-gray-600">خصم تراكمي</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl text-center border-2 border-green-500">
-                            <div class="text-4xl font-bold text-green-700 mb-2">20%</div>
-                            <h3 class="font-bold text-lg mb-2">4+ خدمات</h3>
-                            <p class="text-gray-600">أقصى خصم</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-center text-gray-700">
-                        <strong>مثال:</strong> إذا اخترت 4 خدمات بقيمة إجمالية 5000 ريال، ستحصل على خصم 20% (1000 ريال) وتدفع فقط 4000 ريال!
-                    </p>
-                </div>
-
-                <!-- Package Builder -->
-                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">صمم باقاتك الآن</h2>
-                    
-                    <div id="package-builder-container">
-                        <!-- Package builder will be populated by JavaScript -->
-                    </div>
-                    
-                    <div class="mt-8 text-center">
-                        <button onclick="openCustomPackageModal()" class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-bold rounded-lg hover:from-teal-600 hover:to-cyan-700 transition-all shadow-md text-lg">
-                            <span class="text-2xl ml-2">🎯</span>
-                            <span>ابدأ بتصميم باقة مخصصة</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Popular Packages -->
-                <div class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">باقاتنا الأكثر طلباً</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white border-2 border-gray-200 rounded-xl p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">الباقة الأساسية</h3>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم بروفايل عربي إنجليزي</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> ورق رسمي</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم بطاقات العمل</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> سندات مالية</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتابة محتوى مخصص</li>
-                            </ul>
-                            <div class="text-center">
-                                <span class="text-gray-500 line-through">سعر منفصل: 2150 ريال</span>
-                                <div class="text-2xl font-bold text-blue-600 mt-2">بالباقة: 900 ريال</div>
-                                <div class="text-green-600 font-bold mt-1">توفير 20%</div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white border-2 border-blue-300 rounded-xl p-6 shadow-lg">
-                            <div class="bg-blue-100 text-blue-800 font-bold py-1 px-3 rounded-full inline-block mb-4">الأكثر طلباً</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">باقة المتجر الإلكتروني</h3>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> متجر إلكتروني متكامل</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> اضافة 25 منتح</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إاضافة اقسان المتجر</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> SEO أساسي</li>
-                            </ul>
-                            <div class="text-center">
-                                <span class="text-gray-500 line-through">سعر منفصل: 2500 ريال</span>
-                                <div class="text-2xl font-bold text-blue-600 mt-2">بالباقة: 1500 ريال</div>
-                                <div class="text-green-600 font-bold mt-1">توفير 20%</div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white border-2 border-gray-200 rounded-xl p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">باقة التسويق الشاملة</h3>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حملات إعلانية (شهر)</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> خطة محتوى متكاملة</li>
-                                <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحليل أداء وتقارير</li>
-                            </ul>
-                            <div class="text-center">
-                                <span class="text-gray-500 line-through">سعر منفصل: 4500 ريال</span>
-                                <div class="text-2xl font-bold text-blue-600 mt-2">بالباقة: 3600 ريال</div>
-                                <div class="text-green-600 font-bold mt-1">توفير 20%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Section -->
-                <div class="seo-faq-section">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">أسئلة شائعة عن الباقات المخصصة</h2>
-                    
-                    <div class="space-y-4">
-                        <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">هل يمكنني إضافة خدمات لاحقاً للباقة؟</h3>
-                            <p class="text-gray-700">نعم، يمكنك إضافة خدمات إضافية للباقة في أي وقت، وسيتم تطبيق خصم الباقة على الخدمات المضافة أيضاً.</p>
-                        </div>
-                        
-                        <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">ماذا لو أردت تغيير خدمة في الباقة بعد البدء؟</h3>
-                            <p class="text-gray-700">يمكنك استبدال أي خدمة في الباقة بخدمة أخرى من نفس القيمة أو دفع الفارق إذا كانت الخدمة الجديدة أعلى سعراً.</p>
-                        </div>
-                        
-                        <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">هل تقدمون تقسيط لدفع قيمة الباقة؟</h3>
-                            <p class="text-gray-700">نعم، نقدم خيارات تقسيط مرنة تناسب ميزانيتك. يمكنك مناقشة خيارات الدفع مع مستشارنا المالي.</p>
-                        </div>
-                        
-                        <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">كم تستغرق مدة تنفيذ الباقة المخصصة؟</h3>
-                            <p class="text-gray-700">تختلف مدة التنفيذ حسب عدد الخدمات وتعقيدها. عادةً ما تستغرق الباقات ما بين 15-45 يوم عمل.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Final CTA -->
-                <div class="bg-gradient-to-r from-green-500 to-teal-600 text-white rounded-2xl p-8 text-center">
-                    <h2 class="text-3xl font-bold mb-4">لا تجد الباقة المناسبة؟</h2>
-                    <p class="text-xl mb-6 opacity-90">تواصل معنا وسنساعدك في تصميم باقة مخصصة 100% تناسب احتياجات عملك وميزانيتك</p>
-                    <a href="https://wa.me/966596466303" target="_blank" class="inline-flex items-center justify-center bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg gap-2">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
-                        </svg>
-                        تواصل الآن للحصول على عرض خاص
-                    </a>
                 </div>
             </div>
         </div>
@@ -1801,17 +1894,17 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                         <div class="bg-blue-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">💬</span>
+                            <span class="text-3xl mb-4 block text-blue-600">💬</span>
                             <h3 class="font-bold text-lg mb-2">استشارة مجانية</h3>
                             <p class="text-gray-700">ناقش مشروعك مع خبرائنا مجاناً</p>
                         </div>
                         <div class="bg-green-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">⚡</span>
+                            <span class="text-3xl mb-4 block text-green-600">⚡</span>
                             <h3 class="font-bold text-lg mb-2">رد سريع</h3>
                             <p class="text-gray-700">نرد على استفساراتك خلال 24 ساعة</p>
                         </div>
                         <div class="bg-purple-50 p-6 rounded-xl text-center">
-                            <span class="text-3xl mb-4 block">📞</span>
+                            <span class="text-3xl mb-4 block text-purple-600">📞</span>
                             <h3 class="font-bold text-lg mb-2">دعم متكامل</h3>
                             <p class="text-gray-700">خدمة عملاء على مدار الساعة</p>
                         </div>
@@ -1835,7 +1928,7 @@
                                     <h3 class="font-bold text-gray-900 text-lg">الهاتف / واتساب</h3>
                                     <p class="text-gray-700 mt-1" dir="ltr">+966 59 646 6303</p>
                                     <div class="mt-2 flex gap-2">
-                                        <a href="tel:+966596466303" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors">اتصال هاتفي</a>
+                                        <a href="tel:+966596466303" class="bg-purple-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-purple-900 transition-colors">اتصال هاتفي</a>
                                         <a href="https://wa.me/966596466303" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors">واتساب</a>
                                     </div>
                                 </div>
@@ -1852,7 +1945,7 @@
                                     <h3 class="font-bold text-gray-900 text-lg">البريد الإلكتروني</h3>
                                     <p class="text-gray-700 mt-1">info@etydm.com</p>
                                     <div class="mt-2">
-                                        <a href="mailto:info@etydm.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors">إرسال بريد إلكتروني</a>
+                                        <a href="mailto:info@etydm.com" class="bg-purple-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-purple-900 transition-colors">إرسال بريد إلكتروني</a>
                                     </div>
                                 </div>
                             </div>
@@ -1914,28 +2007,28 @@
                             <div class="mb-6">
                                 <label for="full-name" class="block text-gray-700 font-bold mb-2">الاسم الكامل *</label>
                                 <input type="text" id="full-name" required 
-                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-500 transition-colors"
                                        placeholder="أدخل اسمك الكامل">
                             </div>
                             
                             <div class="mb-6">
                                 <label for="email" class="block text-gray-700 font-bold mb-2">البريد الإلكتروني *</label>
                                 <input type="email" id="email" required 
-                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-500 transition-colors"
                                        placeholder="example@email.com">
                             </div>
                             
                             <div class="mb-6">
                                 <label for="phone" class="block text-gray-700 font-bold mb-2">رقم الجوال *</label>
                                 <input type="tel" id="phone" required 
-                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-500 transition-colors"
                                        placeholder="05XXXXXXXX" dir="ltr">
                             </div>
                             
                             <div class="mb-6">
                                 <label for="service-type" class="block text-gray-700 font-bold mb-2">نوع الخدمة المطلوبة *</label>
                                 <select id="service-type" required 
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors">
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-500 transition-colors">
                                     <option value="">اختر نوع الخدمة</option>
                                     <option value="profile">تصميم بروفايل</option>
                                     <option value="website">موقع إلكتروني</option>
@@ -1943,7 +2036,6 @@
                                     <option value="marketing">تسويق رقمي</option>
                                     <option value="identity">هوية بصرية</option>
                                     <option value="menu">تصميم منيو</option>
-                                    <option value="package">باقة مخصصة</option>
                                     <option value="consultation">استشارة مجانية</option>
                                     <option value="other">خدمة أخرى</option>
                                 </select>
@@ -1952,7 +2044,7 @@
                             <div class="mb-6">
                                 <label for="budget" class="block text-gray-700 font-bold mb-2">الميزانية المقترحة</label>
                                 <select id="budget" 
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors">
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-500 transition-colors">
                                     <option value="">اختر فئة الميزانية</option>
                                     <option value="1000-3000">1,000 - 3,000 ريال</option>
                                     <option value="3000-6000">3,000 - 6,000 ريال</option>
@@ -1966,20 +2058,20 @@
                             <div class="mb-6">
                                 <label for="message" class="block text-gray-700 font-bold mb-2">تفاصيل المشروع *</label>
                                 <textarea id="message" required rows="6"
-                                          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+                                          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-500 transition-colors"
                                           placeholder="صف لنا مشروعك بالتفصيل، أهدافك، ومتطلباتك..."></textarea>
                             </div>
                             
                             <div class="mb-6">
                                 <label class="flex items-center">
                                     <input type="checkbox" required 
-                                           class="form-checkbox h-5 w-5 text-blue-600 rounded">
-                                    <span class="mr-2 text-gray-700">أوافق على <a href="#" class="text-blue-600 hover:underline">شروط الخصوصية</a> و <a href="#" class="text-blue-600 hover:underline">سياسة الاستخدام</a></span>
+                                           class="form-checkbox h-5 w-5 text-purple-600 rounded">
+                                    <span class="mr-2 text-gray-700">أوافق على <a href="#" class="text-purple-600 hover:underline">شروط الخصوصية</a> و <a href="#" class="text-purple-600 hover:underline">سياسة الاستخدام</a></span>
                                 </label>
                             </div>
                             
                             <button type="submit" 
-                                    class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md text-lg">
+                                    class="w-full bg-purple-800 text-white font-bold py-3 rounded-lg hover:bg-purple-900 transition-colors shadow-md text-lg">
                                 إرسال الرسالة
                             </button>
                         </form>
@@ -1992,23 +2084,43 @@
                     
                     <div class="space-y-4">
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">كم تستغرق مدة الرد على استفساري؟</h3>
-                            <p class="text-gray-700">نرد على جميع الاستفسارات خلال 24 ساعة عمل كحد أقصى، وعادةً ما نرد خلال 2-4 ساعات خلال أوقات العمل الرسمية.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                كم تستغرق مدة الرد على استفساري؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">نرد على جميع الاستفسارات خلال 24 ساعة عمل كحد أقصى، وعادةً ما نرد خلال 2-4 ساعات خلال أوقات العمل الرسمية.</p>
+                            </div>
                         </div>
                         
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">هل تقدمون استشارة مجانية حقاً؟</h3>
-                            <p class="text-gray-700">نعم، نقدم استشارة مجانية أولية لمدة 30 دقيقة لمناقشة مشروعك وتقديم النصائح الأولية دون أي تكلفة.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                هل تقدمون استشارة مجانية حقاً؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">نعم، نقدم استشارة مجانية أولية لمدة 30 دقيقة لمناقشة مشروعك وتقديم النصائح الأولية دون أي تكلفة.</p>
+                            </div>
                         </div>
                         
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">هل يمكنني زيارة مقركم؟</h3>
-                            <p class="text-gray-700">نعمل حالياً بنظام العمل عن بعد لخدمة العملاء في جميع مدن السعودية بكفاءة عالية. يمكننا ترتيب اجتماع عبر الإنترنت في الوقت المناسب لك.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                هل يمكنني زيارة مقركم؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">نعمل حالياً بنظام العمل عن بعد لخدمة العملاء في جميع مدن السعودية بكفاءة عالية. يمكننا ترتيب اجتماع عبر الإنترنت في الوقت المناسب لك.</p>
+                            </div>
                         </div>
                         
                         <div class="seo-faq-item">
-                            <h3 class="seo-faq-question">هل تتعاملون مع العملاء خارج السعودية؟</h3>
-                            <p class="text-gray-700">نعم، نتعامل مع عملاء من دول الخليج العربي (الإمارات، قطر، الكويت، عمان، البحرين) وكذلك من الدول العربية الأخرى.</p>
+                            <button class="seo-faq-question" onclick="toggleFaq(this)">
+                                هل تتعاملون مع العملاء خارج السعودية؟
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="seo-faq-answer">
+                                <p class="text-gray-700">نعم، نتعامل مع عملاء من دول الخليج العربي (الإمارات، قطر، الكويت، عمان، البحرين) وكذلك من الدول العربية الأخرى.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2019,7 +2131,7 @@
                     
                     <div class="bg-gray-100 rounded-xl p-6 mb-6">
                         <div class="flex items-center justify-center mb-4">
-                            <svg class="w-8 h-8 text-blue-600 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-8 h-8 text-purple-600 ml-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
                             </svg>
                             <span class="text-xl font-bold text-gray-800">المناطق التي نخدمها</span>
@@ -2062,7 +2174,7 @@
                         <span>رقم التوثيق: 0000162606</span>
                     </div>
                     <div class="mt-3 flex justify-center md:justify-start">
-                        <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="شعار المركز السعودي للأعمال - إي تي واي وكالة تصميم وتسويق معتمدة في السعودية" class="h-16 w-auto object-contain" width="64" height="64">
+                        <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="شعار المركز السعودي للأعمال - إي تي واي وكالة تصميم وتسويق معتمدة في السعودية" class="h-16 w-auto object-contain" width="64" height="64" style="background-color: #1E2A38;">
                     </div>
                 </div>
             </div>
@@ -2071,7 +2183,8 @@
                 <ul class="space-y-2 text-gray-400">
                     <li><a href="#services" class="hover:text-white transition-colors" onclick="showPage('services')">خدماتنا</a></li>
                     <li><a href="#portfolio" class="hover:text-white transition-colors" onclick="showPage('portfolio')">أعمالنا</a></li>
-                    <li><a href="#design-package" class="hover:text-white transition-colors" onclick="showPage('design-package')">صمم باقتك</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" onclick="showPage('about')">من نحن</a></li>
+                    <li><a href="https://wa.me/966596466303" target="_blank" class="hover:text-white transition-colors">استشارة مجانية</a></li>
                     <li><a href="#contact" class="hover:text-white transition-colors" onclick="showPage('contact')">اتصل بنا</a></li>
                 </ul>
             </div>
@@ -2089,78 +2202,12 @@
     </footer>
 
     <!-- All Modals Remain Exactly The Same -->
-    <!-- About Us Modal -->
-    <div id="aboutModal" class="modal-container" onclick="closeModal('aboutModal')">
-        <div class="modal-content max-w-4xl" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6">
-                <div class="flex items-center gap-3">
-                    <span class="text-3xl text-indigo-600">ℹ️</span>
-                    <h2 class="text-2xl font-bold text-gray-800">من نحن - إي تي واي</h2>
-                </div>
-                <button onclick="closeModal('aboutModal')" class="text-gray-500 hover:text-gray-700" aria-label="إغلاق النافذة">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            
-            <div class="prose max-w-none text-gray-700 leading-relaxed">
-                <p class="text-lg font-bold text-indigo-900 mb-4">نحن "إي تي واي للتصميم والتسويق"، وكالتك الرقمية الرائدة في المملكة العربية السعودية.</p>
-                
-                <p class="mb-4">
-                    نجمع بين الإبداع الفني والتقنية المتقدمة لنقدم حلولاً رقمية متكاملة ترفع من قيمة علامتك التجارية. متخصصون في <strong>تصميم الهويات البصرية</strong> التي تخلد في الذاكرة، و<strong>تطوير المواقع والمتاجر الإلكترونية</strong> ذات الأداء العالي، و<strong>التسويق الرقمي</strong> المدروس الذي يستهدف جمهورك بدقة.
-                </p>
-                
-                <p class="mb-6">
-                    فريقنا شغوف بالتفاصيل، ملتزم بالجودة، ويسعى دائماً لتحويل رؤيتك إلى واقع رقمي ملموس يحقق أهدافك التجارية ويزيد من مبيعاتك.
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    <div class="bg-indigo-50 p-4 rounded-lg text-center">
-                        <span class="block text-2xl mb-2">🎯</span>
-                        <span class="font-bold text-indigo-800">رؤيتنا</span>
-                        <p class="text-sm mt-1">أن نكون الخيار الأول للحلول الرقمية في المملكة.</p>
-                    </div>
-                    <div class="bg-purple-50 p-4 rounded-lg text-center">
-                        <span class="block text-2xl mb-2">🚀</span>
-                        <span class="font-bold text-purple-800">رسالتنا</span>
-                        <p class="text-sm mt-1">تمكين الأعمال بأدوات وحلول تقنية مبتكرة.</p>
-                    </div>
-                    <div class="bg-blue-50 p-4 rounded-lg text-center">
-                        <span class="block text-2xl mb-2">⭐</span>
-                        <span class="font-bold text-blue-800">قيمنا</span>
-                        <p class="text-sm mt-1">الإبداع، الجودة، والالتزام بالمواعيد.</p>
-                    </div>
-                </div>
-
-                <!-- Legal/Trust Section -->
-                <div class="bg-gray-900 text-white p-6 rounded-xl flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg">
-                    <div class="text-center md:text-right">
-                        <h4 class="font-bold text-lg mb-2 text-indigo-300">موثوقون ومعتمدون</h4>
-                        <p class="text-sm opacity-90 mb-1">وثيقة العمل الحر: <span class="font-mono text-yellow-400">FL-63005888</span></p>
-                        <p class="text-sm opacity-90">رقم التوثيق: <span class="font-mono text-yellow-400">0000162606</span></p>
-                    </div>
-                    <div class="bg-white/10 p-2 rounded-lg backdrop-blur-sm">
-                        <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="المركز السعودي للأعمال - إي تي واي معتمدة في السعودية" class="h-16 w-auto object-contain" width="64" height="64">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-8 flex gap-4">
-                <button onclick="openServicesModal(); closeModal('aboutModal');" class="flex-1 bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                    اكتشف خدماتنا
-                </button>
-                <button onclick="closeModal('aboutModal'); showPage('contact')" class="flex-1 bg-white border-2 border-indigo-600 text-indigo-600 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors">
-                    تواصل معنا
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- Portfolio Details Modal -->
     <div id="portfolioModal" class="modal-container" onclick="closeModal('portfolioModal')">
         <div class="modal-content max-w-5xl" onclick="event.stopPropagation()">
             <div class="flex justify-between items-start mb-4">
                 <div>
-                    <span id="modalProjectCategory" class="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-2 inline-block"></span>
+                    <span id="modalProjectCategory" class="text-sm font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full mb-2 inline-block"></span>
                     <h2 id="modalProjectTitle" class="text-3xl font-bold text-gray-800"></h2>
                 </div>
                 <button onclick="closeModal('portfolioModal')" class="text-gray-500 hover:text-gray-700 bg-gray-100 p-2 rounded-full" aria-label="إغلاق النافذة">
@@ -2255,10 +2302,10 @@
                 </div>
                 
                 <div class="text-center pt-6 border-t">
-                    <button onclick="closeModal('servicesModal'); showPage('design-package')" class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-bold rounded-lg hover:from-teal-600 hover:to-cyan-700 transition-all shadow-md text-lg">
-                        <span class="text-2xl ml-2">🎁</span>
-                        <span>صمم باقة مخصصة واحصل على خصم</span>
-                    </button>
+                    <a href="https://wa.me/966596466303" target="_blank" class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-800 to-purple-900 text-white font-bold rounded-lg hover:from-purple-900 hover:to-purple-950 transition-all shadow-md text-lg">
+                        <span class="text-2xl ml-2">💬</span>
+                        <span>احصل على استشارة مجانية</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -2282,75 +2329,6 @@
         </div>
     </div>
 
-    <!-- Custom Package Modal -->
-    <div id="customPackageModal" class="modal-container" onclick="closeModal('customPackageModal')">
-        <div class="modal-content max-w-6xl" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 flex items-center">
-                    <span class="text-3xl ml-3">🎯</span>
-                    صمم باقتك المخصصة
-                </h2>
-                <button onclick="closeModal('customPackageModal')" class="text-gray-500 hover:text-gray-700" aria-label="إغلاق النافذة">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-2xl p-6 mb-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6">اختر الخدمات التي تحتاجها</h3>
-                        <div id="custom-package-modal-calculator">
-                            <!-- Calculator content will be injected by JavaScript -->
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lg:col-span-1">
-                    <div class="sticky top-6">
-                        <div class="package-summary">
-                            <h4 class="text-lg font-bold text-gray-800 mb-4">ملخص الباقة المخصصة</h4>
-                            <div id="modal-package-summary">
-                                <div class="text-center py-8 text-gray-500">
-                                    <p>لم تقم باختيار أي خدمات بعد</p>
-                                    <p class="text-sm mt-2">اختر خدمات من القائمة على اليسار</p>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-6" id="modal-package-actions" style="display: none;">
-                                <button onclick="sendCustomPackageToWhatsApp()" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
-                                    </svg>
-                                    <span>إرسال الطلب عبر واتساب</span>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mt-6">
-                            <h4 class="font-bold text-gray-800 mb-3">معلومات عن الخصم</h4>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center">
-                                    <span class="text-green-500 ml-2">✓</span>
-                                    <span>خدمة واحدة: بدون خصم</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 ml-2">✓</span>
-                                    <span>2-3 خدمات: خصم 10%</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 ml-2">✓</span>
-                                    <span>4 خدمات أو أكثر: خصم 20%</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         // Data for services without prices (negotiable)
         const servicesData = {
@@ -2358,11 +2336,10 @@
                 name: 'تصميم ملف تعريفي احترافي',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm3 4h2v2H7V8zm0 4h2v2H7v-2zm0 4h2v2H7v-2zm4-8h2v2h-2V8zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-8h2v2h-2V8zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4-3h2v13h-2z"/>
                     </svg>
                 `,
-                startColor: '#0b7d85',
-                endColor: '#065f65',
+                iconColor: '#0b7d85',
                 items: [
                     'بروفايل عربي (5-12 صفحة)',
                     'بروفايل عربي / إنجليزي',
@@ -2384,8 +2361,7 @@
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
                     </svg>
                 `,
-                startColor: '#3b82f6',
-                endColor: '#1d4ed8',
+                iconColor: '#3b82f6',
                 items: [
                     'صفحة هبوط واحدة',
                     'موقع تعريفي أساسي (5-8 صفحات)',
@@ -2399,7 +2375,7 @@
                 ],
                 details: {
                     overview: 'نصمم مواقع تعريفية احترافية تواكب أحدث التقنيات والاتجاهات في عالم التصميم. مواقعنا ليست مجرد واجهة جميلة، بل أدوات تسويقية قوية تساعد في نمو أعمالك وزيادة انتشارك.',
-                    features: ['تصميم متجاوب يعمل على جميع الأجهزة', 'تحسين سرعة الموقع وأداؤه', 'لوحة تحكم سهلة الاستخدام', 'ربط مع وسائل التواصل الاجتماعي', 'حماية وأمان عالي'],
+                    features: ['تصميم متجاوز يعمل على جميع الأجهزة', 'تحسين سرعة الموقع وأداؤه', 'لوحة تحكم سهلة الاستخدام', 'ربط مع وسائل التواصل الاجتماعي', 'حماية وأمان عالي'],
                     benefits: ['الوصول لجمهور أوسع', 'زيادة المبيعات والطلبات', 'تواجد احترافي على الإنترنت']
                 }
             },
@@ -2407,16 +2383,15 @@
                 name: 'إنشاء المحتوى وإدارة التواصل',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                     </svg>
                 `,
-                startColor: '#8b5cf6',
-                endColor: '#6d28d9',
+                iconColor: '#8b5cf6',
                 items: [
                     'خطة محتوى شهرية (12 منشور)',
                     'خطة محتوى متقدمة (30 منشور)',
                     'كتابة مقالات متوافقة مع SEO (5 مقالات)',
-                    'تصميم بوستات انستقرام (10 تصامين)',
+                    'تصميم بوستات انستقرام (10 تصاميم)',
                     'إدارة حسابات التواصل (شهر)'
                 ],
                 details: {
@@ -2429,11 +2404,10 @@
                 name: 'الهوية البصرية والعلامات التجارية',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>
+                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
                     </svg>
                 `,
-                startColor: '#ec4899',
-                endColor: '#be185d',
+                iconColor: '#ec4899',
                 items: [
                     'تصميم شعار احترافي (3 خيارات)',
                     'هوية بصرية كاملة (شعار + مطبوعات)',
@@ -2451,11 +2425,10 @@
                 name: 'التسويق الرقمي والإعلانات',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
                     </svg>
                 `,
-                startColor: '#f59e0b',
-                endColor: '#b45309',
+                iconColor: '#f59e0b',
                 items: [
                     'إدارة حملات جوجل إدواردز (شهر)',
                     'إدارة حملات سناب شات / تيك توك',
@@ -2473,11 +2446,10 @@
                 name: 'تصميم المنيو الرقمي والورقي',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+                        <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm16 14H5V5h14v14zM9 7h6v2H9zm0 4h6v2H9zm0 4h6v2H9z"/>
                     </svg>
                 `,
-                startColor: '#10b981',
-                endColor: '#047857',
+                iconColor: '#10b981',
                 items: [
                     'منيو صفحة واحدة',
                     'منيو كتيب (4-8 صفحات)',
@@ -2605,6 +2577,7 @@
             renderPortfolio('profile');
             renderPortfolioPage('profile');
             updateNavActiveState();
+            initFAQs();
             
             // Check URL hash for page navigation
             const hash = window.location.hash.replace('#', '');
@@ -2612,6 +2585,38 @@
                 showPage(hash);
             }
         });
+
+        // FAQ Functionality
+        function initFAQs() {
+            // Close all FAQ answers by default
+            document.querySelectorAll('.seo-faq-answer').forEach(answer => {
+                answer.style.display = 'none';
+            });
+            
+            // Add click event listeners to all FAQ questions
+            document.querySelectorAll('.seo-faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    toggleFaq(this);
+                });
+            });
+        }
+
+        function toggleFaq(question) {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.faq-icon');
+            
+            // Toggle active class
+            question.classList.toggle('active');
+            
+            // Toggle answer display
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                if (icon) icon.textContent = '+';
+            } else {
+                answer.style.display = 'block';
+                if (icon) icon.textContent = '−';
+            }
+        }
 
         // Page Navigation Functions
         function showPage(pageId) {
@@ -2628,6 +2633,8 @@
                 window.history.pushState(null, null, '#' + pageId);
                 // Scroll to top
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+                // Initialize FAQs for the new page
+                setTimeout(initFAQs, 100);
             } else {
                 // Default to home page
                 document.getElementById('home-page').classList.add('active');
@@ -2682,7 +2689,7 @@
                         <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" width="400" height="300">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-blue-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
+                        <span class="text-purple-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
                         <h3 class="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
                         <p class="text-gray-300 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">${item.desc}</p>
                     </div>
@@ -2714,7 +2721,7 @@
                         <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" width="400" height="300">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-blue-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
+                        <span class="text-purple-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
                         <h3 class="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
                         <p class="text-gray-300 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">${item.desc}</p>
                     </div>
@@ -2725,7 +2732,7 @@
 
         function filterPortfolio(category) {
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md', 'active');
+                btn.classList.remove('bg-purple-800', 'text-white', 'shadow-md', 'active');
                 btn.classList.add('bg-gray-100', 'text-gray-600');
             });
             
@@ -2734,7 +2741,7 @@
             filters.forEach(btn => {
                 if (btn.textContent.includes(getCategoryName(category))) {
                     btn.classList.remove('bg-gray-100', 'text-gray-600');
-                    btn.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'active');
+                    btn.classList.add('bg-purple-800', 'text-white', 'shadow-md', 'active');
                 }
             });
             
@@ -2808,22 +2815,44 @@
                 const service = servicesData[key];
                 const card = document.createElement('div');
                 card.className = 'service-card';
-                card.style.setProperty('--start-color', service.startColor);
-                card.style.setProperty('--end-color', service.endColor);
                 card.onclick = () => openServiceDetails(key);
                 
                 card.innerHTML = `
-                    <div class="service-icon-infographic">
+                    <div class="service-icon-infographic" style="--icon-color: ${service.iconColor}; --icon-bg: ${getLightColor(service.iconColor)}; --icon-border: ${getBorderColor(service.iconColor)}">
                         ${service.icon}
                     </div>
                     <h3 class="service-title">${service.name}</h3>
                     <p class="service-description">${service.details.overview.substring(0, 120)}...</p>
-                    <button class="detail-btn" onclick="event.stopPropagation(); openServiceDetails('${key}')">
+                    <button class="detail-btn" style="background-color: #4C1D95 !important; color: white !important;" onclick="event.stopPropagation(); openServiceDetails('${key}')">
                         تفاصيل الخدمة
                     </button>
                 `;
                 container.appendChild(card);
             });
+        }
+
+        function getLightColor(color) {
+            const colorMap = {
+                '#0b7d85': '#f0f9ff',
+                '#3b82f6': '#eff6ff',
+                '#8b5cf6': '#f5f3ff',
+                '#ec4899': '#fdf2f8',
+                '#f59e0b': '#fffbeb',
+                '#10b981': '#f0fdf4'
+            };
+            return colorMap[color] || '#f3f4f6';
+        }
+
+        function getBorderColor(color) {
+            const colorMap = {
+                '#0b7d85': '#bae6fd',
+                '#3b82f6': '#bfdbfe',
+                '#8b5cf6': '#ddd6fe',
+                '#ec4899': '#fbcfe8',
+                '#f59e0b': '#fde68a',
+                '#10b981': '#bbf7d0'
+            };
+            return colorMap[color] || '#d1d5db';
         }
 
         function openServicesModal() {
@@ -2855,7 +2884,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <button onclick="addServiceToPackage('${key}')" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-2 rounded-lg font-bold hover:from-blue-600 hover:to-indigo-700 transition-all">
+                            <button onclick="addServiceToPackage('${key}')" class="w-full bg-gradient-to-r from-purple-700 to-purple-900 text-white py-2 rounded-lg font-bold hover:from-purple-800 hover:to-purple-950 transition-all">
                                 إضافة هذه الخدمة إلى الباقة المخصصة
                             </button>
                         </div>
@@ -2891,7 +2920,7 @@
             const modalContent = `
                 <div class="mb-6">
                     <div class="flex items-center justify-center mb-6">
-                        <div class="service-icon-infographic" style="--start-color: ${service.startColor}; --end-color: ${service.endColor};">
+                        <div class="service-icon-infographic" style="--icon-color: ${service.iconColor}; --icon-bg: ${getLightColor(service.iconColor)}; --icon-border: ${getBorderColor(service.iconColor)}">
                             ${service.icon}
                         </div>
                     </div>
@@ -3047,222 +3076,7 @@
             }
             
             closeModal('serviceDetailsModal');
-            openCustomPackageModal();
             showNotification(`تمت إضافة ${service.name} إلى الباقة المخصصة`, 'success');
-        }
-
-        // Custom Package Functions
-        function openCustomPackageModal() {
-            renderCustomPackageCalculator();
-            openModal('customPackageModal');
-        }
-
-        function renderCustomPackageCalculator() {
-            const container = document.getElementById('custom-package-modal-calculator');
-            
-            if (!container) return;
-            
-            container.innerHTML = '';
-            
-            Object.keys(servicesData).forEach((serviceKey, index) => {
-                const service = servicesData[serviceKey];
-                const serviceId = `service-${index}`;
-                const isSelected = currentCart.selectedServices.has(serviceKey);
-                
-                const serviceHtml = `
-                    <div class="calculator-service-item mb-4 ${isSelected ? 'selected' : ''}">
-                        <div class="flex items-center justify-between cursor-pointer" onclick="toggleServiceSelection('${serviceId}', '${serviceKey}')">
-                            <div class="flex items-center">
-                                <input type="checkbox" id="checkbox-${serviceId}" ${isSelected ? 'checked' : ''}
-                                       class="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500"
-                                       onclick="event.stopPropagation(); toggleServiceSelection('${serviceId}', '${serviceKey}')">
-                                <label for="checkbox-${serviceId}" class="mr-3 font-bold text-gray-800 text-lg cursor-pointer">
-                                    ${service.name}
-                                </label>
-                            </div>
-                            <span class="text-gray-600">${service.items.length} خدمة</span>
-                        </div>
-                        
-                        <div id="subitems-${serviceId}" class="calculator-sub-items mt-3" style="display: ${isSelected ? 'block' : 'none'};">
-                            <h4 class="font-medium text-gray-700 mb-2">الخدمات الفرعية المتاحة:</h4>
-                            <div class="space-y-2">
-                                ${service.items.map((item, itemIndex) => `
-                                    <div class="calculator-sub-item">
-                                        <div class="flex items-center">
-                                            <input type="checkbox" id="subitem-${serviceId}-${itemIndex}" 
-                                                   class="form-checkbox h-4 w-4 text-green-600 rounded focus:ring-green-500"
-                                                   onchange="updateModalPackageSummary()"
-                                                   data-service="${service.name}"
-                                                   data-item="${item}">
-                                            <label for="subitem-${serviceId}-${itemIndex}" class="mr-2 text-gray-700 cursor-pointer">
-                                                ${item}
-                                            </label>
-                                        </div>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                container.innerHTML += serviceHtml;
-            });
-            
-            updateModalPackageSummary();
-        }
-
-        function toggleServiceSelection(serviceId, serviceKey) {
-            const checkbox = document.getElementById(`checkbox-${serviceId}`);
-            const subitems = document.getElementById(`subitems-${serviceId}`);
-            
-            checkbox.checked = !checkbox.checked;
-            
-            if (checkbox.checked) {
-                subitems.style.display = 'block';
-                currentCart.selectedServices.add(serviceKey);
-            } else {
-                subitems.style.display = 'none';
-                currentCart.selectedServices.delete(serviceKey);
-                // Uncheck all subitems
-                const subitemCheckboxes = subitems.querySelectorAll('input[type="checkbox"]');
-                subitemCheckboxes.forEach(subCheckbox => {
-                    subCheckbox.checked = false;
-                });
-            }
-            
-            updateModalPackageSummary();
-        }
-
-        function updateModalPackageSummary() {
-            const selectedServices = Array.from(currentCart.selectedServices);
-            const selectedSubitems = [];
-            
-            // Get all checked subitems
-            document.querySelectorAll('#custom-package-modal-calculator .calculator-sub-items input[type="checkbox"]:checked').forEach(checkbox => {
-                const serviceName = checkbox.getAttribute('data-service');
-                const itemName = checkbox.getAttribute('data-item');
-                selectedSubitems.push({
-                    service: serviceName,
-                    name: itemName
-                });
-            });
-            
-            const summaryContainer = document.getElementById('modal-package-summary');
-            const actionsContainer = document.getElementById('modal-package-actions');
-            
-            if (selectedServices.length === 0) {
-                summaryContainer.innerHTML = `
-                    <div class="text-center py-8 text-gray-500">
-                        <p>لم تقم باختيار أي خدمات بعد</p>
-                        <p class="text-sm mt-2">اختر خدمات من القائمة على اليسار</p>
-                    </div>
-                `;
-                actionsContainer.style.display = 'none';
-                return;
-            }
-            
-            // Calculate discount
-            let discount = 0;
-            if (selectedServices.length >= 4) {
-                discount = 20;
-            } else if (selectedServices.length >= 2) {
-                discount = 10;
-            }
-            
-            let summaryHtml = `
-                <div class="package-summary-item">
-                    <span class="font-bold text-gray-800">الخدمات المختارة:</span>
-                    <span class="text-green-600 font-bold">${selectedServices.length} خدمات</span>
-                </div>
-            `;
-            
-            selectedServices.forEach(serviceKey => {
-                const service = servicesData[serviceKey];
-                summaryHtml += `
-                    <div class="package-summary-item">
-                        <span class="text-gray-700">${service.name}</span>
-                    </div>
-                `;
-            });
-            
-            if (selectedSubitems.length > 0) {
-                summaryHtml += `
-                    <div class="package-summary-item">
-                        <span class="font-bold text-gray-800">الخدمات الفرعية المحددة:</span>
-                        <span class="text-blue-600 font-bold">${selectedSubitems.length} خدمة</span>
-                    </div>
-                `;
-                
-                selectedSubitems.forEach(subitem => {
-                    summaryHtml += `
-                        <div class="package-summary-item">
-                            <span class="text-gray-600 text-sm">${subitem.name}</span>
-                        </div>
-                    `;
-                });
-            }
-            
-            if (discount > 0) {
-                summaryHtml += `
-                    <div class="package-summary-item">
-                        <span class="text-green-600 font-bold">الخصم المطبق</span>
-                        <span class="text-green-600 font-bold">${discount}%</span>
-                    </div>
-                `;
-            }
-            
-            summaryContainer.innerHTML = summaryHtml;
-            actionsContainer.style.display = 'block';
-        }
-
-        function sendCustomPackageToWhatsApp() {
-            const selectedServices = Array.from(currentCart.selectedServices);
-            
-            if (selectedServices.length === 0) {
-                showNotification("الرجاء اختيار خدمات أولاً", "error");
-                return;
-            }
-            
-            let message = `مرحباً، أرغب في الحصول على باقة مخصصة تحتوي على الخدمات التالية:\n\n`;
-            
-            selectedServices.forEach(serviceKey => {
-                const service = servicesData[serviceKey];
-                message += `• ${service.name}\n`;
-            });
-            
-            // Get selected subitems
-            const selectedSubitems = [];
-            document.querySelectorAll('#custom-package-modal-calculator .calculator-sub-items input[type="checkbox"]:checked').forEach(checkbox => {
-                const serviceName = checkbox.getAttribute('data-service');
-                const itemName = checkbox.getAttribute('data-item');
-                selectedSubitems.push({ service: serviceName, name: itemName });
-            });
-            
-            if (selectedSubitems.length > 0) {
-                message += `\nالخدمات الفرعية المختارة:\n`;
-                selectedSubitems.forEach(item => {
-                    message += `   - ${item.name}\n`;
-                });
-            }
-            
-            // Calculate discount
-            let discount = 0;
-            if (selectedServices.length >= 4) {
-                discount = 20;
-            } else if (selectedServices.length >= 2) {
-                discount = 10;
-            }
-            
-            if (discount > 0) {
-                message += `\nالخصم المتوقع: ${discount}%`;
-            }
-            
-            message += `\n\nيرجى التواصل معي للتفاوض على السعر المناسب والمتطلبات التفصيلية.`;
-            
-            const url = `https://wa.me/966596466303?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-            
-            closeModal('customPackageModal');
         }
 
         function sendQuickInquiry() {
@@ -3364,7 +3178,7 @@
 
         function updateNavActiveState() {
             // Handle active navigation based on scroll position
-            const sections = ['home', 'services', 'portfolio', 'design-package', 'contact'];
+            const sections = ['home', 'services', 'portfolio', 'contact'];
             const navLinks = document.querySelectorAll('nav a[href^="#"]');
             
             window.addEventListener('scroll', () => {
@@ -3381,44 +3195,18 @@
                 });
 
                 navLinks.forEach(link => {
-                    link.classList.remove('text-blue-600', 'font-bold');
+                    link.classList.remove('text-purple-800', 'font-bold');
                     link.classList.add('text-gray-600');
                     if (link.getAttribute('href') === `#${current}`) {
                         link.classList.remove('text-gray-600');
-                        link.classList.add('text-blue-600', 'font-bold');
+                        link.classList.add('text-purple-800', 'font-bold');
                     }
                 });
             });
         }
 
-        // Render package builder on design package page
-        function renderPackageBuilder() {
-            const container = document.getElementById('package-builder-container');
-            if (!container) return;
-            
-            container.innerHTML = `
-                <div class="text-center mb-8">
-                    <p class="text-lg text-gray-700 mb-4">اختر من الخدمات التالية لإنشاء باقة مخصصة تناسب احتياجاتك:</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                        ${Object.keys(servicesData).map(key => {
-                            const service = servicesData[key];
-                            return `
-                                <div class="bg-white border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-colors" onclick="openServiceDetails('${key}')">
-                                    <div class="service-icon-infographic mx-auto mb-3" style="--start-color: ${service.startColor}; --end-color: ${service.endColor}; width: 60px; height: 60px;">
-                                        ${service.icon}
-                                    </div>
-                                    <h4 class="font-bold text-gray-800">${service.name}</h4>
-                                    <p class="text-sm text-gray-600 mt-1">${service.items.length} خدمة فرعية</p>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        // Initialize package builder when page loads
-        document.addEventListener('DOMContentLoaded', renderPackageBuilder);
+        // Initialize services
+        document.addEventListener('DOMContentLoaded', renderServices);
     </script>
 </body>
 </html>
