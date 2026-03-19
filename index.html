@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="إي تي واي (ETY) - وكالتك الرقمية المتكاملة في السعودية لتصميم الهويات البصرية، برمجة المواقع، والتسويق الرقمي. موثق برقم FL-63005888.">
-    <meta name="keywords" content="تصميم, تسويق, برمجة مواقع, هوية بصرية, السعودية, ETY, تسويق رقمي, سيو, تصميم شعار, متاجر إلكترونية, سيرة ذاتية, لينكد إن">
-    <title>إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد</title>
+    
+    <!-- Dynamic Meta Tags - will be updated per page -->
+    <title id="dynamic-title">إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد</title>
+    <meta name="description" id="dynamic-description" content="إي تي واي (ETY) - وكالتك الرقمية المتكاملة في السعودية لتصميم الهويات البصرية، برمجة المواقع، والتسويق الرقمي. موثق برقم FL-63005888.">
+    <meta name="keywords" id="dynamic-keywords" content="تصميم, تسويق, برمجة مواقع, هوية بصرية, السعودية, ETY, تسويق رقمي, سيو, تصميم شعار, متاجر إلكترونية, سيرة ذاتية, لينكد إن">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://etydm.com">
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد">
-    <meta property="og:description" content="نحوّل أفكارك إلى واقع رقمي مميز - تصميم هويات | مواقع إلكترونية | متاجر | تسويق رقمي | سيرة ذاتية ATS | تحسين لينكد إن">
+    <!-- Open Graph / Social Media Meta Tags (dynamically updated) -->
+    <meta property="og:title" id="og-title" content="إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد">
+    <meta property="og:description" id="og-description" content="نحوّل أفكارك إلى واقع رقمي مميز - تصميم هويات | مواقع إلكترونية | متاجر | تسويق رقمي | سيرة ذاتية ATS | تحسين لينكد إن">
     <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm?authuser=0">
     <meta property="og:url" content="https://etydm.com">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
     <meta property="og:site_name" content="إي تي واي للتصميم والتسويق">
     
-    <!-- Twitter Card -->
+    <!-- Twitter Card (dynamically updated) -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="إي تي واي للتصميم والتسويق">
-    <meta name="twitter:description" content="شريكك الرقمي الأول لتحويل أفكارك إلى مشاريع ناجحة">
+    <meta name="twitter:title" id="twitter-title" content="إي تي واي للتصميم والتسويق">
+    <meta name="twitter:description" id="twitter-description" content="شريكك الرقمي الأول لتحويل أفكارك إلى مشاريع ناجحة">
     <meta name="twitter:image" content="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm?authuser=0">
+    <meta name="twitter:site" content="@etydm">
     
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
+    <!-- Structured Data for SEO (Organization) -->
+    <script type="application/ld+json" id="schema-org">
     {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
@@ -81,6 +84,9 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm?authuser=0">
+    
+    <!-- Sitemap link -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -915,6 +921,83 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(76, 29, 149, 0.3);
         }
+        
+        /* 404 Page */
+        #not-found-page {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        #not-found-page h1 {
+            font-size: 8rem;
+            font-weight: 900;
+            color: #4C1D95;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+        #not-found-page h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .search-404 input {
+            border: 2px solid #e5e7eb;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 1rem;
+            outline: none;
+        }
+        .search-404 input:focus {
+            border-color: #4C1D95;
+        }
+
+        /* Analytics Dashboard */
+        #analytics-dashboard {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #4C1D95;
+        }
+        .stat-label {
+            color: #64748b;
+            font-weight: 500;
+        }
+        .source-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .source-item:last-child {
+            border-bottom: none;
+        }
+        .source-name {
+            font-weight: 500;
+        }
+        .source-count {
+            background: #4C1D95;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50" itemscope itemtype="https://schema.org/WebPage">
@@ -936,8 +1019,8 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3 space-x-reverse">
-                    <!-- Logo -->
-                    <a href="/" class="flex items-center space-x-3 space-x-reverse" aria-label="العودة إلى الصفحة الرئيسية">
+                    <!-- Logo with triple click analytics trigger -->
+                    <a href="/" class="flex items-center space-x-3 space-x-reverse" id="logo-triple-click" aria-label="العودة إلى الصفحة الرئيسية">
                         <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm?authuser=0" alt="شعار إي تي واي للتصميم والتسويق - وكالة تصميم وتسويق رقمي في السعودية" class="w-12 h-12 object-contain rounded-lg" itemprop="logo" width="48" height="48">
                         <h1 class="text-lg md:text-xl font-bold text-gray-800 leading-tight">إي تي واي للتصميم والتسويق</h1>
                     </a>
@@ -988,16 +1071,14 @@
     <main id="main-content">
         <!-- Home Page -->
         <div id="home-page" class="page-content active">
-            <!-- Home Page Content Remains Exactly The Same -->
             <!-- Hero Section -->
             <section id="home" class="gradient-bg text-white py-20 relative overflow-hidden hero-section" itemprop="mainContentOfPage">
-                <!-- Decoration Circles -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20"></div>
                 <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -ml-32 -mb-32"></div>
 
                 <div class="container mx-auto px-4 text-center relative z-10">
                     <h2 class="text-3xl md:text-6xl font-bold mb-6 leading-tight">نحوّل أفكارك إلى واقع رقمي مميز</h2>
-                    <p class="text-base md:text-2xl mb-12 opacity-90 leading-tight">شريكك الرقمي الأول لتصميم الهويات البصرية، برمجة المواقع، والتسويق الإلكتروني</p>
+                    <p class="text-base md:text-2xl mb-12 opacity-90 leading-tight">شريكك الرقمي الأول لتصميم الهويات البصرية، برمجة المواقع، والتسويق الإلكتروني في السعودية</p>
                     
                     <!-- Statistics -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -1007,28 +1088,26 @@
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
                             <div class="text-3xl font-bold">500+</div>
-                            <div class="text-sm opacity-80">مشروع</div>
+                            <div class="text-sm opacity-80">مشروع ناجح</div>
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
                             <div class="text-3xl font-bold">200+</div>
-                            <div class="text-sm opacity-80">عميل</div>
+                            <div class="text-sm opacity-80">عميل راضٍ</div>
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
                             <div class="text-3xl font-bold">24/7</div>
-                            <div class="text-sm opacity-80">دعم</div>
+                            <div class="text-sm opacity-80">دعم فني</div>
                         </div>
                     </div>
 
                     <!-- Action Buttons -->
                     <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-6 max-w-5xl mx-auto flex-wrap hero-buttons">
-                        <!-- About Us Button -->
                         <button onclick="showPage('about')" class="sparkle-btn group relative bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[320px] overflow-hidden border border-indigo-400">
                             <div class="relative flex items-center justify-center gap-3">
                                 <span>من نحن</span>
                             </div>
                         </button>
 
-                        <!-- Our Works Button -->
                         <button onclick="showPage('portfolio')" class="group relative bg-white text-indigo-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[260px] overflow-hidden border-2 border-indigo-200">
                             <div class="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div class="relative flex items-center justify-center gap-3">
@@ -1036,7 +1115,6 @@
                             </div>
                         </button>
                         
-                        <!-- Free Consultation Button -->
                         <a href="https://wa.me/966598844129" target="_blank" class="group relative bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-[260px] overflow-hidden text-center">
                             <div class="relative flex items-center justify-center gap-3">
                                 <span>استشارة مجانية</span>
@@ -1133,7 +1211,7 @@
                                     <div>
                                         <p class="font-medium text-gray-900">الموقع</p>
                                         <p class="text-gray-600">المملكة العربية السعودية</p>
-                                        <p class="text-sm text-gray-500">نخدم جميع مدن المملكة</p>
+                                        <p class="text-sm text-gray-500">نخدم جميع مدن المملكة: الرياض، جدة، الدمام، الخبر، مكة، المدينة المنورة</p>
                                     </div>
                                 </div>
                             </div>
@@ -1180,12 +1258,12 @@
                     <span>من نحن</span>
                 </div>
 
-                <!-- Introduction Section -->
+                <!-- Introduction Section with keywords -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
                     <div class="text-center mb-8">
                         <h2 class="text-3xl font-bold text-gray-800 mb-4">قصتنا في عالم التصميم والتسويق الرقمي</h2>
                         <p class="text-lg text-gray-700">
-                            تأسست <strong>إي تي واي للتصميم والتسويق</strong> عام 2012 كمشروع طموح في المملكة العربية السعودية، وتطورت لتصبح واحدة من الوكالات الرقمية الرائدة التي تقدم حلولاً متكاملة في مجالات التصميم، البرمجة، والتسويق الإلكتروني.
+                            تأسست <strong>إي تي واي للتصميم والتسويق</strong> عام 2012 كمشروع طموح في المملكة العربية السعودية، وتطورت لتصبح واحدة من <strong>أفضل شركات تصميم المواقع والتسويق الرقمي في الرياض وجدة</strong>. نقدم حلولاً متكاملة في مجالات التصميم، البرمجة، والتسويق الإلكتروني.
                         </p>
                     </div>
                     
@@ -1449,16 +1527,17 @@
                                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4-3h2v13h-2z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم ملف تعريفي احترافي</h3>
-                            <p class="text-gray-700 mb-4">نقدم خدمة تصميم الملفات التعريفية الاحترافية التي تعكس هوية شركتك وتبرز نقاط قوتها بأسلوب مبتكر وجذاب. نحن نفهم أن الانطباع الأول مهم، لذلك نحرص على تقديم تصاميم عالية الجودة تترك أثراً إيجابياً لدى عملائك.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم ملف تعريفي احترافي للشركات في السعودية</h3>
+                            <p class="text-gray-700 mb-4">نقدم أفضل خدمات تصميم الملفات التعريفية للشركات والمؤسسات في الرياض وجدة، بروفايلات احترافية تعكس هويتكم وتجذب العملاء. نحن نفهم أن الانطباع الأول مهم، لذلك نحرص على تقديم تصاميم عالية الجودة تترك أثراً إيجابياً لدى عملائك.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بروفايل عربي (5-12 صفحة)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بروفايل عربي / إنجليزي</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم شعار احترافي</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بكج كارد (بطاقة عمل)</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بروفايل عربي (5-12 صفحة) - تصميم بروفايل شركات</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بروفايل عربي / إنجليزي - ملف تعريفي جاهز</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم شعار احترافي - بروفايل شركة احترافي</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بكج كارد (بطاقة عمل) - تصميم كتيب تعريفي</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> بروفايل أعمال السعودية - تصميم بروفايل الرياض</li>
                                 </ul>
                             </div>
                             
@@ -1479,17 +1558,17 @@
                                     <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">سيرة ذاتية احترافية بنظام ATS وتحسين SEO</h3>
-                            <p class="text-gray-700 mb-4">نصمم سيراً ذاتية متوافقة مع أنظمة تتبع المتقدمين (ATS) مع تحسين محتواها لمحركات البحث، لزيادة فرص قبولك في كبرى الشركات. نضمن لك سيرة ذاتية تبرز مهاراتك بأسلوب احترافي.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">سيرة ذاتية ATS احترافية - تصميم سيرة ذاتية متوافقة مع نظام ATS</h3>
+                            <p class="text-gray-700 mb-4">نقدم خدمة تصميم سيرة ذاتية متوافقة مع نظام ATS ومحسنة لمحركات البحث لزيادة فرص قبولك في كبرى الشركات السعودية. نضمن لك سيرة ذاتية تبرز مهاراتك بأسلوب احترافي وتجتاز أنظمة الفحص الآلي.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم سيرة ذاتية PDF متوافقة مع ATS</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتابة محتوى متوافق مع SEO (كلمات مفتاحية)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين الملف الشخصي على منصات التوظيف</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> استشارات مهنية وتوجيه مسار وظيفي</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> سيرة ذاتية عربية / إنجليزية</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم سيرة ذاتية PDF متوافقة مع ATS - نموذج سيرة ذاتية احترافي</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتابة محتوى متوافق مع SEO (كلمات مفتاحية) - CV احترافي</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين الملف الشخصي على منصات التوظيف - سيرة ذاتية جاهزة للتوظيف</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> استشارات مهنية وتوجيه مسار وظيفي - تحسين CV لمحركات البحث</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> سيرة ذاتية عربية / إنجليزية - سيرة ذاتية السعودية</li>
                                 </ul>
                             </div>
                             
@@ -1510,16 +1589,16 @@
                                     <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.68-1.68-1.68a1.68 1.68 0 0 0-1.68 1.68c0 .93.76 1.68 1.68 1.68m1.39 9.75v-8.37H5.5v8.37h2.77z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">بناء صفحة لينكد إن احترافية وتحسين الملف الشخصي</h3>
-                            <p class="text-gray-700 mb-4">نبني لك صفحة LinkedIn متكاملة تعكس هويتك المهنية وتجذب انتباه مسؤولي التوظيف. نركز على تحسين ظهور الملف في نتائج البحث وزيادة فرص التواصل.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">بناء صفحة لينكد إن احترافية - تحسين ملف لينكد إن</h3>
+                            <p class="text-gray-700 mb-4">عزز حضورك المهني مع خدمة بناء صفحة لينكد إن احترافية وتحسين ملفك الشخصي لجذب مسؤولي التوظيف في السعودية. نركز على تحسين ظهور الملف في نتائج البحث وزيادة فرص التواصل.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم صفحة شخصية / شركة متكاملة</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين الملف الشخصي SEO (كلمات مفتاحية)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتابة ملخص احترافي بالإنجازات</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إستراتيجية محتوى وزيادة التفاعل</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم صفحة شخصية / شركة متكاملة - بناء بروفايل لينكد إن</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين الملف الشخصي SEO (كلمات مفتاحية) - خبير لينكد إن</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتابة ملخص احترافي بالإنجازات - استشارات لينكد إن</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إستراتيجية محتوى وزيادة التفاعل - لينكد إن للتوظيف السعودية</li>
                                     <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تدريب على استخدام LinkedIn للتوظيف</li>
                                 </ul>
                             </div>
@@ -1541,18 +1620,18 @@
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">المواقع التعريفية والمتاجر الإلكترونية</h3>
-                            <p class="text-gray-700 mb-4">نصمم مواقع تعريفية احترافية تواكب أحدث التقنيات والاتجاهات في عالم التصميم. مواقعنا ليست مجرد واجهة جميلة، بل أدوات تسويقية قوية تساعد في نمو أعمالك وزيادة انتشارك.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم مواقع ومتاجر إلكترونية احترافية في السعودية</h3>
+                            <p class="text-gray-700 mb-4">نصمم مواقع تعريفية ومتاجر إلكترونية عصرية وجذابة، متوافقة مع محركات البحث وتلبي احتياجات السوق السعودي. مواقعنا ليست مجرد واجهة جميلة، بل أدوات تسويقية قوية تساعد في نمو أعمالك وزيادة انتشارك.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> صفحة هبوط واحدة</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> موقع تعريفي أساسي (5-8 صفحات)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> موقع تعريفي متقدم (10-15 صفحة)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> متجر إلكتروني أساسي</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> متجر إلكتروني متقدم</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> نظام إدارة المحتوى</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> صفحة هبوط واحدة - تصميم موقع تعريفي</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> موقع تعريفي أساسي (5-8 صفحات) - إنشاء متجر إلكتروني</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> موقع تعريفي متقدم (10-15 صفحة) - تصميم متاجر شوبيفاي</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> متجر إلكتروني أساسي - برمجة مواقع ووردبريس</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> متجر إلكتروني متقدم - تصميم موقع شركة</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> نظام إدارة المحتوى - متجر إلكتروني السعودية</li>
                                     <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تطبيق جوال مرافق</li>
                                     <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين محركات البحث SEO</li>
                                     <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> استضافة ونطاق لسنة</li>
@@ -1576,17 +1655,17 @@
                                     <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">إنشاء المحتوى وإدارة التواصل</h3>
-                            <p class="text-gray-700 mb-4">نصنع محتوى إبداعي يجذب جمهورك ويبني علاقة قوية معهم. خدماتنا تشمل الكتابة، التصميم، وإدارة الحسابات لضمان أفضل النتائج.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">إنشاء المحتوى وإدارة حسابات التواصل الاجتماعي</h3>
+                            <p class="text-gray-700 mb-4">خدمات متكاملة لإنشاء محتوى إبداعي وإدارة حسابات التواصل الاجتماعي لتعزيز علامتك التجارية في السعودية. نصنع محتوى إبداعي يجذب جمهورك ويبني علاقة قوية معهم.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> خطة محتوى شهرية (12 منشور)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> خطة محتوى متقدمة (30 منشور)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتابة مقالات متوافقة مع SEO (5 مقالات)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم بوستات انستقرام (10 تصاميم)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حسابات التواصل (شهر)</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> خطة محتوى شهرية (12 منشور) - كتابة محتوى تسويقي</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> خطة محتوى متقدمة (30 منشور) - إدارة حسابات انستقرام</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> كتابة مقالات متوافقة مع SEO (5 مقالات) - استراتيجية محتوى</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم بوستات انستقرام (10 تصاميم) - تسويق بالمحتوى</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حسابات التواصل (شهر) - إدارة سوشيال ميديا السعودية</li>
                                 </ul>
                             </div>
                             
@@ -1607,15 +1686,15 @@
                                     <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">الهوية البصرية والعلامات التجارية</h3>
-                            <p class="text-gray-700 mb-4">نبتكر هويات بصرية مميزة تعلق في الأذهان وتميزك عن المنافسين. نركز على البساطة والمعنى لإنشاء علامة تجارية قوية.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم هوية بصرية وشعارات احترافية</h3>
+                            <p class="text-gray-700 mb-4">نبتكر هويات بصرية فريدة وشعارات مميزة تعبر عن جوهر علامتك التجارية وتبرزها في السوق السعودي. نركز على البساطة والمعنى لإنشاء علامة تجارية قوية.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم شعار احترافي (3 خيارات)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> هوية بصرية كاملة (شعار + مطبوعات)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> دليل استخدام الهوية</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم شعار احترافي (3 خيارات) - تصميم لوجو</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> هوية بصرية كاملة (شعار + مطبوعات) - براندينج شركات</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> دليل استخدام الهوية - هوية بصرية السعودية</li>
                                     <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم كروت شخصية</li>
                                     <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم ورق رسمي وأظرف</li>
                                 </ul>
@@ -1624,7 +1703,7 @@
                             <div class="mt-6">
                                 <h4 class="font-bold text-gray-800 mb-2">الفوائد:</h4>
                                 <ul class="space-y-1">
-                                    <li>• تميز في السوق</li>
+                                    <li>• تميز في السوق السعودي</li>
                                     <li>• ثقة ومصداقية أكبر</li>
                                     <li>• سهولة التعرف على العلامة التجارية</li>
                                 </ul>
@@ -1638,17 +1717,17 @@
                                     <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">التسويق الرقمي والإعلانات</h3>
-                            <p class="text-gray-700 mb-4">نساعدك للوصول لعملائك المستهدفين بدقة من خلال حملات إعلانية مدروسة وموجهة تحقق أعلى عائد على الاستثمار.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات التسويق الرقمي والإعلانات في السعودية</h3>
+                            <p class="text-gray-700 mb-4">استراتيجيات تسويق رقمي متكاملة وحملات إعلانية موجهة لزيادة وصولك ومبيعاتك في المملكة العربية السعودية. نساعدك للوصول لعملائك المستهدفين بدقة من خلال حملات إعلانية مدروسة وموجهة تحقق أعلى عائد على الاستثمار.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حملات جوجل إدواردز (شهر)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حملات سناب شات / تيك توك</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حملات فيسبوك / انستقرام</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين الظهور في محركات البحث SEO</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> استشارات تسويقية</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حملات جوجل إدواردز (شهر) - حملات إعلانية جوجل</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حملات سناب شات / تيك توك - تسويق عبر سناب شات</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> إدارة حملات فيسبوك / انستقرام - إعلانات انستقرام ممولة</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تحسين الظهور في محركات البحث SEO - تحسين محركات البحث المحلية</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> استشارات تسويقية - تسويق رقمي الرياض</li>
                                 </ul>
                             </div>
                             
@@ -1657,7 +1736,7 @@
                                 <ul class="space-y-1">
                                     <li>• زيادة المبيعات والتحويلات</li>
                                     <li>• تقليل تكلفة الاستحواذ على العملاء</li>
-                                    <li>• نمو سريع للأعمال</li>
+                                    <li>• نمو سريع للأعمال في السوق السعودي</li>
                                 </ul>
                             </div>
                         </div>
@@ -1669,26 +1748,26 @@
                                     <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm16 14H5V5h14v14zM9 7h6v2H9zm0 4h6v2H9zm0 4h6v2H9z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم المنيو الرقمي والورقي</h3>
-                            <p class="text-gray-700 mb-4">نقدم حلول قوائم طعام مبتكرة وعملية للمطاعم والكافيهات، تجمع بين جمال التصميم وسهولة الاستخدام.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">تصميم منيو رقمي وورقي للمطاعم والكافيهات</h3>
+                            <p class="text-gray-700 mb-4">حلول مبتكرة لتصميم قوائم الطعام الرقمية (QR Menu) والورقية للمطاعم والكافيهات في السعودية. نقدم حلول قوائم طعام مبتكرة وعملية للمطاعم والكافيهات، تجمع بين جمال التصميم وسهولة الاستخدام.</p>
                             
                             <div class="service-benefits">
                                 <h4 class="font-bold text-gray-800 mb-3">خدمات فرعية:</h4>
                                 <ul class="space-y-2">
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> منيو صفحة واحدة</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> منيو كتيب (4-8 صفحات)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> منيو رقمي (QR Code)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصوير أطباق (10 صور)</li>
-                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم قائمة أسعار</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> منيو صفحة واحدة - تصميم منيو مطعم</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> منيو كتيب (4-8 صفحات) - منيو كافيه</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> منيو رقمي (QR Code) - قائمة طعام رقمية</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصوير أطباق (10 صور) - منيو QR</li>
+                                    <li class="flex items-center"><span class="text-green-500 ml-2">✓</span> تصميم قائمة أسعار - منيو باركود السعودية</li>
                                 </ul>
                             </div>
                             
                             <div class="mt-6">
                                 <h4 class="font-bold text-gray-800 mb-2">الفوائد:</h4>
                                 <ul class="space-y-1">
-                                    <li>• تحسين تجربة العميل</li>
+                                    <li>• تحسين تجربة العميل في المطاعم السعودية</li>
                                     <li>• زيادة متوسط قيمة الطلب</li>
-                                    <li>• سهولة مشاركة القائمة</li>
+                                    <li>• سهولة مشاركة القائمة الرقمية</li>
                                 </ul>
                             </div>
                         </div>
@@ -2222,6 +2301,43 @@
                 </div>
             </div>
         </div>
+
+        <!-- 404 Page -->
+        <div id="not-found-page" class="page-content" style="display: none;">
+            <div class="container mx-auto px-4 py-12">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-8xl font-black text-purple-800 mb-4">404</h1>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">عذراً! الصفحة غير موجودة</h2>
+                    <p class="text-xl text-gray-600 mb-8">يبدو أن الصفحة التي تبحث عنها قد تم نقلها أو حذفها.</p>
+                    
+                    <!-- Search Bar -->
+                    <div class="search-404 mb-8">
+                        <input type="text" id="search-404" placeholder="ابحث في موقعنا..." class="w-full max-w-md mx-auto block px-6 py-3 border-2 border-gray-200 rounded-full focus:border-purple-600 outline-none">
+                        <button onclick="searchSite()" class="mt-4 bg-purple-800 text-white px-8 py-3 rounded-full font-bold hover:bg-purple-900 transition-colors">بحث</button>
+                    </div>
+                    
+                    <!-- Helpful Links -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                        <a href="/" onclick="showPage('home')" class="bg-purple-50 p-4 rounded-xl hover:bg-purple-100 transition-colors">
+                            <div class="text-purple-600 text-2xl mb-2">🏠</div>
+                            <div class="font-bold">الرئيسية</div>
+                        </a>
+                        <a href="#services" onclick="showPage('services')" class="bg-purple-50 p-4 rounded-xl hover:bg-purple-100 transition-colors">
+                            <div class="text-purple-600 text-2xl mb-2">🔧</div>
+                            <div class="font-bold">خدماتنا</div>
+                        </a>
+                        <a href="#portfolio" onclick="showPage('portfolio')" class="bg-purple-50 p-4 rounded-xl hover:bg-purple-100 transition-colors">
+                            <div class="text-purple-600 text-2xl mb-2">💼</div>
+                            <div class="font-bold">أعمالنا</div>
+                        </a>
+                        <a href="#contact" onclick="showPage('contact')" class="bg-purple-50 p-4 rounded-xl hover:bg-purple-100 transition-colors">
+                            <div class="text-purple-600 text-2xl mb-2">📞</div>
+                            <div class="font-bold">اتصل بنا</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -2264,8 +2380,86 @@
         </div>
     </footer>
 
-    <!-- All Modals Remain Exactly The Same -->
-    <!-- Portfolio Details Modal -->
+    <!-- Analytics Dashboard Modal -->
+    <div id="analyticsModal" class="modal-container" onclick="closeModal('analyticsModal')">
+        <div class="modal-content max-w-4xl" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                    <span class="text-3xl ml-3">📊</span>
+                    لوحة تحليلات إي تي واي الداخلية
+                </h2>
+                <button onclick="closeModal('analyticsModal')" class="text-gray-500 hover:text-gray-700" aria-label="إغلاق النافذة">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="analytics-dashboard">
+                <!-- Summary Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-visits">0</div>
+                        <div class="stat-label">إجمالي الزيارات</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="unique-visits">0</div>
+                        <div class="stat-label">زيارات فريدة</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="whatsapp-clicks">0</div>
+                        <div class="stat-label">نقرات واتساب</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="phone-clicks">0</div>
+                        <div class="stat-label">نقرات اتصال</div>
+                    </div>
+                </div>
+
+                <!-- Sources & Geography -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <h3 class="font-bold text-xl mb-4 text-purple-800">مصادر الزيارات</h3>
+                        <div id="sources-list">
+                            <div class="source-item"><span class="source-name">محركات البحث</span><span class="source-count" id="search-count">0</span></div>
+                            <div class="source-item"><span class="source-name">مواقع التواصل</span><span class="source-count" id="social-count">0</span></div>
+                            <div class="source-item"><span class="source-name">مواقع إحالة</span><span class="source-count" id="referral-count">0</span></div>
+                            <div class="source-item"><span class="source-name">زيارات مباشرة</span><span class="source-count" id="direct-count">0</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <h3 class="font-bold text-xl mb-4 text-purple-800">المناطق الجغرافية</h3>
+                        <div id="geo-list">
+                            <div class="source-item"><span class="source-name">الرياض</span><span class="source-count" id="riyadh-count">0</span></div>
+                            <div class="source-item"><span class="source-name">جدة</span><span class="source-count" id="jeddah-count">0</span></div>
+                            <div class="source-item"><span class="source-name">الدمام</span><span class="source-count" id="dammam-count">0</span></div>
+                            <div class="source-item"><span class="source-name">أخرى</span><span class="source-count" id="other-count">0</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Services -->
+                <div class="mt-8 bg-white rounded-xl p-6 shadow border">
+                    <h3 class="font-bold text-xl mb-4 text-purple-800">أكثر الخدمات زيارة</h3>
+                    <div id="top-services-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Modal for Analytics -->
+    <div id="passwordModal" class="modal-container" onclick="closeModal('passwordModal')">
+        <div class="modal-content max-w-sm" onclick="event.stopPropagation()">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">الرجاء إدخال الرقم السري</h3>
+                <input type="password" id="analytics-password" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4 text-center" placeholder="******" maxlength="6">
+                <button onclick="checkAnalyticsPassword()" class="w-full bg-purple-800 text-white py-3 rounded-lg font-bold hover:bg-purple-900 transition-colors">دخول</button>
+                <p class="text-sm text-gray-500 mt-4">للإداريين فقط</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal -->
     <div id="portfolioModal" class="modal-container" onclick="closeModal('portfolioModal')">
         <div class="modal-content max-w-5xl" onclick="event.stopPropagation()">
             <div class="flex justify-between items-start mb-4">
@@ -2393,10 +2587,10 @@
     </div>
 
     <script>
-        // Data for services without prices (negotiable)
+        // Data for services
         const servicesData = {
             profile: {
-                name: 'تصميم ملف تعريفي احترافي',
+                name: 'تصميم ملف تعريفي احترافي للشركات في السعودية',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4-3h2v13h-2z"/>
@@ -2404,22 +2598,21 @@
                 `,
                 iconColor: '#0b7d85',
                 items: [
-                    'بروفايل عربي (5-12 صفحة)',
-                    'بروفايل عربي / إنجليزي',
-                    'تصميم شعار احترافي',
-                    'بكج كارد (بطاقة عمل)',
+                    'بروفايل عربي (5-12 صفحة) - تصميم بروفايل شركات',
+                    'بروفايل عربي / إنجليزي - ملف تعريفي جاهز',
+                    'تصميم شعار احترافي - بروفايل شركة احترافي',
+                    'بكج كارد (بطاقة عمل) - تصميم كتيب تعريفي',
                     'كتابة محتوى مخصص للبروفايل (عربي)',
                     'كتابة محتوى مخصص عربي / إنجليزي'
                 ],
                 details: {
-                    overview: 'نقدم خدمة تصميم الملفات التعريفية الاحترافية التي تعكس هوية شركتك وتبرز نقاط قوتها بأسلوب مبتكر وجذاب. نحن نفهم أن الانطباع الأول مهم، لذلك نحرص على تقديم تصاميم عالية الجودة تترك أثراً إيجابياً لدى عملائك.',
+                    overview: 'نقدم أفضل خدمات تصميم الملفات التعريفية للشركات والمؤسسات في الرياض وجدة، بروفايلات احترافية تعكس هويتكم وتجذب العملاء.',
                     features: ['تصميم احترافي يعكس هوية الشركة', 'محتوى مكتوب بعناية باللغتين العربية والإنجليزية', 'رسوم بيانية وإنفوجرافيك توضيحي', 'تصميم شعار مميز إذا لم يكن متوفراً', 'تنسيق جاهز للطباعة بجودة عالية'],
                     benefits: ['زيادة الثقة والمصداقية لدى العملاء', 'تحسين الصورة المهنية للشركة', 'سهولة التسويق والعرض على المستثمرين']
                 }
             },
-            // NEW: Resume ATS Service
             resume: {
-                name: 'سيرة ذاتية احترافية بنظام ATS وتحسين SEO',
+                name: 'سيرة ذاتية ATS احترافية',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
@@ -2427,22 +2620,21 @@
                 `,
                 iconColor: '#FF6B6B',
                 items: [
-                    'تصميم سيرة ذاتية PDF متوافقة مع ATS',
-                    'كتابة محتوى متوافق مع SEO (كلمات مفتاحية)',
-                    'تحسين الملف الشخصي على منصات التوظيف',
-                    'استشارات مهنية وتوجيه مسار وظيفي',
-                    'سيرة ذاتية عربية / إنجليزية',
+                    'تصميم سيرة ذاتية PDF متوافقة مع ATS - نموذج سيرة ذاتية احترافي',
+                    'كتابة محتوى متوافق مع SEO (كلمات مفتاحية) - CV احترافي',
+                    'تحسين الملف الشخصي على منصات التوظيف - سيرة ذاتية جاهزة للتوظيف',
+                    'استشارات مهنية وتوجيه مسار وظيفي - تحسين CV لمحركات البحث',
+                    'سيرة ذاتية عربية / إنجليزية - سيرة ذاتية السعودية',
                     'تنسيق احترافي للخبرات والمهارات'
                 ],
                 details: {
-                    overview: 'نصمم سيراً ذاتية متوافقة مع أنظمة تتبع المتقدمين (ATS) مع تحسين محتواها لمحركات البحث، لزيادة فرص قبولك في كبرى الشركات. نضمن لك سيرة ذاتية تبرز مهاراتك بأسلوب احترافي.',
+                    overview: 'نقدم خدمة تصميم سيرة ذاتية متوافقة مع نظام ATS ومحسنة لمحركات البحث لزيادة فرص قبولك في كبرى الشركات السعودية. نضمن لك سيرة ذاتية تبرز مهاراتك بأسلوب احترافي وتجتاز أنظمة الفحص الآلي.',
                     features: ['تصميم يتوافق مع أنظمة ATS', 'كتابة احترافية للخبرات والمؤهلات', 'تحسين SEO للكلمات المفتاحية', 'تقديم نصائح للتقديم الناجح'],
                     benefits: ['اجتياز أنظمة الفحص الآلي ATS', 'ظهور أفضل في نتائج البحث للتوظيف', 'زيادة فرص المقابلات الشخصية']
                 }
             },
-            // NEW: LinkedIn Profile Optimization
             linkedin: {
-                name: 'بناء صفحة لينكد إن احترافية وتحسين الملف الشخصي',
+                name: 'بناء صفحة لينكد إن احترافية',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.68-1.68-1.68a1.68 1.68 0 0 0-1.68 1.68c0 .93.76 1.68 1.68 1.68m1.39 9.75v-8.37H5.5v8.37h2.77z"/>
@@ -2450,21 +2642,21 @@
                 `,
                 iconColor: '#0077B5',
                 items: [
-                    'تصميم صفحة شخصية / شركة متكاملة',
-                    'تحسين الملف الشخصي SEO (كلمات مفتاحية)',
-                    'كتابة ملخص احترافي بالإنجازات',
-                    'إستراتيجية محتوى وزيادة التفاعل',
+                    'تصميم صفحة شخصية / شركة متكاملة - بناء بروفايل لينكد إن',
+                    'تحسين الملف الشخصي SEO (كلمات مفتاحية) - خبير لينكد إن',
+                    'كتابة ملخص احترافي بالإنجازات - استشارات لينكد إن',
+                    'إستراتيجية محتوى وزيادة التفاعل - لينكد إن للتوظيف السعودية',
                     'تدريب على استخدام LinkedIn للتوظيف',
                     'تحسين الظهور في نتائج بحث LinkedIn'
                 ],
                 details: {
-                    overview: 'نبني لك صفحة LinkedIn متكاملة تعكس هويتك المهنية وتجذب انتباه مسؤولي التوظيف. نركز على تحسين ظهور الملف في نتائج البحث وزيادة فرص التواصل.',
+                    overview: 'عزز حضورك المهني مع خدمة بناء صفحة لينكد إن احترافية وتحسين ملفك الشخصي لجذب مسؤولي التوظيف في السعودية. نركز على تحسين ظهور الملف في نتائج البحث وزيادة فرص التواصل.',
                     features: ['تصميم احترافي للصفحة', 'تحسين SEO للكلمات المفتاحية', 'كتابة ملخص قوي', 'نصائح لبناء شبكة علاقات'],
                     benefits: ['زيادة فرص التواصل مع مسؤولي التوظيف', 'تحسين الظهور في نتائج بحث LinkedIn', 'بناء علامة شخصية قوية']
                 }
             },
             websites: {
-                name: 'المواقع التعريفية والمتاجر الإلكترونية',
+                name: 'تصميم مواقع ومتاجر إلكترونية احترافية في السعودية',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
@@ -2472,24 +2664,24 @@
                 `,
                 iconColor: '#3b82f6',
                 items: [
-                    'صفحة هبوط واحدة',
-                    'موقع تعريفي أساسي (5-8 صفحات)',
-                    'موقع تعريفي متقدم (10-15 صفحة)',
-                    'متجر إلكتروني أساسي',
-                    'متجر إلكتروني متقدم',
-                    'نظام إدارة المحتوى',
+                    'صفحة هبوط واحدة - تصميم موقع تعريفي',
+                    'موقع تعريفي أساسي (5-8 صفحات) - إنشاء متجر إلكتروني',
+                    'موقع تعريفي متقدم (10-15 صفحة) - تصميم متاجر شوبيفاي',
+                    'متجر إلكتروني أساسي - برمجة مواقع ووردبريس',
+                    'متجر إلكتروني متقدم - تصميم موقع شركة',
+                    'نظام إدارة المحتوى - متجر إلكتروني السعودية',
                     'تطبيق جوال مرافق',
                     'تحسين محركات البحث SEO',
                     'استضافة ونطاق لسنة'
                 ],
                 details: {
-                    overview: 'نصمم مواقع تعريفية احترافية تواكب أحدث التقنيات والاتجاهات في عالم التصميم. مواقعنا ليست مجرد واجهة جميلة، بل أدوات تسويقية قوية تساعد في نمو أعمالك وزيادة انتشارك.',
+                    overview: 'نصمم مواقع تعريفية ومتاجر إلكترونية عصرية وجذابة، متوافقة مع محركات البحث وتلبي احتياجات السوق السعودي. مواقعنا ليست مجرد واجهة جميلة، بل أدوات تسويقية قوية تساعد في نمو أعمالك وزيادة انتشارك.',
                     features: ['تصميم متجاوز يعمل على جميع الأجهزة', 'تحسين سرعة الموقع وأداؤه', 'لوحة تحكم سهلة الاستخدام', 'ربط مع وسائل التواصل الاجتماعي', 'حماية وأمان عالي'],
                     benefits: ['الوصول لجمهور أوسع', 'زيادة المبيعات والطلبات', 'تواجد احترافي على الإنترنت']
                 }
             },
             content: {
-                name: 'إنشاء المحتوى وإدارة التواصل',
+                name: 'إنشاء المحتوى وإدارة حسابات التواصل الاجتماعي',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
@@ -2497,20 +2689,20 @@
                 `,
                 iconColor: '#8b5cf6',
                 items: [
-                    'خطة محتوى شهرية (12 منشور)',
-                    'خطة محتوى متقدمة (30 منشور)',
-                    'كتابة مقالات متوافقة مع SEO (5 مقالات)',
-                    'تصميم بوستات انستقرام (10 تصاميم)',
-                    'إدارة حسابات التواصل (شهر)'
+                    'خطة محتوى شهرية (12 منشور) - كتابة محتوى تسويقي',
+                    'خطة محتوى متقدمة (30 منشور) - إدارة حسابات انستقرام',
+                    'كتابة مقالات متوافقة مع SEO (5 مقالات) - استراتيجية محتوى',
+                    'تصميم بوستات انستقرام (10 تصاميم) - تسويق بالمحتوى',
+                    'إدارة حسابات التواصل (شهر) - إدارة سوشيال ميديا السعودية'
                 ],
                 details: {
-                    overview: 'نصنع محتوى إبداعي يجذب جمهورك ويبني علاقة قوية معهم. خدماتنا تشمل الكتابة، التصميم، وإدارة الحسابات لضمان أفضل النتائج.',
+                    overview: 'خدمات متكاملة لإنشاء محتوى إبداعي وإدارة حسابات التواصل الاجتماعي لتعزيز علامتك التجارية في السعودية. نصنع محتوى إبداعي يجذب جمهورك ويبني علاقة قوية معهم.',
                     features: ['محتوى متنوع (نصوص، صور، فيديو)', 'استراتيجية نشر مدروسة', 'تفاعل مع المتابعين', 'تقارير أداء شهرية'],
                     benefits: ['زيادة التفاعل والمتابعين', 'بناء هوية قوية للعلامة التجارية', 'توفير الوقت والجهد']
                 }
             },
             identity: {
-                name: 'الهوية البصرية والعلامات التجارية',
+                name: 'تصميم هوية بصرية وشعارات احترافية',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
@@ -2518,20 +2710,20 @@
                 `,
                 iconColor: '#ec4899',
                 items: [
-                    'تصميم شعار احترافي (3 خيارات)',
-                    'هوية بصرية كاملة (شعار + مطبوعات)',
-                    'دليل استخدام الهوية',
+                    'تصميم شعار احترافي (3 خيارات) - تصميم لوجو',
+                    'هوية بصرية كاملة (شعار + مطبوعات) - براندينج شركات',
+                    'دليل استخدام الهوية - هوية بصرية السعودية',
                     'تصميم كروت شخصية',
                     'تصميم ورق رسمي وأظرف'
                 ],
                 details: {
-                    overview: 'نبتكر هويات بصرية مميزة تعلق في الأذهان وتميزك عن المنافسين. نركز على البساطة والمعنى لإنشاء علامة تجارية قوية.',
+                    overview: 'نبتكر هويات بصرية فريدة وشعارات مميزة تعبر عن جوهر علامتك التجارية وتبرزها في السوق السعودي. نركز على البساطة والمعنى لإنشاء علامة تجارية قوية.',
                     features: ['تصاميم أصلية ومبتكرة', 'دراسة للسوق والمنافسين', 'تسليم ملفات مفتوحة المصدر', 'تعديلات مفتوحة حتى الرضا'],
-                    benefits: ['تميز في السوق', 'ثقة ومصداقية أكبر', 'سهولة التعرف على العلامة التجارية']
+                    benefits: ['تميز في السوق السعودي', 'ثقة ومصداقية أكبر', 'سهولة التعرف على العلامة التجارية']
                 }
             },
             marketing: {
-                name: 'التسويق الرقمي والإعلانات',
+                name: 'خدمات التسويق الرقمي والإعلانات في السعودية',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
@@ -2539,20 +2731,20 @@
                 `,
                 iconColor: '#f59e0b',
                 items: [
-                    'إدارة حملات جوجل إدواردز (شهر)',
-                    'إدارة حملات سناب شات / تيك توك',
-                    'إدارة حملات فيسبوك / انستقرام',
-                    'تحسين الظهور في محركات البحث SEO',
-                    'استشارات تسويقية'
+                    'إدارة حملات جوجل إدواردز (شهر) - حملات إعلانية جوجل',
+                    'إدارة حملات سناب شات / تيك توك - تسويق عبر سناب شات',
+                    'إدارة حملات فيسبوك / انستقرام - إعلانات انستقرام ممولة',
+                    'تحسين الظهور في محركات البحث SEO - تحسين محركات البحث المحلية',
+                    'استشارات تسويقية - تسويق رقمي الرياض'
                 ],
                 details: {
-                    overview: 'نساعدك للوصول لعملائك المستهدفين بدقة من خلال حملات إعلانية مدروسة وموجهة تحقق أعلى عائد على الاستثمار.',
+                    overview: 'استراتيجيات تسويق رقمي متكاملة وحملات إعلانية موجهة لزيادة وصولك ومبيعاتك في المملكة العربية السعودية. نساعدك للوصول لعملائك المستهدفين بدقة من خلال حملات إعلانية مدروسة وموجهة تحقق أعلى عائد على الاستثمار.',
                     features: ['استهداف دقيق للجمهور', 'تصميم إعلانات جذابة', 'مراقبة وتحسين مستمر للحملات', 'تقارير أداء مفصلة'],
-                    benefits: ['زيادة المبيعات والتحويلات', 'تقليل تكلفة الاستحواذ على العملاء', 'نمو سريع للأعمال']
+                    benefits: ['زيادة المبيعات والتحويلات', 'تقليل تكلفة الاستحواذ على العملاء', 'نمو سريع للأعمال في السوق السعودي']
                 }
             },
             menu: {
-                name: 'تصميم المنيو الرقمي والورقي',
+                name: 'تصميم منيو رقمي وورقي للمطاعم والكافيهات',
                 icon: `
                     <svg class="service-icon-svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm16 14H5V5h14v14zM9 7h6v2H9zm0 4h6v2H9zm0 4h6v2H9z"/>
@@ -2560,23 +2752,22 @@
                 `,
                 iconColor: '#10b981',
                 items: [
-                    'منيو صفحة واحدة',
-                    'منيو كتيب (4-8 صفحات)',
-                    'منيو رقمي (QR Code)',
-                    'تصوير أطباق (10 صور)',
-                    'تصميم قائمة أسعار'
+                    'منيو صفحة واحدة - تصميم منيو مطعم',
+                    'منيو كتيب (4-8 صفحات) - منيو كافيه',
+                    'منيو رقمي (QR Code) - قائمة طعام رقمية',
+                    'تصوير أطباق (10 صور) - منيو QR',
+                    'تصميم قائمة أسعار - منيو باركود السعودية'
                 ],
                 details: {
-                    overview: 'نقدم حلول قوائم طعام مبتكرة وعملية للمطاعم والكافيهات، تجمع بين جمال التصميم وسهولة الاستخدام.',
+                    overview: 'حلول مبتكرة لتصميم قوائم الطعام الرقمية (QR Menu) والورقية للمطاعم والكافيهات في السعودية. نقدم حلول قوائم طعام مبتكرة وعملية للمطاعم والكافيهات، تجمع بين جمال التصميم وسهولة الاستخدام.',
                     features: ['تصميم فاتح للشهية', 'سهولة التعديل والتحديث', 'نسخ رقمية وورقية', 'دعم لغات متعددة'],
-                    benefits: ['تحسين تجربة العميل', 'زيادة متوسط قيمة الطلب', 'سهولة مشاركة القائمة']
+                    benefits: ['تحسين تجربة العميل في المطاعم السعودية', 'زيادة متوسط قيمة الطلب', 'سهولة مشاركة القائمة الرقمية']
                 }
             }
         };
 
-        // Portfolio Data (unchanged)
+        // Portfolio Data
         const portfolioItems = [
-            // Profile Items
             {
                 id: 1,
                 title: 'تقرير سنوي جمعية مسارات',
@@ -2613,8 +2804,6 @@
                 desc: 'تصميم وإخراج فني لكتيب تعريفي ببرامج جمعية خيرية، بأسلوب إنساني ومؤثر.',
                 tags: ['قطاع غير ربحي', 'تصميم إبداعي']
             },
-
-            // Web Items
             {
                 id: 5,
                 title: 'تصميم متجر سكون',
@@ -2651,8 +2840,6 @@
                 desc: 'موقع تعريفي لشركة مرونة القوة للخدمات اللوجيستية.',
                 tags: ['منصة ووردبريس', 'سرعة فائقه']
             },
-
-            // Menu Items
             {
                 id: 9,
                 title: 'منيو كوفي هاوس إلكتروني',
@@ -2673,57 +2860,204 @@
             }
         ];
 
-        // Global variables
+        // ============== Global variables ==============
         let currentCart = {
             items: [],
             selectedServices: new Set(),
             selectedSubServices: {}
         };
+        let logoClickCount = 0;
+        let logoClickTimer = null;
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            renderServices();
-            renderPortfolio('profile');
-            renderPortfolioPage('profile');
-            updateNavActiveState();
-            initFAQs();
-            
-            // Check URL hash for page navigation
-            const hash = window.location.hash.replace('#', '');
-            if (hash && hash.includes('page')) {
-                showPage(hash);
+        // ============== Tracking & Analytics ==============
+        if (!localStorage.getItem('ety_analytics')) {
+            const initialData = {
+                totalVisits: 0,
+                uniqueVisits: 0,
+                whatsappClicks: 0,
+                phoneClicks: 0,
+                sources: { search: 0, social: 0, referral: 0, direct: 0 },
+                geo: { riyadh: 0, jeddah: 0, dammam: 0, other: 0 },
+                serviceViews: {},
+                referrer: document.referrer || 'direct',
+                visitedPages: {}
+            };
+            localStorage.setItem('ety_analytics', JSON.stringify(initialData));
+        }
+
+        function trackPageView(pageName) {
+            let data = JSON.parse(localStorage.getItem('ety_analytics'));
+            data.totalVisits++;
+            if (!sessionStorage.getItem('ety_session')) {
+                sessionStorage.setItem('ety_session', '1');
+                data.uniqueVisits++;
+            }
+            const ref = document.referrer;
+            if (ref.includes('google') || ref.includes('bing') || ref.includes('yahoo')) {
+                data.sources.search++;
+            } else if (ref.includes('facebook') || ref.includes('twitter') || ref.includes('linkedin') || ref.includes('instagram')) {
+                data.sources.social++;
+            } else if (ref && ref !== window.location.origin) {
+                data.sources.referral++;
+            } else {
+                data.sources.direct++;
+            }
+
+            const lang = navigator.language;
+            if (lang.includes('ar')) {
+                data.geo.riyadh++;
+            } else {
+                data.geo.other++;
+            }
+
+            if (pageName.startsWith('service-')) {
+                const serviceKey = pageName.replace('service-', '');
+                data.serviceViews[serviceKey] = (data.serviceViews[serviceKey] || 0) + 1;
+            }
+
+            localStorage.setItem('ety_analytics', JSON.stringify(data));
+        }
+
+        function trackClick(type) {
+            let data = JSON.parse(localStorage.getItem('ety_analytics'));
+            if (type === 'whatsapp') data.whatsappClicks++;
+            if (type === 'phone') data.phoneClicks++;
+            localStorage.setItem('ety_analytics', JSON.stringify(data));
+        }
+
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('a[href*="wa.me"]')) {
+                trackClick('whatsapp');
+            }
+            if (e.target.closest('a[href^="tel:"]')) {
+                trackClick('phone');
             }
         });
 
-        // FAQ Functionality
-        function initFAQs() {
-            document.querySelectorAll('.seo-faq-answer').forEach(answer => {
-                answer.style.display = 'none';
-            });
-            
-            document.querySelectorAll('.seo-faq-question').forEach(question => {
-                question.addEventListener('click', function() {
-                    toggleFaq(this);
-                });
-            });
-        }
-
-        function toggleFaq(question) {
-            const answer = question.nextElementSibling;
-            const icon = question.querySelector('.faq-icon');
-            
-            question.classList.toggle('active');
-            
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-                if (icon) icon.textContent = '+';
+        // ============== Triple click on logo ==============
+        document.getElementById('logo-triple-click').addEventListener('click', function() {
+            logoClickCount++;
+            if (logoClickCount === 3) {
+                openModal('passwordModal');
+                logoClickCount = 0;
+                if (logoClickTimer) clearTimeout(logoClickTimer);
             } else {
-                answer.style.display = 'block';
-                if (icon) icon.textContent = '−';
+                if (logoClickTimer) clearTimeout(logoClickTimer);
+                logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 1000);
+            }
+        });
+
+        function checkAnalyticsPassword() {
+            const pwd = document.getElementById('analytics-password').value;
+            if (pwd === '123321') {
+                closeModal('passwordModal');
+                loadAnalyticsDashboard();
+                openModal('analyticsModal');
+            } else {
+                showNotification('الرقم السري غير صحيح', 'error');
             }
         }
 
-        // Page Navigation Functions
+        function loadAnalyticsDashboard() {
+            const data = JSON.parse(localStorage.getItem('ety_analytics'));
+            document.getElementById('total-visits').innerText = data.totalVisits;
+            document.getElementById('unique-visits').innerText = data.uniqueVisits;
+            document.getElementById('whatsapp-clicks').innerText = data.whatsappClicks;
+            document.getElementById('phone-clicks').innerText = data.phoneClicks;
+
+            document.getElementById('search-count').innerText = data.sources.search;
+            document.getElementById('social-count').innerText = data.sources.social;
+            document.getElementById('referral-count').innerText = data.sources.referral;
+            document.getElementById('direct-count').innerText = data.sources.direct;
+
+            document.getElementById('riyadh-count').innerText = data.geo.riyadh;
+            document.getElementById('jeddah-count').innerText = data.geo.jeddah;
+            document.getElementById('dammam-count').innerText = data.geo.dammam;
+            document.getElementById('other-count').innerText = data.geo.other;
+
+            const serviceViews = data.serviceViews;
+            const sorted = Object.keys(serviceViews).sort((a,b) => serviceViews[b] - serviceViews[a]);
+            let html = '';
+            sorted.slice(0,5).forEach(key => {
+                const serviceName = servicesData[key]?.name || key;
+                html += `<div class="source-item"><span class="source-name">${serviceName}</span><span class="source-count">${serviceViews[key]}</span></div>`;
+            });
+            if (!html) html = '<p class="text-gray-500">لا توجد بيانات كافية بعد</p>';
+            document.getElementById('top-services-list').innerHTML = html;
+        }
+
+        // ============== Dynamic Meta Tags ==============
+        const pageMeta = {
+            home: {
+                title: 'إي تي واي للتصميم والتسويق - شريكك الرقمي المعتمد',
+                desc: 'إي تي واي (ETY) - وكالتك الرقمية المتكاملة في السعودية لتصميم الهويات البصرية، برمجة المواقع، والتسويق الرقمي.',
+                keywords: 'تصميم, تسويق, برمجة مواقع, هوية بصرية, السعودية, ETY'
+            },
+            about: {
+                title: 'من نحن - إي تي واي للتصميم والتسويق | أفضل شركة تصميم في السعودية',
+                desc: 'تعرف على قصة إي تي واي، وكالتك الرقمية المتكاملة في الرياض وجدة، خبرة 13 سنة وأكثر من 500 مشروع ناجح.',
+                keywords: 'عن إي تي واي, شركة تصميم سعودية, وكالة تسويق رقمي الرياض'
+            },
+            services: {
+                title: 'خدمات إي تي واي الرقمية المتكاملة | تصميم، برمجة، تسويق، سيرة ذاتية',
+                desc: 'نقدم 14 خدمة متكاملة تشمل تصميم الهوية البصرية، برمجة المواقع والمتاجر، التسويق الرقمي، السيرة الذاتية ATS، وتحسين لينكد إن.',
+                keywords: 'خدمات تصميم مواقع, تسويق رقمي, سيرة ذاتية ATS, لينكد إن, السعودية'
+            },
+            portfolio: {
+                title: 'معرض أعمال إي تي واي | مشاريع ناجحة في تصميم وبرمجة المواقع',
+                desc: 'شاهد إبداعاتنا الرقمية التي ساعدت أكثر من 200 عميل في السعودية على النمو والتميز. تصاميم بروفايل، مواقع، منيو إلكتروني.',
+                keywords: 'أعمال إي تي واي, مشاريع تصميم, مواقع الكترونية, بروفايل شركات'
+            },
+            contact: {
+                title: 'تواصل مع إي تي واي | استشارة مجانية وخدمة عملاء 24/7',
+                desc: 'نحن هنا للإجابة على استفساراتك وتقديم استشارة مجانية لمشروعك الرقمي في السعودية. اتصل بنا عبر واتساب أو البريد الإلكتروني.',
+                keywords: 'اتصل بنا, استشارة تسويق مجانية, واتساب إي تي واي'
+            }
+        };
+
+        function updateMetaTags(pageId) {
+            const meta = pageMeta[pageId] || pageMeta.home;
+            document.getElementById('dynamic-title').innerText = meta.title;
+            document.getElementById('dynamic-description').setAttribute('content', meta.desc);
+            document.getElementById('dynamic-keywords').setAttribute('content', meta.keywords);
+            document.getElementById('og-title').setAttribute('content', meta.title);
+            document.getElementById('og-description').setAttribute('content', meta.desc);
+            document.getElementById('twitter-title').setAttribute('content', meta.title);
+            document.getElementById('twitter-description').setAttribute('content', meta.desc);
+        }
+
+        // ============== 404 handling ==============
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.replace('#', '');
+            const validPages = ['home', 'about', 'services', 'portfolio', 'contact'];
+            if (hash && !validPages.includes(hash)) {
+                show404();
+            }
+        });
+
+        function show404() {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.getElementById('not-found-page').style.display = 'block';
+            document.getElementById('not-found-page').classList.add('active');
+            document.title = '404 - الصفحة غير موجودة | إي تي واي';
+            document.querySelector('meta[name="robots"]').setAttribute('content', 'noindex, follow');
+        }
+
+        function searchSite() {
+            const query = document.getElementById('search-404').value;
+            if (query.trim() !== '') {
+                window.open(`https://www.google.com/search?q=site:etydm.com+${encodeURIComponent(query)}`, '_blank');
+            }
+        }
+
+        // ============== XML Sitemap ==============
+        const sitemapLink = document.createElement('link');
+        sitemapLink.rel = 'sitemap';
+        sitemapLink.type = 'application/xml';
+        sitemapLink.href = '/sitemap.xml';
+        document.head.appendChild(sitemapLink);
+
+        // ============== Page Functions ==============
         function showPage(pageId) {
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.remove('active');
@@ -2734,10 +3068,13 @@
                 page.classList.add('active');
                 window.history.pushState(null, null, '#' + pageId);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+                updateMetaTags(pageId);
+                trackPageView(pageId);
                 setTimeout(initFAQs, 100);
             } else {
                 document.getElementById('home-page').classList.add('active');
                 window.history.pushState(null, null, '#home');
+                updateMetaTags('home');
             }
             
             const mobileMenu = document.getElementById('mobileMenu');
@@ -2748,8 +3085,11 @@
 
         window.addEventListener('popstate', () => {
             const hash = window.location.hash.replace('#', '');
-            if (hash && hash.includes('page')) {
+            const validPages = ['home', 'about', 'services', 'portfolio', 'contact'];
+            if (hash && validPages.includes(hash)) {
                 showPage(hash);
+            } else if (hash) {
+                show404();
             } else {
                 showPage('home');
             }
@@ -2764,141 +3104,36 @@
             toggleMobileMenu();
         }
 
-        // Portfolio Functions
-        function renderPortfolio(filter) {
-            const container = document.getElementById('portfolio-grid');
-            if (!container) return;
-            container.innerHTML = '';
-
-            const filteredItems = portfolioItems.filter(item => item.category === filter);
-
-            if (filteredItems.length === 0) {
-                container.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500">لا توجد أعمال في هذا القسم حالياً</div>`;
-                return;
-            }
-
-            filteredItems.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white';
-                card.onclick = () => openPortfolioModal(item);
-                
-                card.innerHTML = `
-                    <div class="aspect-video overflow-hidden">
-                        <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-purple-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
-                        <h3 class="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
-                        <p class="text-gray-300 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">${item.desc}</p>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const isOpen = menu.classList.toggle('open');
+            const menuButton = document.querySelector('[aria-controls="mobileMenu"]');
+            menuButton.setAttribute('aria-expanded', isOpen);
         }
 
-        function renderPortfolioPage(filter) {
-            const container = document.getElementById('portfolio-page-grid');
-            if (!container) return;
-            
-            container.innerHTML = '';
-
-            const filteredItems = portfolioItems.filter(item => item.category === filter);
-
-            if (filteredItems.length === 0) {
-                container.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500">لا توجد أعمال في هذا القسم حالياً</div>`;
-                return;
-            }
-
-            filteredItems.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white';
-                card.onclick = () => openPortfolioModal(item);
-                
-                card.innerHTML = `
-                    <div class="aspect-video overflow-hidden">
-                        <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-purple-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
-                        <h3 class="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
-                        <p class="text-gray-300 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">${item.desc}</p>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('open');
+            setTimeout(() => {
+                modal.querySelector('.modal-content').classList.add('show');
+            }, 10);
         }
 
-        function filterPortfolio(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-purple-800', 'text-white', 'shadow-md', 'active');
-                btn.classList.add('bg-gray-100', 'text-gray-600');
-            });
-            
-            const filters = document.querySelectorAll('#portfolio-filters .filter-btn, #portfolio-page-filters .filter-btn');
-            filters.forEach(btn => {
-                if (btn.textContent.includes(getCategoryName(category))) {
-                    btn.classList.remove('bg-gray-100', 'text-gray-600');
-                    btn.classList.add('bg-purple-800', 'text-white', 'shadow-md', 'active');
-                }
-            });
-            
-            renderPortfolio(category);
-            renderPortfolioPage(category);
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('open');
+            setTimeout(() => {
+                modal.querySelector('.modal-content').classList.remove('show');
+            }, 50);
         }
 
-        function getCategoryName(cat) {
-            const names = { 
-                'profile': 'بروفايل', 
-                'web': 'مواقع ومتاجر', 
-                'menu': 'منيو إلكتروني'
-            };
-            return names[cat] || 'مشروع';
-        }
-
-        function openPortfolioModal(item) {
-            document.getElementById('modalProjectTitle').innerText = item.title;
-            document.getElementById('modalProjectCategory').innerText = getCategoryName(item.category);
-            document.getElementById('modalProjectDesc').innerText = item.desc;
-            
-            const tagsContainer = document.getElementById('modalProjectTags');
-            tagsContainer.innerHTML = item.tags.map(tag => `<span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">${tag}</span>`).join('');
-            
-            const mediaContainer = document.getElementById('modalMediaContainer');
-            const downloadBtnContainer = document.getElementById('pdfDownloadBtnContainer');
-            const downloadLink = document.getElementById('pdfDownloadLink');
-            const websiteBtnContainer = document.getElementById('websiteBtnContainer');
-            const websiteLink = document.getElementById('websiteLink');
-            const websiteBtnText = document.getElementById('websiteBtnText');
-
-            mediaContainer.innerHTML = '';
-            downloadBtnContainer.classList.add('hidden');
-            websiteBtnContainer.classList.add('hidden');
-
-            if (item.pdfUrl && item.pdfUrl.trim() !== '') {
-                let embedUrl = item.pdfUrl;
-                if (embedUrl.includes('drive.google.com') && embedUrl.includes('/view')) {
-                    embedUrl = embedUrl.replace('/view', '/preview');
-                }
-
-                mediaContainer.innerHTML = `
-                    <iframe src="${embedUrl}" class="w-full h-[500px] border-0" allow="autoplay" title="مشروع ${item.title} - إي تي واي"></iframe>
-                `;
-                
-                downloadLink.href = item.pdfUrl;
-                downloadBtnContainer.classList.remove('hidden');
-            } else {
-                mediaContainer.innerHTML = `
-                    <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-auto object-contain max-h-[500px]" loading="lazy">
-                `;
-            }
-            
-            if (item.websiteUrl && item.websiteUrl.trim() !== '') {
-                websiteLink.href = item.websiteUrl;
-                websiteBtnText.innerText = item.category === 'menu' ? 'تصفح المنيو الإلكتروني' : 'زيارة الموقع الإلكتروني';
-                websiteBtnContainer.classList.remove('hidden');
-            }
-            
-            openModal('portfolioModal');
+        function showNotification(message, type = 'info') {
+            const notif = document.getElementById('notification');
+            notif.innerText = message;
+            notif.className = `notification ${type} show`;
+            setTimeout(() => {
+                notif.classList.remove('show');
+            }, 3000);
         }
 
         // Service Functions
@@ -3172,6 +3407,7 @@
             showNotification(`تمت إضافة ${service.name} إلى الباقة المخصصة`, 'success');
         }
 
+        // Contact Functions
         function sendQuickInquiry() {
             const name = document.getElementById('quick-name').value;
             const phone = document.getElementById('quick-phone').value;
@@ -3197,7 +3433,6 @@
             document.getElementById('quick-message').value = '';
         }
 
-        // Contact Form Submission
         function submitContactForm(event) {
             event.preventDefault();
             
@@ -3235,37 +3470,169 @@
             form.reset();
         }
 
-        // Utility Functions
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.add('open');
-            setTimeout(() => {
-                modal.querySelector('.modal-content').classList.add('show');
-            }, 10);
+        // Portfolio Functions
+        function renderPortfolio(filter) {
+            const container = document.getElementById('portfolio-grid');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const filteredItems = portfolioItems.filter(item => item.category === filter);
+
+            if (filteredItems.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500">لا توجد أعمال في هذا القسم حالياً</div>`;
+                return;
+            }
+
+            filteredItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white';
+                card.onclick = () => openPortfolioModal(item);
+                
+                card.innerHTML = `
+                    <div class="aspect-video overflow-hidden">
+                        <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-purple-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
+                        <h3 class="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
+                        <p class="text-gray-300 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">${item.desc}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
         }
 
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.remove('open');
-            setTimeout(() => {
-                modal.querySelector('.modal-content').classList.remove('show');
-            }, 50);
+        function renderPortfolioPage(filter) {
+            const container = document.getElementById('portfolio-page-grid');
+            if (!container) return;
+            
+            container.innerHTML = '';
+
+            const filteredItems = portfolioItems.filter(item => item.category === filter);
+
+            if (filteredItems.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center py-10 text-gray-500">لا توجد أعمال في هذا القسم حالياً</div>`;
+                return;
+            }
+
+            filteredItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'group relative overflow-hidden rounded-xl shadow-lg cursor-pointer bg-white';
+                card.onclick = () => openPortfolioModal(item);
+                
+                card.innerHTML = `
+                    <div class="aspect-video overflow-hidden">
+                        <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-purple-300 text-sm font-bold mb-1">${getCategoryName(item.category)}</span>
+                        <h3 class="text-white text-xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.title}</h3>
+                        <p class="text-gray-300 text-sm line-clamp-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">${item.desc}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
         }
 
-        function showNotification(message, type = 'info') {
-            const notif = document.getElementById('notification');
-            notif.innerText = message;
-            notif.className = `notification ${type} show`;
-            setTimeout(() => {
-                notif.classList.remove('show');
-            }, 3000);
+        function filterPortfolio(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-purple-800', 'text-white', 'shadow-md', 'active');
+                btn.classList.add('bg-gray-100', 'text-gray-600');
+            });
+            
+            const filters = document.querySelectorAll('#portfolio-filters .filter-btn, #portfolio-page-filters .filter-btn');
+            filters.forEach(btn => {
+                if (btn.textContent.includes(getCategoryName(category))) {
+                    btn.classList.remove('bg-gray-100', 'text-gray-600');
+                    btn.classList.add('bg-purple-800', 'text-white', 'shadow-md', 'active');
+                }
+            });
+            
+            renderPortfolio(category);
+            renderPortfolioPage(category);
         }
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            const isOpen = menu.classList.toggle('open');
-            const menuButton = document.querySelector('[aria-controls="mobileMenu"]');
-            menuButton.setAttribute('aria-expanded', isOpen);
+        function getCategoryName(cat) {
+            const names = { 
+                'profile': 'بروفايل', 
+                'web': 'مواقع ومتاجر', 
+                'menu': 'منيو إلكتروني'
+            };
+            return names[cat] || 'مشروع';
+        }
+
+        function openPortfolioModal(item) {
+            document.getElementById('modalProjectTitle').innerText = item.title;
+            document.getElementById('modalProjectCategory').innerText = getCategoryName(item.category);
+            document.getElementById('modalProjectDesc').innerText = item.desc;
+            
+            const tagsContainer = document.getElementById('modalProjectTags');
+            tagsContainer.innerHTML = item.tags.map(tag => `<span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">${tag}</span>`).join('');
+            
+            const mediaContainer = document.getElementById('modalMediaContainer');
+            const downloadBtnContainer = document.getElementById('pdfDownloadBtnContainer');
+            const downloadLink = document.getElementById('pdfDownloadLink');
+            const websiteBtnContainer = document.getElementById('websiteBtnContainer');
+            const websiteLink = document.getElementById('websiteLink');
+            const websiteBtnText = document.getElementById('websiteBtnText');
+
+            mediaContainer.innerHTML = '';
+            downloadBtnContainer.classList.add('hidden');
+            websiteBtnContainer.classList.add('hidden');
+
+            if (item.pdfUrl && item.pdfUrl.trim() !== '') {
+                let embedUrl = item.pdfUrl;
+                if (embedUrl.includes('drive.google.com') && embedUrl.includes('/view')) {
+                    embedUrl = embedUrl.replace('/view', '/preview');
+                }
+
+                mediaContainer.innerHTML = `
+                    <iframe src="${embedUrl}" class="w-full h-[500px] border-0" allow="autoplay" title="مشروع ${item.title} - إي تي واي"></iframe>
+                `;
+                
+                downloadLink.href = item.pdfUrl;
+                downloadBtnContainer.classList.remove('hidden');
+            } else {
+                mediaContainer.innerHTML = `
+                    <img src="${item.image}" alt="${item.title} - مشروع تصميم من إي تي واي" class="w-full h-auto object-contain max-h-[500px]" loading="lazy">
+                `;
+            }
+            
+            if (item.websiteUrl && item.websiteUrl.trim() !== '') {
+                websiteLink.href = item.websiteUrl;
+                websiteBtnText.innerText = item.category === 'menu' ? 'تصفح المنيو الإلكتروني' : 'زيارة الموقع الإلكتروني';
+                websiteBtnContainer.classList.remove('hidden');
+            }
+            
+            openModal('portfolioModal');
+        }
+
+        // FAQ Functions
+        function initFAQs() {
+            document.querySelectorAll('.seo-faq-answer').forEach(answer => {
+                answer.style.display = 'none';
+            });
+            
+            document.querySelectorAll('.seo-faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    toggleFaq(this);
+                });
+            });
+        }
+
+        function toggleFaq(question) {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.faq-icon');
+            
+            question.classList.toggle('active');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                if (icon) icon.textContent = '+';
+            } else {
+                answer.style.display = 'block';
+                if (icon) icon.textContent = '−';
+            }
         }
 
         function updateNavActiveState() {
@@ -3295,6 +3662,24 @@
                 });
             });
         }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderServices();
+            renderPortfolio('profile');
+            renderPortfolioPage('profile');
+            updateNavActiveState();
+            initFAQs();
+            trackPageView('home');
+            
+            const hash = window.location.hash.replace('#', '');
+            const validPages = ['home','about','services','portfolio','contact'];
+            if (hash && validPages.includes(hash)) {
+                showPage(hash);
+            } else if (hash) {
+                show404();
+            }
+        });
     </script>
 </body>
 </html>
