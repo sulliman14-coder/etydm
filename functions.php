@@ -24,7 +24,9 @@ class Ety_Nav_Walker extends Walker_Nav_Menu {
     function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
         $output .= '<a href="' . $item->url . '" class="text-gray-700 hover:text-blue-600 transition-colors">' . $item->title . '</a>';
     }
-    function end_el( &$output, $item, $depth = 0, $args = null ) { $output .= ""; }
+    function end_el( &$output, $item, $depth = 0, $args = null ) {
+        $output .= "";
+    }
 }
 
 // Custom Nav Walker for Mobile Menu
@@ -32,60 +34,12 @@ class Ety_Nav_Walker_Mobile extends Walker_Nav_Menu {
     function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
         $output .= '<a href="' . $item->url . '" class="block text-gray-700 hover:text-blue-600 py-2">' . $item->title . '</a>';
     }
-    function end_el( &$output, $item, $depth = 0, $args = null ) { $output .= ""; }
-}
-
-// ---- Automatic Setup on Theme Activation ----
-function ety_theme_activation_setup() {
-    // Set the static front page
-    $front_page = get_page_by_title('إي تي واي');
-    if ( !$front_page ) {
-        $page_id = wp_insert_post(array(
-            'post_title'    => 'إي تي واي',
-            'post_content'  => '',
-            'post_status'   => 'publish',
-            'post_author'   => 1,
-            'post_type'     => 'page',
-        ));
-        update_option('show_on_front', 'page');
-        update_option('page_on_front', $page_id);
-    } else {
-        update_option('show_on_front', 'page');
-        update_option('page_on_front', $front_page->ID);
-    }
-
-    // Set up the primary menu
-    $menu_name = 'القائمة الرئيسية';
-    $menu_location = 'primary_menu';
-    if ( !wp_get_nav_menu_object($menu_name) ) {
-        $menu_id = wp_create_nav_menu($menu_name);
-
-        $menu_items = [
-            'الرئيسية' => '/#home',
-            'الخدمات' => '/#services',
-            'أعمالنا' => '/#works',
-            'التواصل' => '/#contact',
-        ];
-
-        foreach ($menu_items as $title => $url) {
-            wp_update_nav_menu_item($menu_id, 0, array(
-                'menu-item-title' => $title,
-                'menu-item-url' => $url,
-                'menu-item-status' => 'publish'
-            ));
-        }
-
-        $locations = get_theme_mod('nav_menu_locations');
-        $locations[$menu_location] = $menu_id;
-        set_theme_mod('nav_menu_locations', $locations);
+    function end_el( &$output, $item, $depth = 0, $args = null ) {
+        $output .= "";
     }
 }
-add_action('after_switch_theme', 'ety_theme_activation_setup');
 
-
-// --- Data Function (To be replaced with ACF) ---
 function get_app_data() {
-    // This data is currently static.
     return [
         'services' => [
             'profile' => [ 'name' => 'تصميم ملف تعريفي', 'icon' => '📋', 'price' => 250, 'startColor' => '#0b7d85', 'endColor' => '#065f65', 'items' => [ [ 'id' => 'ar-profile', 'name' => 'ملف تعريفي عربي (5-12 صفحة)', 'price' => 250 ], [ 'id' => 'en-profile', 'name' => 'ملف تعريفي إنجليزي', 'price' => 300 ], [ 'id' => 'bilingual-profile', 'name' => 'ملف تعريفي عربي/إنجليزي', 'price' => 450 ], [ 'id' => 'landing-page', 'name' => 'صفحة هبوط تفاعلية', 'price' => 800 ], [ 'id' => 'business-card', 'name' => 'بزنيس كارد عالي الجودة', 'price' => 25 ], [ 'id' => 'receipt-voucher', 'name' => 'سند قبض وصرف', 'price' => 35 ], [ 'id' => 'simple-logo', 'name' => 'شعار بسيط', 'price' => 150 ], [ 'id' => 'professional-logo', 'name' => 'شعار احترافي مرسوم', 'price' => 800 ], [ 'id' => 'envelopes', 'name' => 'تصميم مظاريف', 'price' => 35 ] ], 'details' => [ 'overview' => 'نقدم خدمة تصميم الملفات التعريفية الاحترافية التي تعكس هوية شركتك وتبرز نقاط قوتها بأسلوب مبتكر وجذاب.', 'features' => ['تصميم احترافي يعكس هوية الشركة', 'محتوى مكتوب بعناية باللغتين', 'رسوم بيانية وإنفوجرافيك', 'تنسيق جاهز للطباعة بجودة عالية'], 'benefits' => ['زيادة الثقة والمصداقية', 'تحسين الصورة المهنية للشركة', 'سهولة التسويق والعرض'], 'workProcess' => ['استلام المتطلبات وجمع المعلومات', 'تصميم النموذج الأولي', 'المراجعة والتعديل حسب ملاحظاتك', 'التسليم النهائي للملفات بجودة عالية'] ] ],
@@ -96,9 +50,9 @@ function get_app_data() {
             'menu' => [ 'name' => 'تصميم المنيو', 'icon' => '🍽️', 'price' => 300, 'startColor' => '#f59e0b', 'endColor' => '#d97706', 'items' => [ [ 'id' => 'paper-menu', 'name' => 'منيو ورقي أساسي', 'price' => 300 ], [ 'id' => 'digital-menu', 'name' => 'منيو إلكتروني تفاعلي', 'price' => 600 ], [ 'id' => 'food-photography', 'name' => 'تصوير احترافي للأطباق', 'price' => 400 ] ], 'details' => [ 'overview' => 'نصمم منيو احترافي وجذاب لمطعمك أو مقهاك يعكس هوية علامتك التجارية ويحفز العملاء على الطلب.', 'features' => ['تصميم منيو ورقي وإلكتروني', 'تصميم يعكس هوية المطعم', 'استخدام صور جذابة'], 'benefits' => ['زيادة جاذبية الأطباق', 'تحسين تجربة العميل', 'سهولة التحديث'], 'workProcess' => ['استلام قائمة الأصناف والصور (إن وجدت)', 'تصميم نسخة أولية للمنيو', 'المراجعة والتعديل', 'تسليم الملفات جاهزة للطباعة أو للنشر'] ] ],
             'marketing' => [ 'name' => 'التسويق الرقمي', 'icon' => '📱', 'price' => 800, 'startColor' => '#64748b', 'endColor' => '#475569', 'items' => [ [ 'id' => 'social-management', 'name' => 'إدارة وسائل التواصل', 'price' => 800 ], [ 'id' => 'paid-ads', 'name' => 'حملات إعلانية مدفوعة', 'price' => 1000 ], [ 'id' => 'seo-monthly', 'name' => 'تحسين محركات البحث', 'price' => 600 ] ], 'details' => [ 'overview' => 'نقدم خدمات التسويق الرقمي المتكاملة التي تساعدك في الوصول لجمهورك المستهدف وزيادة مبيعاتك.', 'features' => ['استراتيجيات تسويقية مخصصة', 'إدارة احترافية للسوشيال ميديا', 'حملات إعلانية فعالة'], 'benefits' => ['زيادة الوعي بالعلامة التجارية', 'جذب عملاء جدد', 'زيادة المبيعات'], 'workProcess' => ['وضع الخطة التسويقية', 'إعداد وإطلاق الحملات', 'مراقبة وتحليل الأداء', 'تقديم تقارير دورية بالنتائج'] ] ],
             'letterhead' => [ 'name' => 'الورق الرسمي', 'icon' => '📄', 'price' => 150, 'startColor' => '#dc2626', 'endColor' => '#b91c1c', 'items' => [ [ 'id' => 'letterhead-basic', 'name' => 'ورق رسمي أساسي', 'price' => 150 ], [ 'id' => 'letterhead-pack', 'name' => 'ورق رسمي + مظروف', 'price' => 200 ], [ 'id' => 'invoice-design', 'name' => 'تصميم فاتورة رسمية', 'price' => 120 ] ], 'details' => [ 'overview' => 'نقدم خدمة تصميم الورق الرسمي الاحترافي للشركات والمؤسسات، والذي يعكس الهوية المؤسسية.', 'features' => ['تصميم يعكس هوية الشركة', 'تخطيط احترافي للمعلومات', 'ملفات جاهزة للطباعة'], 'benefits' => ['إضفاء طابع مهني', 'تعزيز الثقة والمصداقية', 'توحيد الهوية البصرية'], 'workProcess' => ['استلام الشعار وبيانات الشركة', 'تصميم النموذج الأولي', 'المراجعة والتعديل', 'تسليم الملفات جاهزة للطباعة'] ] ],
-            'schoolActivities' => [ 'name' => 'الأنشطة المدرسية', 'icon' => '🎓', 'price' => 200, 'startColor' => '#059669', 'endColor' => '#047857', 'items' => [ [ 'id' => 'worksheets', 'name' => 'أوراق عمل تفاعلية', 'price' => 200 ], [ 'id' => 'flashcards', 'name' => 'بطاقات تعليمية ملونة', 'price' => 150 ], [ 'id' => 'classroom-board', 'name' => 'لوحة تعليمية كبيرة', 'price' => 180 } ], 'details' => [ 'overview' => 'نقدم خدمات تصميم الأنشطة المدرسية التفاعلية والإبداعية التي تساعد في تحسين العملية التعليمية.', 'features' => ['تصميم أنشطة تفاعلية', 'أوراق عمل جذابة', 'ألعاب تعليمية مطبوعة'], 'benefits' => ['تحسين تفاعل الطلاب', 'جعل التعلم أكثر متعة', 'تطوير المهارات'], 'workProcess' => ['تحديد الهدف التعليمي للنشاط', 'تصميم النشاط بشكل جذاب وتفاعلي', 'المراجعة والتعديل', 'تسليم الملفات جاهزة للاستخدام'] ] ],
-            'teachers' => [ 'name' => 'خدمات المعلمين', 'icon' => '👨‍🏫', 'price' => 180, 'startColor' => '#7c3aed', 'endColor' => '#6d28d9', 'items' => [ [ 'id' => 'teacher-portfolio', 'name' => 'ملف إنجازات معلم', 'price' => 350 ], [ 'id' => 'presentation-design', 'name' => 'عرض تقديمي تفاعلي', 'price' => 200 ], [ 'id' => 'teacher-cv', 'name' => 'سيرة ذاتية تعليمية', 'price' => 180 } ], 'details' => [ 'overview' => 'نوفر مجموعة شاملة من الخدمات المتخصصة للمعلمين لتطوير أدواتهم التعليمية.', 'features' => ['تصميم ملف إنجازات احترافي', 'عروض تقديمية تفاعلية', 'تصميم أوراق عمل'], 'benefits' => ['تطوير الهوية المهنية', 'تحسين جودة المواد التعليمية', 'زيادة تفاعل الطلاب'], 'workProcess' => ['استلام المحتوى المطلوب', 'تصميم المواد بشكل احترافي', 'المراجعة والتعديل', 'تسليم الملفات النهائية'] ] ],
-            'students' => [ 'name' => 'خدمات الطلاب', 'icon' => '🎒', 'price' => 120, 'startColor' => '#0891b2', 'endColor' => '#0e7490', 'items' => [ [ 'id' => 'graduation-project', 'name' => 'مشروع تخرج كامل', 'price' => 400 ], [ 'id' => 'academic-presentation', 'name' => 'عرض تقديمي أكاديمي', 'price' => 180 ], [ 'id' => 'student-cv', 'name' => 'سيرة ذاتية طلابية', 'price' => 120 } ], 'details' => [ 'overview' => 'نقدم خدمات تصميم متخصصة للطلاب في جميع المراحل لمساعدتهم في تقديم أعمالهم بشكل احترافي.', 'features' => ['تصميم مشاريع التخرج', 'عروض تقديمية أكاديمية', 'سيرة ذاتية مميزة'], 'benefits' => ['تحسين جودة العروض', 'إبراز الإنجازات', 'زيادة فرص القبول'], 'workProcess' => ['فهم متطلبات المشروع أو العرض', 'تصميم وتنسيق المحتوى', 'المراجعة والتعديل', 'تسليم العمل جاهزاً للتقديم'] ] ],
+            'schoolActivities' => [ 'name' => 'الأنشطة المدرسية', 'icon' => '🎓', 'price' => 200, 'startColor' => '#059669', 'endColor' => '#047857', 'items' => [ [ 'id' => 'worksheets', 'name' => 'أوراق عمل تفاعلية', 'price' => 200 ], [ 'id' => 'flashcards', 'name' => 'بطاقات تعليمية ملونة', 'price' => 150 ], [ 'id' => 'classroom-board', 'name' => 'لوحة تعليمية كبيرة', 'price' => 180 ] ], 'details' => [ 'overview' => 'نقدم خدمات تصميم الأنشطة المدرسية التفاعلية والإبداعية التي تساعد في تحسين العملية التعليمية.', 'features' => ['تصميم أنشطة تفاعلية', 'أوراق عمل جذابة', 'ألعاب تعليمية مطبوعة'], 'benefits' => ['تحسين تفاعل الطلاب', 'جعل التعلم أكثر متعة', 'تطوير المهارات'], 'workProcess' => ['تحديد الهدف التعليمي للنشاط', 'تصميم النشاط بشكل جذاب وتفاعلي', 'المراجعة والتعديل', 'تسليم الملفات جاهزة للاستخدام'] ] ],
+            'teachers' => [ 'name' => 'خدمات المعلمين', 'icon' => '👨‍🏫', 'price' => 180, 'startColor' => '#7c3aed', 'endColor' => '#6d28d9', 'items' => [ [ 'id' => 'teacher-portfolio', 'name' => 'ملف إنجازات معلم', 'price' => 350 ], [ 'id' => 'presentation-design', 'name' => 'عرض تقديمي تفاعلي', 'price' => 200 ], [ 'id' => 'teacher-cv', 'name' => 'سيرة ذاتية تعليمية', 'price' => 180 ] ], 'details' => [ 'overview' => 'نوفر مجموعة شاملة من الخدمات المتخصصة للمعلمين لتطوير أدواتهم التعليمية.', 'features' => ['تصميم ملف إنجازات احترافي', 'عروض تقديمية تفاعلية', 'تصميم أوراق عمل'], 'benefits' => ['تطوير الهوية المهنية', 'تحسين جودة المواد التعليمية', 'زيادة تفاعل الطلاب'], 'workProcess' => ['استلام المحتوى المطلوب', 'تصميم المواد بشكل احترافي', 'المراجعة والتعديل', 'تسليم الملفات النهائية'] ] ],
+            'students' => [ 'name' => 'خدمات الطلاب', 'icon' => '🎒', 'price' => 120, 'startColor' => '#0891b2', 'endColor' => '#0e7490', 'items' => [ [ 'id' => 'graduation-project', 'name' => 'مشروع تخرج كامل', 'price' => 400 ], [ 'id' => 'academic-presentation', 'name' => 'عرض تقديمي أكاديمي', 'price' => 180 ], [ 'id' => 'student-cv', 'name' => 'سيرة ذاتية طلابية', 'price' => 120 ] ], 'details' => [ 'overview' => 'نقدم خدمات تصميم متخصصة للطلاب في جميع المراحل لمساعدتهم في تقديم أعمالهم بشكل احترافي.', 'features' => ['تصميم مشاريع التخرج', 'عروض تقديمية أكاديمية', 'سيرة ذاتية مميزة'], 'benefits' => ['تحسين جودة العروض', 'إبراز الإنجازات', 'زيادة فرص القبول'], 'workProcess' => ['فهم متطلبات المشروع أو العرض', 'تصميم وتنسيق المحتوى', 'المراجعة والتعديل', 'تسليم العمل جاهزاً للتقديم'] ] ],
             'annualReport' => [ 'name' => 'التقرير السنوي', 'icon' => '📊', 'price' => 800, 'startColor' => '#ea580c', 'endColor' => '#c2410c', 'items' => [ [ 'id' => 'report-basic', 'name' => 'تقرير سنوي أساسي', 'price' => 800 ], [ 'id' => 'infographics', 'name' => 'رسوم بيانية وإنفوجرافيك', 'price' => 400 ], [ 'id' => 'report-cover', 'name' => 'تصميم غلاف التقرير', 'price' => 200 ] ], 'details' => [ 'overview' => 'نقدم خدمة تصميم التقارير السنوية الاحترافية للشركات والتي تعكس الإنجازات بطريقة بصرية جذابة.', 'features' => ['تصميم شامل ومفصل', 'رسوم بيانية احترافية', 'تخطيط متقن للمحتوى'], 'benefits' => ['تعزيز الثقة لدى المساهمين', 'إبراز الإنجازات والنمو', 'تحسين الصورة المهنية'], 'workProcess' => ['استلام البيانات والتقارير المالية', 'تصميم هيكل التقرير والرسوم البيانية', 'المراجعة والتعديل', 'تسليم التقرير النهائي جاهزاً للنشر'] ] ]
         ],
         'packages' => [],
@@ -123,6 +77,7 @@ function get_app_data() {
             [ 'icon' => '💎', 'title' => 'جودة عالية', 'desc' => 'نلتزم بأعلى معايير الجودة في كل مشروع لضمان تقديم نتائج تفوق توقعاتك.' ]
         ]
     ];
+    return $app_data;
 }
-?>
 
+?>
