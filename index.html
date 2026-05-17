@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="إي تي واي (ETY) - وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.">
-    <title>إي تي واي | وكالة تصميم بروفايلات الشركات والحلول الرقمية</title>
+    <meta name="description" content="وكالة إي تي واي (ETY) - شريكك الرقمي الأول في السعودية. نصمم بروفايلات الشركات الاحترافية، نطور المنصات الرقمية المتقدمة، ونقدم حلول الذكاء الاصطناعي لتنمية أعمالك واجتياز المناقصات بنجاح.">
+    <meta name="keywords" content="تصميم بروفايل شركات السعودية, شركة تصميم مواقع الرياض, وكالة رقمية سعودية, بروفايل مناقصات, هوية تجارية, متجر إلكتروني, خدمات SEO, ذكاء اصطناعي, تصميم منيو مطاعم, برمجة مواقع, ETY, إي تي واي">
+    <meta name="author" content="وكالة إي تي واي - ETY">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="canonical" href="https://etydm.com/">
+    <meta property="og:title" content="إي تي واي | وكالة تصميم بروفايلات الشركات والحلول الرقمية في السعودية">
+    <meta property="og:description" content="وكالة رقمية سعودية رائدة في تصميم بروفايلات الشركات، برمجة المواقع، تحسين محركات البحث، وحلول الذكاء الاصطناعي لتنمية أعمالك.">
+    <meta property="og:url" content="https://etydm.com/">
+    <title>إي تي واي | وكالة تصميم بروفايلات الشركات والحلول الرقمية في السعودية</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,777 +25,641 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f5f3ff',
-                            100: '#ede9fe',
-                            400: '#a78bfa',
-                            500: '#8b5cf6',
-                            600: '#7c3aed',
-                            900: '#4c1d95',
-                            950: '#2e1065',
+                            50: '#f0f1ff',
+                            100: '#e0e3ff',
+                            200: '#c4c9ff',
+                            300: '#9da5ff',
+                            400: '#7880ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                            950: '#1e1b4b',
                         },
-                        dark: {
-                            900: '#0a0a0f',
-                            800: '#12121a',
-                            700: '#1f1f2e',
-                        }
+                        surface: {
+                            light: '#f9fafc',
+                            card: '#ffffff',
+                            dark: '#0b0c10',
+                            'dark-card': '#151720',
+                            'dark-border': '#232533',
+                        },
                     },
                     fontFamily: {
                         sans: ['Tajawal', 'sans-serif'],
                     },
                     animation: {
-                        'blob': 'blob 7s infinite',
+                        'fade-up': 'fadeUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+                        'float': 'float 8s ease-in-out infinite',
+                        'float-delayed': 'float 10s ease-in-out 2s infinite',
+                        'pulse-dot': 'pulseDot 2.2s ease-in-out infinite',
+                        'marquee': 'marquee 40s linear infinite',
                     },
                     keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(32px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%,100%': { transform: 'translateY(0) rotate(0deg)' },
+                            '33%': { transform: 'translateY(-10px) rotate(1deg)' },
+                            '66%': { transform: 'translateY(5px) rotate(-1deg)' },
+                        },
+                        pulseDot: {
+                            '0%,100%': { opacity: '1' },
+                            '50%': { opacity: '0.45' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                    },
+                    boxShadow: {
+                        'card': '0 1px 3px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.04)',
+                        'card-hover': '0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(99,102,241,0.1)',
+                        'elevated': '0 8px 40px rgba(0,0,0,0.06)',
+                        'glow': '0 0 30px rgba(99,102,241,0.2)',
+                    },
+                },
+            },
+        };
     </script>
 
     <style>
-        /* Base & Scrollbar */
-        body { font-family: 'Tajawal', sans-serif; overflow-x: hidden; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 10px; }
-        
-        /* Glassmorphism Utilities */
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        :root {
+            --radius-sm: 0.625rem;
+            --radius: 0.875rem;
+            --radius-lg: 1.25rem;
+            --radius-xl: 1.75rem;
+            --radius-2xl: 2.25rem;
+            --transition: 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-        .dark .glass {
-            background: rgba(18, 18, 26, 0.6);
+        * { -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+        body { font-family: 'Tajawal', sans-serif; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 20px; }
+        .dark ::-webkit-scrollbar-thumb { background: #374151; }
+        ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+        /* Glassmorphism */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .dark .glass-nav {
+            background: rgba(11, 12, 16, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .dark .glass-card {
+            background: rgba(21, 23, 32, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Background Grid */
-        .bg-grid {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(124, 58, 237, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
-        }
-
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Custom Gradients */
+        /* Text gradient */
         .text-gradient {
-            background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #4f46e5, #7c3aed 60%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+
+        /* Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* Modals */
-        .modal {
+        .modal-overlay {
             opacity: 0;
             pointer-events: none;
-            transition: all 0.3s ease;
+            transition: opacity 0.35s ease;
+            display: flex;
         }
-        .modal.open {
-            opacity: 1;
-            pointer-events: auto;
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-dialog {
+            opacity: 0;
+            transform: scale(0.94) translateY(24px);
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
-        .modal-content {
-            transform: scale(0.95) translateY(20px);
-            transition: all 0.3s ease;
+        .modal-overlay.active .modal-dialog { opacity: 1; transform: scale(1) translateY(0); }
+        body.modal-open { overflow: hidden; }
+
+        /* PDF A4 */
+        .pdf-a4 {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 0.7071;
+            max-height: 75vh;
+            background: #fff;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            margin: 0 auto;
         }
-        .modal.open .modal-content {
-            transform: scale(1) translateY(0);
+        .pdf-a4 iframe { width: 100%; height: 100%; border: none; }
+        @media (max-width: 1023px) {
+            .pdf-a4 { aspect-ratio: auto; height: 45vh; max-height: 55vh; }
         }
 
-        /* SEO Text Formatting in Modals */
-        .seo-content p {
-            margin-bottom: 1.25rem;
-            line-height: 1.8;
-            font-size: 1.1rem;
+        /* Filter chips */
+        .filter-chip.active {
+            background: #6366f1 !important;
+            color: #fff !important;
+            box-shadow: 0 2px 12px rgba(99,102,241,0.35);
         }
-        .seo-content strong {
-            color: #7c3aed;
+
+        /* Bento hero card */
+        .bento-hero {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            border-radius: var(--radius-2xl);
+            padding: 2.5rem;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+        .bento-hero:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px -10px rgba(79,70,229,0.4);
+        }
+
+        /* Service card */
+        .service-card {
+            border-radius: var(--radius-xl);
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px -10px rgba(99,102,241,0.12);
+        }
+
+        /* Shimmer */
+        .shimmer-bg {
+            background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .dark .shimmer-bg {
+            background: linear-gradient(90deg, #1f2937 0%, #374151 50%, #1f2937 100%);
+            background-size: 200% 100%;
+        }
+
+        /* SEO content in modals */
+        .seo-content p { margin-bottom: 1rem; line-height: 1.85; font-size: 1rem; color: #4b5563; }
+        .dark .seo-content p { color: #d1d5db; }
+        .seo-content strong { color: #1f2937; font-weight: 800; }
+        .dark .seo-content strong { color: #f9fafb; }
+        .seo-content ul { list-style: none; padding: 0; margin: 1rem 0; }
+        .seo-content ul li { position: relative; padding-right: 1.4rem; margin-bottom: 0.5rem; font-weight: 500; color: #374151; }
+        .dark .seo-content ul li { color: #e5e7eb; }
+        .seo-content ul li::before { content: "▸"; position: absolute; right: 0; color: #6366f1; font-size: 0.85rem; top: 1px; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-dark-900 dark:text-white transition-colors duration-500 antialiased selection:bg-brand-500 selection:text-white relative">
+<body class="bg-surface-light text-gray-900 dark:bg-surface-dark dark:text-gray-50 transition-colors duration-300 selection:bg-brand-500/25">
 
-    <!-- Ambient Background Blobs -->
-    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-brand-600/20 blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-blob"></div>
-        <div class="absolute top-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-600/20 blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] rounded-full bg-purple-600/20 blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-4000"></div>
-        <div class="absolute inset-0 bg-grid pointer-events-none z-0"></div>
-    </div>
-
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
-        <div class="container mx-auto px-6">
-            <div class="glass rounded-full px-6 py-3 flex justify-between items-center shadow-lg border border-white/20 dark:border-white/10">
-                <a href="#home" class="flex items-center gap-3">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm" alt="ETY Logo" class="w-10 h-10 rounded-xl object-contain">
-                    <span class="font-black text-xl tracking-tight">إي تي واي</span>
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all glass-nav py-3">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-3 group shrink-0" aria-label="الرئيسية - إي تي واي">
+                <div class="w-10 h-10 rounded-xl bg-white dark:bg-surface-dark-card border border-gray-200 dark:border-surface-dark-border shadow-sm p-1 group-hover:border-brand-500 transition">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm" alt="شعار وكالة إي تي واي" class="w-full h-full object-contain" width="40" height="40">
+                </div>
+                <span class="font-black text-xl tracking-tight text-gray-900 dark:text-white">إي تي واي</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-6 font-semibold text-sm text-gray-600 dark:text-gray-300">
+                <a href="#services" class="hover:text-brand-600 dark:hover:text-brand-400 transition">الخدمات</a>
+                <a href="#portfolio" class="hover:text-brand-600 dark:hover:text-brand-400 transition">معرض الأعمال</a>
+                <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition">من نحن</a>
+                <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400 transition">تواصل</a>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3">
+                <button id="themeToggle" aria-label="تبديل السمة" class="w-9 h-9 rounded-full flex items-center justify-center bg-gray-100 dark:bg-surface-dark-card text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition border border-transparent dark:border-surface-dark-border">
+                    <i class="ph ph-moon text-lg dark:hidden"></i>
+                    <i class="ph ph-sun text-lg hidden dark:block"></i>
+                </button>
+                <a href="#contact" class="hidden md:flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full font-bold text-sm transition shadow-md hover:shadow-lg">
+                    <span>اطلب تسعيرة</span>
+                    <i class="ph ph-arrow-left text-sm"></i>
                 </a>
-
-                <div class="hidden md:flex items-center gap-8 font-medium">
-                    <a href="#services" class="hover:text-brand-500 transition-colors">خدماتنا المميزة</a>
-                    <a href="#portfolio" class="hover:text-brand-500 transition-colors">معرض الأعمال</a>
-                    <a href="#about" class="hover:text-brand-500 transition-colors">عن الوكالة</a>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <button id="themeToggle" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition">
-                        <i class="ph ph-moon text-xl dark:hidden"></i>
-                        <i class="ph ph-sun text-xl hidden dark:block"></i>
-                    </button>
-                    <a href="#contact" class="hidden md:flex bg-brand-600 hover:bg-brand-500 text-white px-6 py-2 rounded-full font-bold transition shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)]">
-                        ابدأ مشروعك
-                    </a>
-                    <button class="md:hidden p-2 text-2xl" id="mobileMenuBtn">
-                        <i class="ph ph-list"></i>
-                    </button>
-                </div>
+                <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 rounded-full flex items-center justify-center bg-gray-100 dark:bg-surface-dark-card text-gray-800 dark:text-white">
+                    <i class="ph ph-list text-xl"></i>
+                </button>
             </div>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="absolute top-full left-0 w-full px-6 mt-2 hidden">
-            <div class="glass rounded-2xl p-6 flex flex-col gap-4 shadow-xl">
-                <a href="#services" class="text-lg font-bold p-2 border-b border-gray-200 dark:border-gray-700 mobile-link">خدماتنا</a>
-                <a href="#portfolio" class="text-lg font-bold p-2 border-b border-gray-200 dark:border-gray-700 mobile-link">أعمالنا</a>
-                <a href="#about" class="text-lg font-bold p-2 border-b border-gray-200 dark:border-gray-700 mobile-link">من نحن</a>
-                <a href="#contact" class="bg-brand-600 text-white text-center py-3 rounded-xl font-bold mt-2 mobile-link">اطلب خدمة</a>
-            </div>
+        <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white dark:bg-surface-dark-card border-b border-gray-200 dark:border-surface-dark-border shadow-2xl hidden flex-col lg:hidden">
+            <a href="#services" class="mobile-link block p-4 border-b border-gray-100 dark:border-surface-dark-border font-semibold">الخدمات</a>
+            <a href="#portfolio" class="mobile-link block p-4 border-b border-gray-100 dark:border-surface-dark-border font-semibold">معرض الأعمال</a>
+            <a href="#about" class="mobile-link block p-4 border-b border-gray-100 dark:border-surface-dark-border font-semibold">من نحن</a>
+            <div class="p-4"><a href="#contact" class="mobile-link w-full bg-brand-600 text-white text-center py-3.5 rounded-xl font-bold">اطلب تسعيرة الآن</a></div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-12 relative overflow-hidden">
-        <div class="container mx-auto px-6 text-center z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-bold mb-8 reveal text-brand-600 dark:text-brand-400">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
+    <!-- ========== HERO ========== -->
+    <section id="home" class="relative pt-32 pb-16 lg:pt-44 lg:pb-28 overflow-hidden flex items-center min-h-[90vh]">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.04),transparent_50%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,0.03),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.08),transparent_50%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,0.06),transparent_50%)] -z-10"></div>
+        <div class="absolute -top-32 -right-32 w-[400px] h-[400px] bg-brand-400/8 dark:bg-brand-600/12 rounded-full blur-[100px] animate-float -z-10"></div>
+        <div class="absolute -bottom-20 -left-20 w-[280px] h-[280px] bg-violet-400/6 dark:bg-violet-600/10 rounded-full blur-[80px] animate-float-delayed -z-10"></div>
+        <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card text-sm font-bold mb-8 text-brand-600 dark:text-brand-400 reveal">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
                 </span>
-                خبراء صياغة وتصميم بروفايلات الشركات
+                الشريك الرقمي الموثوق في المملكة العربية السعودية 🇸🇦
             </div>
-            
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight reveal" style="transition-delay: 100ms;">
-                واجهتك الرقمية <br>
-                <span class="text-gradient">بأعلى معايير الاحترافية</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.15] text-gray-900 dark:text-white reveal" style="transition-delay: 100ms;">
+                نصنع لك حضوراً رقمياً<br class="hidden md:block">
+                <span class="text-gradient">يسبق منافسيك بخطوات</span>
             </h1>
-            
-            <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-4xl mx-auto font-light reveal leading-relaxed" style="transition-delay: 200ms;">
-                نحن <strong class="font-bold text-gray-900 dark:text-white">إي تي واي</strong>، شريكك الإستراتيجي لبناء هوية بصرية قوية، تصميم بروفايلات تضمن لك الفوز بالمناقصات، وبرمجة منصات رقمية تعزز مبيعاتك وتدعم نموك في السوق السعودي.
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto font-medium reveal" style="transition-delay: 200ms;">
+                في <strong class="text-gray-900 dark:text-white">وكالة إي تي واي</strong>، نجمع بين الإبداع البصري والذكاء التقني لتقديم بروفايلات شركات احترافية، مواقع متطورة، وحلول ذكاء اصطناعي <strong class="text-gray-900 dark:text-white">تضاعف فرصك في المناقصات والمبيعات</strong>.
             </p>
-            
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 reveal" style="transition-delay: 300ms;">
-                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 bg-brand-600 text-white rounded-full font-bold text-lg hover:bg-brand-500 hover:scale-105 transition-all shadow-[0_0_20px_rgba(124,58,237,0.4)] flex items-center justify-center gap-2">
-                    تصفح سابقة أعمالنا
-                    <i class="ph ph-arrow-left font-bold"></i>
+                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 bg-brand-600 text-white rounded-xl font-bold text-lg hover:bg-brand-700 transition-all shadow-elevated hover:shadow-lg flex items-center justify-center gap-2 group">
+                    شاهد أعمالنا
+                    <i class="ph ph-arrow-left text-xl group-hover:-translate-x-1 transition"></i>
                 </a>
-                <a href="#services" class="w-full sm:w-auto px-8 py-4 glass rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                    استكشف التفاصيل
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-surface-dark-card text-gray-800 dark:text-white border-2 border-gray-200 dark:border-surface-dark-border rounded-xl font-bold text-lg hover:border-brand-500 dark:hover:border-brand-400 transition flex items-center justify-center gap-2">
+                    اكتشف خدماتنا
                 </a>
             </div>
+        </div>
+    </section>
 
-            <div class="mt-20 pt-10 border-t border-gray-200/20 dark:border-white/10 flex flex-wrap justify-center gap-8 md:gap-16 opacity-80 reveal" style="transition-delay: 400ms;">
-                <div class="flex flex-col items-center gap-2">
-                    <i class="ph ph-certificate text-3xl text-brand-500"></i>
-                    <span class="text-sm font-bold">موثق بالمركز السعودي للأعمال</span>
-                    <span class="text-xs font-mono text-gray-500">0000162606</span>
+    <!-- ========== STATS ========== -->
+    <section class="py-12 bg-white dark:bg-surface-dark-card border-y border-gray-100 dark:border-surface-dark-border relative z-10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="reveal"><div class="text-3xl md:text-4xl font-black text-brand-600 stat-number" data-target="10">0</div><p class="text-sm font-semibold text-gray-500 mt-1">سنوات خبرة</p></div>
+                <div class="reveal" style="transition-delay: 100ms;"><div class="text-3xl md:text-4xl font-black text-brand-600 stat-number" data-target="150">0</div><p class="text-sm font-semibold text-gray-500 mt-1">مشروع منجز</p></div>
+                <div class="reveal" style="transition-delay: 200ms;"><div class="text-3xl md:text-4xl font-black text-brand-600 stat-number" data-target="80">0</div><p class="text-sm font-semibold text-gray-500 mt-1">عميل سعيد</p></div>
+                <div class="reveal" style="transition-delay: 300ms;"><div class="text-3xl md:text-4xl font-black text-brand-600">24/7</div><p class="text-sm font-semibold text-gray-500 mt-1">دعم متواصل</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="py-20 lg:py-28 relative z-10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-sm font-black text-brand-600 uppercase tracking-widest mb-3 block">عن الوكالة</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6">نحن لا نصمم فقط، <span class="text-gradient">نبني أدواتك البيعية</span></h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-lg">
+                        تأسست <strong>وكالة إي تي واي</strong> لسد الفجوة بين التصميم العشوائي والعمل التجاري الاستراتيجي في <strong>السوق السعودي</strong>. نقدم أدوات تسويقية ترفع قيمة شركتك أمام المستثمرين والجهات الحكومية.
+                    </p>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4"><div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0"><i class="ph ph-check-bold"></i></div><div><h4 class="font-bold">صياغة نصوص بيعية</h4><p class="text-sm text-gray-500 mt-1">محتوى احترافي بالعربية والإنجليزية يخاطب جمهورك المستهدف.</p></div></li>
+                        <li class="flex items-start gap-4"><div class="w-9 h-9 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center shrink-0"><i class="ph ph-target"></i></div><div><h4 class="font-bold">دراسة المنافسين والسوق</h4><p class="text-sm text-gray-500 mt-1">تحليل شامل لعلامتك قبل أي تصميم أو برمجة.</p></div></li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 mt-8 text-brand-600 font-bold hover:underline">تواصل معنا لبدء مشروعك <i class="ph ph-arrow-left"></i></a>
                 </div>
-                <div class="flex flex-col items-center gap-2">
-                    <i class="ph ph-file-text text-3xl text-brand-500"></i>
-                    <span class="text-sm font-bold">وثيقة العمل الحر</span>
-                    <span class="text-xs font-mono text-gray-500">FL-63005888</span>
-                </div>
-                <div class="flex flex-col items-center gap-2">
-                    <i class="ph ph-buildings text-3xl text-brand-500"></i>
-                    <span class="text-sm font-bold">متخصصون في قطاع الأعمال</span>
-                    <span class="text-xs text-gray-500">B2B Solutions</span>
+                <div class="relative reveal" style="transition-delay: 200ms;">
+                    <div class="bento-hero text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+                        <i class="ph ph-quotes text-5xl text-white/20 mb-4 block"></i>
+                        <p class="text-white/90 text-lg font-medium mb-6">"نحن نبني الثقة قبل أن نبني التصاميم. كل مشروع هو خطوة نحو شراكة طويلة الأمد."</p>
+                        <div class="border-t border-white/15 pt-4 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center font-black text-xl">E</div>
+                            <div><div class="font-bold">فريق إي تي واي</div><div class="text-brand-200 text-sm">المملكة العربية السعودية</div></div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 md:-right-4 md:left-auto bg-white dark:bg-surface-dark-card p-4 rounded-xl shadow-lg border animate-float">
+                        <div class="flex items-center gap-3"><div class="text-3xl font-black text-brand-600">+10</div><div class="text-sm font-bold">سنوات من الخبرة</div></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-24 relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-sm font-bold text-brand-500 tracking-widest uppercase mb-2">رحلة نمو أعمالك تبدأ من هنا</h2>
-                <h3 class="text-4xl md:text-5xl font-black mb-6">خدمات مصممة <span class="text-gradient">لقيادة السوق</span></h3>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">ندرك في إي تي واي أن المستخدم السعودي يبحث عن الجودة والموثوقية، لذلك نقدم خدماتنا بتفصيل وعناية تامة لتلبية أعلى المعايير التجارية.</p>
+    <!-- ========== SERVICES ========== -->
+    <section id="services" class="py-20 lg:py-28 bg-white dark:bg-surface-dark-card border-y border-gray-100 dark:border-surface-dark-border relative z-10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-14 reveal">
+                <span class="text-sm font-black text-brand-600 uppercase tracking-widest">حلول متكاملة</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mt-3 mb-5">خدمات مصممة <span class="text-gradient">لقيادة السوق السعودي</span></h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">ندرك أن المستخدم السعودي يبحث عن الجودة والموثوقية، لذلك نقدم خدماتنا بتفصيل وعناية لتلبية أعلى المعايير.</p>
             </div>
-
-            <!-- Custom Grid for Services -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
-                <!-- Injected via JS -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid"></div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-24 bg-gray-100/50 dark:bg-dark-800/50 relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+    <!-- ========== PORTFOLIO ========== -->
+    <section id="portfolio" class="py-20 lg:py-28 relative z-10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 gap-5 reveal">
                 <div>
-                    <h2 class="text-sm font-bold text-brand-500 tracking-widest uppercase mb-2">المعرض الرقمي</h2>
-                    <h3 class="text-4xl md:text-5xl font-black">إبداع يعزز <span class="text-gradient">قيمة علامتك</span></h3>
+                    <span class="text-sm font-black text-brand-600 uppercase tracking-widest">معرض الأعمال</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-3">إبداع يترجم <span class="text-gradient">إلى نتائج ملموسة</span></h2>
                 </div>
-                
-                <div class="flex flex-wrap gap-2 mt-6 md:mt-0 bg-white/50 dark:bg-dark-700/50 p-1.5 rounded-full backdrop-blur-md">
-                    <button class="filter-btn active px-5 py-2 rounded-full text-sm font-bold transition-all" data-filter="all">الكل</button>
-                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-bold transition-all hover:bg-gray-200 dark:hover:bg-gray-600" data-filter="profile">بروفايل الشركات</button>
-                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-bold transition-all hover:bg-gray-200 dark:hover:bg-gray-600" data-filter="web">مواقع ومتاجر</button>
-                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-bold transition-all hover:bg-gray-200 dark:hover:bg-gray-600" data-filter="menu">قوائم المطاعم</button>
+                <div class="flex flex-wrap gap-2 bg-gray-100 dark:bg-gray-800/50 p-1.5 rounded-xl">
+                    <button class="filter-chip active px-4 py-2.5 rounded-lg text-sm font-bold bg-white dark:bg-surface-dark-card text-brand-600 shadow-sm" data-filter="all">الكل</button>
+                    <button class="filter-chip px-4 py-2.5 rounded-lg text-sm font-bold text-gray-600 dark:text-gray-300" data-filter="profile">بروفايلات</button>
+                    <button class="filter-chip px-4 py-2.5 rounded-lg text-sm font-bold text-gray-600 dark:text-gray-300" data-filter="web">مواقع</button>
+                    <button class="filter-chip px-4 py-2.5 rounded-lg text-sm font-bold text-gray-600 dark:text-gray-300" data-filter="menu">منيو مطاعم</button>
                 </div>
             </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="portfolioContainer"></div>
+        </div>
+    </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioContainer">
-                <!-- Portfolio injected via JS -->
+    <!-- ========== PROCESS ========== -->
+    <section class="py-20 lg:py-28 bg-white dark:bg-surface-dark-card border-y border-gray-100 dark:border-surface-dark-border">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <div class="mb-14 reveal">
+                <span class="text-sm font-black text-brand-600 uppercase tracking-widest">منهجيتنا</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mt-3 mb-5">كيف <span class="text-gradient">نحوّل فكرتك</span> إلى واقع</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="reveal"><div class="w-16 h-16 mx-auto rounded-2xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center text-2xl mb-4"><i class="ph ph-chats-circle"></i></div><h3 class="font-black text-xl mb-2">١. الاستشارة</h3><p class="text-sm text-gray-500">نستمع ونحلل السوق.</p></div>
+                <div class="reveal" style="transition-delay: 100ms;"><div class="w-16 h-16 mx-auto rounded-2xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center text-2xl mb-4"><i class="ph ph-pencil-ruler"></i></div><h3 class="font-black text-xl mb-2">٢. التصميم</h3><p class="text-sm text-gray-500">نبتكر هوية بصرية فريدة.</p></div>
+                <div class="reveal" style="transition-delay: 200ms;"><div class="w-16 h-16 mx-auto rounded-2xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center text-2xl mb-4"><i class="ph ph-code"></i></div><h3 class="font-black text-xl mb-2">٣. التطوير</h3><p class="text-sm text-gray-500">نبرمج بأحدث التقنيات.</p></div>
+                <div class="reveal" style="transition-delay: 300ms;"><div class="w-16 h-16 mx-auto rounded-2xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center text-2xl mb-4"><i class="ph ph-rocket-launch"></i></div><h3 class="font-black text-xl mb-2">٤. التسليم</h3><p class="text-sm text-gray-500">مع تدريب ودعم مستمر.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="glass rounded-3xl p-8 md:p-16 border border-white/20 dark:border-white/5 shadow-2xl relative overflow-hidden reveal">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/20 rounded-full blur-[80px]"></div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-                    <div>
-                        <h2 class="text-3xl md:text-5xl font-black mb-6">الاحترافية ليست خياراً، بل <span class="text-gradient">أساس عملنا</span></h2>
-                        <div class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-lg">
-                            <p class="mb-4">
-                                تأسست وكالة <strong>إي تي واي</strong> لسد الفجوة في السوق السعودي بين التصميم الفني العشوائي والعمل التجاري الاستراتيجي. نحن لا نقدم مجرد "تصاميم حلوة"، بل نقدم أدوات بيعية وتسويقية ترفع من قيمة شركتك.
-                            </p>
-                            <p>
-                                سواء كنت مؤسسة تسعى لدخول مناقصات حكومية عبر <strong>بروفايل احترافي</strong>، أو علامة تجارية تبحث عن <strong>موقع إلكتروني</strong> يضاعف مبيعاتها، فنحن الفريق الذي يفهم متطلباتك ويترجمها لواقع ملموس.
-                            </p>
-                        </div>
-                        <ul class="space-y-4 font-medium">
-                            <li class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center"><i class="ph ph-check-circle"></i></div>
-                                صياغة نصوص تسويقية (Copywriting) باللغتين مقنعة ومؤثرة.
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-500 flex items-center justify-center"><i class="ph ph-users"></i></div>
-                                دراسة كاملة لشخصية العلامة التجارية قبل بدء التنفيذ.
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-500 flex items-center justify-center"><i class="ph ph-headset"></i></div>
-                                تواصل مستمر ومرونة عالية في التعديلات لضمان رضاك التام.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Meeting KSA" class="rounded-2xl shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-500">
-                        <div class="absolute -bottom-6 -right-6 glass p-6 rounded-2xl shadow-xl border border-brand-500/30">
-                            <div class="text-4xl font-black text-brand-500">+10</div>
-                            <div class="text-sm font-bold text-gray-800 dark:text-gray-200">سنوات من الخبرة المجتمعة</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ========== MARQUEE ========== -->
+    <section class="py-10 bg-surface-light dark:bg-surface-dark overflow-hidden border-b border-gray-100 dark:border-surface-dark-border">
+        <div class="container mx-auto px-4 mb-6 text-center"><span class="text-sm font-black text-brand-600 uppercase tracking-widest">ثقة كبرى الشركات</span></div>
+        <div class="flex gap-8 animate-marquee hover:[animation-play-state:paused]">
+            <span class="text-2xl md:text-3xl font-black text-gray-200 dark:text-gray-700 whitespace-nowrap select-none">شركات المقاولات • المطاعم الفاخرة • القطاع العقاري • الخدمات اللوجستية • الجهات الحكومية • المتاجر الإلكترونية •</span>
+            <span class="text-2xl md:text-3xl font-black text-gray-200 dark:text-gray-700 whitespace-nowrap select-none">شركات المقاولات • المطاعم الفاخرة • القطاع العقاري • الخدمات اللوجستية • الجهات الحكومية • المتاجر الإلكترونية •</span>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-dark-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-600/20 rounded-full blur-[100px] pointer-events-none"></div>
-
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <h2 class="text-4xl md:text-6xl font-black mb-6 reveal">ارتقِ بأعمالك الآن</h2>
-            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto reveal">حدد الخدمات التي تهمك أدناه، وسنقوم بالتواصل معك فوراً عبر واتساب لتقديم استشارة مجانية وعرض سعر مبدئي يناسب تطلعاتك.</p>
-
-            <div class="max-w-4xl mx-auto glass rounded-3xl p-8 text-right reveal">
-                <h4 class="text-xl font-bold mb-6 text-brand-400">اختر الخدمات المطلوبة:</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="contactServicesTags">
-                    <!-- Checkboxes injected by JS -->
-                </div>
-                
-                <div class="mb-8">
-                    <label class="block text-gray-400 mb-2 font-medium">تفاصيل إضافية (اختياري)</label>
-                    <textarea id="projectNotes" rows="4" placeholder="حدثنا عن طبيعة نشاطك، وما هي أهدافك الرئيسية من هذا المشروع؟..." class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition placeholder-gray-600"></textarea>
-                </div>
-
-                <button onclick="sendWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white text-xl font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)]">
-                    <i class="ph ph-whatsapp-logo text-3xl"></i>
-                    تواصل معنا عبر واتساب الآن
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="py-20 lg:py-28 bg-brand-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
+        <div class="absolute -top-1/3 -right-1/4 w-[600px] h-[600px] bg-brand-600/20 rounded-full blur-[120px]"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center">
+            <div class="max-w-4xl mx-auto mb-12 reveal">
+                <h2 class="text-3xl md:text-5xl font-black mb-5">هل أنت مستعد لنقل عملك <span class="text-gradient">للمستوى التالي؟</span></h2>
+                <p class="text-lg text-brand-200">حدد الخدمات التي تهمك، وسنتواصل معك فوراً لتقديم <strong class="text-white">استشارة مجانية وعرض سعر مبدئي</strong>.</p>
+            </div>
+            <div class="max-w-3xl mx-auto glass-card text-right p-6 md:p-10 rounded-2xl reveal">
+                <h4 class="text-xl font-bold mb-5 flex items-center gap-2"><span class="w-8 h-8 bg-brand-500 text-white rounded-full flex items-center justify-center text-sm">1</span> اختر الخدمات:</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8" id="contactServicesTags"></div>
+                <h4 class="text-xl font-bold mb-4 flex items-center gap-2"><span class="w-8 h-8 bg-brand-500 text-white rounded-full flex items-center justify-center text-sm">2</span> تفاصيل إضافية:</h4>
+                <textarea id="projectNotes" rows="4" placeholder="حدثنا عن نشاطك وأهدافك..." class="w-full bg-gray-900/60 border border-white/20 rounded-xl p-5 text-white focus:outline-none focus:border-brand-400 resize-none mb-8"></textarea>
+                <button onclick="sendWhatsApp()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 text-lg">
+                    <i class="ph ph-whatsapp-logo text-2xl"></i> تواصل معنا عبر واتساب الآن
                 </button>
-                <p class="text-center text-gray-500 text-sm mt-4">نرد عادة خلال دقائق معدودة خلال أوقات العمل الرسمية.</p>
+                <p class="text-center text-brand-300 text-sm mt-4">⏱ نرد عادة خلال دقائق في أوقات العمل.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark-950 text-white py-12 border-t border-white/10">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm" alt="Logo" class="w-12 h-12 rounded bg-white p-1">
-                        <span class="font-black text-2xl">إي تي واي</span>
-                    </div>
-                    <p class="text-gray-400 mb-6 leading-relaxed">شريكك الموثوق في المملكة العربية السعودية لبناء الهويات التجارية، بروفايلات الشركات، وتطوير المنصات الرقمية المتكاملة.</p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-brand-400">الروابط الهامة</h4>
-                    <ul class="space-y-3 text-gray-400 font-medium">
-                        <li><a href="#services" class="hover:text-white transition">الخدمات والتفاصيل</a></li>
-                        <li><a href="#portfolio" class="hover:text-white transition">معرض الأعمال المنجزة</a></li>
-                        <li><a href="#about" class="hover:text-white transition">من نحن ولماذا نحن؟</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-brand-400">التوثيق والتواصل المباشر</h4>
-                    <div class="bg-dark-900 p-4 rounded-xl border border-white/10 mb-4 inline-block hover:border-brand-500/50 transition">
-                        <div class="flex items-center gap-3 mb-2">
-                            <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="SBC" class="h-6">
-                            <span class="text-sm font-bold">المركز السعودي للأعمال</span>
-                        </div>
-                        <div class="text-xs text-gray-400 font-mono">رقم التوثيق: 0000162606</div>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 mt-2 font-medium">
-                        <li class="flex items-center gap-3"><i class="ph ph-envelope-simple text-brand-400 text-xl"></i> info@etydm.com</li>
-                        <li class="flex items-center gap-3" dir="ltr"><i class="ph ph-phone text-brand-400 text-xl"></i> 059 646 6303</li>
-                    </ul>
-                </div>
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+            <div>
+                <div class="flex items-center gap-3 mb-5"><img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm" alt="Logo" class="w-10 h-10 rounded-lg bg-white p-1"><span class="font-black text-xl text-white">إي تي واي</span></div>
+                <p class="text-gray-400 text-sm">شريكك الموثوق في المملكة لبناء الهويات التجارية والمنصات الرقمية.</p>
             </div>
-            
-            <div class="text-center text-gray-500 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p>© 2024 وكالة إي تي واي للحلول الرقمية. جميع الحقوق محفوظة.</p>
-                <div class="flex gap-4 text-sm font-medium text-gray-400">
-                    <span>صمم وطوّر بشغف في السعودية 🇸🇦</span>
-                </div>
+            <div>
+                <h4 class="font-bold mb-5 text-white">روابط سريعة</h4>
+                <ul class="space-y-2 text-sm text-gray-400"><li><a href="#home" class="hover:text-brand-400">الرئيسية</a></li><li><a href="#about" class="hover:text-brand-400">من نحن</a></li><li><a href="#services" class="hover:text-brand-400">الخدمات</a></li><li><a href="#portfolio" class="hover:text-brand-400">معرض الأعمال</a></li><li><a href="#contact" class="hover:text-brand-400">اطلب تسعيرة</a></li></ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-5 text-white">تواصل معنا</h4>
+                <ul class="space-y-2 text-sm text-gray-400"><li class="flex items-center gap-3"><i class="ph ph-envelope text-brand-400"></i> info@etydm.com</li><li dir="ltr" class="flex items-center gap-3"><i class="ph ph-phone text-brand-400"></i> 059 646 6303</li></ul>
+                <div class="mt-4"><span class="bg-brand-900/30 text-brand-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-brand-800">المركز السعودي للأعمال: 0000162606</span></div>
             </div>
         </div>
+        <div class="text-center text-gray-500 border-t border-gray-800 pt-8 text-sm">© 2026 وكالة إي تي واي. جميع الحقوق محفوظة. صمم بشغف في السعودية 🇸🇦</div>
     </footer>
 
-    <!-- Reading/Detail Modal for Services -->
-    <div id="serviceModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-dark-900/80 backdrop-blur-md cursor-pointer" onclick="closeModal('serviceModal')"></div>
-        <div class="modal-content glass bg-white dark:bg-dark-800 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl relative z-10 shadow-2xl border border-gray-200 dark:border-white/10">
-            <button onclick="closeModal('serviceModal')" class="sticky top-4 float-left ml-4 mt-4 text-2xl text-gray-500 hover:text-red-500 bg-gray-100 dark:bg-dark-700 w-10 h-10 rounded-full flex items-center justify-center z-20 transition">✕</button>
-            <div id="serviceModalContent" class="p-8 md:p-12 clear-both text-right">
-                <!-- Injected content via JS -->
+    <!-- ========== SERVICE DETAIL MODAL ========== -->
+    <div id="serviceModal" class="fixed inset-0 z-[100] items-center justify-center p-4 modal-overlay hidden">
+        <div class="absolute inset-0 bg-gray-900/80 backdrop-blur-sm" onclick="closeModal('serviceModal')"></div>
+        <div class="modal-dialog bg-white dark:bg-surface-dark-card w-full max-w-4xl max-h-[88vh] overflow-y-auto rounded-2xl shadow-2xl flex flex-col">
+            <div class="sticky top-0 bg-white/95 dark:bg-surface-dark-card/95 backdrop-blur p-5 flex justify-between items-center border-b">
+                <div class="flex items-center gap-3" id="serviceModalHeader"></div>
+                <button onclick="closeModal('serviceModal')" class="w-10 h-10 bg-gray-100 hover:bg-red-100 hover:text-red-600 rounded-full flex items-center justify-center">✕</button>
+            </div>
+            <div class="p-6 md:p-10 seo-content" id="serviceModalBody"></div>
+            <div class="sticky bottom-0 bg-gray-50 dark:bg-gray-800/80 backdrop-blur p-5 border-t text-center">
+                <button id="serviceModalCta" class="px-10 bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold"><i class="ph ph-whatsapp-logo"></i> طلب تسعيرة</button>
             </div>
         </div>
     </div>
 
-    <!-- Portfolio Detail Modal -->
-    <div id="portfolioModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-dark-900/90 backdrop-blur-md cursor-pointer" onclick="closeModal('portfolioModal')"></div>
-        <div class="modal-content bg-white dark:bg-dark-800 w-full max-w-5xl max-h-[95vh] overflow-y-auto rounded-3xl relative z-10 shadow-2xl flex flex-col lg:flex-row border border-gray-200 dark:border-white/10">
-            <button onclick="closeModal('portfolioModal')" class="absolute top-4 right-4 text-2xl text-white bg-black/50 hover:bg-red-500 w-10 h-10 rounded-full flex items-center justify-center z-20 transition backdrop-blur-md">✕</button>
-            
-            <div id="modalMedia" class="lg:w-2/3 bg-dark-900 min-h-[300px] flex items-center justify-center p-4 relative group">
-                <!-- Media injected here -->
-            </div>
-            
-            <div class="lg:w-1/3 p-8 flex flex-col justify-between">
-                <div>
-                    <span id="modalCat" class="text-brand-500 text-sm font-bold bg-brand-500/10 px-3 py-1 rounded-full mb-4 inline-block"></span>
-                    <h3 id="modalTitle" class="text-3xl font-black mb-4 leading-tight"></h3>
-                    <p id="modalDesc" class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-lg"></p>
-                    
-                    <div class="mb-8">
-                        <h4 class="font-bold mb-3 text-sm text-gray-400">الخدمات المنفذة في هذا المشروع</h4>
-                        <div id="modalTags" class="flex flex-wrap gap-2"></div>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col gap-3 mt-8">
-                    <a id="modalActionBtn" href="#" target="_blank" class="w-full text-white text-center py-4 rounded-xl font-bold transition flex items-center justify-center gap-2 text-lg">
-                        <span id="modalActionText">استعراض العمل</span>
-                        <i class="ph ph-arrow-square-out text-2xl"></i>
-                    </a>
-                </div>
+    <!-- ========== PORTFOLIO DETAIL MODAL ========== -->
+    <div id="portfolioModal" class="fixed inset-0 z-[100] items-center justify-center p-3 md:p-5 modal-overlay hidden">
+        <div class="absolute inset-0 bg-gray-900/90 backdrop-blur-sm" onclick="closeModal('portfolioModal')"></div>
+        <div class="modal-dialog bg-white dark:bg-surface-dark-card w-full max-w-6xl max-h-[94vh] flex flex-col lg:flex-row overflow-hidden rounded-2xl shadow-2xl">
+            <button onclick="closeModal('portfolioModal')" class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 text-white hover:bg-red-600 rounded-full flex items-center justify-center">✕</button>
+            <div id="modalMedia" class="lg:w-[58%] bg-gray-100 dark:bg-gray-900 min-h-[35vh] lg:min-h-full flex items-center justify-center p-4"></div>
+            <div class="lg:w-[42%] p-6 md:p-8 flex flex-col">
+                <span id="modalCat" class="text-brand-600 text-xs font-bold bg-brand-50 px-3 py-1.5 rounded-lg mb-3 w-fit"></span>
+                <h3 id="modalTitle" class="text-2xl font-black mb-2"></h3>
+                <p id="modalDesc" class="text-gray-600 dark:text-gray-300 mb-5 text-sm"></p>
+                <div id="modalTags" class="flex flex-wrap gap-2 mb-5"></div>
+                <a id="modalActionBtn" href="#" target="_blank" class="mt-auto bg-brand-600 hover:bg-brand-700 text-white text-center py-4 rounded-xl font-bold flex items-center justify-center gap-2"><span id="modalActionText"></span><i class="ph ph-arrow-square-out"></i></a>
             </div>
         </div>
     </div>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/966596466303" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(34,197,94,0.5)] hover:scale-110 transition-transform hover:shadow-[0_4px_30px_rgba(34,197,94,0.8)] animate-bounce" style="animation-duration: 2s;">
+    <a href="https://wa.me/966596466303" target="_blank" class="fixed bottom-5 left-5 z-50 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition animate-pulse-dot">
         <i class="ph ph-whatsapp-logo"></i>
     </a>
 
     <script>
-        // --- Data Definitions with High SEO Content ---
+        // ========== DATA (ALL CONTENT PRESERVED) ==========
         const servicesData = [
-            { 
-                id: 'profile', 
-                icon: 'ph-book-open', 
-                title: 'بروفايل الشركات والمؤسسات', 
-                shortDesc: 'صياغة وتصميم ملفات تعريفية (Company Profiles) احترافية تعكس حجم مؤسستك، وتزيد من فرص حصولك على المناقصات وعقود الأعمال (B2B) بأسلوب يثق به السوق السعودي.', 
-                cssSpan: 'md:col-span-2 lg:col-span-3 bg-gradient-to-br from-brand-900 to-brand-700 text-white shadow-brand-500/30 shadow-2xl border-brand-400/30', 
-                iconStyle: 'bg-white/20 text-white',
-                tags: ['B2B Solutions', 'كتابة محتوى تسويقي', 'ملف تفاعلي PDF', 'تصميم للمناقصات'],
-                seoDetails: `
-                    <p>في عالم الأعمال السعودي المتسارع وتوجهات رؤية 2030، أصبح <strong>البروفايل التعريفي للشركة (Company Profile)</strong> هو الانطباع الأول الذي يحدد ما إذا كانت الجهات الحكومية أو الشركات الكبرى ستثق بك كشريك استراتيجي أم لا.</p>
-                    <p>نحن في إي تي واي لا نقوم برص الكلمات وتنسيق الألوان فحسب، بل نقدم <strong>دراسة متكاملة وتصميماً استراتيجياً</strong> لبروفايل مؤسستك يبرز نقاط قوتك، إنجازاتك السابقة، وطاقتك التشغيلية بأسلوب تسويقي (Copywriting) مقنع للغاية.</p>
-                    <p><strong>ماذا يشمل عملنا في هذه الخدمة؟</strong></p>
-                    <ul class="list-disc list-inside space-y-2 mb-4 text-gray-700 dark:text-gray-300">
-                        <li>كتابة وصياغة المحتوى من الصفر (الرؤية، الرسالة، القيم، الهيكل التنظيمي، المشاريع).</li>
-                        <li>تصميم إنفوجرافيك احترافي لعرض الأرقام والإحصائيات وتسهيل قراءتها.</li>
-                        <li>تسليم نسخة تفاعلية (Interactive PDF) مخصصة للإرسال عبر الواتساب والإيميل بحجم خفيف وجودة عالية.</li>
-                        <li>تسليم نسخة جاهزة للطباعة (Print-Ready) بأعلى دقة لتقديمها في الاجتماعات والمناقصات.</li>
-                    </ul>
-                    <p>استثمر في واجهتك، فبروفايل واحد احترافي قد يكون السبب في فوزك بعقد بملايين الريالات.</p>
-                `
-            },
-            { 
-                id: 'web', 
-                icon: 'ph-browser', 
-                title: 'تصميم وبرمجة المواقع والمتاجر', 
-                shortDesc: 'مواقع تعريفية ومتاجر إلكترونية (UI/UX) سريعة وتفاعلية، مصممة لتحويل الزوار إلى عملاء حقيقيين وبناء تواجد رقمي قوي يعزز مبيعاتك.', 
-                cssSpan: 'md:col-span-1 lg:col-span-1 glass', 
-                iconStyle: 'bg-brand-500/10 text-brand-500',
-                tags: ['مواقع تعريفية', 'متاجر إلكترونية', 'واجهات UI/UX'],
-                seoDetails: `
-                    <p>التواجد الرقمي لم يعد رفاهية، بل هو أساس نجاح أي علامة تجارية. موقعك الإلكتروني هو <strong>مندوب مبيعاتك الذي يعمل على مدار 24 ساعة</strong> ولا يتوقف أبداً.</p>
-                    <p>نقوم بتصميم وبرمجة مواقع مخصصة توفر <strong>تجربة مستخدم (UX) سلسة واستثنائية</strong>. نركز بشكل كبير على سرعة تحميل الصفحات والتوافق التام مع شاشات الجوال، حيث أن أكثر من 80% من المستخدمين في السعودية يتصفحون عبر هواتفهم.</p>
-                    <p>بالنسبة للمتاجر الإلكترونية، نقوم بتجهيز متجرك بالكامل، وربط بوابات الدفع المحلية الآمنة (مدى، أبل باي، فيزا)، وشركات الشحن، لتكون مستعداً لاستقبال الطلبات من اليوم الأول.</p>
-                `
-            },
-            { 
-                id: 'seo', 
-                icon: 'ph-trend-up', 
-                title: 'تحسين محركات البحث (SEO)', 
-                shortDesc: 'تصدر النتائج الأولى في بحث جوجل واجذب عملاء يبحثون عن خدماتك بالفعل. خدمة تضمن لك زيارات مستانية ومجانية بدون دفع تكاليف إعلانات باهظة مستمرة.', 
-                cssSpan: 'md:col-span-1 lg:col-span-1 glass',
-                iconStyle: 'bg-green-500/10 text-green-500', 
-                tags: ['تصدر جوجل', 'زيارات عضوية', 'تحليل كلمات مفتاحية'],
-                seoDetails: `
-                    <p>هل تعلم أن الآلاف من العملاء المحتملين في مدينتك يبحثون في جوجل يومياً عن خدمات تشبه ما تقدمه؟ إذا لم يكن موقعك في الصفحة الأولى، فأنت تترك هؤلاء العملاء لمنافسيك.</p>
-                    <p>خدمة <strong>تحسين محركات البحث (SEO)</strong> هي استثمار طويل الأمد. نحن نقوم بتهيئة موقعك من الداخل (On-page) ليكون سريعاً ومتوافقاً مع خوارزميات جوجل، ومن الخارج (Off-page) لبناء الموثوقية.</p>
-                    <p>ندرس الكلمات المفتاحية الأكثر بحثاً في السوق السعودي المتعلقة بمجالك، ونستهدفها بذكاء لنضمن لك تدفقاً مستمراً من الزيارات (Organic Traffic) لعملاء جاهزين للشراء، مما يقلل اعتمادك الكلي على الإعلانات الممولة المكلفة.</p>
-                `
-            },
-            { 
-                id: 'ai', 
-                icon: 'ph-robot', 
-                title: 'وكلاء الذكاء الاصطناعي والأتمتة', 
-                shortDesc: 'ارتقِ بخدمة عملائك مع روبوتات محادثة ذكية (AI Chatbots) تفهم نشاطك وترد على الاستفسارات بذكاء بشري 24/7 عبر واتساب والموقع الإلكتروني.', 
-                cssSpan: 'md:col-span-1 lg:col-span-1 glass',
-                iconStyle: 'bg-blue-500/10 text-blue-500', 
-                tags: ['Chatbots', 'أتمتة المبيعات', 'خدمة عملاء 24/7'],
-                seoDetails: `
-                    <p>في عصر السرعة، العميل لا يحب الانتظار. تأخرك في الرد قد يعني خسارة العميل لصالح منافس آخر. هنا يأتي دور <strong>وكلاء الذكاء الاصطناعي</strong>.</p>
-                    <p>نقوم ببناء وتدريب روبوتات محادثة متطورة جداً تعتمد على تقنيات الذكاء الاصطناعي الحديثة، حيث يتم تغذيتها بكافة معلومات منتجاتك وخدماتك. هذا الروبوت لا يقدم إجابات جاهزة وغبية، بل يفهم سياق الحديث، ويجيب بطريقة تشبه البشر، ويمكنه حتى إتمام عمليات البيع وتوجيه العميل لروابط الدفع.</p>
-                    <p>نوفر دمجاً كاملاً مع تطبيق <strong>واتساب</strong> وموقعك الإلكتروني، مما يقلل من التكاليف التشغيلية لخدمة العملاء ويزيد من رضاهم ومعدلات التحويل المباشر.</p>
-                `
-            },
-            { 
-                id: 'identity', 
-                icon: 'ph-bezier-curve', 
-                title: 'تصميم الهوية البصرية', 
-                shortDesc: 'ابتكار شعارات وأدلة هوية بصرية (Brand Guidelines) متكاملة تعبر عن شخصية مشروعك وترسخ علامتك في ذهن العميل.', 
-                cssSpan: 'md:col-span-1 lg:col-span-1 glass',
-                iconStyle: 'bg-purple-500/10 text-purple-500', 
-                tags: ['شعارات احترافية', 'دليل هوية', 'مطبوعات'],
-                seoDetails: `
-                    <p>هويتك البصرية هي الوجه الصامت لعلامتك التجارية، وهي أول ما يراه العميل قبل أن يتعامل معك. التصميم الضعيف يقلل من قيمة منتجك، بينما التصميم الاحترافي يبرر الأسعار المرتفعة.</p>
-                    <p>نبدأ مع العميل بجلسة عصف ذهني لفهم شخصية المشروع، الفئة المستهدفة، والقيمة المضافة. بناءً على ذلك، نبتكر <strong>شعاراً (Logo)</strong> فريداً ذا دلالة ومعنى.</p>
-                    <p>لا نتوقف عند الشعار، بل نقدم <strong>دليلاً إرشادياً كاملاً (Brand Guidelines)</strong> يحدد الألوان، الخطوط الرسمية، وتطبيقات الهوية على المطبوعات، وسائل التواصل، والتغليف، لضمان ظهورك بشكل موحد واحترافي دائماً.</p>
-                `
-            },
-            { 
-                id: 'marketing', 
-                icon: 'ph-megaphone', 
-                title: 'إدارة التسويق والحملات الإعلانية', 
-                shortDesc: 'نوصل صوتك لجمهورك المستهدف بدقة عبر إدارة حسابات السوشيال ميديا وإطلاق حملات إعلانية ممولة تحقق أعلى عائد (ROI).', 
-                cssSpan: 'md:col-span-1 lg:col-span-1 glass',
-                iconStyle: 'bg-pink-500/10 text-pink-500', 
-                tags: ['إعلانات ممولة', 'صناعة محتوى', 'إدارة حسابات'],
-                seoDetails: `
-                    <p>التسويق الناجح ليس مجرد نشر صور على انستقرام، بل هو استراتيجية متكاملة للوصول إلى العميل الصحيح في الوقت المناسب وبأقل تكلفة.</p>
-                    <p>نقدم خدمة <strong>إدارة حسابات التواصل الاجتماعي وصناعة المحتوى</strong> التفاعلي الذي يبني مجتمعاً حول علامتك التجارية. كما ندير ميزانيتك بحرص في <strong>الحملات الإعلانية الممولة</strong> على منصات مثل (سناب شات، تيك توك، انستقرام، وجوجل).</p>
-                    <p>نعتمد على تحليل البيانات والاستهداف الدقيق (Retargeting) لنضمن لك تحقيق <strong>أعلى عائد على الاستثمار (ROI)</strong> وتحويل المشاهدات إلى مبيعات حقيقية وملموسة.</p>
-                `
-            },
-            { 
-                id: 'edu', 
-                icon: 'ph-student', 
-                title: 'الخدمات للمنشآت التعليمية', 
-                shortDesc: 'تصميم خطط تشغيلية مدرسية وملفات إنجاز باحترافية عالية، تتوافق تماماً مع متطلبات هيئة تقويم التعليم والتدريب لإبراز تميز منشأتك.', 
-                cssSpan: 'md:col-span-1 lg:col-span-1 glass',
-                iconStyle: 'bg-yellow-500/10 text-yellow-500', 
-                tags: ['خطة تشغيلية', 'ملف إنجاز', 'تقارير أداء'],
-                seoDetails: `
-                    <p>إدارة المدارس والمؤسسات التعليمية تتطلب توثيقاً دقيقاً ومظهراً احترافياً يعكس جودة التعليم المقدم. نحن نقدم دعماً متكاملاً للمنشآت التعليمية.</p>
-                    <p>نصمم ونصيغ <strong>الخطط التشغيلية</strong> للمدارس، و<strong>ملفات الإنجاز</strong> الخاصة بالمعلمين والإدارة، بالإضافة إلى تقارير الأداء الدورية. نضمن أن يكون المحتوى والتصميم متوافقاً مع المعايير الوطنية و<strong>هيئة تقويم التعليم والتدريب</strong>.</p>
-                    <p>نجعل من ملفات منشأتك واجهة مشرّفة أثناء زيارات المشرفين ولجان التقييم.</p>
-                `
-            },
-            { 
-                id: 'menu', 
-                icon: 'ph-hamburger', 
-                title: 'تصميم قوائم الطعام (المنيو)', 
-                shortDesc: 'قوائم طعام رقمية (QR) وورقية مصممة نفسياً لفتح الشهية وتسهيل اتخاذ قرار الشراء لعملائك في المطاعم والمقاهي.', 
-                cssSpan: 'md:col-span-1 lg:col-span-2 glass',
-                iconStyle: 'bg-orange-500/10 text-orange-500', 
-                tags: ['منيو إلكتروني QR', 'منيو مطبوع', 'لوحة تحكم'],
-                seoDetails: `
-                    <p>المنيو ليس مجرد قائمة أسعار، بل هو <strong>أهم أداة بيعية في مطعمك أو المقهى الخاص بك</strong>. التصميم الذكي للمنيو يوجه عين العميل نحو الأطباق الأكثر ربحية ويزيد من متوسط الفاتورة.</p>
-                    <p>نصمم قوائم طعام جذابة بصرياً. نوفر حلول <strong>المنيو الإلكتروني (QR Code)</strong> الذي يتيح للعميل التصفح من هاتفه بسهولة، مع تسليمك <strong>لوحة تحكم خاصة</strong> لتغيير الأسعار وإضافة أطباق جديدة أو إخفاء الأطباق غير المتوفرة بضغطة زر دون الحاجة للرجوع إلينا.</p>
-                    <p>كما نوفر تصاميم فخمة للقوائم الورقية والجلدية الجاهزة للطباعة للمطاعم الفاخرة (Fine Dining).</p>
-                `
-            }
+            { id: 'profile', icon: 'ph-book-open', title: 'بروفايل الشركات والمؤسسات', shortDesc: 'ملفات تعريفية احترافية تبرز قوة مؤسستك، مصممة خصيصاً لاجتياز المناقصات وإقناع كبار المستثمرين والعملاء في السوق السعودي.', cssSpan: 'md:col-span-2 lg:col-span-3', isHero: true, tags: ['B2B Solutions', 'كتابة محتوى تسويقي', 'ملف تفاعلي PDF', 'تصميم للمناقصات'], seoDetails: `<p>في عالم الأعمال السعودي وتوجهات <strong>رؤية 2030</strong>، أصبح <strong>البروفايل التعريفي للشركة (Company Profile)</strong> هو الانطباع الأول الذي يحدد ما إذا كانت الجهات الحكومية أو الشركات الكبرى ستثق بك كشريك استراتيجي.</p><p>نحن في إي تي واي لا نقوم برص الكلمات وتنسيق الألوان فحسب، بل نقدم <strong>دراسة متكاملة وتصميماً استراتيجياً</strong> لبروفايل مؤسستك يبرز نقاط قوتك وإنجازاتك بأسلوب تسويقي (Copywriting) مقنع للغاية.</p><p><strong>ماذا يشمل عملنا في هذه الخدمة؟</strong></p><ul><li>كتابة وصياغة المحتوى من الصفر (الرؤية، الرسالة، القيم، الهيكل التنظيمي، المشاريع).</li><li>تصميم إنفوجرافيك احترافي لعرض الأرقام والإحصائيات وتسهيل قراءتها.</li><li>تسليم نسخة تفاعلية (Interactive PDF) مخصصة للإرسال السريع وتصفح الجوال.</li><li>تسليم نسخة جاهزة للطباعة (Print-Ready) بأعلى دقة لتقديمها في الاجتماعات والمناقصات.</li></ul><p>استثمر في واجهتك، فبروفايل واحد احترافي قد يكون السبب في فوزك بعقد بملايين الريالات.</p>` },
+            { id: 'seo', icon: 'ph-trend-up', title: 'تحسين محركات البحث (SEO)', shortDesc: 'تصدر النتائج الأولى في بحث جوجل واجذب عملاء يبحثون عن خدماتك بالفعل. خدمة تضمن لك زيارات مجانية ومستمرة.', cssSpan: '', isHero: false, tags: ['تصدر جوجل', 'زيارات عضوية', 'كلمات مفتاحية', 'SEO محلي'], seoDetails: `<p>الآلاف من العملاء المحتملين في مدينتك يبحثون في جوجل يومياً عن خدمات تشبه ما تقدمه. إذا لم يكن موقعك في الصفحة الأولى، فأنت تترك هؤلاء العملاء لمنافسيك.</p><p>خدمة <strong>تحسين محركات البحث (SEO)</strong> هي استثمار طويل الأمد. نحن نقوم بتهيئة موقعك من الداخل (On-page) ليكون سريعاً ومتوافقاً مع خوارزميات جوجل، ومن الخارج (Off-page) لبناء الموثوقية.</p><p>ندرس الكلمات المفتاحية الأكثر بحثاً في السوق السعودي المتعلقة بمجالك، ونستهدفها بذكاء لنضمن لك تدفقاً مستمراً من الزيارات لعملاء جاهزين للشراء، مما يقلل اعتمادك الكلي على الإعلانات الممولة المكلفة.</p>` },
+            { id: 'web', icon: 'ph-browser', title: 'تصميم المواقع والمتاجر', shortDesc: 'مواقع تعريفية ومتاجر إلكترونية سريعة وتفاعلية، مصممة لتحويل الزوار إلى عملاء حقيقيين وبناء تواجد رقمي قوي.', cssSpan: '', isHero: false, tags: ['مواقع شركات', 'متاجر إلكترونية', 'واجهات UI/UX'], seoDetails: `<p>التواجد الرقمي لم يعد رفاهية، بل هو أساس نجاح أي علامة تجارية. موقعك الإلكتروني هو <strong>مندوب مبيعاتك الذي يعمل على مدار 24 ساعة</strong> ولا يتوقف أبداً.</p><p>نقوم بتصميم وبرمجة مواقع مخصصة توفر <strong>تجربة مستخدم (UX) سلسة واستثنائية</strong>. نركز بشكل كبير على سرعة تحميل الصفحات والتوافق التام مع شاشات الجوال، حيث أن أكثر من 80% من المستخدمين في السعودية يتصفحون عبر هواتفهم.</p><p>بالنسبة للمتاجر الإلكترونية، نقوم بتجهيز متجرك بالكامل، وربط بوابات الدفع المحلية الآمنة، وشركات الشحن، لتكون مستعداً لاستقبال الطلبات من اليوم الأول بتصميم يرفع من موثوقية علامتك التجارية.</p>` },
+            { id: 'ai', icon: 'ph-robot', title: 'وكلاء الذكاء الاصطناعي', shortDesc: 'ارتقِ بخدمة عملائك مع روبوتات محادثة ذكية (AI Chatbots) تفهم نشاطك وترد على الاستفسارات بذكاء بشري 24/7.', cssSpan: '', isHero: false, tags: ['Chatbots', 'أتمتة المبيعات', 'خدمة عملاء 24/7'], seoDetails: `<p>في عصر السرعة، العميل لا يحب الانتظار. تأخرك في الرد قد يعني خسارة العميل لصالح منافس آخر. هنا يأتي دور <strong>وكلاء الذكاء الاصطناعي</strong>.</p><p>نقوم ببناء وتدريب روبوتات محادثة متطورة جداً تعتمد على تقنيات الذكاء الاصطناعي الحديثة، حيث يتم تغذيتها بكافة معلومات منتجاتك وخدماتك. هذا الروبوت لا يقدم إجابات جاهزة وغبية، بل يفهم سياق الحديث، ويجيب بطريقة تشبه البشر، ويمكنه حتى إتمام عمليات البيع وتوجيه العميل لروابط الدفع.</p><p>نوفر دمجاً كاملاً مع تطبيق <strong>واتساب</strong> وموقعك الإلكتروني، مما يقلل من التكاليف التشغيلية لخدمة العملاء ويزيد من رضاهم ومعدلات التحويل المباشر.</p>` },
+            { id: 'identity', icon: 'ph-bezier-curve', title: 'تصميم الهوية البصرية', shortDesc: 'ابتكار شعارات وأدلة هوية بصرية (Brand Guidelines) متكاملة تعبر عن شخصية مشروعك وترسخ علامتك بقوة.', cssSpan: '', isHero: false, tags: ['شعارات', 'دليل هوية', 'مطبوعات'], seoDetails: `<p>هويتك البصرية هي الوجه الصامت لعلامتك التجارية، وهي أول ما يراه العميل قبل أن يتعامل معك. التصميم الضعيف يقلل من قيمة منتجك، بينما التصميم الاحترافي يبرر الأسعار المرتفعة.</p><p>نبدأ مع العميل بجلسة عصف ذهني لفهم شخصية المشروع، الفئة المستهدفة، والقيمة المضافة. بناءً على ذلك، نبتكر <strong>شعاراً (Logo)</strong> فريداً ذا دلالة ومعنى لا ينسى.</p><p>لا نتوقف عند الشعار، بل نقدم <strong>دليلاً إرشادياً كاملاً (Brand Guidelines)</strong> يحدد الألوان، الخطوط الرسمية، وتطبيقات الهوية على المطبوعات، لضمان ظهورك بشكل موحد واحترافي.</p>` },
+            { id: 'marketing', icon: 'ph-megaphone', title: 'إدارة التسويق والحملات الإعلانية', shortDesc: 'نوصل صوتك لجمهورك المستهدف بدقة عبر إدارة حسابات السوشيال ميديا وإطلاق حملات إعلانية ممولة تحقق أعلى عائد (ROI).', cssSpan: '', isHero: false, tags: ['إعلانات ممولة', 'صناعة محتوى', 'إدارة حسابات'], seoDetails: `<p>التسويق الناجح ليس مجرد نشر صور على انستقرام، بل هو استراتيجية متكاملة للوصول إلى العميل الصحيح في الوقت المناسب وبأقل تكلفة.</p><p>نقدم خدمة <strong>إدارة حسابات التواصل الاجتماعي وصناعة المحتوى</strong> التفاعلي الذي يبني مجتمعاً حول علامتك التجارية. كما ندير ميزانيتك بحرص في <strong>الحملات الإعلانية الممولة</strong> على منصات مثل (سناب شات، تيك توك، انستقرام، وجوجل).</p><p>نعتمد على تحليل البيانات والاستهداف الدقيق (Retargeting) لنضمن لك تحقيق <strong>أعلى عائد على الاستثمار (ROI)</strong> وتحويل المشاهدات إلى مبيعات حقيقية وملموسة.</p>` },
+            { id: 'edu', icon: 'ph-student', title: 'الخدمات للمنشآت التعليمية', shortDesc: 'تصميم خطط تشغيلية مدرسية وملفات إنجاز باحترافية عالية، تتوافق تماماً مع متطلبات هيئة تقويم التعليم والتدريب.', cssSpan: '', isHero: false, tags: ['خطة تشغيلية', 'ملف إنجاز', 'تقارير أداء'], seoDetails: `<p>إدارة المدارس والمؤسسات التعليمية تتطلب توثيقاً دقيقاً ومظهراً احترافياً يعكس جودة التعليم المقدم. نحن نقدم دعماً متكاملاً للمنشآت التعليمية.</p><p>نصمم ونصيغ <strong>الخطط التشغيلية</strong> للمدارس، و<strong>ملفات الإنجاز</strong> الخاصة بالمعلمين والإدارة، بالإضافة إلى تقارير الأداء الدورية. نضمن أن يكون المحتوى والتصميم متوافقاً مع المعايير الوطنية و<strong>هيئة تقويم التعليم والتدريب</strong>.</p><p>نجعل من ملفات منشأتك واجهة مشرّفة أثناء زيارات المشرفين ولجان التقييم.</p>` },
+            { id: 'menu', icon: 'ph-hamburger', title: 'تصميم قوائم الطعام (المنيو)', shortDesc: 'قوائم طعام رقمية (QR) وورقية مصممة نفسياً لفتح الشهية وتسهيل اتخاذ قرار الشراء لعملائك مع لوحة تحكم.', cssSpan: 'md:col-span-1 lg:col-span-2', isHero: false, tags: ['منيو إلكتروني QR', 'منيو مطبوع', 'لوحة تحكم'], seoDetails: `<p>المنيو ليس مجرد قائمة أسعار، بل هو <strong>أهم أداة بيعية في مطعمك أو المقهى الخاص بك</strong>. التصميم الذكي للمنيو يوجه عين العميل نحو الأطباق الأكثر ربحية ويزيد من متوسط الفاتورة.</p><p>نصمم قوائم طعام جذابة بصرياً. نوفر حلول <strong>المنيو الإلكتروني (QR Code)</strong> الذي يتيح للعميل التصفح من هاتفه بسهولة، مع تسليمك <strong>لوحة تحكم خاصة</strong> لتغيير الأسعار وإضافة أطباق جديدة بضغطة زر دون الحاجة للرجوع إلينا.</p><p>كما نوفر تصاميم فخمة للقوائم الورقية والجلدية الجاهزة للطباعة للمطاعم الفاخرة (Fine Dining).</p>` }
         ];
 
-        // The Protected Portfolio Data
         const portfolioItems = [
-            { id: 1, title: 'تقرير سنوي جمعية مسارات', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczNauihJ3rzmKIViFZZfKpNXpMOYSI2FlNi2w_Exg0fvKJdZccw-rzDtnhgM5XdKNiAmlEnLxGB8VqX0sPaYfvhTvalp0MxDNN_iLQ3__7uNjVJRjC9dH7--ILcPkyqyfL5hjfFGrV1MHErqiMopMnF8zQ=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1pqzZyR0DFSz4jurKM8hZvyrdoX76uXho/view?usp=sharing', desc: 'تصميم وتحليل بيانات جمعية مسارات ، شمل 20 صفحة مع إنفوجرافيك للإنجازات، يعكس الشفافية والاحترافية.', tags: ['تصميم تقرير سنوي', 'كتابة محتوى', 'إنفوجرافيك'] },
-            { id: 2, title: 'تصميم بروفايل إعمار المساند للتشغيل والصيانة', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczODDifOmTd2U5ZiWhPmOCoZWPmBDFZ68x_a48FnUXr_tAo9OQABVD7KULrh9m4DUT6vcsUmObRSBUcYtML2w8wOQZhvEfdHkHBY_UY8e6WmrLnRi0YfjUGiQcMEIAX4CA5g3whidY6FE9aIMo7Ehi_7Hw=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1yRSAzCj1ziBvea6frrr3yEzt0TiOVl14/view?usp=sharing', desc: 'تصميم عصري وجذاب لملف تعريفي لشركة إعمار المساند للتشغيل والصيانة، باللغتين العربية والإنجليزية، مجهز خصيصاً للمناقصات.', tags: ['ثنائي اللغة', 'تصميم عصري', 'B2B'] },
-            { id: 3, title: 'بروفايل أوفى المتحدة للتطوير العقاري', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczMKO-sLBfjhr4QH6TpRmCOsyxeQg6WXhbtslJkcq2VhjEtugMY9kBpYj1vd4SkI2dcTKYKNPz_fu-N1zsFzRNmYaSUPLRNb8OawEqbdhD3cML7X1C84kMDsJkNjcTLUa6ViJwBH418Y7P2pc1XtenQY7g=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1WtE4hxw5uCRaewI-PY0Lc09ftEYyg9yb/view?usp=sharing', desc: 'تصميم بروفايل فخم لشركة أوفى للتطوير العقاري، يبرز المشاريع الضخمة والقدرة التشغيلية للشركة لجذب المستثمرين.', tags: ['بروفايل تفاعلي', 'PDF ذكي', 'عقارات'] },
-            { id: 4, title: 'بروفايل شركة مناسيب للمقاولات العامة', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczP6xIIBz_XslAKDgMSu3dL5bg7ZzKynCITweZ6EDjrGHyKVwgjjJRunrB0iQNXkAogz8r7VbKxRIMoCA1XaMjogiBErAyb2EQjWN7pU4QE1wtT0qhdI7XqmxDISEHYGKoHlrNFiAVLTcc0_YNS5_a7meg=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1M_p9rMNkSb3HJnSjio0R5pt2dmGlElda/view?usp=sharing', desc: 'إخراج فني قوي لملف شركة مقاولات كبرى، يركز على المعدات والاعتمادات الرسمية.', tags: ['مقاولات', 'تصميم إبداعي'] },
-            { id: 5, title: 'تصميم متجر سكون', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczNvrripjkyLcL9ETLKpewyeSNlYcq6Yu4_Xq0Aj1oA5HAyRpwjVbvmw4fakmEI-GmSEPWkVk8MEbTb86oxR2S9EnlK95Deiz3Gsz-bnpL539E7P0YTPbRdkj7vjkGNqhFjXnvXjXQ-0Gizcm6ymRdyB9w=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://skoon-care.com/', desc: 'تصميم متجر سكون الإلكتروني للعناية بالعين مع تحسين واجهة المستخدم وتجربة المستخدم (UI/UX) لرفع معدل التحويل.', tags: ['متجر إلكتروني', 'UI/UX', 'تجاوب سريع'] },
-            { id: 6, title: 'متحر رواد الإعمار الكبرى', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczNYJ5IEGNT-V1W9HcnMxx2UAo8ySBpDsOPCe7vEGCXi_24NA2JXRlrVDNsCGbfeihiBikGquaKpmIlzgFkQI7IszubHIcDL-v9DBWueoWSaTvO53fK7F1wJSM3HhPCUECGmFPUeRjjsUqWw-S-yrOIMiA=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://r-w-d.com/', desc: 'متجر متكامل لشركة رواد الإعمار الكبرى لمنتجات مواد البناء والمواد الصحية، مع تصنيف متقدم للمنتجات.', tags: ['مواد صحية', 'منصة تجارة إلكترونية'] },
-            { id: 7, title: 'متجر عسل صبوح', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczMFVYyTENVYl7Oh5FSB0Aud4J1GszEdpwMsSuYe0Imdt60l4i1i_hXv6gwe6z_fvxJ0F9achQs4vmbrN9VER_PsLddJqMd36HHpIBOsw0rT8BxTDYP27Pfq_zWXCXHmOggwm6X_q6uvBCMbBkB-bFEDjg=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://sabo7.com/', desc: 'واجهة جذابة لمتجر عسل صبوح تركز على إبراز جودة المنتج الطبيعي وسهولة إتمام الطلب.', tags: ['منصة سلة', 'تجربة مستخدم'] },
-            { id: 8, title: 'موقع شركة مرونة القوة', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczNI_aLCI7Og6Z5ytngzUJ3kyzpsEXz9DfnXw3hZEAQbWehUTrTk8viwjbUkkJ_7roGG3luLAsMwyOxG_urSpUGgyqmR0U-a5ZWLXFlBSOajV3ztEe0B6JhkWpDQBqDZsGUOBHQ8-mXwKcwPU9Z1_Ty51A=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://forceflexi.com/', desc: 'موقع تعريفي احترافي لشركة مرونة القوة للخدمات اللوجيستية يوضح نطاق العمل وسرعة التوصيل.', tags: ['ووردبريس', 'موقع شركة تعريفية'] },
-            { id: 9, title: 'منيو كوفي هاوس إلكتروني', category: 'menu', image: 'https://lh3.googleusercontent.com/pw/AP1GczNJEJKfX_lY4KAiUT01SskmTdOVRgUQ_7nT5KiXuIqhztQ_t4SwGv2iyXmWinfSvBJvLOSrnKD2Db5mPiQ_YcuBO-CSrATswGhWuXkueAogE73_mpuwx0uapfUoP4Bj72vK4yEBRMktYImSsoNS6vnScA=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://kozicoffe.netlify.app/', desc: 'تصميم منيو إلكتروني (QR) سريع الاستجابة مع لوحة تحكم خاصة للعميل لتعديل الأسعار والصور فورياً.', tags: ['منيو إلكتروني', 'لوحة تحكم'] },
-            { id: 10, title: 'منيو برقر لارنج', category: 'menu', image: 'https://lh3.googleusercontent.com/pw/AP1GczMbchnu_khD5Vl3adbRmMWEypeycE_ktlbhO--YLYT7-Yns64Mnt5BqRjQ6fe7ObLbnL55WLmxkCC9Lz6BTogQMyPgTpUXuzFs4CN4won1ZdqT81k8w1wYBivgpVgZCr9x6WIBiLGAmYAJJUP8ztk7OsQ=w686-h314-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1rhfeoIhgj7lN525jv4IUIjNfT5yrxmU5/view?usp=sharing', desc: 'كتيب منيو لارنج برجر بتصميم كلاسيكي جذاب يفتح الشهية ومجهز للطباعة الفاخرة.', tags: ['منيو ورقي', 'PDF للطباعة'] }
+            { id: 1, title: 'تقرير سنوي جمعية مسارات', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczNauihJ3rzmKIViFZZfKpNXpMOYSI2FlNi2w_Exg0fvKJdZccw-rzDtnhgM5XdKNiAmlEnLxGB8VqX0sPaYfvhTvalp0MxDNN_iLQ3__7uNjVJRjC9dH7--ILcPkyqyfL5hjfFGrV1MHErqiMopMnF8zQ=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1pqzZyR0DFSz4jurKM8hZvyrdoX76uXho/view?usp=sharing', desc: 'تصميم وتحليل بيانات جمعية مسارات، شمل 20 صفحة مع إنفوجرافيك للإنجازات.', tags: ['تقرير سنوي', 'محتوى', 'إنفوجرافيك'] },
+            { id: 2, title: 'بروفايل إعمار المساند', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczODDifOmTd2U5ZiWhPmOCoZWPmBDFZ68x_a48FnUXr_tAo9OQABVD7KULrh9m4DUT6vcsUmObRSBUcYtML2w8wOQZhvEfdHkHBY_UY8e6WmrLnRi0YfjUGiQcMEIAX4CA5g3whidY6FE9aIMo7Ehi_7Hw=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1yRSAzCj1ziBvea6frrr3yEzt0TiOVl14/view?usp=sharing', desc: 'تصميم عصري لملف تعريفي لشركة تشغيل وصيانة، بالعربية والإنجليزية، مجهز للمناقصات.', tags: ['ثنائي اللغة', 'مناقصات', 'B2B'] },
+            { id: 3, title: 'أوفى للتطوير العقاري', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczMKO-sLBfjhr4QH6TpRmCOsyxeQg6WXhbtslJkcq2VhjEtugMY9kBpYj1vd4SkI2dcTKYKNPz_fu-N1zsFzRNmYaSUPLRNb8OawEqbdhD3cML7X1C84kMDsJkNjcTLUa6ViJwBH418Y7P2pc1XtenQY7g=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1WtE4hxw5uCRaewI-PY0Lc09ftEYyg9yb/view?usp=sharing', desc: 'تصميم فخم لشركة تطوير عقاري يبرز المشاريع الضخمة لجذب المستثمرين.', tags: ['تفاعلي', 'PDF ذكي', 'عقارات'] },
+            { id: 4, title: 'مناسيب للمقاولات', category: 'profile', image: 'https://lh3.googleusercontent.com/pw/AP1GczP6xIIBz_XslAKDgMSu3dL5bg7ZzKynCITweZ6EDjrGHyKVwgjjJRunrB0iQNXkAogz8r7VbKxRIMoCA1XaMjogiBErAyb2EQjWN7pU4QE1wtT0qhdI7XqmxDISEHYGKoHlrNFiAVLTcc0_YNS5_a7meg=w1600-h900-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1M_p9rMNkSb3HJnSjio0R5pt2dmGlElda/view?usp=sharing', desc: 'إخراج فني قوي لملف شركة مقاولات كبرى، يركز على المعدات والاعتمادات الرسمية.', tags: ['مقاولات', 'إخراج فني'] },
+            { id: 5, title: 'متجر سكون للعناية', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczNvrripjkyLcL9ETLKpewyeSNlYcq6Yu4_Xq0Aj1oA5HAyRpwjVbvmw4fakmEI-GmSEPWkVk8MEbTb86oxR2S9EnlK95Deiz3Gsz-bnpL539E7P0YTPbRdkj7vjkGNqhFjXnvXjXQ-0Gizcm6ymRdyB9w=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://skoon-care.com/', desc: 'متجر إلكتروني مع تحسين UI/UX لرفع معدل التحويل والمبيعات.', tags: ['متجر إلكتروني', 'UI/UX'] },
+            { id: 6, title: 'رواد الإعمار الكبرى', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczNYJ5IEGNT-V1W9HcnMxx2UAo8ySBpDsOPCe7vEGCXi_24NA2JXRlrVDNsCGbfeihiBikGquaKpmIlzgFkQI7IszubHIcDL-v9DBWueoWSaTvO53fK7F1wJSM3HhPCUECGmFPUeRjjsUqWw-S-yrOIMiA=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://r-w-d.com/', desc: 'منصة تجارة إلكترونية متكاملة لمواد البناء والمواد الصحية بتصنيف متقدم.', tags: ['مواد بناء', 'منصة تجارة'] },
+            { id: 7, title: 'متجر عسل صبوح', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczMFVYyTENVYl7Oh5FSB0Aud4J1GszEdpwMsSuYe0Imdt60l4i1i_hXv6gwe6z_fvxJ0F9achQs4vmbrN9VER_PsLddJqMd36HHpIBOsw0rT8BxTDYP27Pfq_zWXCXHmOggwm6X_q6uvBCMbBkB-bFEDjg=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://sabo7.com/', desc: 'واجهة جذابة لمتجر عسل صبوح تركز على إبراز جودة المنتج الطبيعي.', tags: ['منصة سلة', 'تجربة مستخدم'] },
+            { id: 8, title: 'مرونة القوة اللوجستية', category: 'web', image: 'https://lh3.googleusercontent.com/pw/AP1GczNI_aLCI7Og6Z5ytngzUJ3kyzpsEXz9DfnXw3hZEAQbWehUTrTk8viwjbUkkJ_7roGG3luLAsMwyOxG_urSpUGgyqmR0U-a5ZWLXFlBSOajV3ztEe0B6JhkWpDQBqDZsGUOBHQ8-mXwKcwPU9Z1_Ty51A=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://forceflexi.com/', desc: 'موقع تعريفي احترافي لشركة خدمات لوجستية يوضح نطاق العمل بوضوح.', tags: ['موقع تعريفي', 'ووردبريس'] },
+            { id: 9, title: 'منيو كوفي هاوس', category: 'menu', image: 'https://lh3.googleusercontent.com/pw/AP1GczNJEJKfX_lY4KAiUT01SskmTdOVRgUQ_7nT5KiXuIqhztQ_t4SwGv2iyXmWinfSvBJvLOSrnKD2Db5mPiQ_YcuBO-CSrATswGhWuXkueAogE73_mpuwx0uapfUoP4Bj72vK4yEBRMktYImSsoNS6vnScA=w1600-h900-s-no-gm?authuser=0', websiteUrl: 'https://kozicoffe.netlify.app/', desc: 'منيو إلكتروني (QR) سريع مع لوحة تحكم لتعديل الأسعار فورياً.', tags: ['منيو إلكتروني', 'لوحة تحكم'] },
+            { id: 10, title: 'برجر لارنج', category: 'menu', image: 'https://lh3.googleusercontent.com/pw/AP1GczMbchnu_khD5Vl3adbRmMWEypeycE_ktlbhO--YLYT7-Yns64Mnt5BqRjQ6fe7ObLbnL55WLmxkCC9Lz6BTogQMyPgTpUXuzFs4CN4won1ZdqT81k8w1wYBivgpVgZCr9x6WIBiLGAmYAJJUP8ztk7OsQ=w686-h314-s-no-gm?authuser=0', pdfUrl: 'https://drive.google.com/file/d/1rhfeoIhgj7lN525jv4IUIjNfT5yrxmU5/view?usp=sharing', desc: 'كتيب منيو بتصميم كلاسيكي جذاب يفتح الشهية ومجهز للطباعة الفاخرة.', tags: ['منيو مطبوع', 'تصميم PDF'] }
         ];
 
-        // --- Initialization ---
+        // ========== INITIALIZATION ==========
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
             renderServices();
             renderPortfolio();
-            renderContactForm();
-            initScrollObserver();
-            initNavbar();
+            renderContact();
+            initReveal();
+            initStats();
         });
 
-        // --- Theme & Navbar Logic ---
         function initTheme() {
-            if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'dark');
-            const isDark = localStorage.getItem('theme') === 'dark';
-            if (isDark) document.documentElement.classList.add('dark');
-            
+            if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light');
+            if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
             document.getElementById('themeToggle').addEventListener('click', () => {
                 document.documentElement.classList.toggle('dark');
                 localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
             });
-
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-            document.querySelectorAll('.mobile-link').forEach(link => {
-                link.addEventListener('click', () => menu.classList.add('hidden'));
+            document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+                const m = document.getElementById('mobileMenu');
+                m.classList.toggle('hidden'); m.classList.toggle('flex');
             });
+            document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+                const m = document.getElementById('mobileMenu');
+                m.classList.add('hidden'); m.classList.remove('flex');
+            }));
         }
 
-        function initNavbar() {
-            const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('py-2', 'backdrop-blur-md');
-                    navbar.classList.remove('py-4');
-                } else {
-                    navbar.classList.add('py-4');
-                    navbar.classList.remove('py-2', 'backdrop-blur-md');
-                }
-            });
+        function initReveal() {
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
         }
 
-        function initScrollObserver() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
+        function initStats() {
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        const el = e.target, target = +el.dataset.target, dur = 1500;
+                        const start = performance.now();
+                        const step = (now) => {
+                            const progress = Math.min((now - start) / dur, 1);
+                            el.textContent = '+' + Math.floor(progress * target);
+                            if (progress < 1) requestAnimationFrame(step);
+                            else el.textContent = '+' + target;
+                        };
+                        requestAnimationFrame(step);
+                        obs.unobserve(el);
                     }
                 });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            }, { threshold: 0.5 });
+            document.querySelectorAll('.stat-number[data-target]').forEach(el => obs.observe(el));
         }
 
-        // --- Render Content Functions ---
+        // ========== RENDERING ==========
         function renderServices() {
-            const container = document.getElementById('servicesGrid');
-            container.innerHTML = servicesData.map(s => `
-                <div class="rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group cursor-pointer reveal ${s.cssSpan} relative overflow-hidden flex flex-col h-full" onclick="openServiceInfo('${s.id}')">
-                    ${s.id === 'profile' ? '<div class="absolute top-0 right-0 w-full h-full bg-[url(\'https://www.transparenttextures.com/patterns/cubes.png\')] opacity-10 pointer-events-none"></div>' : ''}
-                    <div class="relative z-10 flex-grow">
-                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-6 transition-colors ${s.iconStyle} group-hover:scale-110 duration-300">
-                            <i class="ph ${s.icon}"></i>
-                        </div>
-                        <h3 class="${s.id === 'profile' ? 'text-3xl md:text-4xl' : 'text-2xl'} font-black mb-4">${s.title}</h3>
-                        <p class="${s.id === 'profile' ? 'text-gray-100 text-lg md:text-xl' : 'text-gray-600 dark:text-gray-400'} mb-6 leading-relaxed">${s.shortDesc}</p>
-                    </div>
-                    <div class="relative z-10 flex flex-wrap gap-2 mt-auto pt-6 border-t ${s.id === 'profile' ? 'border-white/20' : 'border-gray-200 dark:border-white/10'}">
-                        ${s.tags.map(tag => `<span class="text-xs font-bold px-3 py-1.5 rounded-full ${s.id === 'profile' ? 'bg-white/10 text-white' : 'bg-gray-100 dark:bg-dark-700 text-brand-600 dark:text-brand-400'}">${tag}</span>`).join('')}
-                    </div>
-                    
-                    <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-4 group-hover:translate-x-0 ${s.id === 'profile' ? 'text-white' : 'text-brand-500'} font-bold flex items-center gap-2">
-                        اقرأ التفاصيل <i class="ph ph-arrow-left"></i>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function renderContactForm() {
-            const container = document.getElementById('contactServicesTags');
-            container.innerHTML = servicesData.map(s => `
-                <label class="flex items-center gap-3 p-4 glass rounded-xl cursor-pointer hover:bg-white/10 transition border border-white/5 hover:border-brand-500/50">
-                    <input type="checkbox" class="service-cb form-checkbox text-brand-500 w-5 h-5 rounded focus:ring-brand-500 bg-transparent border-gray-500" value="${s.title}">
-                    <span class="text-sm font-bold select-none text-gray-200">${s.title}</span>
-                </label>
-            `).join('');
+            const grid = document.getElementById('servicesGrid');
+            grid.innerHTML = servicesData.map((s, i) => {
+                const delay = (i % 3) * 80;
+                if (s.isHero) {
+                    return `<div class="${s.cssSpan} bento-hero reveal cursor-pointer" style="transition-delay:${delay}ms" onclick="openServiceModal('${s.id}')">
+                        <div class="flex flex-col h-full"><div class="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center text-3xl mb-5"><i class="ph ${s.icon}"></i></div>
+                        <h3 class="text-3xl font-black mb-3">${s.title}</h3><p class="text-white/80 text-lg mb-6">${s.shortDesc}</p>
+                        <div class="mt-auto"><button class="bg-white text-brand-700 px-5 py-2.5 rounded-lg font-bold flex items-center gap-2">تفاصيل الخدمة <i class="ph ph-arrow-left"></i></button></div></div></div>`;
+                }
+                return `<div class="bg-white dark:bg-surface-dark-card border border-gray-200 dark:border-surface-dark-border service-card p-6 flex flex-col reveal cursor-pointer" style="transition-delay:${delay}ms" onclick="openServiceModal('${s.id}')">
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center text-2xl mb-4"><i class="ph ${s.icon}"></i></div>
+                    <h3 class="text-xl font-black mb-2">${s.title}</h3><p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">${s.shortDesc}</p>
+                    <div class="flex flex-wrap gap-2 mb-3">${s.tags.map(t=>`<span class="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-md font-bold">${t}</span>`).join('')}</div>
+                    <button class="text-brand-600 font-bold flex items-center gap-1 text-sm">تفاصيل <i class="ph ph-arrow-left"></i></button></div>`;
+            }).join('');
         }
 
         function renderPortfolio(filter = 'all') {
-            const container = document.getElementById('portfolioContainer');
-            container.innerHTML = '';
-            
-            const filtered = filter === 'all' ? portfolioItems : portfolioItems.filter(i => i.category === filter);
-            
-            filtered.forEach((item, index) => {
-                const delay = (index % 3) * 100;
-                const catName = item.category === 'profile' ? 'بروفايل ومطبوعات' : item.category === 'web' ? 'مواقع ومتاجر' : 'منيو ومطاعم';
-                
-                const html = `
-                    <div class="glass rounded-3xl overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-brand-500/10 transition-all reveal border border-gray-200 dark:border-white/5 flex flex-col" style="transition-delay: ${delay}ms" onclick='openPortfolioModal(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
-                        <div class="relative aspect-[4/3] overflow-hidden bg-white">
-                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-dark-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <span class="bg-brand-500 text-white text-sm font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg"><i class="ph ph-eye text-lg"></i> استعراض التفاصيل</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <div class="text-xs text-brand-500 font-bold mb-3 tracking-wider bg-brand-500/10 inline-block px-3 py-1 rounded-md w-fit">${catName}</div>
-                            <h3 class="text-xl font-black mb-3 text-gray-900 dark:text-white">${item.title}</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 leading-relaxed mb-4">${item.desc}</p>
-                            <div class="mt-auto flex flex-wrap gap-2 pt-4 border-t border-gray-100 dark:border-white/5">
-                                ${item.tags.map(t => `<span class="text-[10px] font-bold text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-dark-800 px-2 py-1 rounded">${t}</span>`).join('')}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                container.innerHTML += html;
-            });
+            const grid = document.getElementById('portfolioContainer');
+            const items = filter === 'all' ? portfolioItems : portfolioItems.filter(i => i.category === filter);
+            grid.innerHTML = items.map((item, i) => {
+                const cat = item.category === 'profile' ? 'بروفايل' : item.category === 'web' ? 'موقع إلكتروني' : 'منيو';
+                return `<div class="bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-gray-200 dark:border-surface-dark-border service-card cursor-pointer reveal" style="transition-delay:${(i%3)*80}ms" onclick='openPortfolioModal(${JSON.stringify(item).replace(/'/g,"&#39;")})'>
+                    <div class="aspect-[4/3] overflow-hidden"><img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover hover:scale-105 transition duration-500" loading="lazy"></div>
+                    <div class="p-5"><span class="text-xs text-brand-600 font-bold bg-brand-50 px-2 py-1 rounded">${cat}</span><h3 class="font-black mt-2 mb-1">${item.title}</h3><p class="text-sm text-gray-500 line-clamp-2">${item.desc}</p></div></div>`;
+            }).join('');
         }
 
-        // --- Portfolio Filters ---
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        function renderContact() {
+            document.getElementById('contactServicesTags').innerHTML = servicesData.map(s => `
+                <label class="flex items-center gap-3 p-3 bg-white/5 border border-white/10 rounded-xl cursor-pointer hover:bg-white/10">
+                    <input type="checkbox" class="service-cb text-brand-500 w-5 h-5 rounded" value="${s.title}">
+                    <span class="text-sm font-bold text-white">${s.title}</span>
+                </label>`).join('');
+        }
+
+        // ========== FILTERS ==========
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-chip')) {
+                document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
                 e.target.classList.add('active');
                 renderPortfolio(e.target.dataset.filter);
-            });
+            }
         });
 
-        // --- Modals Logic ---
+        // ========== MODALS ==========
         function openModal(id) {
-            document.getElementById(id).classList.add('open');
-            document.body.style.overflow = 'hidden';
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            requestAnimationFrame(() => { modal.classList.add('active'); document.body.classList.add('modal-open'); });
         }
         function closeModal(id) {
-            document.getElementById(id).classList.remove('open');
-            document.body.style.overflow = '';
-            
-            if(id === 'portfolioModal') {
-               setTimeout(()=> document.getElementById('modalMedia').innerHTML = '', 300);
-            }
+            const modal = document.getElementById(id);
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+            setTimeout(() => { modal.classList.add('hidden'); if(id==='portfolioModal') document.getElementById('modalMedia').innerHTML=''; }, 350);
         }
 
-        window.openServiceInfo = function(serviceId) {
-            const service = servicesData.find(s => s.id === serviceId);
-            if(!service) return;
-
-            const content = document.getElementById('serviceModalContent');
-            content.innerHTML = `
-                <div class="flex items-center gap-4 mb-8 border-b border-gray-200 dark:border-white/10 pb-6">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-4xl ${service.iconStyle} ${service.id === 'profile' ? 'bg-brand-500 text-white' : ''}">
-                        <i class="ph ${service.icon}"></i>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white">${service.title}</h2>
-                </div>
-                
-                <div class="seo-content text-gray-700 dark:text-gray-300 mb-10">
-                    ${service.seoDetails}
-                </div>
-
-                <div class="bg-brand-50 dark:bg-dark-900 p-6 rounded-2xl border border-brand-100 dark:border-brand-900/50 text-center">
-                    <h4 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">هل أنت مستعد للبدء في هذا المشروع؟</h4>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر مخصص لاحتياجاتك.</p>
-                    <button onclick="window.open('https://wa.me/966596466303?text=${encodeURIComponent('مرحباً فريق إي تي واي 👋\nقرأت عن خدمة: *' + service.title + '* وأرغب في معرفة المزيد من التفاصيل وطلب عرض سعر.')}', '_blank')" class="w-full md:w-auto px-10 bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold text-lg transition flex justify-center items-center gap-3 mx-auto shadow-lg shadow-green-500/30">
-                        <i class="ph ph-whatsapp-logo text-3xl"></i>
-                        طلب تسعيرة عبر الواتساب
-                    </button>
-                </div>
-            `;
+        window.openServiceModal = function(id) {
+            const s = servicesData.find(x => x.id === id);
+            document.getElementById('serviceModalHeader').innerHTML = `<div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl"><i class="ph ${s.icon}"></i></div><h2 class="text-xl font-black">${s.title}</h2>`;
+            document.getElementById('serviceModalBody').innerHTML = s.seoDetails;
+            document.getElementById('serviceModalCta').onclick = () => window.open(`https://wa.me/966596466303?text=${encodeURIComponent(`مرحباً، أريد خدمة: ${s.title}`)}`, '_blank');
             openModal('serviceModal');
-        }
+        };
 
         window.openPortfolioModal = function(item) {
             document.getElementById('modalTitle').innerText = item.title;
-            document.getElementById('modalCat').innerText = item.category === 'profile' ? 'ملف تعريفي (بروفايل)' : item.category === 'web' ? 'منصة رقمية' : 'تصميم منيو';
+            document.getElementById('modalCat').innerText = item.category === 'profile' ? 'بروفايل' : item.category === 'web' ? 'منصة رقمية' : 'منيو';
             document.getElementById('modalDesc').innerText = item.desc;
-            
-            document.getElementById('modalTags').innerHTML = item.tags.map(t => `<span class="bg-gray-100 dark:bg-dark-700 text-brand-600 dark:text-brand-400 font-bold px-4 py-2 text-sm rounded-lg border border-gray-200 dark:border-white/5">${t}</span>`).join('');
-            
+            document.getElementById('modalTags').innerHTML = item.tags.map(t => `<span class="bg-gray-100 dark:bg-gray-800 text-xs font-bold px-3 py-1 rounded-lg">${t}</span>`).join('');
             const btn = document.getElementById('modalActionBtn');
-            const btnText = document.getElementById('modalActionText');
-            
+            const media = document.getElementById('modalMedia');
             if (item.pdfUrl) {
                 btn.href = item.pdfUrl;
-                btnText.innerText = 'تصفح الملف بالكامل (PDF)';
-                btn.className = "w-full bg-blue-600 hover:bg-blue-500 text-white text-center py-5 rounded-2xl font-bold transition flex items-center justify-center gap-3 text-xl shadow-lg shadow-blue-600/30";
-                
-                let embedUrl = item.pdfUrl.replace('/view?usp=sharing', '/preview');
-                document.getElementById('modalMedia').innerHTML = `
-                    <div class="absolute inset-0 flex items-center justify-center text-gray-500"><i class="ph ph-spinner animate-spin text-4xl"></i></div>
-                    <iframe src="${embedUrl}" class="w-full h-full min-h-[400px] md:min-h-[600px] border-0 rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none relative z-10 bg-white"></iframe>`;
-            } else if (item.websiteUrl) {
-                btn.href = item.websiteUrl;
-                btnText.innerText = 'زيارة الموقع الإلكتروني المباشر';
-                btn.className = "w-full bg-brand-600 hover:bg-brand-500 text-white text-center py-5 rounded-2xl font-bold transition flex items-center justify-center gap-3 text-xl shadow-lg shadow-brand-600/30";
-                
-                document.getElementById('modalMedia').innerHTML = `<img src="${item.image}" class="w-full h-full object-cover rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none">`;
+                document.getElementById('modalActionText').innerText = 'تصفح الملف كاملاً (PDF)';
+                btn.className = 'mt-auto bg-indigo-600 hover:bg-indigo-700 text-white text-center py-4 rounded-xl font-bold flex items-center justify-center gap-2';
+                media.innerHTML = `<div class="pdf-a4"><iframe src="${item.pdfUrl.replace('/view?usp=sharing','/preview')}" title="PDF"></iframe></div>`;
+            } else {
+                btn.href = item.websiteUrl || '#';
+                document.getElementById('modalActionText').innerText = item.websiteUrl ? 'زيارة الموقع' : 'عرض الصورة';
+                btn.className = 'mt-auto bg-brand-600 hover:bg-brand-700 text-white text-center py-4 rounded-xl font-bold flex items-center justify-center gap-2';
+                media.innerHTML = `<img src="${item.image}" class="w-full h-full object-contain max-h-[70vh] rounded-xl">`;
             }
-
             openModal('portfolioModal');
-        }
+        };
 
-        // --- WhatsApp Messaging ---
         window.sendWhatsApp = function() {
             const selected = Array.from(document.querySelectorAll('.service-cb:checked')).map(cb => cb.value);
-            const notes = document.getElementById('projectNotes').value;
-            
-            if (selected.length === 0 && !notes) {
-                alert('يرجى اختيار خدمة واحدة على الأقل أو كتابة تفاصيل مشروعك لنتمكن من خدمتك بشكل أفضل.');
-                return;
-            }
-
-            let msg = "مرحباً فريق إي تي واي 👋\nأرغب في الاستفسار والحصول على عرض سعر بخصوص:\n\n";
+            const notes = document.getElementById('projectNotes').value.trim();
+            if (!selected.length && !notes) return alert('اختر خدمة واحدة على الأقل');
+            let msg = "مرحباً إي تي واي 👋\nأرغب في:\n";
             selected.forEach(s => msg += `✅ ${s}\n`);
-            if (notes) msg += `\n📝 نبذة عن المشروع/الأهداف:\n${notes}`;
-            
-            msg += `\n\nبانتظار تواصلكم، شكراً لكم.`;
-
+            if (notes) msg += `\n📝 ${notes}`;
             window.open(`https://wa.me/966596466303?text=${encodeURIComponent(msg)}`, '_blank');
-        }
+        };
     </script>
 </body>
 </html>
