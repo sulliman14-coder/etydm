@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
-    <!-- SEO Meta Tags -->
+    <!-- SEO & Browser Meta Tags -->
+    <meta name="theme-color" content="#7c3aed">
     <meta name="description" content="إي تي واي (ETY) - وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.">
     <meta name="keywords" content="تصميم بروفايل شركات, برمجة مواقع, SEO, ذكاء اصطناعي, وكلاء ذكاء, هوية بصرية, منيو إلكتروني, شركة سعودية, مناقصات, B2B">
     <meta name="author" content="وكالة إي تي واي">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.etydm.com/">
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -17,6 +21,7 @@
     <meta property="og:title" content="إي تي واي | وكالة تصميم بروفايلات الشركات والحلول الرقمية">
     <meta property="og:description" content="شريكك الإستراتيجي لبناء هوية بصرية قوية، تصميم بروفايلات للشركات، وبرمجة منصات رقمية تدعم نموك في السوق السعودي.">
     <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w600-h400-s-no-gm">
+    <meta property="og:image:alt" content="وكالة إي تي واي للحلول الرقمية">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="400">
     <meta property="og:locale" content="ar_SA">
@@ -28,6 +33,7 @@
     <meta name="twitter:title" content="إي تي واي | وكالة تصميم بروفايلات الشركات والحلول الرقمية">
     <meta name="twitter:description" content="شريكك الإستراتيجي لبناء هوية بصرية قوية، تصميم بروفايلات للشركات، وبرمجة منصات رقمية تدعم نموك في السوق السعودي.">
     <meta name="twitter:image" content="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w600-h400-s-no-gm">
+    <meta name="twitter:image:alt" content="وكالة إي تي واي للحلول الرقمية">
     
     <title>إي تي واي | وكالة تصميم بروفايلات الشركات والحلول الرقمية في السعودية</title>
 
@@ -56,8 +62,6 @@
     <!--
     ═══════════════════════════════════════════════════════
      FIX 4: إزالة Tailwind CDN تماماً واستبداله بـ CSS خالص
-     Tailwind CDN = 3MB+ JavaScript يُنفَّذ في الـ browser
-     ويُبطئ أي جهاز خاصة الجوال
     ═══════════════════════════════════════════════════════
     -->
 
@@ -74,9 +78,23 @@
     /*
     ═══════════════════════════════════════════════════════════════════
       FIX 4 (تفصيلي): كل CSS مكتوب يدوياً بدل Tailwind CDN
-      هذا يُلغي 3MB+ JavaScript ويُحوّله لـ ~30KB CSS نقي
     ═══════════════════════════════════════════════════════════════════
     */
+
+    /* ── Accessibility ─────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--brand-600);
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
 
     /* ── CSS Variables ─────────────────────────────────────── */
     :root {
@@ -252,7 +270,8 @@
     }
     .glass-strong {
       background: rgba(255,255,255,.96);
-      border: 1px solid rgba(0,0,0,.08);
+      border: 1px
+            border: 1px solid rgba(0,0,0,.08);
     }
     html.dark .glass-strong {
       background: rgba(42,42,61,.96);
@@ -887,7 +906,7 @@
     .seo-content p { margin-bottom:1.25rem; line-height:1.85; font-size:1.05rem; }
     .seo-content strong { color:var(--brand-600); font-weight:700; }
     html.dark .seo-content strong { color:var(--brand-400); }
-    .seo-content ul { list-style-disc; padding-right:1.5rem; margin-bottom:1.25rem; }
+    .seo-content ul { list-style-type: disc; padding-right:1.5rem; margin-bottom:1.25rem; }
     .seo-content ul li { margin-bottom:.5rem; line-height:1.7; }
 
     /* Portfolio Modal */
@@ -943,22 +962,52 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-      "@context":"https://schema.org",
-      "@type":"ProfessionalService",
-      "name":"وكالة إي تي واي للحلول الرقمية",
-      "alternateName":"ETY Agency",
-      "description":"وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.",
-      "url":"https://www.etydm.com/",
-      "logo":"https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm",
-      "contactPoint":{"@type":"ContactPoint","telephone":"+966596466303","contactType":"customer service","availableLanguage":["Arabic","English"]},
-      "address":{"@type":"PostalAddress","addressCountry":"SA","addressRegion":"المملكة العربية السعودية"},
-      "sameAs":["https://wa.me/966596466303"],
-      "knowsAbout":["تصميم بروفايل شركات","برمجة مواقع","تسويق رقمي","هوية بصرية","قوائم طعام رقمية"]
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.etydm.com/#website",
+          "url": "https://www.etydm.com/",
+          "name": "وكالة إي تي واي للحلول الرقمية",
+          "description": "وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.",
+          "publisher": {
+            "@id": "https://www.etydm.com/#organization"
+          },
+          "inLanguage": "ar-SA"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.etydm.com/#organization",
+          "name": "وكالة إي تي واي للحلول الرقمية",
+          "alternateName": "ETY Agency",
+          "description": "وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.",
+          "url": "https://www.etydm.com/",
+          "logo": "https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm",
+          "image": "https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w600-h400-s-no-gm",
+          "telephone": "+966596466303",
+          "priceRange": "$$",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+966596466303",
+            "contactType": "customer service",
+            "availableLanguage": ["Arabic", "English"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "SA",
+            "addressRegion": "المملكة العربية السعودية"
+          },
+          "sameAs": ["https://wa.me/966596466303"],
+          "knowsAbout": ["تصميم بروفايل شركات", "برمجة مواقع", "تسويق رقمي", "هوية بصرية", "قوائم طعام رقمية"]
+        }
+      ]
     }
     </script>
 </head>
 
 <body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
 
   <!--
   ═══════════════════════════════════════════════════════
@@ -966,7 +1015,7 @@
     على الجوال تُخفى blobs تلقائياً بـ media query
   ═══════════════════════════════════════════════════════
   -->
-  <div class="ambient-bg">
+  <div class="ambient-bg" aria-hidden="true">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
@@ -974,207 +1023,214 @@
   </div>
 
   <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
-  <nav id="navbar">
-    <div class="container">
-      <div class="nav-inner glass-nav">
-        <a href="#home" class="nav-logo" aria-label="الرئيسية">
-          <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm"
-               alt="شعار وكالة إي تي واي" loading="eager" fetchpriority="high" width="40" height="40">
-          <span>إي تي واي</span>
-        </a>
-
-        <div class="nav-links">
-          <a href="#services">خدماتنا المميزة</a>
-          <a href="#portfolio">معرض الأعمال</a>
-          <a href="#about">عن الوكالة</a>
-        </div>
-
-        <div class="nav-actions">
-          <button id="themeToggle" class="btn-theme" aria-label="تبديل السمة">
-            <i class="ph ph-moon moon-icon"></i>
-            <i class="ph ph-sun sun-icon"></i>
-          </button>
-          <a href="#contact" class="btn-cta">ابدأ مشروعك</a>
-          <button class="btn-menu" id="mobileMenuBtn" aria-label="القائمة">
-            <i class="ph ph-list"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="mobileMenu" class="hidden">
-      <div class="mobile-menu-inner glass-nav">
-        <a href="#services" class="mobile-link">خدماتنا</a>
-        <a href="#portfolio" class="mobile-link">أعمالنا</a>
-        <a href="#about" class="mobile-link">من نحن</a>
-        <a href="#contact" class="mobile-link">اطلب خدمة</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ══ HERO ════════════════════════════════════════════════ -->
-  <section id="home">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge glass-badge reveal">
-          <div class="ping-dot"><span></span><span></span></div>
-          خبراء صياغة وتصميم بروفايلات الشركات
-        </div>
-
-        <h1 class="hero-title reveal reveal-delay-1">
-          واجهتك الرقمية <br>
-          <span class="text-gradient">بأعلى معايير الاحترافية</span>
-        </h1>
-
-        <p class="hero-desc reveal reveal-delay-2">
-          نحن <strong>إي تي واي</strong>، شريكك الإستراتيجي لبناء هوية بصرية قوية، تصميم بروفايلات تضمن لك الفوز بالمناقصات، وبرمجة منصات رقمية تعزز مبيعاتك وتدعم نموك في السوق السعودي.
-        </p>
-
-        <div class="hero-btns reveal reveal-delay-3">
-          <a href="#portfolio" class="btn-primary">
-            تصفح سابقة أعمالنا
-            <i class="ph ph-arrow-left"></i>
+  <header>
+    <nav id="navbar" aria-label="القائمة الرئيسية">
+      <div class="container">
+        <div class="nav-inner glass-nav">
+          <a href="#home" class="nav-logo" aria-label="الرئيسية">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm"
+                 alt="شعار وكالة إي تي واي" loading="eager" fetchpriority="high" width="40" height="40">
+            <span>إي تي واي</span>
           </a>
-          <a href="#services" class="btn-secondary">
-            استكشف التفاصيل
-          </a>
-        </div>
 
-        <div class="hero-trust reveal reveal-delay-4">
-          <div class="trust-item">
-            <i class="ph ph-certificate"></i>
-            <span>موثق بالمركز السعودي للأعمال</span>
-            <small>0000162606</small>
+          <div class="nav-links">
+            <a href="#services">خدماتنا المميزة</a>
+            <a href="#portfolio">معرض الأعمال</a>
+            <a href="#about">عن الوكالة</a>
           </div>
-          <div class="trust-item">
-            <i class="ph ph-file-text"></i>
-            <span>وثيقة العمل الحر</span>
-            <small>FL-63005888</small>
-          </div>
-          <div class="trust-item">
-            <i class="ph ph-buildings"></i>
-            <span>متخصصون في قطاع الأعمال</span>
-            <small>B2B Solutions</small>
+
+          <div class="nav-actions">
+            <button id="themeToggle" class="btn-theme" aria-label="تبديل السمة (الوضع الليلي والنهاري)">
+              <i class="ph ph-moon moon-icon" aria-hidden="true"></i>
+              <i class="ph ph-sun sun-icon" aria-hidden="true"></i>
+            </button>
+            <a href="#contact" class="btn-cta">ابدأ مشروعك</a>
+            <button class="btn-menu" id="mobileMenuBtn" aria-expanded="false" aria-label="فتح القائمة الجانبية">
+              <i class="ph ph-list" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ══ SERVICES ════════════════════════════════════════════ -->
-  <section id="services">
-    <div class="container">
-      <div class="text-center reveal" style="margin-bottom:4rem">
-        <p class="section-label">رحلة نمو أعمالك تبدأ من هنا</p>
-        <h2 class="section-title">خدمات مصممة <span class="text-gradient">لقيادة السوق</span></h2>
-        <p class="section-desc">ندرك في إي تي واي أن المستخدم السعودي يبحث عن الجودة والموثوقية، لذلك نقدم خدماتنا بتفصيل وعناية تامة لتلبية أعلى المعايير التجارية.</p>
-      </div>
-      <div class="services-grid" id="servicesGrid"></div>
-    </div>
-  </section>
-
-  <!-- ══ PORTFOLIO ═══════════════════════════════════════════ -->
-  <section id="portfolio">
-    <div class="container">
-      <div class="section-header reveal" style="display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem">
-        <div>
-          <p class="section-label">المعرض الرقمي</p>
-          <h2 class="section-title">إبداع يعزز <span class="text-gradient">قيمة علامتك</span></h2>
-        </div>
-        <div class="filter-bar" style="align-self:flex-start">
-          <button class="filter-btn active" data-filter="all">الكل</button>
-          <button class="filter-btn" data-filter="profile">بروفايل الشركات</button>
-          <button class="filter-btn" data-filter="web">مواقع ومتاجر</button>
-          <button class="filter-btn" data-filter="menu">قوائم المطاعم</button>
+      <div id="mobileMenu" class="hidden" aria-hidden="true">
+        <div class="mobile-menu-inner glass-nav">
+          <a href="#services" class="mobile-link">خدماتنا</a>
+          <a href="#portfolio" class="mobile-link">أعمالنا</a>
+          <a href="#about" class="mobile-link">من نحن</a>
+          <a href="#contact" class="mobile-link">اطلب خدمة</a>
         </div>
       </div>
-      <div class="portfolio-grid" id="portfolioContainer"></div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <!-- ══ ABOUT ═══════════════════════════════════════════════ -->
-  <section id="about">
-    <div class="container">
-      <div class="about-card glass reveal">
-        <div class="about-glow-1"></div>
-        <div class="about-glow-2"></div>
-        <div class="about-grid">
+  <!-- ══ MAIN CONTENT ════════════════════════════════════════ -->
+  <main id="main-content">
+    
+    <!-- ══ HERO ════════════════════════════════════════════════ -->
+    <section id="home" aria-label="القسم الرئيسي">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge glass-badge reveal">
+            <div class="ping-dot" aria-hidden="true"><span></span><span></span></div>
+            خبراء صياغة وتصميم بروفايلات الشركات
+          </div>
+
+          <h1 class="hero-title reveal reveal-delay-1">
+            واجهتك الرقمية <br>
+            <span class="text-gradient">بأعلى معايير الاحترافية</span>
+          </h1>
+
+          <p class="hero-desc reveal reveal-delay-2">
+            نحن <strong>إي تي واي</strong>، شريكك الإستراتيجي لبناء هوية بصرية قوية، تصميم بروفايلات تضمن لك الفوز بالمناقصات، وبرمجة منصات رقمية تعزز مبيعاتك وتدعم نموك في السوق السعودي.
+          </p>
+
+          <div class="hero-btns reveal reveal-delay-3">
+            <a href="#portfolio" class="btn-primary">
+              تصفح سابقة أعمالنا
+              <i class="ph ph-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a href="#services" class="btn-secondary">
+              استكشف التفاصيل
+            </a>
+          </div>
+
+          <div class="hero-trust reveal reveal-delay-4">
+            <div class="trust-item">
+              <i class="ph ph-certificate" aria-hidden="true"></i>
+              <span>موثق بالمركز السعودي للأعمال</span>
+              <small>0000162606</small>
+            </div>
+            <div class="trust-item">
+              <i class="ph ph-file-text" aria-hidden="true"></i>
+              <span>وثيقة العمل الحر</span>
+              <small>FL-63005888</small>
+            </div>
+            <div class="trust-item">
+              <i class="ph ph-buildings" aria-hidden="true"></i>
+              <span>متخصصون في قطاع الأعمال</span>
+              <small>B2B Solutions</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SERVICES ════════════════════════════════════════════ -->
+    <section id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="text-center reveal" style="margin-bottom:4rem">
+          <p class="section-label">رحلة نمو أعمالك تبدأ من هنا</p>
+          <h2 id="services-title" class="section-title">خدمات مصممة <span class="text-gradient">لقيادة السوق</span></h2>
+          <p class="section-desc">ندرك في إي تي واي أن المستخدم السعودي يبحث عن الجودة والموثوقية، لذلك نقدم خدماتنا بتفصيل وعناية تامة لتلبية أعلى المعايير التجارية.</p>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ══ PORTFOLIO ═══════════════════════════════════════════ -->
+    <section id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-header reveal" style="display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem">
           <div>
-            <h2 class="section-title" style="max-width:none">الاحترافية ليست خياراً، بل <span class="text-gradient">أساس عملنا</span></h2>
-            <div class="about-prose" style="margin-bottom:2rem">
-              <p>تأسست وكالة <strong>إي تي واي</strong> لسد الفجوة في السوق السعودي بين التصميم الفني العشوائي والعمل التجاري الاستراتيجي. نحن لا نقدم مجرد "تصاميم حلوة"، بل نقدم أدوات بيعية وتسويقية ترفع من قيمة شركتك.</p>
-              <p>سواء كنت مؤسسة تسعى لدخول مناقصات حكومية عبر <strong>بروفايل احترافي</strong>، أو علامة تجارية تبحث عن <strong>موقع إلكتروني</strong> يضاعف مبيعاتها، فنحن الفريق الذي يفهم متطلباتك ويترجمها لواقع ملموس.</p>
-            </div>
-            <ul class="checklist">
-              <li>
-                <div class="check-icon" style="background:rgba(34,197,94,.12);color:var(--green-500)"><i class="ph ph-check-circle"></i></div>
-                صياغة نصوص تسويقية (Copywriting) باللغتين.
-              </li>
-              <li>
-                <div class="check-icon" style="background:rgba(139,92,246,.12);color:var(--brand-500)"><i class="ph ph-users"></i></div>
-                دراسة كاملة لشخصية العلامة التجارية.
-              </li>
-              <li>
-                <div class="check-icon" style="background:rgba(59,130,246,.12);color:var(--blue-500)"><i class="ph ph-headset"></i></div>
-                تواصل مستمر ومرونة في التعديلات.
-              </li>
-            </ul>
+            <p class="section-label">المعرض الرقمي</p>
+            <h2 id="portfolio-title" class="section-title">إبداع يعزز <span class="text-gradient">قيمة علامتك</span></h2>
           </div>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-num text-gradient">+150</div>
-              <div class="stat-label">مشروع منجز بنجاح</div>
-              <div class="stat-sub">بروفايلات ومواقع وهويات لشركات رائدة</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num text-gradient-warm">98%</div>
-              <div class="stat-label">نسبة رضا العملاء</div>
-              <div class="stat-sub">ثقة متكررة وتوصيات مستمرة</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num text-gradient">+10</div>
-              <div class="stat-label">سنوات خبرة مجتمعة</div>
-              <div class="stat-sub">فريق متمرس في التصميم الاستراتيجي</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num text-gradient-warm">24/7</div>
-              <div class="stat-label">دعم وتواصل مستمر</div>
-              <div class="stat-sub">نرد خلال دقائق على استفساراتك</div>
-            </div>
+          <div class="filter-bar" style="align-self:flex-start" role="group" aria-label="تصفية الأعمال">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">الكل</button>
+            <button class="filter-btn" data-filter="profile" aria-pressed="false">بروفايل الشركات</button>
+            <button class="filter-btn" data-filter="web" aria-pressed="false">مواقع ومتاجر</button>
+            <button class="filter-btn" data-filter="menu" aria-pressed="false">قوائم المطاعم</button>
           </div>
         </div>
+        <div class="portfolio-grid" id="portfolioContainer"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ CONTACT ════════════════════════════════════════════ -->
-  <section id="contact">
-    <div class="contact-glow"></div>
-    <div class="container" style="position:relative;z-index:1;text-align:center">
-      <h2 class="section-title reveal" style="color:#fff">ارتقِ بأعمالك الآن</h2>
-      <p class="reveal reveal-delay-1" style="font-size:1.25rem;color:#d1d5db;margin-bottom:3rem;max-width:36rem;margin-left:auto;margin-right:auto">
-        حدد الخدمات التي تهمك أدناه، وسنقوم بالتواصل معك فوراً عبر واتساب لتقديم استشارة مجانية وعرض سعر مبدئي يناسب تطلعاتك.
-      </p>
-      <div class="contact-form-wrap reveal reveal-delay-2">
-        <h4 style="font-size:1.125rem;font-weight:700;margin-bottom:1.5rem;color:var(--brand-400)">اختر الخدمات المطلوبة:</h4>
-        <div class="services-checks" id="contactServicesTags" style="margin-bottom:2rem"></div>
-        <div style="margin-bottom:2rem;text-align:right">
-          <label style="display:block;color:#9ca3af;margin-bottom:.5rem;font-weight:500" for="projectNotes">تفاصيل إضافية (اختياري)</label>
-          <textarea id="projectNotes" class="contact-textarea" rows="4"
-            placeholder="حدثنا عن طبيعة نشاطك، وما هي أهدافك الرئيسية من هذا المشروع؟..."></textarea>
+    <!-- ══ ABOUT ═══════════════════════════════════════════════ -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-card glass reveal">
+          <div class="about-glow-1" aria-hidden="true"></div>
+          <div class="about-glow-2" aria-hidden="true"></div>
+          <div class="about-grid">
+            <div>
+              <h2 id="about-title" class="section-title" style="max-width:none">الاحترافية ليست خياراً، بل <span class="text-gradient">أساس عملنا</span></h2>
+              <div class="about-prose" style="margin-bottom:2rem">
+                <p>تأسست وكالة <strong>إي تي واي</strong> لسد الفجوة في السوق السعودي بين التصميم الفني العشوائي والعمل التجاري الاستراتيجي. نحن لا نقدم مجرد "تصاميم حلوة"، بل نقدم أدوات بيعية وتسويقية ترفع من قيمة شركتك.</p>
+                <p>سواء كنت مؤسسة تسعى لدخول مناقصات حكومية عبر <strong>بروفايل احترافي</strong>، أو علامة تجارية تبحث عن <strong>موقع إلكتروني</strong> يضاعف مبيعاتها، فنحن الفريق الذي يفهم متطلباتك ويترجمها لواقع ملموس.</p>
+              </div>
+              <ul class="checklist">
+                <li>
+                  <div class="check-icon" style="background:rgba(34,197,94,.12);color:var(--green-500)" aria-hidden="true"><i class="ph ph-check-circle"></i></div>
+                  صياغة نصوص تسويقية (Copywriting) باللغتين.
+                </li>
+                <li>
+                  <div class="check-icon" style="background:rgba(139,92,246,.12);color:var(--brand-500)" aria-hidden="true"><i class="ph ph-users"></i></div>
+                  دراسة كاملة لشخصية العلامة التجارية.
+                </li>
+                <li>
+                  <div class="check-icon" style="background:rgba(59,130,246,.12);color:var(--blue-500)" aria-hidden="true"><i class="ph ph-headset"></i></div>
+                  تواصل مستمر ومرونة في التعديلات.
+                </li>
+              </ul>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-num text-gradient">+150</div>
+                <div class="stat-label">مشروع منجز بنجاح</div>
+                <div class="stat-sub">بروفايلات ومواقع وهويات لشركات رائدة</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num text-gradient-warm">98%</div>
+                <div class="stat-label">نسبة رضا العملاء</div>
+                <div class="stat-sub">ثقة متكررة وتوصيات مستمرة</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num text-gradient">+10</div>
+                <div class="stat-label">سنوات خبرة مجتمعة</div>
+                <div class="stat-sub">فريق متمرس في التصميم الاستراتيجي</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num text-gradient-warm">24/7</div>
+                <div class="stat-label">دعم وتواصل مستمر</div>
+                <div class="stat-sub">نرد خلال دقائق على استفساراتك</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <button onclick="sendWhatsApp()" class="btn-whatsapp">
-          <i class="ph ph-whatsapp-logo" style="font-size:1.875rem"></i>
-          تواصل معنا عبر واتساب الآن
-        </button>
-        <p style="text-align:center;color:#6b7280;font-size:.875rem;margin-top:1rem">نرد عادة خلال دقائق معدودة خلال أوقات العمل الرسمية.</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ══ CONTACT ════════════════════════════════════════════ -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="container" style="position:relative;z-index:1;text-align:center">
+        <h2 id="contact-title" class="section-title reveal" style="color:#fff">ارتقِ بأعمالك الآن</h2>
+        <p class="reveal reveal-delay-1" style="font-size:1.25rem;color:#d1d5db;margin-bottom:3rem;max-width:36rem;margin-left:auto;margin-right:auto">
+          حدد الخدمات التي تهمك أدناه، وسنقوم بالتواصل معك فوراً عبر واتساب لتقديم استشارة مجانية وعرض سعر مبدئي يناسب تطلعاتك.
+        </p>
+        <div class="contact-form-wrap reveal reveal-delay-2">
+          <h4 style="font-size:1.125rem;font-weight:700;margin-bottom:1.5rem;color:var(--brand-400)">اختر الخدمات المطلوبة:</h4>
+          <div class="services-checks" id="contactServicesTags" style="margin-bottom:2rem"></div>
+          <div style="margin-bottom:2rem;text-align:right">
+            <label style="display:block;color:#9ca3af;margin-bottom:.5rem;font-weight:500" for="projectNotes">تفاصيل إضافية (اختياري)</label>
+            <textarea id="projectNotes" class="contact-textarea" rows="4"
+              placeholder="حدثنا عن طبيعة نشاطك، وما هي أهدافك الرئيسية من هذا المشروع؟..."></textarea>
+          </div>
+          <button onclick="sendWhatsApp()" class="btn-whatsapp">
+            <i class="ph ph-whatsapp-logo" style="font-size:1.875rem" aria-hidden="true"></i>
+            تواصل معنا عبر واتساب الآن
+          </button>
+          <p style="text-align:center;color:#6b7280;font-size:.875rem;margin-top:1rem">نرد عادة خلال دقائق معدودة خلال أوقات العمل الرسمية.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ══ FOOTER ══════════════════════════════════════════════ -->
   <footer>
-    <div class="footer-top-line"></div>
+    <div class="footer-top-line" aria-hidden="true"></div>
     <div class="container" style="position:relative;z-index:1">
       <div class="footer-grid">
         <div>
@@ -1192,9 +1248,9 @@
         <div class="footer-col">
           <h4>روابط سريعة</h4>
           <ul class="footer-links">
-            <li><a href="#services"><i class="ph ph-caret-left" style="color:var(--brand-400)"></i>الخدمات والتفاصيل</a></li>
-            <li><a href="#portfolio"><i class="ph ph-caret-left" style="color:var(--brand-400)"></i>معرض الأعمال</a></li>
-            <li><a href="#about"><i class="ph ph-caret-left" style="color:var(--brand-400)"></i>من نحن</a></li>
+            <li><a href="#services"><i class="ph ph-caret-left" style="color:var(--brand-400)" aria-hidden="true"></i>الخدمات والتفاصيل</a></li>
+            <li><a href="#portfolio"><i class="ph ph-caret-left" style="color:var(--brand-400)" aria-hidden="true"></i>معرض الأعمال</a></li>
+            <li><a href="#about"><i class="ph ph-caret-left" style="color:var(--brand-400)" aria-hidden="true"></i>من نحن</a></li>
           </ul>
         </div>
 
@@ -1202,14 +1258,14 @@
           <h4>تواصل معنا</h4>
           <div class="footer-cert">
             <div class="footer-cert-inner">
-              <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="المركز السعودي للأعمال" loading="lazy" width="24" height="24">
+              <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="شعار المركز السعودي للأعمال" loading="lazy" width="24" height="24">
               <span>المركز السعودي للأعمال</span>
             </div>
             <small>رقم التوثيق: 0000162606</small>
           </div>
           <ul class="footer-contacts">
-            <li><i class="ph ph-envelope-simple" style="color:var(--brand-400);font-size:1.25rem"></i> info@etydm.com</li>
-            <li dir="ltr" style="direction:ltr"><i class="ph ph-phone" style="color:var(--brand-400);font-size:1.25rem"></i> 059 646 6303</li>
+            <li><i class="ph ph-envelope-simple" style="color:var(--brand-400);font-size:1.25rem" aria-hidden="true"></i> info@etydm.com</li>
+            <li dir="ltr" style="direction:ltr"><i class="ph ph-phone" style="color:var(--brand-400);font-size:1.25rem" aria-hidden="true"></i> 059 646 6303</li>
           </ul>
         </div>
       </div>
@@ -1220,24 +1276,24 @@
       </div>
     </div>
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="btn-top" aria-label="العودة للأعلى">
-      <i class="ph ph-arrow-up"></i>
+      <i class="ph ph-arrow-up" aria-hidden="true"></i>
     </button>
   </footer>
 
   <!-- ══ SERVICE MODAL ═══════════════════════════════════════ -->
-  <div id="serviceModal" class="modal">
+  <div id="serviceModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-service-title">
     <div class="modal-backdrop" onclick="closeModal('serviceModal')"></div>
     <div class="modal-box" id="serviceModalInner" style="max-width:48rem">
-      <button onclick="closeModal('serviceModal')" class="modal-close" aria-label="إغلاق">✕</button>
+      <button onclick="closeModal('serviceModal')" class="modal-close" aria-label="إغلاق النافذة المنبثقة">✕</button>
       <div id="serviceModalContent"></div>
     </div>
   </div>
 
   <!-- ══ PORTFOLIO MODAL ════════════════════════════════════ -->
-  <div id="portfolioModal" class="modal">
+  <div id="portfolioModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-backdrop" onclick="closeModal('portfolioModal')"></div>
     <div class="modal-box" style="max-width:72rem;flex-direction:column;display:flex">
-      <button onclick="closeModal('portfolioModal')" class="modal-close-abs" aria-label="إغلاق">✕</button>
+      <button onclick="closeModal('portfolioModal')" class="modal-close-abs" aria-label="إغلاق النافذة المنبثقة">✕</button>
       <div style="display:flex;flex-direction:column;height:100%" id="portfolioModalInner">
         <div id="modalMedia" style="flex:1;min-height:280px;background:var(--dark-900);display:flex;align-items:center;justify-content:center;position:relative"></div>
         <div class="modal-info">
@@ -1254,7 +1310,7 @@
             <a id="modalActionBtn" href="#" target="_blank" rel="noopener noreferrer"
                style="display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;padding:1.25rem;border-radius:1rem;font-weight:700;font-size:1.125rem;transition:all .2s;color:#fff">
               <span id="modalActionText">استعراض العمل</span>
-              <i class="ph ph-arrow-square-out" style="font-size:1.5rem"></i>
+              <i class="ph ph-arrow-square-out" style="font-size:1.5rem" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -1264,8 +1320,8 @@
 
   <!-- ══ FLOATING WHATSAPP ════════════════════════════════════ -->
   <a href="https://wa.me/966596466303" target="_blank" rel="noopener noreferrer"
-     class="float-wa" aria-label="تواصل واتساب">
-    <i class="ph ph-whatsapp-logo"></i>
+     class="float-wa" aria-label="تواصل معنا عبر واتساب">
+    <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
   </a>
 
   <!--
@@ -1378,7 +1434,7 @@
   function showLoadingTooltip(event,msg='جارٍ التحميل...'){
     const t=document.createElement('div');
     t.className='loading-tooltip';
-    t.innerHTML=`<i class="ph ph-spinner animate-spin"></i>${msg}`;
+    t.innerHTML=`<i class="ph ph-spinner animate-spin" aria-hidden="true"></i>${msg}`;
     document.body.appendChild(t);
     const x=event?event.clientX:window.innerWidth/2;
     const y=event?event.clientY:window.innerHeight/2;
@@ -1393,9 +1449,9 @@
     const html=servicesData.map(s=>{
       const feat=s.featured;
       return `<div class="service-card${feat?' service-card-featured':''} reveal"
-        onclick="openServiceInfo('${s.id}',event)">
+        onclick="openServiceInfo('${s.id}',event)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ') openServiceInfo('${s.id}',event)">
         <div class="service-icon" style="${s.iconStyle}">
-          <i class="ph ${s.icon}"></i>
+          <i class="ph ${s.icon}" aria-hidden="true"></i>
         </div>
         <h3 style="font-size:${feat?'1.875rem':'1.375rem'}">${s.title}</h3>
         <p style="${feat?'color:rgba(255,255,255,.85)':''}">${s.shortDesc}</p>
@@ -1404,11 +1460,11 @@
             ${s.tags.map(t=>`<span class="tag${feat?' tag-light':''}">${t}</span>`).join('')}
           </div>
           <div class="card-btns">
-            <button class="btn-details" onclick="event.stopPropagation();openServiceInfo('${s.id}',event)">
-              <i class="ph ph-info"></i> تفاصيل
+            <button class="btn-details" onclick="event.stopPropagation();openServiceInfo('${s.id}',event)" aria-label="تفاصيل عن ${s.title}">
+              <i class="ph ph-info" aria-hidden="true"></i> تفاصيل
             </button>
-            <button class="btn-order" onclick="event.stopPropagation();window.open('https://wa.me/966596466303?text='+encodeURIComponent('مرحباً، أريد طلب خدمة: ${s.title}'),'_blank')">
-              <i class="ph ph-whatsapp-logo"></i> طلب
+            <button class="btn-order" onclick="event.stopPropagation();window.open('https://wa.me/966596466303?text='+encodeURIComponent('مرحباً، أريد طلب خدمة: ${s.title}'),'_blank')" aria-label="طلب خدمة ${s.title} عبر الواتساب">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> طلب
             </button>
           </div>
         </div>
@@ -1436,11 +1492,11 @@
     const catMap={profile:'بروفايل ومطبوعات',web:'مواقع ومتاجر',menu:'منيو ومطاعم'};
     c.innerHTML=items.map((item,idx)=>`
       <div class="portfolio-card reveal" style="transition-delay:${idx*60}ms"
-        onclick='openPortfolioModal(${JSON.stringify(item).replace(/'/g,"&#39;")},event)'>
+        onclick='openPortfolioModal(${JSON.stringify(item).replace(/'/g,"&#39;")},event)' role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ') openPortfolioModal(${JSON.stringify(item).replace(/'/g,"&#39;")},event)">
         <div class="portfolio-thumb">
-          <img src="${item.image}" alt="${item.title}" loading="lazy" width="400" height="300">
+          <img src="${item.image}" alt="صورة لمشروع ${item.title}" loading="lazy" width="400" height="300">
           <div class="thumb-overlay">
-            <span><i class="ph ph-eye"></i> استعراض</span>
+            <span><i class="ph ph-eye" aria-hidden="true"></i> استعراض</span>
           </div>
         </div>
         <div class="portfolio-body">
@@ -1458,8 +1514,12 @@
   // ── Filter ───────────────────────────────────────────────────
   document.querySelectorAll('.filter-btn').forEach(btn=>{
     btn.addEventListener('click',e=>{
-      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.filter-btn').forEach(b=>{
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       e.currentTarget.classList.add('active');
+      e.currentTarget.setAttribute('aria-pressed', 'true');
       renderPortfolio(e.currentTarget.dataset.filter);
     });
   });
@@ -1468,6 +1528,11 @@
   function openModal(id){
     document.getElementById(id).classList.add('open');
     document.body.style.overflow='hidden';
+    // Accessibility: Focus on the close button when opened
+    setTimeout(() => {
+        const closeBtn = document.querySelector(`#${id} .modal-close, #${id} .modal-close-abs`);
+        if(closeBtn) closeBtn.focus();
+    }, 100);
   }
   function closeModal(id){
     document.getElementById(id).classList.remove('open');
@@ -1484,9 +1549,9 @@
     document.getElementById('serviceModalContent').innerHTML=`
       <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(0,0,0,.07)">
         <div class="service-icon" style="${s.iconStyle};${s.featured?'background:var(--brand-500);color:#fff':''}">
-          <i class="ph ${s.icon}"></i>
+          <i class="ph ${s.icon}" aria-hidden="true"></i>
         </div>
-        <h2 style="font-size:clamp(1.5rem,4vw,2.25rem);font-weight:900">${s.title}</h2>
+        <h2 id="modal-service-title" style="font-size:clamp(1.5rem,4vw,2.25rem);font-weight:900">${s.title}</h2>
       </div>
       <div class="seo-content" style="margin-bottom:2.5rem">${s.seoDetails}</div>
       <div style="background:rgba(139,92,246,.06);padding:1.5rem;border-radius:1rem;border:1px solid rgba(139,92,246,.12);text-align:center">
@@ -1495,7 +1560,7 @@
         <button onclick="window.open('https://wa.me/966596466303?text='+encodeURIComponent('مرحباً فريق إي تي واي، أريد طلب خدمة: ${s.title}'),'_blank')"
           style="background:var(--green-500);color:#fff;padding:1rem 2rem;border-radius:.75rem;font-weight:700;font-size:1.125rem;border:none;cursor:pointer;display:flex;align-items:center;gap:.75rem;margin:0 auto;font-family:inherit;transition:background .2s"
           onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='var(--green-500)'">
-          <i class="ph ph-whatsapp-logo" style="font-size:1.75rem"></i> طلب تسعيرة عبر الواتساب
+          <i class="ph ph-whatsapp-logo" style="font-size:1.75rem" aria-hidden="true"></i> طلب تسعيرة عبر الواتساب
         </button>
       </div>`;
     openModal('serviceModal');
@@ -1519,15 +1584,15 @@
       const embedUrl=item.pdfUrl.replace('/view?usp=sharing','/preview');
       media.innerHTML=`
         <div id="pdfLoader" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#6b7280">
-          <i class="ph ph-spinner animate-spin" style="font-size:2.5rem"></i>
+          <i class="ph ph-spinner animate-spin" style="font-size:2.5rem" aria-hidden="true"></i>
         </div>
         <iframe src="${embedUrl}" style="width:100%;height:100%;min-height:420px;border:0;position:relative;z-index:1;background:#fff"
-          onload="document.getElementById('pdfLoader')?.remove()" title="معاينة PDF"></iframe>`;
+          onload="document.getElementById('pdfLoader')?.remove()" title="معاينة PDF لمشروع ${item.title}"></iframe>`;
     }else if(item.websiteUrl){
       btn.href=item.websiteUrl;
       document.getElementById('modalActionText').textContent='زيارة الموقع الإلكتروني المباشر';
       btn.style.cssText='display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;padding:1.25rem;border-radius:1rem;font-weight:700;font-size:1.125rem;color:#fff;background:var(--brand-600);box-shadow:0 4px 16px rgba(124,58,237,.3)';
-      media.innerHTML=`<img src="${item.image}" style="width:100%;height:100%;object-fit:cover" alt="${item.title}" loading="lazy">`;
+      media.innerHTML=`<img src="${item.image}" style="width:100%;height:100%;object-fit:cover" alt="صورة مكبرة لمشروع ${item.title}" loading="lazy">`;
     }
     openModal('portfolioModal');
   };
@@ -1552,9 +1617,19 @@
       localStorage.setItem('theme',document.documentElement.classList.contains('dark')?'dark':'light');
     });
     const mBtn=document.getElementById('mobileMenuBtn');
-    if(mBtn)mBtn.addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('hidden'));
+    if(mBtn){
+      mBtn.addEventListener('click',()=>{
+          const menu = document.getElementById('mobileMenu');
+          const isHidden = menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          mBtn.setAttribute('aria-expanded', !isHidden);
+      });
+    }
     document.querySelectorAll('.mobile-link').forEach(l=>
-      l.addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('hidden')));
+      l.addEventListener('click',()=>{
+          document.getElementById('mobileMenu').classList.add('hidden');
+          if(mBtn) mBtn.setAttribute('aria-expanded', 'false');
+      }));
   }
 
   // ── Navbar scroll ────────────────────────────────────────────
@@ -1610,3 +1685,4 @@
 
 </body>
 </html>
+
