@@ -2,11 +2,7 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="theme-color" content="#7c3aed">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="إي تي واي (ETY) - وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.">
@@ -35,698 +31,1582 @@
     
     <title>إي تي واي | وكالة تصميم بروفايلات الشركات والحلول الرقمية في السعودية</title>
 
-    <!-- فونت سريع مع font-display: swap -->
-    <style>
-        @font-face {
-            font-family: 'Tajawal';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/tajawal/v9/Iura6YBj_oCad4k1nzSBC45JxLE.woff2) format('woff2');
-            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
-        }
-        @font-face {
-            font-family: 'Tajawal';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/tajawal/v9/Iurf6YBj_oCad4k1l4qkHrRpiYlJ.woff2) format('woff2');
-            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
-        }
-        @font-face {
-            font-family: 'Tajawal';
-            font-style: normal;
-            font-weight: 800;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/tajawal/v9/Iurf6YBj_oCad4k1l5anHrRpiYlJ.woff2) format('woff2');
-            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
-        }
-        @font-face {
-            font-family: 'Tajawal';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/tajawal/v9/Iurf6YBj_oCad4k1l7KmHrRpiYlJ.woff2) format('woff2');
-            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
-        }
-    </style>
+    <!--
+    ═══════════════════════════════════════════════════════
+     FIX 1: Google Fonts — استخدام display=swap بشكل صحيح
+     مع preconnect للدومينين معاً قبل أي طلب
+    ═══════════════════════════════════════════════════════
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--
+      FIX 2: تحميل الخط مباشرة بـ rel=stylesheet بدلاً من onload hack
+      الـ display=swap يمنع حجب الـ render تلقائياً
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Preconnect فقط للنطاقات الضرورية -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com">
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    
-    <!-- Phosphor Icons - تحميل مع defer -->
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <!--
+    ═══════════════════════════════════════════════════════
+     FIX 3: Phosphor Icons — تحميل بعد الـ render (defer)
+     مع تحديد الـ font-display لتجنب FOIT
+    ═══════════════════════════════════════════════════════
+    -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
 
-    <!-- Tailwind CSS من CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd',
-                            400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9',
-                            800: '#5b21b6', 900: '#4c1d95', 950: '#2e1065',
-                        },
-                        dark: {
-                            900: '#0a0a0f', 800: '#12121a', 700: '#1f1f2e', 600: '#2a2a3d',
-                        },
-                        surface: {
-                            light: '#f8fafc', dark: '#0f0f1a',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Tajawal', 'system-ui', '-apple-system', 'sans-serif'],
-                    },
-                    animation: {
-                        'blob': 'blob 10s infinite',
-                        'blob-slow': 'blob 14s infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(40px, -60px) scale(1.15)' },
-                            '66%': { transform: 'translate(-25px, 25px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-12px)' },
-                        },
-                    }
-                }
-            }
-        }
-    </script>
+    <!--
+    ═══════════════════════════════════════════════════════
+     FIX 4: إزالة Tailwind CDN تماماً واستبداله بـ CSS خالص
+     Tailwind CDN = 3MB+ JavaScript يُنفَّذ في الـ browser
+     ويُبطئ أي جهاز خاصة الجوال
+    ═══════════════════════════════════════════════════════
+    -->
+
+    <!--
+    ═══════════════════════════════════════════════════════
+     FIX 5: Preload الشعار بأولوية عالية (LCP optimization)
+    ═══════════════════════════════════════════════════════
+    -->
+    <link rel="preload" as="image"
+          href="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm"
+          fetchpriority="high">
 
     <style>
-        /* الأنماط الحرجة جداً */
-        *, ::before, ::after { box-sizing: border-box; }
-        
-        :root {
-            --brand-600: #7c3aed;
-            --brand-500: #8b5cf6;
-            --brand-400: #a78bfa;
-        }
-        
-        body {
-            font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-            background-color: #f8fafc;
-            color: #1a1a1a;
-            -webkit-text-size-adjust: 100%;
-        }
-        
-        .dark body, body.dark {
-            background-color: #0a0a0f;
-            color: #fff;
-        }
-        
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: var(--brand-600); border-radius: 10px; }
+    /*
+    ═══════════════════════════════════════════════════════════════════
+      FIX 4 (تفصيلي): كل CSS مكتوب يدوياً بدل Tailwind CDN
+      هذا يُلغي 3MB+ JavaScript ويُحوّله لـ ~30KB CSS نقي
+    ═══════════════════════════════════════════════════════════════════
+    */
 
-        /* تحسينات الأداء */
-        .glass {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-        .glass-strong {
-            background: rgba(255, 255, 255, 0.14);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-        
-        .text-gradient {
-            background: linear-gradient(135deg, #c4b5fd 0%, #7c3aed 45%, #6d28d9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: transform, opacity;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .service-card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            border: 1px solid rgba(156, 163, 175, 0.25);
-            will-change: transform;
-        }
-        .service-card-hover:active {
-            transform: scale(0.98);
-        }
-        
-        .portfolio-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            will-change: transform;
-        }
-        .portfolio-card:active {
-            transform: scale(0.98);
-        }
-        
-        .modal {
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-        .modal.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .modal-content {
-            transform: scale(0.95);
-            transition: transform 0.3s ease;
-        }
-        .modal.open .modal-content {
-            transform: scale(1);
-        }
-        
-        .filter-btn.active {
-            background: var(--brand-600) !important;
-            color: #fff !important;
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
-        }
-        
-        .loading-tooltip {
-            position: fixed;
-            background: rgba(0,0,0,0.9);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            z-index: 200;
-            pointer-events: none;
-            animation: tooltipIn 0.15s ease-out;
-        }
-        @keyframes tooltipIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .scroll-hint {
-            position: absolute;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            color: var(--brand-400);
-            font-size: 0.7rem;
-            font-weight: 600;
-            z-index: 20;
-            pointer-events: none;
-        }
-        .scroll-hint i {
-            animation: bounceDown 1s ease-in-out infinite;
-            font-size: 1.5rem;
-        }
-        @keyframes bounceDown {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(6px); }
-        }
+    /* ── CSS Variables ─────────────────────────────────────── */
+    :root {
+      --brand-50:#f5f3ff; --brand-100:#ede9fe; --brand-200:#ddd6fe;
+      --brand-300:#c4b5fd; --brand-400:#a78bfa; --brand-500:#8b5cf6;
+      --brand-600:#7c3aed; --brand-700:#6d28d9; --brand-800:#5b21b6;
+      --brand-900:#4c1d95; --brand-950:#2e1065;
+      --dark-900:#0a0a0f; --dark-800:#12121a; --dark-700:#1f1f2e; --dark-600:#2a2a3d;
+      --green-500:#22c55e; --green-600:#16a34a;
+      --blue-500:#3b82f6; --blue-600:#2563eb;
+      --gray-100:#f3f4f6; --gray-200:#e5e7eb; --gray-300:#d1d5db;
+      --gray-400:#9ca3af; --gray-500:#6b7280; --gray-600:#4b5563;
+      --gray-700:#374151; --gray-800:#1f2937; --gray-900:#111827;
+      --surface-light:#f8fafc;
+      --radius-xl:1rem; --radius-2xl:1.25rem; --radius-3xl:1.5rem;
+    }
 
-        /* تحسينات للجوال */
-        @media (max-width: 768px) {
-            .glass, .glass-strong {
-                backdrop-filter: none;
-                -webkit-backdrop-filter: none;
-            }
-            .reveal {
-                transform: translateY(12px);
-            }
-        }
-        
-        /* تقليل الأنيميشن للمستخدمين الذين يفضلون ذلك */
-        @media (prefers-reduced-motion: reduce) {
-            *, ::before, ::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
+    /* ── Reset & Base ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      overflow-x: hidden;
+      background: var(--surface-light);
+      color: var(--gray-900);
+      transition: background-color .4s ease, color .4s ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    ::selection { background: var(--brand-500); color: #fff; }
+
+    /* ── Scrollbar ─────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--brand-600); border-radius: 10px; }
+
+    /* ── Dark Mode ─────────────────────────────────────────── */
+    .dark body, body.dark-mode-body {
+      background: var(--dark-900);
+      color: #fff;
+    }
+    html.dark body {
+      background: var(--dark-900);
+      color: #fff;
+    }
+
+    /* ── Layout helpers ────────────────────────────────────── */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-py { padding: 6rem 0; }
+    .text-center { text-align: center; }
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .gap-2 { gap: .5rem; } .gap-3 { gap: .75rem; } .gap-4 { gap: 1rem; }
+    .gap-5 { gap: 1.25rem; } .gap-6 { gap: 1.5rem; } .gap-8 { gap: 2rem; }
+    .gap-10 { gap: 2.5rem; } .gap-12 { gap: 3rem; }
+    .w-full { width: 100%; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .fixed { position: fixed; }
+    .overflow-hidden { overflow: hidden; }
+    .z-10 { z-index: 10; }
+    .z-50 { z-index: 50; }
+    .z-100 { z-index: 100; }
+    .hidden { display: none !important; }
+    .block { display: block; }
+    .inline-flex { display: inline-flex; }
+    .inline-block { display: inline-block; }
+    .grid { display: grid; }
+    .mt-auto { margin-top: auto; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .mb-2{margin-bottom:.5rem} .mb-3{margin-bottom:.75rem} .mb-4{margin-bottom:1rem}
+    .mb-5{margin-bottom:1.25rem} .mb-6{margin-bottom:1.5rem} .mb-8{margin-bottom:2rem}
+    .mb-10{margin-bottom:2.5rem} .mb-12{margin-bottom:3rem}
+    .mt-2{margin-top:.5rem} .mt-3{margin-top:.75rem} .mt-4{margin-top:1rem}
+    .mt-6{margin-top:1.5rem} .mt-8{margin-top:2rem} .mt-20{margin-top:5rem}
+    .pt-4{padding-top:1rem} .pt-6{padding-top:1.5rem} .pt-8{padding-top:2rem}
+    .pt-10{padding-top:2.5rem} .pt-16{padding-top:4rem}
+    .pb-6{padding-bottom:1.5rem} .pb-8{padding-bottom:2rem} .pb-16{padding-bottom:4rem}
+    .p-1{padding:.25rem} .p-3{padding:.75rem} .p-4{padding:1rem}
+    .p-6{padding:1.5rem} .p-7{padding:1.75rem} .p-8{padding:2rem}
+    .px-3{padding-left:.75rem;padding-right:.75rem}
+    .px-4{padding-left:1rem;padding-right:1rem}
+    .px-5{padding-left:1.25rem;padding-right:1.25rem}
+    .px-6{padding-left:1.5rem;padding-right:1.5rem}
+    .px-8{padding-left:2rem;padding-right:2rem}
+    .px-10{padding-left:2.5rem;padding-right:2.5rem}
+    .py-1{padding-top:.25rem;padding-bottom:.25rem}
+    .py-1_5{padding-top:.375rem;padding-bottom:.375rem}
+    .py-2{padding-top:.5rem;padding-bottom:.5rem}
+    .py-2_5{padding-top:.625rem;padding-bottom:.625rem}
+    .py-3{padding-top:.75rem;padding-bottom:.75rem}
+    .py-3_5{padding-top:.875rem;padding-bottom:.875rem}
+    .py-4{padding-top:1rem;padding-bottom:1rem}
+    .py-5{padding-top:1.25rem;padding-bottom:1.25rem}
+
+    /* ── Typography ────────────────────────────────────────── */
+    .font-light{font-weight:300} .font-medium{font-weight:500}
+    .font-bold{font-weight:700} .font-black{font-weight:900}
+    .text-xs{font-size:.75rem} .text-sm{font-size:.875rem}
+    .text-base{font-size:1rem} .text-lg{font-size:1.125rem}
+    .text-xl{font-size:1.25rem} .text-2xl{font-size:1.5rem}
+    .text-3xl{font-size:1.875rem} .text-4xl{font-size:2.25rem}
+    .text-5xl{font-size:3rem} .text-6xl{font-size:3.75rem}
+    .leading-tight{line-height:1.25} .leading-relaxed{line-height:1.75}
+    .tracking-tight{letter-spacing:-.025em} .tracking-widest{letter-spacing:.1em}
+    .uppercase{text-transform:uppercase}
+    .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .font-mono{font-family:ui-monospace,monospace}
+
+    /* ── Colors ────────────────────────────────────────────── */
+    .text-white{color:#fff} .text-brand-400{color:var(--brand-400)}
+    .text-brand-500{color:var(--brand-500)} .text-brand-600{color:var(--brand-600)}
+    .text-gray-400{color:var(--gray-400)} .text-gray-500{color:var(--gray-500)}
+    .text-gray-600{color:var(--gray-600)} .text-gray-900{color:var(--gray-900)}
+    .text-green-500{color:var(--green-500)} .text-blue-500{color:var(--blue-500)}
+    html.dark .dark\:text-white{color:#fff}
+    html.dark .dark\:text-gray-200{color:#e5e7eb}
+    html.dark .dark\:text-gray-300{color:#d1d5db}
+    html.dark .dark\:text-gray-400{color:#9ca3af}
+    html.dark .dark\:text-brand-400{color:var(--brand-400)}
+
+    /* ── Gradient Text ─────────────────────────────────────── */
+    .text-gradient {
+      background: linear-gradient(135deg, #c4b5fd 0%, #7c3aed 45%, #6d28d9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-gradient-warm {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Background utilities ──────────────────────────────── */
+    .bg-brand-600{background:var(--brand-600)}
+    .bg-green-500{background:var(--green-500)}
+    .bg-blue-600{background:var(--blue-600)}
+    html.dark .dark\:bg-dark-800{background:var(--dark-800)}
+    html.dark .dark\:bg-dark-700{background:var(--dark-700)}
+
+    /*
+    ═══════════════════════════════════════════════════════════════
+      FIX 6: Glass effect — إزالة backdrop-filter من الـ cards
+      وإبقاؤه فقط على الـ navbar (عنصر واحد) لتوفير GPU
+    ═══════════════════════════════════════════════════════════════
+    */
+    .glass-nav {
+      background: rgba(248,250,252,.88);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    html.dark .glass-nav {
+      background: rgba(10,10,15,.88);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    /* Cards: خلفية مُعتمة بدلاً من backdrop-filter */
+    .glass {
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    html.dark .glass {
+      background: rgba(31,31,46,.92);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .glass-strong {
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    html.dark .glass-strong {
+      background: rgba(42,42,61,.96);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    /* بادج صغير يحتاج blur بسيط */
+    .glass-badge {
+      background: rgba(255,255,255,.12);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(124,58,237,.25);
+    }
+
+    /* ── Background Grid ───────────────────────────────────── */
+    .bg-grid {
+      background-size: 44px 44px;
+      background-image:
+        linear-gradient(to right, rgba(124,58,237,.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(124,58,237,.04) 1px, transparent 1px);
+    }
+
+    /*
+    ═══════════════════════════════════════════════════════════════
+      FIX 7: Blob animations — استخدام will-change مؤقت
+      + تقليل blur من 130px → 80px للجوال (يُطبَّق عبر media query)
+      + استخدام transform3d لتفعيل GPU composite layer
+    ═══════════════════════════════════════════════════════════════
+    */
+    .ambient-bg {
+      position: fixed; top:0; left:0; width:100%; height:100%;
+      overflow:hidden; z-index:-1; pointer-events:none;
+    }
+    .blob {
+      position:absolute; border-radius:50%;
+      /* GPU layer مخصص */
+      will-change: transform;
+      transform: translate3d(0,0,0);
+    }
+    .blob-1 {
+      top:-8%; right:-4%; width:550px; height:550px;
+      background:rgba(139,92,246,.12);
+      filter: blur(80px);
+      animation: blob 10s infinite;
+    }
+    .blob-2 {
+      top:25%; left:-8%; width:420px; height:420px;
+      background:rgba(59,130,246,.1);
+      filter: blur(80px);
+      animation: blob 14s infinite reverse;
+    }
+    .blob-3 {
+      bottom:-8%; left:18%; width:550px; height:550px;
+      background:rgba(168,85,247,.1);
+      filter: blur(80px);
+      animation: blob 12s infinite 2s;
+    }
+
+    /*
+    ═══════════════════════════════════════════════════════════════
+      FIX 8: على الجوال — تعطيل blobs تماماً لتحرير الـ GPU
+    ═══════════════════════════════════════════════════════════════
+    */
+    @media (max-width: 768px) {
+      .blob { display: none; }
+      /* خلفية gradient بسيطة بديلاً */
+      .ambient-bg::before {
+        content:'';
+        position:absolute; inset:0;
+        background: radial-gradient(ellipse 80% 50% at 70% 10%, rgba(139,92,246,.1) 0%, transparent 60%),
+                    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(59,130,246,.08) 0%, transparent 60%);
+      }
+    }
+
+    @keyframes blob {
+      0%   { transform: translate3d(0,0,0) scale(1); }
+      33%  { transform: translate3d(30px,-40px,0) scale(1.1); }
+      66%  { transform: translate3d(-20px,20px,0) scale(0.93); }
+      100% { transform: translate3d(0,0,0) scale(1); }
+    }
+
+    /* ── Reveal Animation ──────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal.active { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+
+    /* ── Animations ────────────────────────────────────────── */
+    @keyframes float {
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-12px)}
+    }
+    @keyframes ping {
+      75%,100%{transform:scale(2);opacity:0}
+    }
+    @keyframes spin {
+      to{transform:rotate(360deg)}
+    }
+    @keyframes bounceDown {
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(7px)}
+    }
+    @keyframes tooltipFadeIn {
+      from{opacity:0;transform:translate(-50%,-16px)}
+      to{opacity:1;transform:translate(-50%,0)}
+    }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-ping   { animation: ping 1.2s cubic-bezier(0,0,.2,1) infinite; }
+    .animate-spin   { animation: spin .8s linear infinite; }
+    .animate-bounce-down { animation: bounceDown 1.2s ease-in-out infinite; }
+
+    /* ── Navbar ────────────────────────────────────────────── */
+    #navbar {
+      position:fixed; width:100%; z-index:50;
+      padding: 1rem 0;
+      transition: padding .3s ease;
+    }
+    #navbar.scrolled { padding: .5rem 0; }
+    .nav-inner {
+      display:flex; justify-content:space-between; align-items:center;
+      padding: .75rem 1.5rem;
+      border-radius:9999px;
+      box-shadow:0 8px 32px rgba(0,0,0,.1);
+    }
+    .nav-logo { display:flex; align-items:center; gap:.75rem; }
+    .nav-logo img {
+      width:40px; height:40px; border-radius:.75rem;
+      object-fit:contain; transition:transform .3s;
+    }
+    .nav-logo:hover img { transform:scale(1.05); }
+    .nav-logo span { font-weight:900; font-size:1.25rem; }
+    .nav-links { display:none; align-items:center; gap:2rem; font-weight:500; font-size:.875rem; }
+    .nav-links a { transition:color .2s; }
+    .nav-links a:hover { color:var(--brand-500); }
+    .nav-actions { display:flex; align-items:center; gap:.75rem; }
+    .btn-theme {
+      padding:.625rem; border-radius:9999px;
+      transition:background .2s, transform .2s;
+      font-size:1.25rem; line-height:1;
+    }
+    .btn-theme:hover { background:rgba(0,0,0,.06); transform:scale(1.1); }
+    html.dark .btn-theme:hover { background:rgba(255,255,255,.1); }
+    .moon-icon { display:block; }
+    .sun-icon  { display:none; }
+    html.dark .moon-icon { display:none; }
+    html.dark .sun-icon  { display:block; }
+    .btn-cta {
+      display:none; background:var(--brand-600); color:#fff;
+      padding:.625rem 1.5rem; border-radius:9999px; font-weight:700; font-size:.875rem;
+      transition:background .2s, transform .2s, box-shadow .2s;
+      box-shadow:0 0 20px rgba(124,58,237,.35);
+    }
+    .btn-cta:hover { background:var(--brand-500); transform:scale(1.04); box-shadow:0 0 32px rgba(124,58,237,.55); }
+    .btn-menu { padding:.625rem; border-radius:9999px; font-size:1.5rem; transition:background .2s; }
+    .btn-menu:hover { background:rgba(0,0,0,.05); }
+    html.dark .btn-menu:hover { background:rgba(255,255,255,.1); }
+    #mobileMenu {
+      position:absolute; top:100%; left:0; width:100%;
+      padding:0 1.5rem; margin-top:.5rem;
+    }
+    .mobile-menu-inner {
+      border-radius:1.25rem; padding:1.5rem;
+      display:flex; flex-direction:column; gap:.75rem;
+      box-shadow:0 20px 60px rgba(0,0,0,.15);
+    }
+    .mobile-menu-inner a {
+      font-size:1.125rem; font-weight:700; padding:.75rem;
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    html.dark .mobile-menu-inner a { border-color:rgba(255,255,255,.07); }
+    .mobile-menu-inner a:last-child {
+      border:none; background:var(--brand-600); color:#fff;
+      text-align:center; padding:.875rem; border-radius:.75rem; margin-top:.5rem;
+    }
+    @media(min-width:768px){
+      .nav-links,.btn-cta{display:flex}
+      .btn-menu{display:none}
+    }
+
+    /* ── Hero ──────────────────────────────────────────────── */
+    #home {
+      min-height:100svh;
+      display:flex; align-items:center; justify-content:center;
+      padding: 6rem 0 4rem;
+    }
+    .hero-content { text-align:center; z-index:10; width:100%; }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.625rem 1.25rem; border-radius:9999px;
+      font-size:.875rem; font-weight:700; margin-bottom:2rem;
+      color:var(--brand-600);
+    }
+    html.dark .hero-badge { color:var(--brand-400); }
+    .ping-dot { position:relative; display:flex; width:.75rem; height:.75rem; }
+    .ping-dot span:first-child {
+      position:absolute; inset:0; border-radius:50%;
+      background:var(--brand-400); opacity:.75; animation:ping 1.2s cubic-bezier(0,0,.2,1) infinite;
+    }
+    .ping-dot span:last-child {
+      position:relative; width:.75rem; height:.75rem; border-radius:50%;
+      background:var(--brand-500); display:block;
+    }
+    h1.hero-title {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight:900; margin-bottom:1.5rem; line-height:1.15;
+    }
+    .hero-desc {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color:var(--gray-600); margin-bottom:2.5rem;
+      max-width:48rem; margin-left:auto; margin-right:auto; line-height:1.75;
+    }
+    html.dark .hero-desc { color:#d1d5db; }
+    .hero-desc strong { font-weight:700; color:var(--gray-900); }
+    html.dark .hero-desc strong { color:#fff; }
+    .hero-btns {
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center; gap:1rem;
+      margin-bottom:5rem;
+    }
+    .btn-primary {
+      width:100%; max-width:20rem;
+      padding:1rem 2rem; background:var(--brand-600); color:#fff;
+      border-radius:9999px; font-weight:700; font-size:1.125rem;
+      display:flex; align-items:center; justify-content:center; gap:.5rem;
+      transition:background .2s, transform .2s, box-shadow .2s;
+      box-shadow:0 0 22px rgba(124,58,237,.4);
+    }
+    .btn-primary:hover { background:var(--brand-500); transform:scale(1.04); box-shadow:0 0 32px rgba(124,58,237,.55); }
+    .btn-primary i { transition:transform .2s; }
+    .btn-primary:hover i { transform:translateX(-3px); }
+    .btn-secondary {
+      width:100%; max-width:20rem;
+      padding:1rem 2rem; background:rgba(255,255,255,.12);
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:9999px; font-weight:700; font-size:1.125rem;
+      display:flex; align-items:center; justify-content:center; gap:.5rem;
+      transition:background .2s, transform .2s;
+    }
+    html.dark .btn-secondary { border-color:rgba(255,255,255,.12); }
+    .btn-secondary:hover { background:rgba(255,255,255,.18); transform:scale(1.04); }
+    @media(min-width:640px){
+      .hero-btns{flex-direction:row}
+      .btn-primary,.btn-secondary{width:auto;max-width:none}
+    }
+    .hero-trust {
+      padding-top:2.5rem; border-top:1px solid rgba(0,0,0,.08);
+      display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;
+    }
+    html.dark .hero-trust { border-color:rgba(255,255,255,.08); }
+    .trust-item {
+      display:flex; flex-direction:column; align-items:center; gap:.5rem;
+    }
+    .trust-item i { font-size:1.875rem; color:var(--brand-500); transition:transform .3s; }
+    .trust-item:hover i { transform:scale(1.1); }
+    .trust-item span { font-size:.875rem; font-weight:700; }
+    .trust-item small { font-size:.75rem; font-family:ui-monospace,monospace; color:var(--gray-500); }
+
+    /* ── Services ──────────────────────────────────────────── */
+    #services { padding:6rem 0; }
+    .section-label {
+      font-size:.875rem; font-weight:700; color:var(--brand-500);
+      letter-spacing:.1em; text-transform:uppercase; margin-bottom:.75rem;
+    }
+    .section-title { font-size:clamp(2rem,5vw,3rem); font-weight:900; margin-bottom:1.5rem; line-height:1.2; }
+    .section-desc {
+      color:var(--gray-600); max-width:38rem; margin:0 auto; line-height:1.75;
+    }
+    html.dark .section-desc { color:#9ca3af; }
+    .services-grid {
+      display:grid; gap:1.5rem;
+      grid-template-columns:1fr;
+    }
+    @media(min-width:768px){ .services-grid{grid-template-columns:1fr 1fr} }
+    @media(min-width:1024px){ .services-grid{grid-template-columns:repeat(3,1fr)} }
+
+    .service-card {
+      border-radius:var(--radius-3xl); padding:2rem;
+      cursor:pointer; position:relative; overflow:hidden;
+      display:flex; flex-direction:column;
+      border:1px solid rgba(0,0,0,.07);
+      background:rgba(255,255,255,.94);
+      transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s, border-color .3s;
+    }
+    html.dark .service-card {
+      background:rgba(31,31,46,.94);
+      border-color:rgba(255,255,255,.07);
+    }
+    .service-card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 20px 40px -10px rgba(124,58,237,.2);
+      border-color:rgba(124,58,237,.4);
+    }
+    .service-card-featured {
+      background: linear-gradient(135deg, var(--brand-900) 0%, var(--brand-700) 100%);
+      color:#fff; border-color:rgba(196,181,253,.2);
+      box-shadow:0 20px 40px -10px rgba(124,58,237,.35);
+    }
+    .service-card-featured:hover {
+      box-shadow:0 28px 56px -14px rgba(124,58,237,.5);
+    }
+    @media(min-width:768px){ .service-card-featured{grid-column:span 2} }
+    @media(min-width:1024px){ .service-card-featured{grid-column:span 3} }
+    .service-icon {
+      width:3.5rem; height:3.5rem; border-radius:1rem;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.75rem; margin-bottom:1.5rem;
+      transition:transform .3s, box-shadow .3s;
+    }
+    .service-card:hover .service-icon { transform:scale(1.1); box-shadow:0 8px 16px rgba(0,0,0,.15); }
+    .service-card h3 { font-weight:900; margin-bottom:1rem; line-height:1.3; }
+    .service-card p { line-height:1.75; flex-grow:1; }
+    .service-card-featured p { color:rgba(255,255,255,.85); }
+    .card-footer {
+      margin-top:1.5rem; padding-top:1.5rem;
+      border-top:1px solid rgba(0,0,0,.07);
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.75rem;
+    }
+    .service-card-featured .card-footer { border-color:rgba(255,255,255,.15); }
+    .tags-row { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .tag {
+      font-size:.75rem; font-weight:700; padding:.375rem .75rem; border-radius:9999px;
+      background:rgba(0,0,0,.05); color:var(--brand-600);
+    }
+    html.dark .tag { background:rgba(255,255,255,.07); color:var(--brand-400); }
+    .tag-light { background:rgba(255,255,255,.12); color:#fff; }
+    .card-btns { display:flex; gap:.5rem; width:100%; }
+    @media(min-width:640px){ .card-btns{width:auto} }
+    .btn-details,.btn-order {
+      flex:1; padding:.5rem 1rem; border-radius:.75rem;
+      font-weight:700; font-size:.875rem; display:flex;
+      align-items:center; justify-content:center; gap:.25rem;
+      transition:background .2s, transform .2s; font-family:inherit;
+    }
+    .btn-details { background:var(--brand-600); color:#fff; }
+    .btn-details:hover { background:var(--brand-500); }
+    .btn-order { background:var(--green-500); color:#fff; }
+    .btn-order:hover { background:var(--green-600); }
+
+    /* ── Portfolio ─────────────────────────────────────────── */
+    #portfolio { padding:6rem 0; }
+    html.dark #portfolio { background:rgba(18,18,26,.5); }
+    #portfolio > .container > .section-header {
+      display:flex; flex-direction:column; gap:1.5rem; margin-bottom:3rem;
+    }
+    @media(min-width:768px){ #portfolio > .container > .section-header{flex-direction:row;align-items:flex-end;justify-content:space-between} }
+    .filter-bar {
+      display:flex; flex-wrap:wrap; gap:.375rem;
+      background:rgba(255,255,255,.7); padding:.375rem; border-radius:9999px;
+      border:1px solid rgba(0,0,0,.07);
+    }
+    html.dark .filter-bar { background:rgba(31,31,46,.7); border-color:rgba(255,255,255,.07); }
+    .filter-btn {
+      padding:.625rem 1.25rem; border-radius:9999px;
+      font-size:.875rem; font-weight:700; font-family:inherit;
+      transition:background .2s, color .2s, box-shadow .2s;
+      color:var(--gray-700);
+    }
+    html.dark .filter-btn { color:#d1d5db; }
+    .filter-btn:hover { background:rgba(0,0,0,.06); }
+    html.dark .filter-btn:hover { background:rgba(255,255,255,.08); }
+    .filter-btn.active {
+      background:var(--brand-600); color:#fff;
+      box-shadow:0 4px 14px rgba(124,58,237,.4);
+    }
+    .portfolio-grid {
+      display:grid; gap:2rem; grid-template-columns:1fr;
+    }
+    @media(min-width:768px){ .portfolio-grid{grid-template-columns:1fr 1fr} }
+    @media(min-width:1024px){ .portfolio-grid{grid-template-columns:repeat(3,1fr)} }
+
+    .portfolio-card {
+      border-radius:var(--radius-3xl); overflow:hidden;
+      cursor:pointer; display:flex; flex-direction:column;
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.95);
+      transition:transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s;
+    }
+    html.dark .portfolio-card {
+      background:rgba(31,31,46,.95);
+      border-color:rgba(255,255,255,.05);
+    }
+    .portfolio-card:hover {
+      transform:translateY(-7px);
+      box-shadow:0 24px 48px -12px rgba(0,0,0,.25);
+    }
+    .portfolio-thumb {
+      position:relative; aspect-ratio:4/3; overflow:hidden;
+      background:#f3f4f6;
+    }
+    html.dark .portfolio-thumb { background:var(--dark-900); }
+    .portfolio-thumb img {
+      width:100%; height:100%; object-fit:cover;
+      transition:transform .6s cubic-bezier(.16,1,.3,1);
+    }
+    .portfolio-card:hover .portfolio-thumb img { transform:scale(1.05); }
+    .thumb-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top, rgba(10,10,15,.85) 0%, rgba(10,10,15,.3) 50%, transparent 100%);
+      opacity:0; transition:opacity .3s;
+      display:flex; align-items:flex-end; padding:1.25rem;
+    }
+    .portfolio-card:hover .thumb-overlay { opacity:1; }
+    .thumb-overlay span {
+      background:var(--brand-500); color:#fff; font-size:.875rem; font-weight:700;
+      padding:.5rem 1rem; border-radius:9999px; display:flex; align-items:center; gap:.5rem;
+    }
+    .portfolio-body { padding:1.5rem; flex-grow:1; display:flex; flex-direction:column; }
+    .port-cat {
+      font-size:.75rem; color:var(--brand-500); font-weight:700;
+      background:rgba(139,92,246,.1); display:inline-block;
+      padding:.25rem .75rem; border-radius:.375rem; margin-bottom:.75rem;
+    }
+    .portfolio-body h3 { font-weight:900; font-size:1.25rem; margin-bottom:.75rem; }
+    .portfolio-body p { font-size:.875rem; color:var(--gray-600); line-height:1.7; margin-bottom:1rem; }
+    html.dark .portfolio-body p { color:#9ca3af; }
+    .port-tags {
+      margin-top:auto; padding-top:1rem; border-top:1px solid rgba(0,0,0,.06);
+      display:flex; flex-wrap:wrap; gap:.375rem;
+    }
+    html.dark .port-tags { border-color:rgba(255,255,255,.05); }
+    .port-tag {
+      font-size:.625rem; font-weight:700; color:var(--gray-500);
+      background:rgba(0,0,0,.04); padding:.25rem .5rem; border-radius:.25rem;
+    }
+    html.dark .port-tag { background:rgba(255,255,255,.06); color:#9ca3af; }
+
+    /* ── About ─────────────────────────────────────────────── */
+    #about { padding:6rem 0; }
+    .about-card {
+      border-radius:var(--radius-3xl); padding:2rem;
+      position:relative; overflow:hidden;
+      box-shadow:0 20px 60px rgba(0,0,0,.08);
+    }
+    @media(min-width:768px){ .about-card{padding:3.5rem} }
+    .about-glow-1 {
+      position:absolute; top:0; right:0; width:18rem; height:18rem;
+      background:rgba(124,58,237,.12); border-radius:50%; filter:blur(60px); pointer-events:none;
+    }
+    .about-glow-2 {
+      position:absolute; bottom:0; left:0; width:14rem; height:14rem;
+      background:rgba(59,130,246,.08); border-radius:50%; filter:blur(50px); pointer-events:none;
+    }
+    .about-grid {
+      display:grid; gap:2.5rem; position:relative; z-index:1;
+    }
+    @media(min-width:1024px){ .about-grid{grid-template-columns:2fr 3fr; align-items:center} }
+    .about-prose { color:var(--gray-600); line-height:1.75; font-size:1.05rem; }
+    html.dark .about-prose { color:#d1d5db; }
+    .about-prose p { margin-bottom:1.25rem; }
+    .about-prose strong { color:var(--gray-900); font-weight:700; }
+    html.dark .about-prose strong { color:#fff; }
+    .checklist { list-style:none; display:flex; flex-direction:column; gap:1rem; font-weight:500; }
+    .checklist li { display:flex; align-items:center; gap:.75rem; }
+    .check-icon {
+      width:2.25rem; height:2.25rem; border-radius:50%;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.1rem;
+    }
+    .stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .stat-card {
+      border-radius:1.25rem; padding:1.75rem; text-align:center;
+      border:1px solid rgba(124,58,237,.15); background:rgba(255,255,255,.96);
+    }
+    html.dark .stat-card { background:rgba(42,42,61,.96); border-color:rgba(124,58,237,.1); }
+    .stat-card .stat-num { font-size:3rem; font-weight:900; margin-bottom:.75rem; }
+    .stat-card .stat-label { font-size:.875rem; font-weight:700; margin-bottom:.25rem; }
+    .stat-card .stat-sub { font-size:.75rem; color:var(--gray-500); }
+
+    /* ── Contact ───────────────────────────────────────────── */
+    #contact {
+      padding:6rem 0;
+      background:var(--dark-900); color:#fff;
+      position:relative; overflow:hidden;
+    }
+    .contact-glow {
+      position:absolute; top:50%; left:50%;
+      transform:translate(-50%,-50%);
+      width:50rem; height:50rem; border-radius:50%;
+      background:rgba(124,58,237,.15); filter:blur(80px);
+      pointer-events:none;
+    }
+    .contact-form-wrap {
+      max-width:56rem; margin:0 auto;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius-3xl); padding:2rem;
+      text-align:right;
+    }
+    @media(min-width:768px){ .contact-form-wrap{padding:2.5rem} }
+    .services-checks {
+      display:grid; gap:1rem;
+      grid-template-columns:1fr;
+    }
+    @media(min-width:640px){ .services-checks{grid-template-columns:1fr 1fr} }
+    @media(min-width:768px){ .services-checks{grid-template-columns:repeat(3,1fr)} }
+    .service-check-label {
+      display:flex; align-items:center; gap:.75rem; padding:1rem;
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06);
+      border-radius:.75rem; cursor:pointer;
+      transition:background .2s, border-color .2s;
+    }
+    .service-check-label:hover { background:rgba(255,255,255,.08); border-color:rgba(124,58,237,.4); }
+    .service-check-label input { width:1.25rem; height:1.25rem; accent-color:var(--brand-500); flex-shrink:0; }
+    .service-check-label span { font-size:.875rem; font-weight:700; color:#e5e7eb; }
+    .contact-textarea {
+      width:100%;
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      border-radius:.75rem; padding:1rem; color:#fff; font-family:inherit; font-size:1rem;
+      transition:border-color .2s, box-shadow .2s; resize:vertical; min-height:120px;
+    }
+    .contact-textarea:focus {
+      outline:none; border-color:var(--brand-500);
+      box-shadow:0 0 0 3px rgba(139,92,246,.2);
+    }
+    .contact-textarea::placeholder { color:rgba(255,255,255,.3); }
+    .btn-whatsapp {
+      width:100%; background:var(--green-500); color:#fff;
+      padding:1.25rem; border-radius:1rem; font-weight:700; font-size:1.25rem;
+      display:flex; align-items:center; justify-content:center; gap:.75rem;
+      transition:background .2s, transform .2s, box-shadow .2s; font-family:inherit;
+      box-shadow:0 0 24px rgba(34,197,94,.35);
+    }
+    .btn-whatsapp:hover { background:var(--green-600); transform:scale(1.02); box-shadow:0 0 36px rgba(34,197,94,.55); }
+    .btn-whatsapp:active { transform:scale(.98); }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      background:#060609; color:#fff;
+      padding:4rem 0 2rem;
+      border-top:4px solid rgba(124,58,237,.5);
+      position:relative; overflow:hidden;
+    }
+    .footer-top-line {
+      position:absolute; top:0; left:0; width:100%; height:3px;
+      background:linear-gradient(to left, var(--brand-500), #a855f7, #3b82f6); opacity:.6;
+    }
+    .footer-grid {
+      display:grid; gap:3rem; margin-bottom:3rem;
+      grid-template-columns:1fr;
+    }
+    @media(min-width:768px){ .footer-grid{grid-template-columns:repeat(3,1fr)} }
+    .footer-logo { display:flex; align-items:center; gap:.75rem; margin-bottom:1.5rem; }
+    .footer-logo img {
+      width:3rem; height:3rem; border-radius:.5rem;
+      background:#fff; padding:.25rem; object-fit:contain;
+    }
+    .footer-logo span { font-weight:900; font-size:1.5rem; }
+    .footer-desc { color:#9ca3af; line-height:1.75; margin-bottom:1.5rem; }
+    .footer-col h4 { font-size:1.125rem; font-weight:700; color:var(--brand-400); margin-bottom:1.5rem; }
+    .footer-links { list-style:none; display:flex; flex-direction:column; gap:1rem; }
+    .footer-links a {
+      color:#9ca3af; font-weight:500;
+      display:flex; align-items:center; gap:.5rem; transition:color .2s;
+    }
+    .footer-links a:hover { color:#fff; }
+    .footer-cert {
+      background:rgba(255,255,255,.04); padding:1rem; border-radius:.75rem;
+      border:1px solid rgba(255,255,255,.07); margin-bottom:1.25rem;
+      transition:border-color .2s;
+    }
+    .footer-cert:hover { border-color:rgba(124,58,237,.4); }
+    .footer-cert-inner { display:flex; align-items:center; gap:.75rem; margin-bottom:.5rem; }
+    .footer-cert-inner img { height:1.5rem; }
+    .footer-cert-inner span { font-size:.875rem; font-weight:700; }
+    .footer-cert small { font-size:.75rem; color:#6b7280; font-family:ui-monospace,monospace; }
+    .footer-contacts { list-style:none; display:flex; flex-direction:column; gap:.75rem; }
+    .footer-contacts li { display:flex; align-items:center; gap:.75rem; color:#d1d5db; font-weight:500; }
+    .footer-bottom {
+      border-top:1px solid rgba(255,255,255,.08); padding-top:2rem;
+      display:flex; flex-direction:column; align-items:center; gap:1rem; text-align:center;
+      color:#6b7280; font-size:.875rem;
+    }
+    @media(min-width:768px){ .footer-bottom{flex-direction:row;justify-content:space-between} }
+    .btn-top {
+      position:absolute; bottom:1.5rem; right:1.5rem;
+      background:var(--brand-600); color:#fff;
+      width:2.5rem; height:2.5rem; border-radius:9999px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.25rem; font-family:inherit;
+      transition:background .2s, transform .2s; box-shadow:0 4px 12px rgba(124,58,237,.4);
+    }
+    .btn-top:hover { background:var(--brand-500); transform:scale(1.1); }
+
+    /* ── Floating WhatsApp ─────────────────────────────────── */
+    .float-wa {
+      position:fixed; bottom:1.5rem; left:1.5rem; z-index:50;
+      background:var(--green-500); color:#fff;
+      width:3.5rem; height:3.5rem; border-radius:9999px;
+      display:flex; align-items:center; justify-content:center; font-size:1.875rem;
+      box-shadow:0 4px 20px rgba(34,197,94,.45); animation:float 6s ease-in-out infinite;
+      transition:transform .2s, box-shadow .2s;
+    }
+    .float-wa:hover { transform:scale(1.1); box-shadow:0 4px 30px rgba(34,197,94,.7); }
+
+    /* ── Modals ────────────────────────────────────────────── */
+    .modal {
+      position:fixed; inset:0; z-index:200;
+      display:flex; align-items:center; justify-content:center; padding:1rem;
+      opacity:0; pointer-events:none; transition:opacity .3s;
+    }
+    .modal.open { opacity:1; pointer-events:auto; }
+    .modal-backdrop {
+      position:absolute; inset:0;
+      background:rgba(10,10,15,.85); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+      cursor:pointer;
+    }
+    .modal-box {
+      position:relative; z-index:1; width:100%; border-radius:var(--radius-3xl);
+      overflow:hidden; max-height:92vh; overflow-y:auto;
+      transform:scale(.94) translateY(20px);
+      transition:transform .35s cubic-bezier(.16,1,.3,1);
+      background:#fff; border:1px solid rgba(0,0,0,.07);
+      box-shadow:0 40px 80px rgba(0,0,0,.3);
+    }
+    html.dark .modal-box { background:var(--dark-800); border-color:rgba(255,255,255,.07); }
+    .modal.open .modal-box { transform:scale(1) translateY(0); }
+    .modal-close {
+      position:sticky; top:1rem; float:left; margin:1rem;
+      width:2.5rem; height:2.5rem; border-radius:9999px;
+      background:rgba(0,0,0,.06); color:#6b7280; font-size:1.125rem;
+      display:flex; align-items:center; justify-content:center; font-family:inherit;
+      transition:background .2s, color .2s, transform .2s; z-index:10;
+    }
+    html.dark .modal-close { background:rgba(255,255,255,.08); color:#9ca3af; }
+    .modal-close:hover { background:rgba(239,68,68,.15); color:#ef4444; transform:scale(1.1); }
+    #serviceModalContent { padding:2rem; clear:both; text-align:right; }
+    @media(min-width:768px){ #serviceModalContent{padding:3rem} }
+    .seo-content p { margin-bottom:1.25rem; line-height:1.85; font-size:1.05rem; }
+    .seo-content strong { color:var(--brand-600); font-weight:700; }
+    html.dark .seo-content strong { color:var(--brand-400); }
+    .seo-content ul { list-style-disc; padding-right:1.5rem; margin-bottom:1.25rem; }
+    .seo-content ul li { margin-bottom:.5rem; line-height:1.7; }
+
+    /* Portfolio Modal */
+    #portfolioModal .modal-box {
+      max-width:72rem; display:flex; flex-direction:column;
+      overflow:hidden; /* prevent double scroll */
+    }
+    @media(min-width:1024px){ #portfolioModal .modal-box{flex-direction:row} }
+    #modalMedia {
+      background:var(--dark-900);
+      min-height:280px; position:relative;
+      display:flex; align-items:center; justify-content:center;
+    }
+    @media(min-width:1024px){ #modalMedia{width:66.666%;min-height:500px} }
+    #modalMedia iframe, #modalMedia img {
+      width:100%; height:100%; border:0; display:block;
+      object-fit:cover;
+    }
+    .modal-info {
+      padding:2rem; display:flex; flex-direction:column; justify-content:space-between;
+    }
+    @media(min-width:1024px){ .modal-info{width:33.333%} }
+    .modal-close-abs {
+      position:absolute; top:1rem; right:1rem;
+      width:2.5rem; height:2.5rem; border-radius:9999px;
+      background:rgba(0,0,0,.5); color:#fff; font-size:1rem;
+      display:flex; align-items:center; justify-content:center; z-index:10;
+      transition:background .2s, transform .2s; font-family:inherit;
+    }
+    .modal-close-abs:hover { background:rgba(239,68,68,.8); transform:scale(1.1); }
+
+    /* ── Loading Tooltip ───────────────────────────────────── */
+    .loading-tooltip {
+      position:fixed; z-index:300; pointer-events:none;
+      background:rgba(0,0,0,.88); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+      color:#fff; padding:.625rem 1.125rem; border-radius:9999px;
+      font-weight:600; font-size:.875rem;
+      display:flex; align-items:center; gap:.625rem;
+      white-space:nowrap; animation:tooltipFadeIn .2s ease-out;
+    }
+
+    /* ── Misc ──────────────────────────────────────────────── */
+    .scroll-hint {
+      position:absolute; bottom:1.25rem; left:50%; transform:translateX(-50%);
+      display:flex; flex-direction:column; align-items:center; gap:.5rem;
+      color:var(--brand-400); opacity:.8; pointer-events:none;
+    }
+    .scroll-hint i { font-size:1.75rem; animation:bounceDown 1.2s ease-in-out infinite; }
+    .scroll-hint span { font-size:.75rem; font-weight:600; }
+    .prose-dark { color:#d1d5db; }
     </style>
-</head>
-<body class="bg-surface-light text-gray-900 dark:bg-dark-900 dark:text-white">
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "وكالة إي تي واي للحلول الرقمية",
-        "description": "وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.",
-        "url": "https://www.etydm.com/",
-        "logo": "https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+966596466303",
-            "contactType": "customer service",
-            "availableLanguage": ["Arabic"]
-        }
+      "@context":"https://schema.org",
+      "@type":"ProfessionalService",
+      "name":"وكالة إي تي واي للحلول الرقمية",
+      "alternateName":"ETY Agency",
+      "description":"وكالة رائدة في حلول الذكاء الاصطناعي، تصميم بروفايل الشركات، وبرمجة المواقع المتقدمة في السعودية.",
+      "url":"https://www.etydm.com/",
+      "logo":"https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm",
+      "contactPoint":{"@type":"ContactPoint","telephone":"+966596466303","contactType":"customer service","availableLanguage":["Arabic","English"]},
+      "address":{"@type":"PostalAddress","addressCountry":"SA","addressRegion":"المملكة العربية السعودية"},
+      "sameAs":["https://wa.me/966596466303"],
+      "knowsAbout":["تصميم بروفايل شركات","برمجة مواقع","تسويق رقمي","هوية بصرية","قوائم طعام رقمية"]
     }
     </script>
+</head>
 
-    <!-- Navbar - ثابت ومبسط -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10" style="height:64px;">
-        <div class="h-full flex items-center justify-between px-4 md:px-8">
-            <a href="#home" class="flex items-center gap-2 flex-shrink-0">
-                <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm" alt="ETY Logo" width="36" height="36" class="rounded-lg" loading="eager">
-                <span class="font-black text-lg">إي تي واي</span>
+<body>
+
+  <!--
+  ═══════════════════════════════════════════════════════
+    FIX 9: Ambient background — CSS فقط، بدون JS
+    على الجوال تُخفى blobs تلقائياً بـ media query
+  ═══════════════════════════════════════════════════════
+  -->
+  <div class="ambient-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="bg-grid" style="position:absolute;inset:0;pointer-events:none;"></div>
+  </div>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner glass-nav">
+        <a href="#home" class="nav-logo" aria-label="الرئيسية">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm"
+               alt="شعار وكالة إي تي واي" loading="eager" fetchpriority="high" width="40" height="40">
+          <span>إي تي واي</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#services">خدماتنا المميزة</a>
+          <a href="#portfolio">معرض الأعمال</a>
+          <a href="#about">عن الوكالة</a>
+        </div>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="btn-theme" aria-label="تبديل السمة">
+            <i class="ph ph-moon moon-icon"></i>
+            <i class="ph ph-sun sun-icon"></i>
+          </button>
+          <a href="#contact" class="btn-cta">ابدأ مشروعك</a>
+          <button class="btn-menu" id="mobileMenuBtn" aria-label="القائمة">
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden">
+      <div class="mobile-menu-inner glass-nav">
+        <a href="#services" class="mobile-link">خدماتنا</a>
+        <a href="#portfolio" class="mobile-link">أعمالنا</a>
+        <a href="#about" class="mobile-link">من نحن</a>
+        <a href="#contact" class="mobile-link">اطلب خدمة</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ════════════════════════════════════════════════ -->
+  <section id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge glass-badge reveal">
+          <div class="ping-dot"><span></span><span></span></div>
+          خبراء صياغة وتصميم بروفايلات الشركات
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          واجهتك الرقمية <br>
+          <span class="text-gradient">بأعلى معايير الاحترافية</span>
+        </h1>
+
+        <p class="hero-desc reveal reveal-delay-2">
+          نحن <strong>إي تي واي</strong>، شريكك الإستراتيجي لبناء هوية بصرية قوية، تصميم بروفايلات تضمن لك الفوز بالمناقصات، وبرمجة منصات رقمية تعزز مبيعاتك وتدعم نموك في السوق السعودي.
+        </p>
+
+        <div class="hero-btns reveal reveal-delay-3">
+          <a href="#portfolio" class="btn-primary">
+            تصفح سابقة أعمالنا
+            <i class="ph ph-arrow-left"></i>
+          </a>
+          <a href="#services" class="btn-secondary">
+            استكشف التفاصيل
+          </a>
+        </div>
+
+        <div class="hero-trust reveal reveal-delay-4">
+          <div class="trust-item">
+            <i class="ph ph-certificate"></i>
+            <span>موثق بالمركز السعودي للأعمال</span>
+            <small>0000162606</small>
+          </div>
+          <div class="trust-item">
+            <i class="ph ph-file-text"></i>
+            <span>وثيقة العمل الحر</span>
+            <small>FL-63005888</small>
+          </div>
+          <div class="trust-item">
+            <i class="ph ph-buildings"></i>
+            <span>متخصصون في قطاع الأعمال</span>
+            <small>B2B Solutions</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICES ════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:4rem">
+        <p class="section-label">رحلة نمو أعمالك تبدأ من هنا</p>
+        <h2 class="section-title">خدمات مصممة <span class="text-gradient">لقيادة السوق</span></h2>
+        <p class="section-desc">ندرك في إي تي واي أن المستخدم السعودي يبحث عن الجودة والموثوقية، لذلك نقدم خدماتنا بتفصيل وعناية تامة لتلبية أعلى المعايير التجارية.</p>
+      </div>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ══ PORTFOLIO ═══════════════════════════════════════════ -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-header reveal" style="display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem">
+        <div>
+          <p class="section-label">المعرض الرقمي</p>
+          <h2 class="section-title">إبداع يعزز <span class="text-gradient">قيمة علامتك</span></h2>
+        </div>
+        <div class="filter-bar" style="align-self:flex-start">
+          <button class="filter-btn active" data-filter="all">الكل</button>
+          <button class="filter-btn" data-filter="profile">بروفايل الشركات</button>
+          <button class="filter-btn" data-filter="web">مواقع ومتاجر</button>
+          <button class="filter-btn" data-filter="menu">قوائم المطاعم</button>
+        </div>
+      </div>
+      <div class="portfolio-grid" id="portfolioContainer"></div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ═══════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-card glass reveal">
+        <div class="about-glow-1"></div>
+        <div class="about-glow-2"></div>
+        <div class="about-grid">
+          <div>
+            <h2 class="section-title" style="max-width:none">الاحترافية ليست خياراً، بل <span class="text-gradient">أساس عملنا</span></h2>
+            <div class="about-prose" style="margin-bottom:2rem">
+              <p>تأسست وكالة <strong>إي تي واي</strong> لسد الفجوة في السوق السعودي بين التصميم الفني العشوائي والعمل التجاري الاستراتيجي. نحن لا نقدم مجرد "تصاميم حلوة"، بل نقدم أدوات بيعية وتسويقية ترفع من قيمة شركتك.</p>
+              <p>سواء كنت مؤسسة تسعى لدخول مناقصات حكومية عبر <strong>بروفايل احترافي</strong>، أو علامة تجارية تبحث عن <strong>موقع إلكتروني</strong> يضاعف مبيعاتها، فنحن الفريق الذي يفهم متطلباتك ويترجمها لواقع ملموس.</p>
+            </div>
+            <ul class="checklist">
+              <li>
+                <div class="check-icon" style="background:rgba(34,197,94,.12);color:var(--green-500)"><i class="ph ph-check-circle"></i></div>
+                صياغة نصوص تسويقية (Copywriting) باللغتين.
+              </li>
+              <li>
+                <div class="check-icon" style="background:rgba(139,92,246,.12);color:var(--brand-500)"><i class="ph ph-users"></i></div>
+                دراسة كاملة لشخصية العلامة التجارية.
+              </li>
+              <li>
+                <div class="check-icon" style="background:rgba(59,130,246,.12);color:var(--blue-500)"><i class="ph ph-headset"></i></div>
+                تواصل مستمر ومرونة في التعديلات.
+              </li>
+            </ul>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-num text-gradient">+150</div>
+              <div class="stat-label">مشروع منجز بنجاح</div>
+              <div class="stat-sub">بروفايلات ومواقع وهويات لشركات رائدة</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num text-gradient-warm">98%</div>
+              <div class="stat-label">نسبة رضا العملاء</div>
+              <div class="stat-sub">ثقة متكررة وتوصيات مستمرة</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num text-gradient">+10</div>
+              <div class="stat-label">سنوات خبرة مجتمعة</div>
+              <div class="stat-sub">فريق متمرس في التصميم الاستراتيجي</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num text-gradient-warm">24/7</div>
+              <div class="stat-label">دعم وتواصل مستمر</div>
+              <div class="stat-sub">نرد خلال دقائق على استفساراتك</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-glow"></div>
+    <div class="container" style="position:relative;z-index:1;text-align:center">
+      <h2 class="section-title reveal" style="color:#fff">ارتقِ بأعمالك الآن</h2>
+      <p class="reveal reveal-delay-1" style="font-size:1.25rem;color:#d1d5db;margin-bottom:3rem;max-width:36rem;margin-left:auto;margin-right:auto">
+        حدد الخدمات التي تهمك أدناه، وسنقوم بالتواصل معك فوراً عبر واتساب لتقديم استشارة مجانية وعرض سعر مبدئي يناسب تطلعاتك.
+      </p>
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <h4 style="font-size:1.125rem;font-weight:700;margin-bottom:1.5rem;color:var(--brand-400)">اختر الخدمات المطلوبة:</h4>
+        <div class="services-checks" id="contactServicesTags" style="margin-bottom:2rem"></div>
+        <div style="margin-bottom:2rem;text-align:right">
+          <label style="display:block;color:#9ca3af;margin-bottom:.5rem;font-weight:500" for="projectNotes">تفاصيل إضافية (اختياري)</label>
+          <textarea id="projectNotes" class="contact-textarea" rows="4"
+            placeholder="حدثنا عن طبيعة نشاطك، وما هي أهدافك الرئيسية من هذا المشروع؟..."></textarea>
+        </div>
+        <button onclick="sendWhatsApp()" class="btn-whatsapp">
+          <i class="ph ph-whatsapp-logo" style="font-size:1.875rem"></i>
+          تواصل معنا عبر واتساب الآن
+        </button>
+        <p style="text-align:center;color:#6b7280;font-size:.875rem;margin-top:1rem">نرد عادة خلال دقائق معدودة خلال أوقات العمل الرسمية.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-top-line"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm"
+                 alt="شعار إي تي واي" loading="lazy" width="48" height="48">
+            <span>إي تي واي</span>
+          </div>
+          <p class="footer-desc">شريكك الموثوق في المملكة العربية السعودية لبناء الهويات التجارية، بروفايلات الشركات، وتطوير المنصات الرقمية المتكاملة.</p>
+          <div style="margin-top:1.5rem">
+            <span style="font-size:.875rem;background:rgba(124,58,237,.2);padding:.5rem 1rem;border-radius:9999px;border:1px solid rgba(124,58,237,.2)">رؤية 2030</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#services"><i class="ph ph-caret-left" style="color:var(--brand-400)"></i>الخدمات والتفاصيل</a></li>
+            <li><a href="#portfolio"><i class="ph ph-caret-left" style="color:var(--brand-400)"></i>معرض الأعمال</a></li>
+            <li><a href="#about"><i class="ph ph-caret-left" style="color:var(--brand-400)"></i>من نحن</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>تواصل معنا</h4>
+          <div class="footer-cert">
+            <div class="footer-cert-inner">
+              <img src="https://www.saudibusiness.gov.sa/images/whiteSbcLogo.png" alt="المركز السعودي للأعمال" loading="lazy" width="24" height="24">
+              <span>المركز السعودي للأعمال</span>
+            </div>
+            <small>رقم التوثيق: 0000162606</small>
+          </div>
+          <ul class="footer-contacts">
+            <li><i class="ph ph-envelope-simple" style="color:var(--brand-400);font-size:1.25rem"></i> info@etydm.com</li>
+            <li dir="ltr" style="direction:ltr"><i class="ph ph-phone" style="color:var(--brand-400);font-size:1.25rem"></i> 059 646 6303</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 وكالة إي تي واي للحلول الرقمية. جميع الحقوق محفوظة.</p>
+        <span>صمم وطوّر بشغف في السعودية 🇸🇦</span>
+      </div>
+    </div>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="btn-top" aria-label="العودة للأعلى">
+      <i class="ph ph-arrow-up"></i>
+    </button>
+  </footer>
+
+  <!-- ══ SERVICE MODAL ═══════════════════════════════════════ -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-backdrop" onclick="closeModal('serviceModal')"></div>
+    <div class="modal-box" id="serviceModalInner" style="max-width:48rem">
+      <button onclick="closeModal('serviceModal')" class="modal-close" aria-label="إغلاق">✕</button>
+      <div id="serviceModalContent"></div>
+    </div>
+  </div>
+
+  <!-- ══ PORTFOLIO MODAL ════════════════════════════════════ -->
+  <div id="portfolioModal" class="modal">
+    <div class="modal-backdrop" onclick="closeModal('portfolioModal')"></div>
+    <div class="modal-box" style="max-width:72rem;flex-direction:column;display:flex">
+      <button onclick="closeModal('portfolioModal')" class="modal-close-abs" aria-label="إغلاق">✕</button>
+      <div style="display:flex;flex-direction:column;height:100%" id="portfolioModalInner">
+        <div id="modalMedia" style="flex:1;min-height:280px;background:var(--dark-900);display:flex;align-items:center;justify-content:center;position:relative"></div>
+        <div class="modal-info">
+          <div>
+            <span id="modalCat" style="color:var(--brand-500);font-size:.875rem;font-weight:700;background:rgba(139,92,246,.1);padding:.375rem .75rem;border-radius:9999px;display:inline-block;margin-bottom:1rem"></span>
+            <h3 id="modalTitle" style="font-size:1.875rem;font-weight:900;margin-bottom:1rem;line-height:1.2"></h3>
+            <p id="modalDesc" style="color:var(--gray-600);line-height:1.75;margin-bottom:1.5rem;font-size:1.05rem"></p>
+            <div style="margin-bottom:2rem">
+              <h4 style="font-weight:700;font-size:.875rem;color:var(--gray-400);margin-bottom:.75rem">الخدمات المنفذة في هذا المشروع</h4>
+              <div id="modalTags" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
+            </div>
+          </div>
+          <div>
+            <a id="modalActionBtn" href="#" target="_blank" rel="noopener noreferrer"
+               style="display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;padding:1.25rem;border-radius:1rem;font-weight:700;font-size:1.125rem;transition:all .2s;color:#fff">
+              <span id="modalActionText">استعراض العمل</span>
+              <i class="ph ph-arrow-square-out" style="font-size:1.5rem"></i>
             </a>
-            <div class="hidden md:flex items-center gap-6 font-medium text-sm">
-                <a href="#services" class="hover:text-brand-500">خدماتنا</a>
-                <a href="#portfolio" class="hover:text-brand-500">معرض الأعمال</a>
-                <a href="#about" class="hover:text-brand-500">عن الوكالة</a>
-            </div>
-            <div class="flex items-center gap-2">
-                <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10" aria-label="تبديل السمة">
-                    <i class="ph ph-moon text-lg dark:hidden"></i>
-                    <i class="ph ph-sun text-lg hidden dark:block"></i>
-                </button>
-                <a href="#contact" class="hidden md:block bg-brand-600 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-brand-500">
-                    ابدأ مشروعك
-                </a>
-                <button class="md:hidden p-2" id="mobileMenuBtn" aria-label="القائمة">
-                    <i class="ph ph-list text-xl"></i>
-                </button>
-            </div>
+          </div>
         </div>
-        <div id="mobileMenu" class="absolute top-full left-0 right-0 bg-white dark:bg-dark-800 shadow-xl border-b border-gray-200 dark:border-white/10 hidden px-4 py-4 space-y-3">
-            <a href="#services" class="block py-2 font-bold mobile-link">خدماتنا</a>
-            <a href="#portfolio" class="block py-2 font-bold mobile-link">أعمالنا</a>
-            <a href="#about" class="block py-2 font-bold mobile-link">من نحن</a>
-            <a href="#contact" class="block bg-brand-600 text-white text-center py-3 rounded-xl font-bold mobile-link">اطلب خدمة</a>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="pt-16">
-        
-    <!-- Hero -->
-    <section id="home" class="min-h-[90vh] flex items-center justify-center py-12 px-4">
-        <div class="text-center max-w-4xl mx-auto">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-bold mb-6 text-brand-600 dark:text-brand-400">
-                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                خبراء صياغة وتصميم بروفايلات الشركات
-            </div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-4 reveal">
-                واجهتك الرقمية<br><span class="text-gradient">بأعلى معايير الاحترافية</span>
-            </h1>
-            <p class="text-base md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto reveal">
-                نحن <strong>إي تي واي</strong>، شريكك الإستراتيجي لبناء هوية بصرية قوية، تصميم بروفايلات تضمن لك الفوز بالمناقصات، وبرمجة منصات رقمية تعزز مبيعاتك وتدعم نموك في السوق السعودي.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-3 reveal">
-                <a href="#portfolio" class="bg-brand-600 text-white px-6 py-3 rounded-full font-bold hover:bg-brand-500">
-                    تصفح أعمالنا <i class="ph ph-arrow-left inline-block mr-1"></i>
-                </a>
-                <a href="#services" class="glass px-6 py-3 rounded-full font-bold hover:bg-white/10">
-                    استكشف الخدمات
-                </a>
-            </div>
-            <div class="mt-12 pt-8 border-t border-gray-200/30 dark:border-white/10 flex flex-wrap justify-center gap-6 text-sm reveal">
-                <div class="flex flex-col items-center gap-1">
-                    <i class="ph ph-certificate text-2xl text-brand-500"></i>
-                    <span class="font-bold">موثق بالمركز السعودي للأعمال</span>
-                    <span class="text-xs text-gray-500">0000162606</span>
-                </div>
-                <div class="flex flex-col items-center gap-1">
-                    <i class="ph ph-file-text text-2xl text-brand-500"></i>
-                    <span class="font-bold">وثيقة العمل الحر</span>
-                    <span class="text-xs text-gray-500">FL-63005888</span>
-                </div>
-                <div class="flex flex-col items-center gap-1">
-                    <i class="ph ph-buildings text-2xl text-brand-500"></i>
-                    <span class="font-bold">قطاع الأعمال</span>
-                    <span class="text-xs text-gray-500">B2B Solutions</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12 reveal">
-                <h2 class="text-sm font-bold text-brand-500 uppercase mb-2">رحلة نمو أعمالك تبدأ من هنا</h2>
-                <h3 class="text-3xl md:text-4xl font-black mb-4">خدمات مصممة <span class="text-gradient">لقيادة السوق</span></h3>
-                <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">ندرك في إي تي واي أن المستخدم السعودي يبحث عن الجودة والموثوقية، لذلك نقدم خدماتنا بتفصيل وعناية تامة لتلبية أعلى المعايير التجارية.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5" id="servicesGrid"></div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-16 px-4 bg-gray-50/50 dark:bg-dark-800/30">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 reveal gap-4">
-                <div>
-                    <h2 class="text-sm font-bold text-brand-500 uppercase mb-2">المعرض الرقمي</h2>
-                    <h3 class="text-3xl md:text-4xl font-black">إبداع يعزز <span class="text-gradient">قيمة علامتك</span></h3>
-                </div>
-                <div class="flex flex-wrap gap-1.5 bg-white/80 dark:bg-dark-700/50 p-1 rounded-full">
-                    <button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold" data-filter="all">الكل</button>
-                    <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold" data-filter="profile">بروفايلات</button>
-                    <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold" data-filter="web">مواقع</button>
-                    <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold" data-filter="menu">منيو</button>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="portfolioContainer"></div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-16 px-4">
-        <div class="max-w-5xl mx-auto glass rounded-3xl p-6 md:p-10 reveal">
-            <h2 class="text-2xl md:text-4xl font-black mb-6">الاحترافية ليست خياراً، بل <span class="text-gradient">أساس عملنا</span></h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        تأسست وكالة <strong>إي تي واي</strong> لسد الفجوة بين التصميم العشوائي والعمل التجاري الاستراتيجي.
-                    </p>
-                    <ul class="space-y-3 font-medium text-sm">
-                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> صياغة نصوص تسويقية (Copywriting) باللغتين.</li>
-                        <li class="flex items-center gap-2"><span class="text-brand-500">✓</span> دراسة كاملة لشخصية العلامة التجارية.</li>
-                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> تواصل مستمر ومرونة في التعديلات.</li>
-                    </ul>
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="glass-strong rounded-xl p-4 text-center"><div class="text-3xl font-black text-gradient">+150</div><div class="text-xs font-bold mt-1">مشروع منجز</div></div>
-                    <div class="glass-strong rounded-xl p-4 text-center"><div class="text-3xl font-black text-gradient">98%</div><div class="text-xs font-bold mt-1">رضا العملاء</div></div>
-                    <div class="glass-strong rounded-xl p-4 text-center"><div class="text-3xl font-black text-gradient">+10</div><div class="text-xs font-bold mt-1">سنوات خبرة</div></div>
-                    <div class="glass-strong rounded-xl p-4 text-center"><div class="text-3xl font-black text-gradient">24/7</div><div class="text-xs font-bold mt-1">دعم مستمر</div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-16 px-4 bg-dark-900 text-white">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 reveal">ارتقِ بأعمالك الآن</h2>
-            <p class="text-gray-300 mb-10 reveal">حدد الخدمات التي تهمك أدناه، وسنتواصل معك فوراً عبر واتساب.</p>
-            <div class="glass rounded-2xl p-6 text-right reveal">
-                <h4 class="text-lg font-bold mb-4 text-brand-400">اختر الخدمات المطلوبة:</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6" id="contactServicesTags"></div>
-                <textarea id="projectNotes" rows="3" placeholder="حدثنا عن نشاطك وأهدافك..." class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-brand-500 focus:outline-none placeholder-gray-500 mb-6 resize-y"></textarea>
-                <button onclick="sendWhatsApp()" class="w-full bg-green-500 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-green-600">
-                    <i class="ph ph-whatsapp-logo text-2xl"></i> تواصل معنا عبر واتساب
-                </button>
-            </div>
-        </div>
-    </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark-950 text-white py-12 px-4 border-t-2 border-brand-600/50">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-            <div>
-                <div class="flex items-center gap-2 mb-4">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMlMGIcHu0CxKNYY9F64IsUOtvFbj6cwTzziWuaiqm_mrue8WXgCDZkb43ciu6uvUpHTsno4sQrNbUrIVw8Vml9DGvtL17to7LRQsDb7zgcjuFgTvtWkpzrxs2xKrtYbFqYJcNCzQIzrScCIrHvAt_UWg=w158-h126-s-no-gm" alt="ETY" width="40" height="40" class="rounded bg-white p-0.5" loading="lazy">
-                    <span class="font-black text-xl">إي تي واي</span>
-                </div>
-                <p class="text-gray-400 text-sm">شريكك الموثوق في السعودية لبناء الهويات التجارية والمنصات الرقمية.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-3 text-brand-400">روابط سريعة</h4>
-                <ul class="space-y-2 text-gray-400 text-sm">
-                    <li><a href="#services" class="hover:text-white">الخدمات</a></li>
-                    <li><a href="#portfolio" class="hover:text-white">معرض الأعمال</a></li>
-                    <li><a href="#about" class="hover:text-white">من نحن</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-3 text-brand-400">تواصل معنا</h4>
-                <div class="text-gray-400 text-sm space-y-2">
-                    <p>📧 info@etydm.com</p>
-                    <p dir="ltr">📞 059 646 6303</p>
-                    <div class="bg-dark-800 p-2 rounded-lg text-xs mt-2">
-                        <span class="font-bold">المركز السعودي للأعمال:</span> 0000162606
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center text-gray-500 text-xs mt-8 pt-6 border-t border-white/10">
-            © 2024 وكالة إي تي واي للحلول الرقمية. صمم بشغف في السعودية 🇸🇦
-        </div>
-    </footer>
-
-    <!-- Service Modal -->
-    <div id="serviceModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/80" onclick="closeModal('serviceModal')"></div>
-        <div class="modal-content glass bg-white dark:bg-dark-800 w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 md:p-10 relative z-10" id="serviceModalInner">
-            <button onclick="closeModal('serviceModal')" class="absolute top-3 right-3 text-xl text-gray-500 hover:text-red-500 bg-gray-100 dark:bg-dark-700 w-8 h-8 rounded-full" aria-label="إغلاق">✕</button>
-            <div id="serviceModalContent" class="text-right"></div>
-        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Portfolio Modal -->
-    <div id="portfolioModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/90" onclick="closeModal('portfolioModal')"></div>
-        <div class="modal-content bg-white dark:bg-dark-800 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl relative z-10 flex flex-col lg:flex-row">
-            <button onclick="closeModal('portfolioModal')" class="absolute top-3 right-3 text-white bg-black/50 w-8 h-8 rounded-full z-20 flex items-center justify-center" aria-label="إغلاق">✕</button>
-            <div id="modalMedia" class="lg:w-2/3 bg-dark-900 min-h-[250px]"></div>
-            <div class="lg:w-1/3 p-6">
-                <span id="modalCat" class="text-brand-500 text-xs font-bold bg-brand-500/10 px-2 py-1 rounded-full mb-3 inline-block"></span>
-                <h3 id="modalTitle" class="text-2xl font-black mb-3"></h3>
-                <p id="modalDesc" class="text-gray-600 dark:text-gray-300 text-sm mb-4"></p>
-                <div class="mb-4">
-                    <h4 class="text-xs font-bold text-gray-400 mb-2">الخدمات المنفذة</h4>
-                    <div id="modalTags" class="flex flex-wrap gap-1.5"></div>
-                </div>
-                <a id="modalActionBtn" href="#" target="_blank" rel="noopener" class="w-full text-white text-center py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2">
-                    <span id="modalActionText"></span>
-                    <i class="ph ph-arrow-square-out"></i>
-                </a>
-            </div>
+  <!-- ══ FLOATING WHATSAPP ════════════════════════════════════ -->
+  <a href="https://wa.me/966596466303" target="_blank" rel="noopener noreferrer"
+     class="float-wa" aria-label="تواصل واتساب">
+    <i class="ph ph-whatsapp-logo"></i>
+  </a>
+
+  <!--
+  ═══════════════════════════════════════════════════════════════
+    FIX 10: JavaScript — كل الكود في نهاية الـ body
+    + استخدام requestIdleCallback للـ non-critical rendering
+    + تجنب layout thrashing
+  ═══════════════════════════════════════════════════════════════
+  -->
+  <script>
+  // ── Data ────────────────────────────────────────────────────
+  const servicesData=[
+    {id:'profile',icon:'ph-book-open',title:'بروفايل الشركات والمؤسسات',
+     shortDesc:'صياغة وتصميم ملفات تعريفية (Company Profiles) احترافية تعكس حجم مؤسستك، وتزيد من فرص حصولك على المناقصات وعقود الأعمال (B2B) بأسلوب يثق به السوق السعودي.',
+     featured:true,
+     tags:['B2B Solutions','كتابة محتوى تسويقي','ملف تفاعلي PDF','تصميم للمناقصات'],
+     iconStyle:'background:rgba(255,255,255,.2);color:#fff',
+     seoDetails:`<p>في عالم الأعمال السعودي المتسارع وتوجهات رؤية 2030، أصبح <strong>البروفايل التعريفي للشركة (Company Profile)</strong> هو الانطباع الأول الذي يحدد ما إذا كانت الجهات الحكومية أو الشركات الكبرى ستثق بك كشريك استراتيجي أم لا.</p><p>نحن في إي تي واي لا نقوم برص الكلمات وتنسيق الألوان فحسب، بل نقدم <strong>دراسة متكاملة وتصميماً استراتيجياً</strong> لبروفايل مؤسستك يبرز نقاط قوتك، إنجازاتك السابقة، وطاقتك التشغيلية بأسلوب تسويقي (Copywriting) مقنع للغاية.</p><p><strong>ماذا يشمل عملنا في هذه الخدمة؟</strong></p><ul><li>كتابة وصياغة المحتوى من الصفر (الرؤية، الرسالة، القيم، الهيكل التنظيمي، المشاريع).</li><li>تصميم إنفوجرافيك احترافي لعرض الأرقام والإحصائيات وتسهيل قراءتها.</li><li>تسليم نسخة تفاعلية (Interactive PDF) مخصصة للإرسال عبر الواتساب والإيميل بحجم خفيف وجودة عالية.</li><li>تسليم نسخة جاهزة للطباعة (Print-Ready) بأعلى دقة لتقديمها في الاجتماعات والمناقصات.</li></ul><p>استثمر في واجهتك، فبروفايل واحد احترافي قد يكون السبب في فوزك بعقد بملايين الريالات.</p>`},
+    {id:'web',icon:'ph-browser',title:'تصميم وبرمجة المواقع والمتاجر',
+     shortDesc:'مواقع تعريفية ومتاجر إلكترونية (UI/UX) سريعة وتفاعلية، مصممة لتحويل الزوار إلى عملاء حقيقيين وبناء تواجد رقمي قوي.',
+     iconStyle:'background:rgba(139,92,246,.1);color:var(--brand-500)',
+     tags:['مواقع تعريفية','متاجر إلكترونية','واجهات UI/UX'],
+     seoDetails:`<p>التواجد الرقمي لم يعد رفاهية، بل هو أساس نجاح أي علامة تجارية. موقعك الإلكتروني هو <strong>مندوب مبيعاتك الذي يعمل على مدار 24 ساعة</strong> ولا يتوقف أبداً.</p><p>نقوم بتصميم وبرمجة مواقع مخصصة توفر <strong>تجربة مستخدم (UX) سلسة واستثنائية</strong>. نركز بشكل كبير على سرعة تحميل الصفحات والتوافق التام مع شاشات الجوال، حيث أن أكثر من 80% من المستخدمين في السعودية يتصفحون عبر هواتفهم.</p><p>بالنسبة للمتاجر الإلكترونية، نقوم بتجهيز متجرك بالكامل، وربط بوابات الدفع المحلية الآمنة (مدى، أبل باي، فيزا)، وشركات الشحن، لتكون مستعداً لاستقبال الطلبات من اليوم الأول.</p>`},
+    {id:'seo',icon:'ph-trend-up',title:'تحسين محركات البحث (SEO)',
+     shortDesc:'تصدر النتائج الأولى في بحث جوجل واجذب عملاء يبحثون عن خدماتك بالفعل. خدمة تضمن زيارات مستدامة بدون تكاليف إعلانات باهظة.',
+     iconStyle:'background:rgba(34,197,94,.1);color:var(--green-500)',
+     tags:['تصدر جوجل','زيارات عضوية','تحليل كلمات مفتاحية'],
+     seoDetails:`<p>هل تعلم أن الآلاف من العملاء المحتملين في مدينتك يبحثون في جوجل يومياً عن خدمات تشبه ما تقدمه؟ إذا لم يكن موقعك في الصفحة الأولى، فأنت تترك هؤلاء العملاء لمنافسيك.</p><p>خدمة <strong>تحسين محركات البحث (SEO)</strong> هي استثمار طويل الأمد. نحن نقوم بتهيئة موقعك من الداخل (On-page) ليكون سريعاً ومتوافقاً مع خوارزميات جوجل، ومن الخارج (Off-page) لبناء الموثوقية.</p><p>ندرس الكلمات المفتاحية الأكثر بحثاً في السوق السعودي المتعلقة بمجالك، ونستهدفها بذكاء لنضمن لك تدفقاً مستمراً من الزيارات (Organic Traffic) لعملاء جاهزين للشراء.</p>`},
+    {id:'ai',icon:'ph-robot',title:'وكلاء الذكاء الاصطناعي والأتمتة',
+     shortDesc:'ارتقِ بخدمة عملائك مع روبوتات محادثة ذكية (AI Chatbots) تفهم نشاطك وترد على الاستفسارات بذكاء بشري 24/7 عبر واتساب والموقع الإلكتروني.',
+     iconStyle:'background:rgba(59,130,246,.1);color:var(--blue-500)',
+     tags:['Chatbots','أتمتة المبيعات','خدمة عملاء 24/7'],
+     seoDetails:`<p>في عصر السرعة، العميل لا يحب الانتظار. تأخرك في الرد قد يعني خسارة العميل لصالح منافس آخر. هنا يأتي دور <strong>وكلاء الذكاء الاصطناعي</strong>.</p><p>نقوم ببناء وتدريب روبوتات محادثة متطورة جداً تعتمد على تقنيات الذكاء الاصطناعي الحديثة، حيث يتم تغذيتها بكافة معلومات منتجاتك وخدماتك. هذا الروبوت لا يقدم إجابات جاهزة وغبية، بل يفهم سياق الحديث، ويجيب بطريقة تشبه البشر، ويمكنه حتى إتمام عمليات البيع وتوجيه العميل لروابط الدفع.</p><p>نوفر دمجاً كاملاً مع تطبيق <strong>واتساب</strong> وموقعك الإلكتروني، مما يقلل من التكاليف التشغيلية لخدمة العملاء ويزيد من رضاهم ومعدلات التحويل المباشر.</p>`},
+    {id:'identity',icon:'ph-bezier-curve',title:'تصميم الهوية البصرية',
+     shortDesc:'ابتكار شعارات وأدلة هوية بصرية (Brand Guidelines) متكاملة تعبر عن شخصية مشروعك وترسخ علامتك في ذهن العميل.',
+     iconStyle:'background:rgba(168,85,247,.1);color:#a855f7',
+     tags:['شعارات احترافية','دليل هوية','مطبوعات'],
+     seoDetails:`<p>هويتك البصرية هي الوجه الصامت لعلامتك التجارية، وهي أول ما يراه العميل قبل أن يتعامل معك. التصميم الضعيف يقلل من قيمة منتجك، بينما التصميم الاحترافي يبرر الأسعار المرتفعة.</p><p>نبدأ مع العميل بجلسة عصف ذهني لفهم شخصية المشروع، الفئة المستهدفة، والقيمة المضافة. بناءً على ذلك، نبتكر <strong>شعاراً (Logo)</strong> فريداً ذا دلالة ومعنى.</p><p>لا نتوقف عند الشعار، بل نقدم <strong>دليلاً إرشادياً كاملاً (Brand Guidelines)</strong> يحدد الألوان، الخطوط الرسمية، وتطبيقات الهوية على المطبوعات، وسائل التواصل، والتغليف، لضمان ظهورك بشكل موحد واحترافي دائماً.</p>`},
+    {id:'marketing',icon:'ph-megaphone',title:'إدارة التسويق والحملات الإعلانية',
+     shortDesc:'نوصل صوتك لجمهورك المستهدف بدقة عبر إدارة حسابات السوشيال ميديا وإطلاق حملات إعلانية ممولة تحقق أعلى عائد (ROI).',
+     iconStyle:'background:rgba(236,72,153,.1);color:#ec4899',
+     tags:['إعلانات ممولة','صناعة محتوى','إدارة حسابات'],
+     seoDetails:`<p>التسويق الناجح ليس مجرد نشر صور على انستقرام، بل هو استراتيجية متكاملة للوصول إلى العميل الصحيح في الوقت المناسب وبأقل تكلفة.</p><p>نقدم خدمة <strong>إدارة حسابات التواصل الاجتماعي وصناعة المحتوى</strong> التفاعلي الذي يبني مجتمعاً حول علامتك التجارية. كما ندير ميزانيتك بحرص في <strong>الحملات الإعلانية الممولة</strong> على منصات مثل (سناب شات، تيك توك، انستقرام، وجوجل).</p><p>نعتمد على تحليل البيانات والاستهداف الدقيق (Retargeting) لنضمن لك تحقيق <strong>أعلى عائد على الاستثمار (ROI)</strong> وتحويل المشاهدات إلى مبيعات حقيقية وملموسة.</p>`},
+    {id:'edu',icon:'ph-student',title:'الخدمات للمنشآت التعليمية',
+     shortDesc:'تصميم خطط تشغيلية مدرسية وملفات إنجاز باحترافية عالية، تتوافق تماماً مع متطلبات هيئة تقويم التعليم والتدريب لإبراز تميز منشأتك.',
+     iconStyle:'background:rgba(234,179,8,.1);color:#eab308',
+     tags:['خطة تشغيلية','ملف إنجاز','تقارير أداء'],
+     seoDetails:`<p>إدارة المدارس والمؤسسات التعليمية تتطلب توثيقاً دقيقاً ومظهراً احترافياً يعكس جودة التعليم المقدم. نحن نقدم دعماً متكاملاً للمنشآت التعليمية.</p><p>نصمم ونصيغ <strong>الخطط التشغيلية</strong> للمدارس، و<strong>ملفات الإنجاز</strong> الخاصة بالمعلمين والإدارة، بالإضافة إلى تقارير الأداء الدورية. نضمن أن يكون المحتوى والتصميم متوافقاً مع المعايير الوطنية و<strong>هيئة تقويم التعليم والتدريب</strong>.</p><p>نجعل من ملفات منشأتك واجهة مشرّفة أثناء زيارات المشرفين ولجان التقييم.</p>`},
+    {id:'menu',icon:'ph-hamburger',title:'تصميم قوائم الطعام (المنيو)',
+     shortDesc:'قوائم طعام رقمية (QR) وورقية مصممة نفسياً لفتح الشهية وتسهيل اتخاذ قرار الشراء لعملائك في المطاعم والمقاهي.',
+     iconStyle:'background:rgba(249,115,22,.1);color:#f97316',
+     tags:['منيو إلكتروني QR','منيو مطبوع','لوحة تحكم'],
+     seoDetails:`<p>المنيو ليس مجرد قائمة أسعار، بل هو <strong>أهم أداة بيعية في مطعمك أو المقهى الخاص بك</strong>. التصميم الذكي للمنيو يوجه عين العميل نحو الأطباق الأكثر ربحية ويزيد من متوسط الفاتورة.</p><p>نصمم قوائم طعام جذابة بصرياً. نوفر حلول <strong>المنيو الإلكتروني (QR Code)</strong> الذي يتيح للعميل التصفح من هاتفه بسهولة، مع تسليمك <strong>لوحة تحكم خاصة</strong> لتغيير الأسعار وإضافة أطباق جديدة أو إخفاء الأطباق غير المتوفرة بضغطة زر دون الحاجة للرجوع إلينا.</p><p>كما نوفر تصاميم فخمة للقوائم الورقية والجلدية الجاهزة للطباعة للمطاعم الفاخرة (Fine Dining).</p>`}
+  ];
+
+  const portfolioItems=[
+    {id:1,title:'تقرير سنوي جمعية مسارات',category:'profile',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczNauihJ3rzmKIViFZZfKpNXpMOYSI2FlNi2w_Exg0fvKJdZccw-rzDtnhgM5XdKNiAmlEnLxGB8VqX0sPaYfvhTvalp0MxDNN_iLQ3__7uNjVJRjC9dH7--ILcPkyqyfL5hjfFGrV1MHErqiMopMnF8zQ=w1600-h900-s-no-gm?authuser=0',
+     pdfUrl:'https://drive.google.com/file/d/1pqzZyR0DFSz4jurKM8hZvyrdoX76uXho/view?usp=sharing',
+     desc:'تصميم وتحليل بيانات جمعية مسارات، شمل 20 صفحة مع إنفوجرافيك للإنجازات، يعكس الشفافية والاحترافية.',
+     tags:['تصميم تقرير سنوي','كتابة محتوى','إنفوجرافيك']},
+    {id:2,title:'تصميم بروفايل إعمار المساند للتشغيل والصيانة',category:'profile',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczODDifOmTd2U5ZiWhPmOCoZWPmBDFZ68x_a48FnUXr_tAo9OQABVD7KULrh9m4DUT6vcsUmObRSBUcYtML2w8wOQZhvEfdHkHBY_UY8e6WmrLnRi0YfjUGiQcMEIAX4CA5g3whidY6FE9aIMo7Ehi_7Hw=w1600-h900-s-no-gm?authuser=0',
+     pdfUrl:'https://drive.google.com/file/d/1yRSAzCj1ziBvea6frrr3yEzt0TiOVl14/view?usp=sharing',
+     desc:'تصميم عصري وجذاب لملف تعريفي لشركة إعمار المساند للتشغيل والصيانة، باللغتين العربية والإنجليزية، مجهز خصيصاً للمناقصات.',
+     tags:['ثنائي اللغة','تصميم عصري','B2B']},
+    {id:3,title:'بروفايل أوفى المتحدة للتطوير العقاري',category:'profile',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczMKO-sLBfjhr4QH6TpRmCOsyxeQg6WXhbtslJkcq2VhjEtugMY9kBpYj1vd4SkI2dcTKYKNPz_fu-N1zsFzRNmYaSUPLRNb8OawEqbdhD3cML7X1C84kMDsJkNjcTLUa6ViJwBH418Y7P2pc1XtenQY7g=w1600-h900-s-no-gm?authuser=0',
+     pdfUrl:'https://drive.google.com/file/d/1WtE4hxw5uCRaewI-PY0Lc09ftEYyg9yb/view?usp=sharing',
+     desc:'تصميم بروفايل فخم لشركة أوفى للتطوير العقاري، يبرز المشاريع الضخمة والقدرة التشغيلية للشركة لجذب المستثمرين.',
+     tags:['بروفايل تفاعلي','PDF ذكي','عقارات']},
+    {id:4,title:'بروفايل شركة مناسيب للمقاولات العامة',category:'profile',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczP6xIIBz_XslAKDgMSu3dL5bg7ZzKynCITweZ6EDjrGHyKVwgjjJRunrB0iQNXkAogz8r7VbKxRIMoCA1XaMjogiBErAyb2EQjWN7pU4QE1wtT0qhdI7XqmxDISEHYGKoHlrNFiAVLTcc0_YNS5_a7meg=w1600-h900-s-no-gm?authuser=0',
+     pdfUrl:'https://drive.google.com/file/d/1M_p9rMNkSb3HJnSjio0R5pt2dmGlElda/view?usp=sharing',
+     desc:'إخراج فني قوي لملف شركة مقاولات كبرى، يركز على المعدات والاعتمادات الرسمية.',
+     tags:['مقاولات','تصميم إبداعي']},
+    {id:5,title:'تصميم متجر سكون',category:'web',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczNvrripjkyLcL9ETLKpewyeSNlYcq6Yu4_Xq0Aj1oA5HAyRpwjVbvmw4fakmEI-GmSEPWkVk8MEbTb86oxR2S9EnlK95Deiz3Gsz-bnpL539E7P0YTPbRdkj7vjkGNqhFjXnvXjXQ-0Gizcm6ymRdyB9w=w1600-h900-s-no-gm?authuser=0',
+     websiteUrl:'https://skoon-care.com/',
+     desc:'تصميم متجر سكون الإلكتروني للعناية بالعين مع تحسين واجهة المستخدم وتجربة المستخدم (UI/UX) لرفع معدل التحويل.',
+     tags:['متجر إلكتروني','UI/UX','تجاوب سريع']},
+    {id:6,title:'متجر رواد الإعمار الكبرى',category:'web',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczNYJ5IEGNT-V1W9HcnMxx2UAo8ySBpDsOPCe7vEGCXi_24NA2JXRlrVDNsCGbfeihiBikGquaKpmIlzgFkQI7IszubHIcDL-v9DBWueoWSaTvO53fK7F1wJSM3HhPCUECGmFPs-yrOIMiA=w1600-h900-s-no-gm?authuser=0',
+     websiteUrl:'https://r-w-d.com/',
+     desc:'متجر متكامل لشركة رواد الإعمار الكبرى لمنتجات مواد البناء والمواد الصحية، مع تصنيف متقدم للمنتجات.',
+     tags:['مواد صحية','منصة تجارة إلكترونية']},
+    {id:7,title:'متجر عسل صبوح',category:'web',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczMFVYyTENVYl7Oh5FSB0Aud4J1GszEdpwMsSuYe0Imdt60l4i1i_hXv6gwe6z_fvxJ0F9achQs4vmbrN9VER_PsLddJqMd36HHpIBOsw0rT8BxTDYP27Pfq_zWXCXHmOggwm6X_q6uvBCMbBkB-bFEDjg=w1600-h900-s-no-gm?authuser=0',
+     websiteUrl:'https://sabo7.com/',
+     desc:'واجهة جذابة لمتجر عسل صبوح تركز على إبراز جودة المنتج الطبيعي وسهولة إتمام الطلب.',
+     tags:['منصة سلة','تجربة مستخدم']},
+    {id:8,title:'موقع شركة مرونة القوة',category:'web',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczNI_aLCI7Og6Z5ytngzUJ3kyzpsEXz9DfnXw3hZEAQbWehUTrTk8viwjbUkkJ_7roGG3luLAsMwyOxG_urSpUGgyqmR0U-a5ZWLXFlBSOajV3ztEe0B6JhkWpDQBqDZsGUOBHQ8-mXwKcwPU9Z1_Ty51A=w1600-h900-s-no-gm?authuser=0',
+     websiteUrl:'https://forceflexi.com/',
+     desc:'موقع تعريفي احترافي لشركة مرونة القوة للخدمات اللوجستية يوضح نطاق العمل وسرعة التوصيل.',
+     tags:['ووردبريس','موقع شركة تعريفية']},
+    {id:9,title:'منيو كوفي هاوس إلكتروني',category:'menu',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczNJEJKfX_lY4KAiUT01SskmTdOVRgUQ_7nT5KiXuIqhztQ_t4SwGv2iyXmWinfSvBJvLOSrnKD2Db5mPiQ_YcuBO-CSrATswGhWuXkueAogE73_mpuwx0uapfUoP4Bj72vK4yEBRMktYImSsoNS6vnScA=w1600-h900-s-no-gm?authuser=0',
+     websiteUrl:'https://kozicoffe.netlify.app/',
+     desc:'تصميم منيو إلكتروني (QR) سريع الاستجابة مع لوحة تحكم خاصة للعميل لتعديل الأسعار والصور فورياً.',
+     tags:['منيو إلكتروني','لوحة تحكم']},
+    {id:10,title:'منيو برقر لارنج',category:'menu',
+     image:'https://lh3.googleusercontent.com/pw/AP1GczMbchnu_khD5Vl3adbRmMWEypeycE_ktlbhO--YLYT7-Yns64Mnt5BqRjQ6fe7ObLbnL55WLmxkCC9Lz6BTogQMyPgTpUXuzFs4CN4won1ZdqT81k8w1wYBivgpVgZCr9x6WIBiLGAmYAJJUP8ztk7OsQ=w686-h314-s-no-gm?authuser=0',
+     pdfUrl:'https://drive.google.com/file/d/1rhfeoIhgj7lN525jv4IUIjNfT5yrxmU5/view?usp=sharing',
+     desc:'كتيب منيو لارنج برجر بتصميم كلاسيكي جذاب يفتح الشهية ومجهز للطباعة الفاخرة.',
+     tags:['منيو ورقي','PDF للطباعة']}
+  ];
+
+  // ── Tooltip ─────────────────────────────────────────────────
+  function showLoadingTooltip(event,msg='جارٍ التحميل...'){
+    const t=document.createElement('div');
+    t.className='loading-tooltip';
+    t.innerHTML=`<i class="ph ph-spinner animate-spin"></i>${msg}`;
+    document.body.appendChild(t);
+    const x=event?event.clientX:window.innerWidth/2;
+    const y=event?event.clientY:window.innerHeight/2;
+    t.style.cssText=`left:${x}px;top:${y-50}px;transform:translateX(-50%)`;
+    setTimeout(()=>t.parentNode&&t.remove(),1600);
+  }
+
+  // ── Render Services ──────────────────────────────────────────
+  function renderServices(){
+    const g=document.getElementById('servicesGrid');
+    if(!g)return;
+    const html=servicesData.map(s=>{
+      const feat=s.featured;
+      return `<div class="service-card${feat?' service-card-featured':''} reveal"
+        onclick="openServiceInfo('${s.id}',event)">
+        <div class="service-icon" style="${s.iconStyle}">
+          <i class="ph ${s.icon}"></i>
         </div>
-    </div>
+        <h3 style="font-size:${feat?'1.875rem':'1.375rem'}">${s.title}</h3>
+        <p style="${feat?'color:rgba(255,255,255,.85)':''}">${s.shortDesc}</p>
+        <div class="card-footer">
+          <div class="tags-row">
+            ${s.tags.map(t=>`<span class="tag${feat?' tag-light':''}">${t}</span>`).join('')}
+          </div>
+          <div class="card-btns">
+            <button class="btn-details" onclick="event.stopPropagation();openServiceInfo('${s.id}',event)">
+              <i class="ph ph-info"></i> تفاصيل
+            </button>
+            <button class="btn-order" onclick="event.stopPropagation();window.open('https://wa.me/966596466303?text='+encodeURIComponent('مرحباً، أريد طلب خدمة: ${s.title}'),'_blank')">
+              <i class="ph ph-whatsapp-logo"></i> طلب
+            </button>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+    g.innerHTML=html;
+  }
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/966596466303" target="_blank" rel="noopener" class="fixed bottom-5 left-5 z-50 bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-105 active:scale-95 transition-transform animate-float" aria-label="واتساب">
-        <i class="ph ph-whatsapp-logo"></i>
-    </a>
+  // ── Render Contact Form ──────────────────────────────────────
+  function renderContactForm(){
+    const c=document.getElementById('contactServicesTags');
+    if(!c)return;
+    c.innerHTML=servicesData.map(s=>`
+      <label class="service-check-label">
+        <input type="checkbox" class="service-cb" value="${s.title}">
+        <span>${s.title}</span>
+      </label>`).join('');
+  }
 
-    <script>
-        // ==================== DATA ====================
-        const servicesData = [
-            { id: 'profile', icon: 'ph-book-open', title: 'بروفايل الشركات والمؤسسات', shortDesc: 'ملفات تعريفية احترافية تزيد فرص المناقصات وعقود الأعمال (B2B) بأسلوب يثق به السوق السعودي.', cssSpan: 'md:col-span-2 lg:col-span-3 bg-gradient-to-br from-brand-900 to-brand-700 text-white', iconStyle: 'bg-white/20 text-white', tags: ['B2B','كتابة محتوى','PDF تفاعلي','مناقصات'], seoDetails: `<p><strong>البروفايل التعريفي</strong> هو انطباعك الأول. نقدم دراسة متكاملة وتصميماً استراتيجياً يبرز نقاط قوتك وإنجازاتك.</p><p><strong>ماذا يشمل؟</strong></p><ul><li>صياغة المحتوى من الصفر</li><li>إنفوجرافيك احترافي</li><li>نسخة تفاعلية PDF</li><li>نسخة جاهزة للطباعة</li></ul>` },
-            { id: 'web', icon: 'ph-browser', title: 'تصميم وبرمجة المواقع والمتاجر', shortDesc: 'مواقع ومتاجر سريعة وتفاعلية تحول الزوار إلى عملاء.', cssSpan: '', iconStyle: 'bg-brand-500/10 text-brand-500', tags: ['مواقع','متاجر','UI/UX'], seoDetails: `<p>موقعك هو <strong>مندوب مبيعاتك 24 ساعة</strong>. نركز على سرعة التحميل وتوافق الجوال.</p>` },
-            { id: 'seo', icon: 'ph-trend-up', title: 'تحسين محركات البحث (SEO)', shortDesc: 'تصدر نتائج جوجل واجذب عملاء بدون تكاليف إعلانات.', cssSpan: '', iconStyle: 'bg-green-500/10 text-green-500', tags: ['تصدر جوجل','زيارات عضوية'], seoDetails: `<p>خدمة <strong>SEO</strong> استثمار طويل الأمد. نهيئ موقعك داخلياً وخارجياً.</p>` },
-            { id: 'ai', icon: 'ph-robot', title: 'وكلاء الذكاء الاصطناعي', shortDesc: 'روبوتات محادثة ذكية 24/7 عبر واتساب وموقعك.', cssSpan: '', iconStyle: 'bg-blue-500/10 text-blue-500', tags: ['Chatbots','أتمتة','خدمة عملاء'], seoDetails: `<p>العميل لا يحب الانتظار. <strong>وكلاء الذكاء الاصطناعي</strong> يردون فوراً ويفهمون سياق الحديث.</p>` },
-            { id: 'identity', icon: 'ph-bezier-curve', title: 'الهوية البصرية', shortDesc: 'شعارات وأدلة هوية متكاملة تعبر عن شخصية مشروعك.', cssSpan: '', iconStyle: 'bg-purple-500/10 text-purple-500', tags: ['شعارات','دليل هوية'], seoDetails: `<p>نبتكر <strong>شعاراً فريداً</strong> و<strong>دليلاً إرشادياً</strong> كاملاً.</p>` },
-            { id: 'marketing', icon: 'ph-megaphone', title: 'إدارة التسويق والإعلانات', shortDesc: 'حملات إعلانية تحقق أعلى عائد على الاستثمار.', cssSpan: '', iconStyle: 'bg-pink-500/10 text-pink-500', tags: ['إعلانات','صناعة محتوى'], seoDetails: `<p>نعتمد على تحليل البيانات والاستهداف الدقيق.</p>` },
-            { id: 'edu', icon: 'ph-student', title: 'الخدمات التعليمية', shortDesc: 'خطط تشغيلية وملفات إنجاز للمنشآت التعليمية.', cssSpan: '', iconStyle: 'bg-yellow-500/10 text-yellow-500', tags: ['خطة تشغيلية','ملف إنجاز'], seoDetails: `<p>نضمن توافق الملفات مع <strong>هيئة تقويم التعليم</strong>.</p>` },
-            { id: 'menu', icon: 'ph-hamburger', title: 'قوائم الطعام (المنيو)', shortDesc: 'منيو رقمي QR وورقي يزيد من متوسط الفاتورة.', cssSpan: 'md:col-span-1 lg:col-span-2', iconStyle: 'bg-orange-500/10 text-orange-500', tags: ['منيو QR','لوحة تحكم','طباعة'], seoDetails: `<p>المنيو <strong>أهم أداة بيعية</strong>. نوفر لوحة تحكم لتعديل الأسعار فوراً.</p>` }
-        ];
+  // ── Render Portfolio ─────────────────────────────────────────
+  function renderPortfolio(filter='all'){
+    const c=document.getElementById('portfolioContainer');
+    if(!c)return;
+    const items=filter==='all'?portfolioItems:portfolioItems.filter(i=>i.category===filter);
+    const catMap={profile:'بروفايل ومطبوعات',web:'مواقع ومتاجر',menu:'منيو ومطاعم'};
+    c.innerHTML=items.map((item,idx)=>`
+      <div class="portfolio-card reveal" style="transition-delay:${idx*60}ms"
+        onclick='openPortfolioModal(${JSON.stringify(item).replace(/'/g,"&#39;")},event)'>
+        <div class="portfolio-thumb">
+          <img src="${item.image}" alt="${item.title}" loading="lazy" width="400" height="300">
+          <div class="thumb-overlay">
+            <span><i class="ph ph-eye"></i> استعراض</span>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="port-cat">${catMap[item.category]}</span>
+          <h3>${item.title}</h3>
+          <p class="line-clamp-2">${item.desc}</p>
+          <div class="port-tags">
+            ${item.tags.map(t=>`<span class="port-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+      </div>`).join('');
+    initScrollObserver();
+  }
 
-        const portfolioItems = [
-            { id:1, title:'تقرير سنوي جمعية مسارات', category:'profile', image:'https://lh3.googleusercontent.com/pw/AP1GczNauihJ3rzmKIViFZZfKpNXpMOYSI2FlNi2w_Exg0fvKJdZccw-rzDtnhgM5XdKNiAmlEnLxGB8VqX0sPaYfvhTvalp0MxDNN_iLQ3__7uNjVJRjC9dH7--ILcPkyqyfL5hjfFGrV1MHErqiMopMnF8zQ=w1600-h900-s-no-gm', pdfUrl:'https://drive.google.com/file/d/1pqzZyR0DFSz4jurKM8hZvyrdoX76uXho/view?usp=sharing', desc:'تصميم 20 صفحة مع إنفوجرافيك للإنجازات.', tags:['تقرير','إنفوجرافيك'] },
-            { id:2, title:'بروفايل إعمار المساند', category:'profile', image:'https://lh3.googleusercontent.com/pw/AP1GczODDifOmTd2U5ZiWhPmOCoZWPmBDFZ68x_a48FnUXr_tAo9OQABVD7KULrh9m4DUT6vcsUmObRSBUcYtML2w8wOQZhvEfdHkHBY_UY8e6WmrLnRi0YfjUGiQcMEIAX4CA5g3whidY6FE9aIMo7Ehi_7Hw=w1600-h900-s-no-gm', pdfUrl:'https://drive.google.com/file/d/1yRSAzCj1ziBvea6frrr3yEzt0TiOVl14/view?usp=sharing', desc:'ملف تعريفي باللغتين للمناقصات.', tags:['ثنائي اللغة','B2B'] },
-            { id:3, title:'بروفايل أوفى للتطوير العقاري', category:'profile', image:'https://lh3.googleusercontent.com/pw/AP1GczMKO-sLBfjhr4QH6TpRmCOsyxeQg6WXhbtslJkcq2VhjEtugMY9kBpYj1vd4SkI2dcTKYKNPz_fu-N1zsFzRNmYaSUPLRNb8OawEqbdhD3cML7X1C84kMDsJkNjcTLUa6ViJwBH418Y7P2pc1XtenQY7g=w1600-h900-s-no-gm', pdfUrl:'https://drive.google.com/file/d/1WtE4hxw5uCRaewI-PY0Lc09ftEYyg9yb/view?usp=sharing', desc:'بروفايل فخم يبرز المشاريع الضخمة.', tags:['تفاعلي','عقارات'] },
-            { id:4, title:'بروفايل مناسيب للمقاولات', category:'profile', image:'https://lh3.googleusercontent.com/pw/AP1GczP6xIIBz_XslAKDgMSu3dL5bg7ZzKynCITweZ6EDjrGHyKVwgjjJRunrB0iQNXkAogz8r7VbKxRIMoCA1XaMjogiBErAyb2EQjWN7pU4QE1wtT0qhdI7XqmxDISEHYGKoHlrNFiAVLTcc0_YNS5_a7meg=w1600-h900-s-no-gm', pdfUrl:'https://drive.google.com/file/d/1M_p9rMNkSb3HJnSjio0R5pt2dmGlElda/view?usp=sharing', desc:'إخراج فني لملف شركة مقاولات.', tags:['مقاولات'] },
-            { id:5, title:'متجر سكون', category:'web', image:'https://lh3.googleusercontent.com/pw/AP1GczNvrripjkyLcL9ETLKpewyeSNlYcq6Yu4_Xq0Aj1oA5HAyRpwjVbvmw4fakmEI-GmSEPWkVk8MEbTb86oxR2S9EnlK95Deiz3Gsz-bnpL539E7P0YTPbRdkj7vjkGNqhFjXnvXjXQ-0Gizcm6ymRdyB9w=w1600-h900-s-no-gm', websiteUrl:'https://skoon-care.com/', desc:'متجر إلكتروني للعناية بالعين.', tags:['متجر','UI/UX'] },
-            { id:6, title:'متجر رواد الإعمار', category:'web', image:'https://lh3.googleusercontent.com/pw/AP1GczNYJ5IEGNT-V1W9HcnMxx2UAo8ySBpDsOPCe7vEGCXi_24NA2JXRlrVDNsCGbfeihiBikGquaKpmIlzgFkQI7IszubHIcDL-v9DBWueoWSaTvO53fK7F1wJSM3HhPCUECGmFPUeRjjsUqWw-S-yrOIMiA=w1600-h900-s-no-gm', websiteUrl:'https://r-w-d.com/', desc:'متجر مواد بناء ومواد صحية.', tags:['متجر','B2B'] },
-            { id:7, title:'متجر عسل صبوح', category:'web', image:'https://lh3.googleusercontent.com/pw/AP1GczMFVYyTENVYl7Oh5FSB0Aud4J1GszEdpwMsSuYe0Imdt60l4i1i_hXv6gwe6z_fvxJ0F9achQs4vmbrN9VER_PsLddJqMd36HHpIBOsw0rT8BxTDYP27Pfq_zWXCXHmOggwm6X_q6uvBCMbBkB-bFEDjg=w1600-h900-s-no-gm', websiteUrl:'https://sabo7.com/', desc:'متجر عسل طبيعي بواجهة جذابة.', tags:['منصة سلة'] },
-            { id:8, title:'موقع شركة مرونة القوة', category:'web', image:'https://lh3.googleusercontent.com/pw/AP1GczNI_aLCI7Og6Z5ytngzUJ3kyzpsEXz9DfnXw3hZEAQbWehUTrTk8viwjbUkkJ_7roGG3luLAsMwyOxG_urSpUGgyqmR0U-a5ZWLXFlBSOajV3ztEe0B6JhkWpDQBqDZsGUOBHQ8-mXwKcwPU9Z1_Ty51A=w1600-h900-s-no-gm', websiteUrl:'https://forceflexi.com/', desc:'موقع تعريفي للخدمات اللوجستية.', tags:['موقع شركة'] },
-            { id:9, title:'منيو كوفي هاوس', category:'menu', image:'https://lh3.googleusercontent.com/pw/AP1GczNJEJKfX_lY4KAiUT01SskmTdOVRgUQ_7nT5KiXuIqhztQ_t4SwGv2iyXmWinfSvBJvLOSrnKD2Db5mPiQ_YcuBO-CSrATswGhWuXkueAogE73_mpuwx0uapfUoP4Bj72vK4yEBRMktYImSsoNS6vnScA=w1600-h900-s-no-gm', websiteUrl:'https://kozicoffe.netlify.app/', desc:'منيو QR مع لوحة تحكم.', tags:['QR','لوحة تحكم'] },
-            { id:10, title:'منيو برقر لارنج', category:'menu', image:'https://lh3.googleusercontent.com/pw/AP1GczMbchnu_khD5Vl3adbRmMWEypeycE_ktlbhO--YLYT7-Yns64Mnt5BqRjQ6fe7ObLbnL55WLmxkCC9Lz6BTogQMyPgTpUXuzFs4CN4won1ZdqT81k8w1wYBivgpVgZCr9x6WIBiLGAmYAJJUP8ztk7OsQ=w686-h314-s-no-gm', pdfUrl:'https://drive.google.com/file/d/1rhfeoIhgj7lN525jv4IUIjNfT5yrxmU5/view?usp=sharing', desc:'كتيب منيو كلاسيكي للطباعة.', tags:['ورقي','PDF'] }
-        ];
+  // ── Filter ───────────────────────────────────────────────────
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',e=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      e.currentTarget.classList.add('active');
+      renderPortfolio(e.currentTarget.dataset.filter);
+    });
+  });
 
-        // ==================== FUNCTIONS ====================
-        function renderServices() {
-            const c = document.getElementById('servicesGrid');
-            if (!c) return;
-            c.innerHTML = servicesData.map(s => `
-                <div class="rounded-2xl p-5 service-card-hover cursor-pointer reveal ${s.cssSpan} ${!s.cssSpan ? 'bg-white/80 dark:bg-dark-800/80 glass' : ''}" onclick="openServiceInfo('${s.id}', event)">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center text-2xl mb-4 ${s.iconStyle}"><i class="ph ${s.icon}"></i></div>
-                    <h3 class="text-xl font-black mb-2">${s.title}</h3>
-                    <p class="text-sm ${s.id==='profile'?'text-gray-100':'text-gray-600 dark:text-gray-300'} mb-4">${s.shortDesc}</p>
-                    <div class="flex flex-wrap gap-1.5 mb-4">${s.tags.map(t=>`<span class="text-[10px] font-bold px-2 py-1 rounded-full ${s.id==='profile'?'bg-white/15 text-white':'bg-gray-100 dark:bg-dark-700 text-brand-600 dark:text-brand-400'}">${t}</span>`).join('')}</div>
-                    <div class="flex gap-2">
-                        <button onclick="event.stopPropagation(); openServiceInfo('${s.id}', event)" class="flex-1 bg-brand-600 text-white px-3 py-2 rounded-lg font-bold text-xs">تفاصيل</button>
-                        <button onclick="event.stopPropagation(); window.open('https://wa.me/966596466303?text='+encodeURIComponent('أريد طلب خدمة: ${s.title}'), '_blank')" class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg font-bold text-xs">طلب</button>
-                    </div>
-                </div>
-            `).join('');
-        }
+  // ── Modal ────────────────────────────────────────────────────
+  function openModal(id){
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(id){
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow='';
+    if(id==='portfolioModal'){
+      setTimeout(()=>{document.getElementById('modalMedia').innerHTML='';},300);
+    }
+  }
 
-        function renderContactForm() {
-            const c = document.getElementById('contactServicesTags');
-            if (!c) return;
-            c.innerHTML = servicesData.map(s => `
-                <label class="flex items-center gap-2 p-3 glass rounded-lg cursor-pointer hover:bg-white/10">
-                    <input type="checkbox" class="service-cb w-4 h-4 rounded accent-brand-500" value="${s.title}">
-                    <span class="text-sm font-bold">${s.title}</span>
-                </label>
-            `).join('');
-        }
+  window.openServiceInfo=function(serviceId,event){
+    if(event)showLoadingTooltip(event,'تحميل التفاصيل...');
+    const s=servicesData.find(x=>x.id===serviceId);
+    if(!s)return;
+    document.getElementById('serviceModalContent').innerHTML=`
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(0,0,0,.07)">
+        <div class="service-icon" style="${s.iconStyle};${s.featured?'background:var(--brand-500);color:#fff':''}">
+          <i class="ph ${s.icon}"></i>
+        </div>
+        <h2 style="font-size:clamp(1.5rem,4vw,2.25rem);font-weight:900">${s.title}</h2>
+      </div>
+      <div class="seo-content" style="margin-bottom:2.5rem">${s.seoDetails}</div>
+      <div style="background:rgba(139,92,246,.06);padding:1.5rem;border-radius:1rem;border:1px solid rgba(139,92,246,.12);text-align:center">
+        <h4 style="font-size:1.125rem;font-weight:700;margin-bottom:.75rem">هل أنت مستعد للبدء في هذا المشروع؟</h4>
+        <p style="color:var(--gray-600);margin-bottom:1.5rem">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر مخصص لاحتياجاتك.</p>
+        <button onclick="window.open('https://wa.me/966596466303?text='+encodeURIComponent('مرحباً فريق إي تي واي، أريد طلب خدمة: ${s.title}'),'_blank')"
+          style="background:var(--green-500);color:#fff;padding:1rem 2rem;border-radius:.75rem;font-weight:700;font-size:1.125rem;border:none;cursor:pointer;display:flex;align-items:center;gap:.75rem;margin:0 auto;font-family:inherit;transition:background .2s"
+          onmouseover="this.style.background='var(--green-600)'" onmouseout="this.style.background='var(--green-500)'">
+          <i class="ph ph-whatsapp-logo" style="font-size:1.75rem"></i> طلب تسعيرة عبر الواتساب
+        </button>
+      </div>`;
+    openModal('serviceModal');
+  };
 
-        function renderPortfolio(filter = 'all') {
-            const c = document.getElementById('portfolioContainer');
-            if (!c) return;
-            c.innerHTML = '';
-            const items = filter === 'all' ? portfolioItems : portfolioItems.filter(i => i.category === filter);
-            items.forEach((item, i) => {
-                const cat = item.category==='profile'?'بروفايل':item.category==='web'?'موقع':'منيو';
-                c.innerHTML += `
-                    <div class="rounded-2xl overflow-hidden portfolio-card glass bg-white/60 dark:bg-dark-800/60 cursor-pointer reveal" style="transition-delay:${i*60}ms" onclick='openPortfolioModal(${JSON.stringify(item).replace(/'/g,"&#39;")}, event)'>
-                        <div class="aspect-[4/3] bg-gray-100 dark:bg-dark-900 relative">
-                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover" loading="lazy" width="400" height="300">
-                            <div class="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition flex items-end p-4"><span class="bg-brand-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">استعراض</span></div>
-                        </div>
-                        <div class="p-4">
-                            <span class="text-[10px] text-brand-500 font-bold bg-brand-500/10 px-2 py-0.5 rounded">${cat}</span>
-                            <h3 class="text-lg font-black mt-2 mb-1">${item.title}</h3>
-                            <p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">${item.desc}</p>
-                        </div>
-                    </div>
-                `;
-            });
-            requestAnimationFrame(() => initScrollObserver());
-        }
+  window.openPortfolioModal=function(item,event){
+    if(event)showLoadingTooltip(event,'تحميل المعاينة...');
+    document.getElementById('modalTitle').textContent=item.title;
+    document.getElementById('modalCat').textContent=
+      item.category==='profile'?'ملف تعريفي (بروفايل)':
+      item.category==='web'?'منصة رقمية':'تصميم منيو';
+    document.getElementById('modalDesc').textContent=item.desc;
+    document.getElementById('modalTags').innerHTML=
+      item.tags.map(t=>`<span style="background:rgba(0,0,0,.05);color:var(--brand-600);font-weight:700;padding:.375rem .875rem;font-size:.875rem;border-radius:.5rem">${t}</span>`).join('');
+    const btn=document.getElementById('modalActionBtn');
+    const media=document.getElementById('modalMedia');
+    if(item.pdfUrl){
+      btn.href=item.pdfUrl;
+      document.getElementById('modalActionText').textContent='تصفح الملف بالكامل (PDF)';
+      btn.style.cssText='display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;padding:1.25rem;border-radius:1rem;font-weight:700;font-size:1.125rem;color:#fff;background:var(--blue-600);box-shadow:0 4px 16px rgba(37,99,235,.3)';
+      const embedUrl=item.pdfUrl.replace('/view?usp=sharing','/preview');
+      media.innerHTML=`
+        <div id="pdfLoader" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#6b7280">
+          <i class="ph ph-spinner animate-spin" style="font-size:2.5rem"></i>
+        </div>
+        <iframe src="${embedUrl}" style="width:100%;height:100%;min-height:420px;border:0;position:relative;z-index:1;background:#fff"
+          onload="document.getElementById('pdfLoader')?.remove()" title="معاينة PDF"></iframe>`;
+    }else if(item.websiteUrl){
+      btn.href=item.websiteUrl;
+      document.getElementById('modalActionText').textContent='زيارة الموقع الإلكتروني المباشر';
+      btn.style.cssText='display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;padding:1.25rem;border-radius:1rem;font-weight:700;font-size:1.125rem;color:#fff;background:var(--brand-600);box-shadow:0 4px 16px rgba(124,58,237,.3)';
+      media.innerHTML=`<img src="${item.image}" style="width:100%;height:100%;object-fit:cover" alt="${item.title}" loading="lazy">`;
+    }
+    openModal('portfolioModal');
+  };
 
-        // ==================== MODALS ====================
-        function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; }
-        function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow = ''; if(id==='portfolioModal') document.getElementById('modalMedia').innerHTML=''; }
+  window.sendWhatsApp=function(){
+    const sel=Array.from(document.querySelectorAll('.service-cb:checked')).map(c=>c.value);
+    const notes=document.getElementById('projectNotes').value;
+    if(!sel.length&&!notes){alert('يرجى اختيار خدمة واحدة على الأقل أو كتابة تفاصيل مشروعك.');return;}
+    let msg='مرحباً فريق إي تي واي 👋\nأرغب في الاستفسار والحصول على عرض سعر بخصوص:\n\n';
+    sel.forEach(s=>msg+=`✅ ${s}\n`);
+    if(notes)msg+=`\n📝 نبذة عن المشروع/الأهداف:\n${notes}`;
+    msg+='\n\nبانتظار تواصلكم، شكراً لكم.';
+    window.open(`https://wa.me/966596466303?text=${encodeURIComponent(msg)}`,'_blank');
+  };
 
-        window.openServiceInfo = function(serviceId, event) {
-            if (event) showTooltip(event, 'تحميل...');
-            const s = servicesData.find(x => x.id === serviceId);
-            if (!s) return;
-            document.getElementById('serviceModalContent').innerHTML = `
-                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200 dark:border-white/10">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${s.iconStyle} ${s.id==='profile'?'bg-brand-500 text-white':''}"><i class="ph ${s.icon}"></i></div>
-                    <h2 class="text-2xl font-black">${s.title}</h2>
-                </div>
-                <div class="text-gray-700 dark:text-gray-300 mb-6 text-sm leading-relaxed">${s.seoDetails}</div>
-                <div class="bg-brand-50 dark:bg-dark-900 p-4 rounded-xl text-center">
-                    <p class="font-bold mb-3">هل أنت مستعد للبدء؟</p>
-                    <button onclick="window.open('https://wa.me/966596466303?text='+encodeURIComponent('أريد طلب خدمة: ${s.title}'), '_blank')" class="bg-green-500 text-white px-6 py-2.5 rounded-xl font-bold text-sm">طلب تسعيرة واتساب</button>
-                </div>
-            `;
-            openModal('serviceModal');
-            setTimeout(() => addScrollHint('serviceModalInner'), 300);
-        };
+  // ── Theme ────────────────────────────────────────────────────
+  function initTheme(){
+    if(!localStorage.getItem('theme'))localStorage.setItem('theme','dark');
+    if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');
+    document.getElementById('themeToggle').addEventListener('click',()=>{
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme',document.documentElement.classList.contains('dark')?'dark':'light');
+    });
+    const mBtn=document.getElementById('mobileMenuBtn');
+    if(mBtn)mBtn.addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(l=>
+      l.addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('hidden')));
+  }
 
-        window.openPortfolioModal = function(item, event) {
-            if (event) showTooltip(event, 'تحميل...');
-            document.getElementById('modalTitle').innerText = item.title;
-            document.getElementById('modalCat').innerText = item.category==='profile'?'بروفايل':item.category==='web'?'منصة رقمية':'منيو';
-            document.getElementById('modalDesc').innerText = item.desc;
-            document.getElementById('modalTags').innerHTML = item.tags.map(t=>`<span class="bg-gray-100 dark:bg-dark-700 text-brand-600 dark:text-brand-400 font-bold px-2 py-1 text-[10px] rounded">${t}</span>`).join('');
-            const btn = document.getElementById('modalActionBtn');
-            const btnText = document.getElementById('modalActionText');
-            const mc = document.getElementById('modalMedia');
-            
-            if (item.pdfUrl) {
-                btn.href = item.pdfUrl; btnText.innerText = 'تصفح PDF'; btn.className = 'w-full bg-blue-600 text-white text-center py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2';
-                mc.innerHTML = `<iframe src="${item.pdfUrl.replace('/view?usp=sharing','/preview')}" class="w-full h-[300px] md:h-[500px] border-0 bg-white" title="PDF"></iframe>`;
-            } else if (item.websiteUrl) {
-                btn.href = item.websiteUrl; btnText.innerText = 'زيارة الموقع'; btn.className = 'w-full bg-brand-600 text-white text-center py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2';
-                mc.innerHTML = `<img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover" loading="lazy">`;
-            }
-            openModal('portfolioModal');
-        };
+  // ── Navbar scroll ────────────────────────────────────────────
+  function initNavbar(){
+    const nav=document.getElementById('navbar');
+    if(!nav)return;
+    let ticking=false;
+    window.addEventListener('scroll',()=>{
+      if(!ticking){
+        requestAnimationFrame(()=>{
+          nav.classList.toggle('scrolled',window.scrollY>50);
+          ticking=false;
+        });
+        ticking=true;
+      }
+    },{passive:true});
+  }
 
-        window.sendWhatsApp = function() {
-            const sel = Array.from(document.querySelectorAll('.service-cb:checked')).map(cb=>cb.value);
-            const notes = document.getElementById('projectNotes')?.value || '';
-            if (!sel.length && !notes) { alert('اختر خدمة أو اكتب تفاصيل'); return; }
-            let msg = "مرحباً فريق إي تي واي 👋\n\n";
-            sel.forEach(s=>msg+=`✅ ${s}\n`);
-            if(notes) msg+=`\n📝 ${notes}`;
-            window.open(`https://wa.me/966596466303?text=${encodeURIComponent(msg)}`, '_blank');
-        };
+  // ── Scroll Observer (IntersectionObserver) ───────────────────
+  let revealObs=null;
+  function initScrollObserver(){
+    if(revealObs)revealObs.disconnect();
+    revealObs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');});
+    },{threshold:.07,rootMargin:'0px 0px -20px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+  }
 
-        function showTooltip(event, msg) {
-            const t = document.createElement('div');
-            t.className = 'loading-tooltip';
-            t.innerHTML = `<i class="ph ph-spinner animate-spin"></i> ${msg}`;
-            t.style.left = (event.clientX || window.innerWidth/2) + 'px';
-            t.style.top = ((event.clientY || window.innerHeight/2) - 40) + 'px';
-            document.body.appendChild(t);
-            setTimeout(() => t.remove(), 1500);
-        }
+  // ── Keyboard ─────────────────────────────────────────────────
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      if(document.getElementById('portfolioModal').classList.contains('open'))closeModal('portfolioModal');
+      if(document.getElementById('serviceModal').classList.contains('open'))closeModal('serviceModal');
+    }
+  });
 
-        function addScrollHint(id) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            el.querySelector('.scroll-hint')?.remove();
-            if (el.scrollHeight - el.clientHeight < 20) return;
-            const h = document.createElement('div');
-            h.className = 'scroll-hint';
-            h.innerHTML = '<i class="ph ph-caret-down"></i><span>اسحب للمزيد</span>';
-            el.appendChild(h);
-            el.addEventListener('scroll', () => { if (el.scrollTop > 30) h.style.opacity = '0'; }, { once: true });
-            setTimeout(() => h.remove(), 4000);
-        }
+  // ── Init ─────────────────────────────────────────────────────
+  /*
+    FIX 11: تشغيل الـ critical content أولاً (theme + navbar)
+    ثم باقي المحتوى بعد paint الأولى عبر requestAnimationFrame
+  */
+  initTheme();
+  initNavbar();
 
-        // ==================== INIT ====================
-        let revealObserver;
-        function initScrollObserver() {
-            if (revealObserver) revealObserver.disconnect();
-            revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-            }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-        }
+  requestAnimationFrame(()=>{
+    renderServices();
+    renderPortfolio();
+    renderContactForm();
+    // تأخير الـ observer قليلاً بعد الـ render
+    requestAnimationFrame(initScrollObserver);
+  });
+  </script>
 
-        function init() {
-            // Theme
-            if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'dark');
-            if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
-            document.getElementById('themeToggle').addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-            });
-            // Mobile menu
-            document.getElementById('mobileMenuBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('hidden'));
-            document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden')));
-            // Render
-            renderServices();
-            renderPortfolio();
-            renderContactForm();
-            initScrollObserver();
-            // Filters
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    e.target.classList.add('active');
-                    renderPortfolio(e.target.dataset.filter);
-                });
-            });
-            // Escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    if (document.getElementById('portfolioModal').classList.contains('open')) closeModal('portfolioModal');
-                    if (document.getElementById('serviceModal').classList.contains('open')) closeModal('serviceModal');
-                }
-            });
-        }
-
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-        else init();
-    </script>
 </body>
 </html>
